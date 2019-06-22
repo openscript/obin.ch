@@ -21,5 +21,7 @@ deploy:
   local_dir: public
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
+  keep_history: true
+  fqdn: obin.ch
   on:
     branch: master
