@@ -1,6 +1,8 @@
 language: node_js
 node_js:
- - "12"
+  - '12'
+
+dist: xenial
 
 cache:
   yarn: true
@@ -8,12 +10,8 @@ cache:
     - node_modules
     - .cache
 
-before_install:
- - sudo apt-get update
- - sudo apt-get install xsel make g++ -y
-
 install:
- - yarn install
+  - yarn install
 
 script:
   - yarn run build
