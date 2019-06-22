@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'r.obin.ch',
     description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
+    keywords: 'blog, experiments, software, teaching, traveling, photos',
     siteUrl: 'https://r.obin.ch',
     author: {
       name: 'Robin',
@@ -47,7 +48,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
+        siteUrl: 'https://r.obin.ch'
       }
     },
     'gatsby-plugin-emotion',

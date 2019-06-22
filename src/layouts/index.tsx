@@ -14,11 +14,12 @@ interface StaticQueryProps {
     siteMetadata: {
       title: string
       description: string
+      keywords: string
     }
   }
 }
 
-const IndexLayout: React.SFC = ({ children }) => (
+const IndexLayout: React.FC = ({ children }) => (
   <StaticQuery
     query={graphql`
       query IndexLayoutQuery {
@@ -36,7 +37,7 @@ const IndexLayout: React.SFC = ({ children }) => (
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: 'gatsbyjs, gatsby, javascript, sample, something' }
+            { name: 'keywords', content: data.site.siteMetadata.keywords }
           ]}
         />
         <Header title={data.site.siteMetadata.title} />
