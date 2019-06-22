@@ -22,6 +22,6 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
-  fqdn: obin.ch
+  fqdn: r.obin.ch
   on:
     branch: master
