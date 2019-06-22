@@ -3,7 +3,7 @@
 module.exports = {
   siteMetadata: {
     title: 'r.obin.ch',
-    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
+    description: 'Eine persönliche Webseite.',
     keywords: 'blog, experiments, software, teaching, traveling, photos',
     siteUrl: 'https://r.obin.ch',
     author: {
@@ -55,6 +55,7 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-scss-typescript'
   ]
 }

@@ -2,6 +2,11 @@ interface CSSModule {
   [className: string]: string
 }
 
+declare module '*.scss' {
+  const cssModule: CSSModule
+  export = cssModule
+}
+
 // type shims for CSS modules
 
 declare module '*.module.scss' {

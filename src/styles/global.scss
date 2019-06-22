@@ -1,0 +1,25 @@
+@import './variables.module.scss';
+
+html {
+  height: 100%;
+  font-size: $fontSize;
+}
+
+body {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+#___gatsby,
+#___gatsby > * {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+header,
+main,
+footer {
+  padding: 0 calc((100vw - #{$maxPageWidth}) / 2);
+}
