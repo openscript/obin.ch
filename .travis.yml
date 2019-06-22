@@ -8,6 +8,9 @@ cache:
     - node_modules
     - .cache
 
+before_install:
+ - apt install xsel make g++
+
 install:
  - yarn install
 
