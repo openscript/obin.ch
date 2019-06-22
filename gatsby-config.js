@@ -2,13 +2,13 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
+    title: 'r.obin.ch',
     description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    siteUrl: 'https://r.obin.ch',
     author: {
-      name: 'Resi Respati',
-      url: 'https://twitter.com/resir014',
-      email: 'resir014@gmail.com'
+      name: 'Robin',
+      url: 'https://r.obin.ch',
+      email: ''
     }
   },
   plugins: [
