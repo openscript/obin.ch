@@ -9,7 +9,8 @@ cache:
     - .cache
 
 before_install:
- - apt install xsel make g++
+ - sudo apt-get update
+ - sudo apt-get install xsel make g++ -y
 
 install:
  - yarn install
