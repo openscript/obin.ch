@@ -56,6 +56,14 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-scss-typescript'
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/translations`,
+        languages: [`en`, `de`],
+        defaultLanguage: `en`,
+        redirect: false
+      }
+    }
   ]
 }
