@@ -1,6 +1,26 @@
 /* eslint-disable max-len */
 
+export const dimensions = {
+  baseSize: {
+    regular: '16px',
+    large: '18px'
+  },
+  layout: {
+    pageWidth: '80rem',
+    headerHeight: '10rem',
+    footerHeight: '7rem'
+  }
+}
+
 export const colors = {
+  dark: '#6A4A3C',
+  red: '#CC333F',
+  orange: '#EB6841',
+  yellow: '#EDC951',
+  contra: '#00A0B0',
+}
+
+/* export const colors = {
   brand: '#663399',
   lilac: '#9d7cbf',
   accent: '#ffb238',
@@ -62,4 +82,4 @@ export const dimensions = {
 
 export const heights = {
   header: 60
-}
+} */

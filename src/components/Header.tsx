@@ -1,24 +1,15 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-
-import { heights, dimensions, colors } from '../styles/variables'
-import Container from './Container'
+import { dimensions, colors } from '../styles/variables'
 
 const StyledHeader = styled.header`
-  height: ${heights.header}px;
-  background-color: red;
-`
-
-const HeaderInner = styled(Container)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
+  height: ${dimensions.layout.headerHeight};
+  background-color: ${colors.dark};
 `
 
 const HomepageLink = styled(Link)`
-  color: ${colors.white};
+  color: white;
   font-size: 1.5rem;
   font-weight: 600;
 
@@ -34,9 +25,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title }) => (
   <StyledHeader>
-    <HeaderInner>
-      <HomepageLink to="/">{title}</HomepageLink>
-    </HeaderInner>
+    <HomepageLink to="/">{title}</HomepageLink>
   </StyledHeader>
 )
 

@@ -1,9 +1,10 @@
-@import './variables.scss';
+import css from '@emotion/css';
+import { dimensions } from './variables'
 
-:global {
+export const globalStyles = css`
   html {
     height: 100%;
-    font-size: $fontSize;
+    font-size: ${dimensions.baseSize.regular};
   }
 
   body {
@@ -22,6 +23,6 @@
   header,
   main,
   footer {
-    padding: 0 calc((100vw - #{$maxPageWidth}) / 2);
+    padding: 0 calc((100vw - ${dimensions.layout.pageWidth}) / 2);
   }
-}
+`

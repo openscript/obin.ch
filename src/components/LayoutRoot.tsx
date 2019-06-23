@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Global, css } from '@emotion/core'
-import globalStyles from '../styles/global.module.scss'
+import { Global } from '@emotion/core'
+import { globalStyles } from '../styles/global'
 
 interface LayoutRootProps {
   className?: string
@@ -8,7 +8,7 @@ interface LayoutRootProps {
 
 const LayoutRoot: React.FC<LayoutRootProps> = ({ children }) => (
   <>
-    <Global styles={() => css(globalStyles)} />
+    <Global styles={globalStyles} />
     {children}
   </>
 )
