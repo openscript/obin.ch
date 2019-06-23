@@ -1,10 +1,11 @@
 import css from '@emotion/css';
-import { dimensions } from './variables'
+import { dimensions, fonts } from './variables'
 
 export const globalStyles = css`
   html {
     height: 100%;
     font-size: ${dimensions.baseSize.regular};
+    font-family: ${fonts.sansSerif};
   }
 
   body {
