@@ -6,6 +6,7 @@ export const dimensions = {
     large: '18px'
   },
   layout: {
+    gutter: '1.5rem',
     pageWidth: '80rem',
     headerHeight: '10rem',
     footerHeight: '7rem'
