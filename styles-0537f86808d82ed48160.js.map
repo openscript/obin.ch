@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/styles/global.scss"],"names":["module","exports","maxPageWidth"],"mappings":"mGACAA,EAAAC,QAAA,CAAkBC,aAAA","file":"styles-0537f86808d82ed48160.js","sourcesContent":["// extracted by mini-css-extract-plugin\nmodule.exports = {\"maxPageWidth\":\"80rem\"};"],"sourceRoot":""}
