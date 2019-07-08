@@ -57,12 +57,11 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-intl`,
+      resolve: 'gatsby-plugin-i18n',
       options: {
-        path: `${__dirname}/src/translations`,
-        languages: [`en`, `de`],
-        defaultLanguage: `en`,
-        redirect: false
+        langKeyDefault: 'en',
+        useLangKeyLayout: true,
+        prefixDefault: false
       }
     }
   ]

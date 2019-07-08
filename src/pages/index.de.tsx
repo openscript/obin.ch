@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import IndexLayout from '../layouts'
+import IndexLayout from '../layouts/de'
 
 const IndexPage = () => (
   <IndexLayout>
