@@ -1,9 +1,11 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import { colors } from '../../styles/variables'
 
 const HomepageLink = styled(Link)`
-  color: white;
+  display: block;
+  color: ${colors.white};
   font-size: 1.5rem;
   font-weight: 600;
   text-decoration: none;

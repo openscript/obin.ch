@@ -11,6 +11,8 @@ import { IntlProvider, FormattedDate, FormattedTime } from 'react-intl'
 import { Translation, EnglishTranslation } from '../translations/locales'
 import Brand from '../components/parts/Brand'
 import Head from '../components/Head'
+import TopNavigation from '../components/parts/TopNavigation'
+import styled from '@emotion/styled'
 
 interface StaticQueryProps {
   site: {
@@ -28,6 +30,11 @@ interface StaticQueryProps {
 interface Props {
   translation?: Translation
 }
+
+const StyledHeader = styled(Header)`
+  display: flex;
+  justify-content: space-between;
+`
 
 const IndexLayout: React.FC<Props> = ({ children, translation = EnglishTranslation }) => (
   <StaticQuery
@@ -49,9 +56,10 @@ const IndexLayout: React.FC<Props> = ({ children, translation = EnglishTranslati
       <IntlProvider locale={translation.language} messages={translation.messages}>
         <LayoutRoot>
           <Head language={translation.language} title={data.site.siteMetadata.title} author={data.site.siteMetadata.author.name} />
-          <Header>
+          <StyledHeader>
             <Brand />
-          </Header>
+            <TopNavigation />
+          </StyledHeader>
           <Main>{children}</Main>
           <Footer>
             {data.site.siteMetadata.license} - <FormattedDate value={new Date(data.site.buildTime)} />{' '}

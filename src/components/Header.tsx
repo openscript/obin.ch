@@ -10,12 +10,14 @@ const StyledHeader = styled.header`
   background-color: ${colors.dark};
 `
 
-interface HeaderProps {}
+interface HeaderProps {
+  className?: string
+}
 
-const Header: React.FC<HeaderProps> = ({ children }) => (
+const Header: React.FC<HeaderProps> = ({ className, children }) => (
   <>
     <StyledHeader>
-      <Content>{children}</Content>
+      <Content className={className}>{children}</Content>
     </StyledHeader>
   </>
 )
