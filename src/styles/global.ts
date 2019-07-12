@@ -1,5 +1,5 @@
 import css from '@emotion/css';
-import { dimensions, fonts } from './variables'
+import { dimensions, fonts, colors } from './variables'
 
 export const globalStyles = css`
   html {
@@ -12,6 +12,11 @@ export const globalStyles = css`
     display: flex;
     min-height: 100%;
     flex-direction: column;
+    color: ${colors.black};
+  }
+
+  main, a {
+    color: ${colors.white};
   }
 
   #___gatsby,

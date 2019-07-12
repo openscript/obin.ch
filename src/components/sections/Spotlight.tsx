@@ -7,6 +7,7 @@ const StyledSpotlightContainer = styled.div`
   min-height: 20rem;
   height: 50vh;
   background-color: ${colors.white};
+  color: ${colors.black};
 `
 
 const StyledDivider = styled.svg`

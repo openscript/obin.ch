@@ -14,6 +14,7 @@ export const dimensions = {
 }
 
 export const colors = {
+  black: '#111111',
   white: '#EEEEEE',
   dark: '#6A4A3C',
   red: '#CC333F',
