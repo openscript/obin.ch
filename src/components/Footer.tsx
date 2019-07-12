@@ -17,7 +17,6 @@ const StyledDivider = styled.svg`
   width: 100%;
   bottom: 100%;
   left: 0;
-  border-bottom: 1px solid ${colors.orange};
 
   polygon {
     fill: ${colors.orange};
@@ -31,7 +30,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className, children }) => (
   <>
     <StyledFooter className={className}>
-      <StyledDivider viewBox="0 0 100 2" className="topDivider">
+      <StyledDivider viewBox="0 -0.01 100 2" className="topDivider">
         <polygon points="0 2, 80 0, 100 2"></polygon>
       </StyledDivider>
       <Content>{children}</Content>
