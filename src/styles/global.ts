@@ -9,6 +9,7 @@ export const globalStyles = css`
   }
 
   body {
+    scroll-behavior: smooth;
     display: flex;
     min-height: 100%;
     flex-direction: column;
