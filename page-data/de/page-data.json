@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-index-tsx","path":"/de/","webpackCompilationHash":"603223f9b44694d371de","result":{"pageContext":{"isCreatedByStatefulCreatePages":true,"intl":{"language":"de","languages":["en","de"],"messages":{},"routed":true,"originalPath":"/","redirect":false}}}}
+{"componentChunkName":"component---src-pages-index-de-tsx","path":"/de/","webpackCompilationHash":"63695d3950396e1948e5","result":{"pageContext":{"isCreatedByStatefulCreatePages":true,"slug":"/de/","langKey":"de"}}}
