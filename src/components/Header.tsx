@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import { dimensions, colors } from '../styles/variables'
+import Content from './Content'
 
 const StyledHeader = styled.header`
   position: relative;
@@ -27,7 +28,9 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title }) => (
   <>
     <StyledHeader>
-      <HomepageLink to="/">{title}</HomepageLink>
+      <Content>
+        <HomepageLink to="/">{title}</HomepageLink>
+      </Content>
     </StyledHeader>
   </>
 )

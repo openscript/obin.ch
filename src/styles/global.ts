@@ -20,9 +20,4 @@ export const globalStyles = css`
     flex-direction: column;
     flex-grow: 1;
   }
-
-  header,
-  footer {
-    padding: ${dimensions.layout.gutter} calc((100vw - ${dimensions.layout.pageWidth}) / 2);
-  }
 `

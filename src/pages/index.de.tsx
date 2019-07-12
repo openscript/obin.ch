@@ -2,11 +2,14 @@ import * as React from 'react'
 
 import IndexLayout from '../layouts/de'
 import Spotlight from '../components/Spotlight'
+import Content from '../components/Content'
 
 const IndexPage = () => (
   <IndexLayout>
     <Spotlight></Spotlight>
-    <p>Willkommen :)</p>
+    <Content>
+      <p>Willkommen :)</p>
+    </Content>
   </IndexLayout>
 )
 

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { dimensions, colors } from '../styles/variables'
+import Content from './Content'
 
 const StyledFooter = styled.footer`
   height: ${dimensions.layout.footerHeight};
@@ -27,7 +28,9 @@ const Footer: React.FC<FooterProps> = ({ className, children }) => (
     <StyledDivider viewBox="0 0 100 2" className="topDivider">
       <polygon points="0 0, 100 0, 100 2, 80 0, 0 2"></polygon>
     </StyledDivider>
-    <StyledFooter className={className}>{children}</StyledFooter>
+    <StyledFooter className={className}>
+      <Content>{children}</Content>
+    </StyledFooter>
   </>
 )
 
