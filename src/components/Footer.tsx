@@ -4,18 +4,22 @@ import { dimensions, colors } from '../styles/variables'
 import Content from './Content'
 
 const StyledFooter = styled.footer`
+  position: relative;
   height: ${dimensions.layout.footerHeight};
   background-color: ${colors.orange};
   display: flex;
   align-items: center;
+  font-size: 0.8rem;
 `
 
 const StyledDivider = styled.svg`
+  position: absolute;
   width: 100%;
-  background-color: ${colors.orange};
+  bottom: 100%;
+  left: 0;
 
   polygon {
-    fill: ${colors.dark};
+    fill: ${colors.orange};
   }
 `
 
@@ -25,10 +29,10 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ className, children }) => (
   <>
-    <StyledDivider viewBox="0 0 100 2" className="topDivider">
-      <polygon points="0 0, 100 0, 100 2, 80 0, 0 2"></polygon>
-    </StyledDivider>
     <StyledFooter className={className}>
+      <StyledDivider viewBox="0 0 100 2" className="topDivider">
+        <polygon points="0 2, 80 0, 100 2"></polygon>
+      </StyledDivider>
       <Content>{children}</Content>
     </StyledFooter>
   </>
