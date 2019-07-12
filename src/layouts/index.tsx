@@ -8,7 +8,7 @@ import Header from '../components/Header'
 import LayoutRoot from '../components/LayoutRoot'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
-import { IntlProvider } from 'react-intl'
+import { IntlProvider, FormattedDate, FormattedTime } from 'react-intl'
 import { Translation, EnglishTranslation } from '../translations/locales'
 
 interface StaticQueryProps {
@@ -57,7 +57,8 @@ const IndexLayout: React.FC<Props> = ({ children, translation = EnglishTranslati
           <Header title={data.site.siteMetadata.title} />
           <Main>{children}</Main>
           <Footer>
-            {data.site.siteMetadata.license} - {new Date(data.site.buildTime).toISOString()}
+            {data.site.siteMetadata.license} - <FormattedDate value={new Date(data.site.buildTime)} />{' '}
+            <FormattedTime value={new Date(data.site.buildTime)} />
           </Footer>
         </LayoutRoot>
       </IntlProvider>
