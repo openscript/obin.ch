@@ -9,7 +9,7 @@ import LayoutRoot from '../components/LayoutRoot'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 import { IntlProvider } from 'react-intl'
-import { Translation } from '../translations/locales'
+import { Translation, EnglishTranslation } from '../translations/locales'
 
 interface StaticQueryProps {
   site: {
@@ -17,15 +17,17 @@ interface StaticQueryProps {
       title: string
       description: string
       keywords: string
+      license: string
     }
+    buildTime: string
   }
 }
 
 interface Props {
-  translation: Translation
+  translation?: Translation
 }
 
-const IndexLayout: React.FC<Props> = ({ children, translation }) => (
+const IndexLayout: React.FC<Props> = ({ children, translation = EnglishTranslation }) => (
   <StaticQuery
     query={graphql`
       query IndexLayoutQuery {
@@ -34,7 +36,9 @@ const IndexLayout: React.FC<Props> = ({ children, translation }) => (
             title
             description
             keywords
+            license
           }
+          buildTime
         }
       }
     `}
@@ -52,7 +56,9 @@ const IndexLayout: React.FC<Props> = ({ children, translation }) => (
           </Helmet>
           <Header title={data.site.siteMetadata.title} />
           <Main>{children}</Main>
-          <Footer />
+          <Footer>
+            {data.site.siteMetadata.license} - {new Date(data.site.buildTime).toISOString()}
+          </Footer>
         </LayoutRoot>
       </IntlProvider>
     )}

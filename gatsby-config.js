@@ -5,6 +5,7 @@ module.exports = {
     title: 'r.obin.ch',
     description: 'Eine persönliche Webseite.',
     keywords: 'blog, experiments, software, teaching, traveling, photos',
+    license: 'Robin Bühler - AGPL-3.0',
     siteUrl: 'https://r.obin.ch',
     author: {
       name: 'Robin',

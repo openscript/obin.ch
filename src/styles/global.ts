@@ -22,7 +22,6 @@ export const globalStyles = css`
   }
 
   header,
-  main,
   footer {
     padding: ${dimensions.layout.gutter} calc((100vw - ${dimensions.layout.pageWidth}) / 2);
   }
