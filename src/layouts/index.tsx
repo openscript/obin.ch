@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import 'modern-normalize'
@@ -11,14 +10,16 @@ import Footer from '../components/Footer'
 import { IntlProvider, FormattedDate, FormattedTime } from 'react-intl'
 import { Translation, EnglishTranslation } from '../translations/locales'
 import Brand from '../components/parts/Brand'
+import Head from '../components/Head'
 
 interface StaticQueryProps {
   site: {
     siteMetadata: {
       title: string
-      description: string
-      keywords: string
       license: string
+      author: {
+        name: string
+      }
     }
     buildTime: string
   }
@@ -35,9 +36,10 @@ const IndexLayout: React.FC<Props> = ({ children, translation = EnglishTranslati
         site {
           siteMetadata {
             title
-            description
-            keywords
             license
+            author {
+              name
+            }
           }
           buildTime
         }
@@ -46,15 +48,7 @@ const IndexLayout: React.FC<Props> = ({ children, translation = EnglishTranslati
     render={(data: StaticQueryProps) => (
       <IntlProvider locale={translation.language} messages={translation.messages}>
         <LayoutRoot>
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              { name: 'description', content: data.site.siteMetadata.description },
-              { name: 'keywords', content: data.site.siteMetadata.keywords }
-            ]}
-          >
-            <html lang={translation.language} />
-          </Helmet>
+          <Head language={translation.language} title={data.site.siteMetadata.title} author={data.site.siteMetadata.author.name} />
           <Header>
             <Brand />
           </Header>

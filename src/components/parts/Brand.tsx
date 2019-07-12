@@ -27,9 +27,11 @@ interface BrandProps {}
 
 const Brand: React.FC<BrandProps> = () => (
   <>
-    <HomepageLink to="/">
-      r.obin<span>.ch</span>
-    </HomepageLink>
+    <h1>
+      <HomepageLink to="/">
+        r.obin<span>.ch</span>
+      </HomepageLink>
+    </h1>
   </>
 )
 
