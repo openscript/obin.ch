@@ -8,11 +8,12 @@ const StyledSpotlightContainer = styled.div`
   height: 50vh;
   background-color: ${colors.white};
   color: ${colors.black};
+  overflow: hidden;
 `
 
 const StyledDivider = styled.svg`
   position: absolute;
-  width: 100%;
+  margin: 0 -1px;
 
   &.topDivider {
     top: 0;
