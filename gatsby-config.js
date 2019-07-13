@@ -52,6 +52,18 @@ module.exports = {
         siteUrl: 'https://r.obin.ch'
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `r.obin.ch`,
+        short_name: `r.obin.ch`,
+        start_url: `/`,
+        background_color: `#6A4A3C`,
+        theme_color: `#EB6841`,
+        display: `standalone`,
+        icon: `src/assets/favicon.png`
+      }
+    },
     'gatsby-plugin-emotion',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
