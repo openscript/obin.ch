@@ -14,7 +14,12 @@ export const GermanTranslation: Translation = {
     language: 'Deutsch',
     subtitle: 'Mein Faszikel',
     description: 'Persönliche Webseite zu den Themen: Informatik, Progressive Webapplikationen (PWA), Softwareentwicklung und vieles mehr.',
-    keywords: 'Informatik, Progressive Webapplikationen, Informatik Schulungen, Experte für Softwareentwicklung, persönlich, engagiert'
+    keywords: 'Informatik, Progressive Webapplikationen, Informatik Schulungen, Experte für Softwareentwicklung, persönlich, engagiert',
+    'navigation.about': 'Über mich',
+    'navigation.projects': 'Projekte',
+    'navigation.recordings': 'Aufnahmen',
+    'navigation.blog': 'Blog',
+    'navigation.collection': 'Sammlung'
   }
 }
 
@@ -25,6 +30,11 @@ export const EnglishTranslation: Translation = {
     subtitle: 'My fascicle',
     description:
       'Personal website about topics like: information technologies, progressive web applications (PWA), software development and much more.',
-    keywords: 'computer science, progressive web applications, IT teaching, expert for software development'
+    keywords: 'computer science, progressive web applications, IT teaching, expert for software development',
+    'navigation.about': 'About me',
+    'navigation.projects': 'Projects',
+    'navigation.recordings': 'Recordings',
+    'navigation.blog': 'Blog',
+    'navigation.collection': 'Collection'
   }
 }

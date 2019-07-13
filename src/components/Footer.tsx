@@ -13,6 +13,7 @@ const StyledFooter = styled.footer`
 `
 
 const StyledDivider = styled.svg`
+  pointer-events: none;
   position: absolute;
   width: 100%;
   bottom: 100%;

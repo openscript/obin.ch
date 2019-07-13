@@ -1,0 +1,16 @@
+import * as React from 'react'
+
+import IndexLayout from '../layouts/de'
+import Spotlight from '../components/sections/Spotlight'
+import Content from '../components/Content'
+
+const RecordingsPage = () => (
+  <IndexLayout>
+    <Spotlight></Spotlight>
+    <Content>
+      <h2>Recordings</h2>
+    </Content>
+  </IndexLayout>
+)
+
+export default RecordingsPage

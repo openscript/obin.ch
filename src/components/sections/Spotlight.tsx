@@ -12,6 +12,7 @@ const StyledSpotlightContainer = styled.div`
 `
 
 const StyledDivider = styled.svg`
+  pointer-events: none;
   position: absolute;
   margin: 0 -1px;
 
