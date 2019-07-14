@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { dimensions, colors } from '../../styles/variables'
 import Navigation from '../sections/Navigation'
 import { FormattedMessage } from 'react-intl'
-import { Link } from 'gatsby'
+import LocalizedLink from '../LocalizedLink'
 
 interface TopNavigationProps {
   className?: string
@@ -28,29 +28,29 @@ const MenuItem = styled.li`
 const TopNavigation: React.FC<TopNavigationProps> = ({ className }) => (
   <Navigation className={className}>
     <MenuItem>
-      <Link to="/about">
+      <LocalizedLink to="/about">
         <FormattedMessage id="navigation.about" />
-      </Link>
+      </LocalizedLink>
     </MenuItem>
     <MenuItem>
-      <Link to="/projects">
+      <LocalizedLink to="/projects">
         <FormattedMessage id="navigation.projects" />
-      </Link>
+      </LocalizedLink>
     </MenuItem>
     <MenuItem>
-      <Link to="/recordings">
+      <LocalizedLink to="/recordings">
         <FormattedMessage id="navigation.recordings" />
-      </Link>
+      </LocalizedLink>
     </MenuItem>
     <MenuItem>
-      <Link to="/blog">
+      <LocalizedLink to="/blog">
         <FormattedMessage id="navigation.blog" />
-      </Link>
+      </LocalizedLink>
     </MenuItem>
     <MenuItem>
-      <Link to="/collection">
+      <LocalizedLink to="/collection">
         <FormattedMessage id="navigation.collection" />
-      </Link>
+      </LocalizedLink>
     </MenuItem>
   </Navigation>
 )

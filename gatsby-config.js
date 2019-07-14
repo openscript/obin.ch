@@ -3,8 +3,6 @@
 module.exports = {
   siteMetadata: {
     title: 'r.obin.ch',
-    description: 'Mein Faszikel.',
-    keywords: 'blog, experiments, software, teaching, traveling, photos',
     license: 'Robin Bühler - AGPL-3.0',
     siteUrl: 'https://r.obin.ch',
     author: {

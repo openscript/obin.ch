@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
 import { colors } from '../../styles/variables'
+import LocalizedLink from '../LocalizedLink'
 
-const HomepageLink = styled(Link)`
+const HomepageLink = styled(LocalizedLink)`
   display: block;
   color: ${colors.white};
   font-size: 1.5rem;
