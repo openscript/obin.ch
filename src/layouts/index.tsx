@@ -11,7 +11,7 @@ import Brand from '../components/parts/Brand'
 import Head from '../components/Head'
 import TopNavigation from '../components/parts/TopNavigation'
 import styled from '@emotion/styled'
-import { LocaleContext } from '../components/Wrapper'
+import { LocaleContext } from '../components/PageWrapper'
 
 interface StaticQueryProps {
   site: {

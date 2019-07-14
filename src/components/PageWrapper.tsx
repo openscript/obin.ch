@@ -15,7 +15,7 @@ interface Props {
 
 export const LocaleContext = React.createContext<{ langKey: string }>({ langKey: 'en' })
 
-class Wrapper extends React.Component<Props> {
+class PageWrapper extends React.Component<Props> {
   public constructor(props: Props) {
     super(props)
 
@@ -35,4 +35,4 @@ class Wrapper extends React.Component<Props> {
   }
 }
 
-export default Wrapper
+export default PageWrapper

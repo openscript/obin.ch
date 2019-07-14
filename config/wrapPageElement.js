@@ -1,6 +1,6 @@
 import React from 'react'
-import Wrapper from '../src/components/Wrapper'
+import PageWrapper from '../src/components/PageWrapper'
 
 export const wrapPageElement = ({ element, props }) => {
-  return <Wrapper {...props}>{element}</Wrapper>
+  return <PageWrapper {...props}>{element}</PageWrapper>
 }
