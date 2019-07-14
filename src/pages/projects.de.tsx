@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import IndexLayout from '../layouts/de'
+import IndexLayout from '../layouts'
 import Spotlight from '../components/sections/Spotlight'
 import Content from '../components/Content'
 
