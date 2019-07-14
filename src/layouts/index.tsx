@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import 'modern-normalize'
 
 import Header from '../components/Header'
-import LayoutRoot from '../components/LayoutRoot'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 import { FormattedDate, FormattedTime } from 'react-intl'
@@ -51,7 +50,7 @@ const IndexLayout: React.FC = ({ children }) => {
         }
       `}
       render={(data: StaticQueryProps) => (
-        <LayoutRoot>
+        <>
           <Head language={currentLocale.langKey} title={data.site.siteMetadata.title} author={data.site.siteMetadata.author.name} />
           <StyledHeader>
             <Brand />
@@ -62,7 +61,7 @@ const IndexLayout: React.FC = ({ children }) => {
             {data.site.siteMetadata.license} - <FormattedDate value={new Date(data.site.buildTime)} />{' '}
             <FormattedTime value={new Date(data.site.buildTime)} />
           </Footer>
-        </LayoutRoot>
+        </>
       )}
     />
   )

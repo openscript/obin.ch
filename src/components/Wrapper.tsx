@@ -3,6 +3,8 @@ import { addLocaleData, IntlProvider } from 'react-intl'
 import * as en from 'react-intl/locale-data/en'
 import * as de from 'react-intl/locale-data/de'
 import { GermanTranslation, EnglishTranslation } from '../translations/locales'
+import { Global } from '@emotion/core'
+import { globalStyles } from '../styles/global'
 
 interface Props {
   className?: string
@@ -24,6 +26,7 @@ class Wrapper extends React.Component<Props> {
     const translation = this.props.pageContext.langKey === 'de' ? GermanTranslation : EnglishTranslation
     return (
       <>
+        <Global styles={globalStyles} />
         <IntlProvider locale={translation.language} messages={translation.messages}>
           <LocaleContext.Provider value={{ langKey: translation.language }}>{this.props.children}</LocaleContext.Provider>
         </IntlProvider>
