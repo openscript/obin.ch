@@ -1,7 +1,5 @@
 import React from 'react'
-import { addLocaleData, IntlProvider } from 'react-intl'
-import * as en from 'react-intl/locale-data/en'
-import * as de from 'react-intl/locale-data/de'
+import { IntlProvider } from 'react-intl'
 import { GermanTranslation, EnglishTranslation } from '../translations/locales'
 import { Global } from '@emotion/core'
 import { globalStyles } from '../styles/global'
@@ -19,7 +17,15 @@ class PageWrapper extends React.Component<Props> {
   public constructor(props: Props) {
     super(props)
 
-    addLocaleData([...de, ...en])
+    if (!Intl.PluralRules) {
+      require('intl-pluralrules');
+    }
+
+    if (!Intl.RelativeTimeFormat) {
+      require('@formatjs/intl-relativetimeformat/polyfill');
+      require('@formatjs/intl-relativetimeformat/dist/include-aliases'); // Optional, if you care about edge cases in locale resolution, e.g zh-CN -> zh-Hans-CN
+      require('@formatjs/intl-relativetimeformat/dist/locale-data/en'); // Add locale data for de
+    }
   }
 
   public render() {
