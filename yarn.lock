@@ -1424,13 +1424,6 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-intl@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@types/react-intl/-/react-intl-3.0.0.tgz#a2cce0024b6cfe403be28ccf67f49d720fa810ec"
-  integrity sha512-k8F3d05XQGEqSWIfK97bBjZe4z9RruXU9Wa7OZ2iUC5pdeIpzuQDZe/9C2J3Xir5//ZtAkhcv08Wfx3n5TBTQg==
-  dependencies:
-    react-intl "*"
-
 "@types/react@*", "@types/react@^16.8.12", "@types/react@^16.8.6", "@types/react@^16.9.2":
   version "16.9.2"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.2.tgz#6d1765431a1ad1877979013906731aae373de268"
@@ -10520,7 +10513,7 @@ react-hot-loader@^4.12.12:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-intl@*, react-intl@^3.2.0:
+react-intl@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-3.2.0.tgz#fa882b69dd5e3cecbfbf71d26f726f6855203b1c"
   integrity sha512-TAElrF1kV6SHGSkYrPojnsUALRTSFqlEJTOJuyivLdA4St1LinkgmMuoHEaldzTyG/bBhF2LkzF9OlTOAglfDA==
