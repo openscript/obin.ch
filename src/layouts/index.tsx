@@ -11,7 +11,7 @@ import Brand from '../components/parts/Brand'
 import Head from '../components/Head'
 import TopNavigation from '../components/parts/TopNavigation'
 import styled from '@emotion/styled'
-import { LocaleContext } from '../components/PageWrapper'
+import { PageContext } from '../components/Context'
 
 interface StaticQueryProps {
   site: {
@@ -31,8 +31,13 @@ const StyledHeader = styled(Header)`
   justify-content: space-between;
 `
 
+const StyledNav = styled.nav`
+  display: flex;
+  align-items: center;
+`
+
 const IndexLayout: React.FC = ({ children }) => {
-  const currentLocale = React.useContext(LocaleContext)
+  const currentPageContext = React.useContext(PageContext)
   return (
     <StaticQuery
       query={graphql`
@@ -51,10 +56,12 @@ const IndexLayout: React.FC = ({ children }) => {
       `}
       render={(data: StaticQueryProps) => (
         <>
-          <Head language={currentLocale.langKey} title={data.site.siteMetadata.title} author={data.site.siteMetadata.author.name} />
+          <Head language={currentPageContext.langKey} title={data.site.siteMetadata.title} author={data.site.siteMetadata.author.name} />
           <StyledHeader>
             <Brand />
-            <TopNavigation />
+            <StyledNav>
+              <TopNavigation />
+            </StyledNav>
           </StyledHeader>
           <Main>{children}</Main>
           <Footer>

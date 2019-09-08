@@ -33,7 +33,7 @@ export const GermanTranslation: Translation = {
 export const EnglishTranslation: Translation = {
   key: Locales.en.key,
   messages: {
-    language: 'Englisch',
+    language: 'English',
     subtitle: 'My fascicle',
     description:
       'Personal website about topics like: information technologies, progressive web applications (PWA), software development and much more.',

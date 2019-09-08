@@ -4,6 +4,8 @@ import { dimensions, colors } from '../../styles/variables'
 import Navigation from '../Navigation'
 import { FormattedMessage } from 'react-intl'
 import LocalizedLink from '../LocalizedLink'
+import LanguageSwitcher from '../LanguageSwitcher'
+import { Locales } from '../../models/locales'
 
 interface TopNavigationProps {
   className?: string
@@ -51,6 +53,9 @@ const TopNavigation: React.FC<TopNavigationProps> = ({ className }) => (
       <LocalizedLink to="/collection">
         <FormattedMessage id="navigation.collection" />
       </LocalizedLink>
+    </MenuItem>
+    <MenuItem>
+      <LanguageSwitcher locales={Locales} />
     </MenuItem>
   </Navigation>
 )

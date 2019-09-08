@@ -5,11 +5,6 @@ interface Navigation {
   className?: string
 }
 
-const StyledNav = styled.nav`
-  display: flex;
-  align-items: center;
-`
-
 const StyledList = styled.ul`
   display: flex;
   padding: 0;
@@ -17,10 +12,6 @@ const StyledList = styled.ul`
   list-style: none;
 `
 
-const Navigation: React.FC<Navigation> = ({ className, children }) => (
-  <StyledNav>
-    <StyledList className={className}>{children}</StyledList>
-  </StyledNav>
-)
+const Navigation: React.FC<Navigation> = ({ className, children }) => <StyledList className={className}>{children}</StyledList>
 
 export default Navigation
