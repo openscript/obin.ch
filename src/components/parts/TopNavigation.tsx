@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { dimensions, colors } from '../../styles/variables'
-import Navigation from '../sections/Navigation'
+import Navigation from '../Navigation'
 import { FormattedMessage } from 'react-intl'
 import LocalizedLink from '../LocalizedLink'
 
