@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{248:function(n,c,l){"use strict";l.r(c);var e=l(1),t=(l(0),l(239)),u=l(240),a=l(79);c.default=function(){return Object(e.c)(t.a,null,Object(e.c)(u.a,null),Object(e.c)(a.a,null,Object(e.c)("p",null,"Willkommen :)")))}}}]);
+//# sourceMappingURL=component---src-pages-index-de-tsx-1adedc67d123bc44bb60.js.map

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{249:function(n,c,u){"use strict";u.r(c);var e=u(1),t=(u(0),u(237)),l=u(238),a=u(77);c.default=function(){return Object(e.c)(t.a,null,Object(e.c)(l.a,null),Object(e.c)(a.a,null,Object(e.c)("h2",null,"Aufnahmen")))}}}]);
-//# sourceMappingURL=component---src-pages-recordings-de-tsx-0ef70a5bb474573a0447.js.map
