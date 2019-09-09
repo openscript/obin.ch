@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{245:function(c,n,l){"use strict";l.r(n);var t=l(1),u=(l(0),l(240)),e=l(241),a=l(80);n.default=function(){return Object(t.c)(u.a,null,Object(t.c)(e.a,null),Object(t.c)(a.a,null,Object(t.c)("h2",null,"Blog")))}}}]);
+//# sourceMappingURL=component---src-pages-blog-de-tsx-9137c6731b8e201952db.js.map

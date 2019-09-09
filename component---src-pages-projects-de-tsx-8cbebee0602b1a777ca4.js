@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{251:function(c,n,e){"use strict";e.r(n);var t=e(1),u=(e(0),e(240)),l=e(241),a=e(80);n.default=function(){return Object(t.c)(u.a,null,Object(t.c)(l.a,null),Object(t.c)(a.a,null,Object(t.c)("h2",null,"Projekte")))}}}]);
+//# sourceMappingURL=component---src-pages-projects-de-tsx-8cbebee0602b1a777ca4.js.map
