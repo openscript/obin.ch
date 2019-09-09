@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { colors } from '../../styles/variables'
+import Divider from '../Divider'
 
 const StyledSpotlightContainer = styled.div`
   position: relative;
@@ -11,42 +12,18 @@ const StyledSpotlightContainer = styled.div`
   overflow: hidden;
 `
 
-const StyledDivider = styled.svg`
-  pointer-events: none;
-  position: absolute;
-  margin: 0 -1px;
-
-  &.topDivider {
-    top: 0;
-    left: 0;
-  }
-
-  &.bottomDivider {
-    bottom: 0;
-    left: 0;
-  }
-
-  polygon {
-    fill: ${colors.dark};
-  }
-`
-
 interface SpotlightProps {
   className?: string
 }
 
 const Spotlight: React.FC<SpotlightProps> = ({ className }) => (
   <StyledSpotlightContainer className={className}>
-    <StyledDivider viewBox="0 0 100 2" className="topDivider">
-      <polygon points="0 0, 100 0, 100 2, 20 0, 0 2"></polygon>
-    </StyledDivider>
+    <Divider color={colors.dark} />
     <div>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio animi doloribus possimus voluptas deserunt magnam. Dolore non culpa
       fugiat in commodi facere expedita blanditiis deleniti odio, veniam exercitationem ab ipsam.
     </div>
-    <StyledDivider viewBox="0 0 100 2" className="bottomDivider">
-      <polygon points="0 0, 80 2, 100 0, 100 2, 0 100"></polygon>
-    </StyledDivider>
+    <Divider color={colors.dark} flipVertically={true} flipHorizontally={true} />
   </StyledSpotlightContainer>
 )
 

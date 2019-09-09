@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { dimensions, colors } from '../styles/variables'
 import Content from './Content'
+import Divider from './Divider'
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -12,16 +13,8 @@ const StyledFooter = styled.footer`
   font-size: 0.8rem;
 `
 
-const StyledDivider = styled.svg`
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
+const StyledDivider = styled(Divider)`
   bottom: 100%;
-  left: 0;
-
-  polygon {
-    fill: ${colors.orange};
-  }
 `
 
 interface FooterProps {
@@ -31,9 +24,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className, children }) => (
   <>
     <StyledFooter className={className}>
-      <StyledDivider viewBox="0 -0.01 100 2" className="topDivider">
-        <polygon points="0 2, 80 0, 100 2"></polygon>
-      </StyledDivider>
+      <StyledDivider color={colors.orange} invert={true} />
       <Content>{children}</Content>
     </StyledFooter>
   </>
