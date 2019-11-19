@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{247:function(n,c,u){"use strict";u.r(c);var l=u(1),t=(u(0),u(240)),e=u(241),a=u(80);c.default=function(){return Object(l.c)(t.a,null,Object(l.c)(e.a,null),Object(l.c)(a.a,null,Object(l.c)("h2",null,"Sammlung")))}}}]);
-//# sourceMappingURL=component---src-pages-collection-de-tsx-efcba4053d69bbfb7e93.js.map
