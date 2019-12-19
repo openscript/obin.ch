@@ -15,3 +15,10 @@ declare module '*.module.css' {
   const cssModule: CSSModule
   export = cssModule
 }
+
+declare namespace Intl {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  class RelativeTimeFormat {
+    constructor(locale: string);
+  }
+}

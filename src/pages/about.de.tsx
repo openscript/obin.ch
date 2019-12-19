@@ -6,7 +6,7 @@ import Content from '../components/Content'
 
 const AboutPage = () => (
   <IndexLayout>
-    <Spotlight></Spotlight>
+    <Spotlight />
     <Content>
       <h2>Über mich</h2>
     </Content>

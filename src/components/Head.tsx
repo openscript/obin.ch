@@ -1,26 +1,30 @@
 import * as React from 'react'
-import { InjectedIntlProps, injectIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import Helmet from 'react-helmet'
 
-interface HeadProps extends InjectedIntlProps {
+interface HeadProps {
   language: string
   title: string
   author: string
 }
 
-const Head: React.FC<HeadProps> = ({ intl, language, title, author }) => (
-  <>
-    <Helmet
-      title={`${intl.formatMessage({ id: 'subtitle' })} - ${title}`}
-      meta={[
-        { name: 'description', content: intl.formatMessage({ id: 'description' }) },
-        { name: 'keywords', content: intl.formatMessage({ id: 'keywords' }) },
-        { name: 'author', content: author }
-      ]}
-    >
-      <html lang={language} />
-    </Helmet>
-  </>
-)
+const Head: React.FC<HeadProps> = ({ language, title, author }) => {
+  const intl = useIntl()
 
-export default injectIntl(Head)
+  return (
+    <>
+      <Helmet
+        title={`${intl.formatMessage({ id: 'subtitle' })} - ${title}`}
+        meta={[
+          { name: 'description', content: intl.formatMessage({ id: 'description' }) },
+          { name: 'keywords', content: intl.formatMessage({ id: 'keywords' }) },
+          { name: 'author', content: author }
+        ]}
+      >
+        <html lang={language} />
+      </Helmet>
+    </>
+  )
+}
+
+export default Head
