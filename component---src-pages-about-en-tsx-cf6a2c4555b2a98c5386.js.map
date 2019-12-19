@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/about.en.tsx"],"names":["AboutPage"],"mappings":"2FAAA,6CAMeA,UAFG,kBAAM,YAAC,IAAD","file":"component---src-pages-about-en-tsx-cf6a2c4555b2a98c5386.js","sourcesContent":["import * as React from 'react'\n\nimport IndexLayout from '../layouts'\n\nconst AboutPage = () => <IndexLayout />\n\nexport default AboutPage\n"],"sourceRoot":""}
