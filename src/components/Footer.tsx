@@ -24,7 +24,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className, children }) => (
   <>
     <StyledFooter className={className}>
-      <StyledDivider color={colors.orange} invert={true} />
+      <StyledDivider color={colors.orange} invert />
       <Content>{children}</Content>
     </StyledFooter>
   </>

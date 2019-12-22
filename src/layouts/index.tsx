@@ -3,14 +3,14 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import 'modern-normalize'
 
+import { FormattedDate, FormattedTime } from 'react-intl'
+import styled from '@emotion/styled'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
-import { FormattedDate, FormattedTime } from 'react-intl'
 import Brand from '../components/parts/Brand'
 import Head from '../components/Head'
 import TopNavigation from '../components/parts/TopNavigation'
-import styled from '@emotion/styled'
 import { PageContext } from '../components/Context'
 
 interface StaticQueryProps {

@@ -1,6 +1,6 @@
 import React from 'react'
-import { PageContext } from './Context'
 import { Link } from 'gatsby'
+import { PageContext } from './Context'
 import { DefaultLocale } from '../models/locales'
 
 interface Props {
@@ -29,6 +29,7 @@ const LanguageSwitcher: React.FC<Props> = ({ locales }) => {
         </Link>
       )
     }
+    return null
   })
 
   return <>{menuItems}</>

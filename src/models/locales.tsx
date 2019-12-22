@@ -36,7 +36,8 @@ export const EnglishTranslation: Translation = {
     language: 'English',
     subtitle: 'My fascicle',
     description:
-      'Personal website about topics like: information technologies, progressive web applications (PWA), software development and much more.',
+      'Personal website about topics like: information technologies, progressive web applications (PWA), software development and much ' +
+      'more.',
     keywords: 'computer science, progressive web applications, IT teaching, expert for software development',
     'navigation.about': 'About me',
     'navigation.projects': 'Projects',

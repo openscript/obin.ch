@@ -20,7 +20,7 @@ export const colors = {
   red: '#CC333F',
   orange: '#EB6841',
   yellow: '#EDC951',
-  contra: '#00A0B0',
+  contra: '#00A0B0'
 }
 
 export const fonts = {

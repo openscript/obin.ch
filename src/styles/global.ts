@@ -1,4 +1,4 @@
-import css from '@emotion/css';
+import css from '@emotion/css'
 import { dimensions, fonts, colors } from './variables'
 
 export const globalStyles = css`
@@ -16,7 +16,8 @@ export const globalStyles = css`
     color: ${colors.black};
   }
 
-  main, a {
+  main,
+  a {
     color: ${colors.white};
   }
 

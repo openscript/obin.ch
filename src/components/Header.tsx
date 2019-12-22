@@ -15,11 +15,9 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ className, children }) => (
-  <>
-    <StyledHeader>
-      <Content className={className}>{children}</Content>
-    </StyledHeader>
-  </>
+  <StyledHeader>
+    <Content className={className}>{children}</Content>
+  </StyledHeader>
 )
 
 export default Header

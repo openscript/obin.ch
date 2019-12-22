@@ -26,8 +26,18 @@ interface Props {
 }
 
 const viewBox = '0 0 100 2'
-const baseCoordinates = [[0, 0], [100, 0], [100, 2], [20, 0], [0, 2]]
-const invertedBaseCoordinates = [[0, 2], [80, 0], [100, 2]]
+const baseCoordinates = [
+  [0, 0],
+  [100, 0],
+  [100, 2],
+  [20, 0],
+  [0, 2]
+]
+const invertedBaseCoordinates = [
+  [0, 2],
+  [80, 0],
+  [100, 2]
+]
 
 const convertCoordinatesToHTMLPoints = (coordinates: Array<Array<number>>) => {
   return coordinates.map(p => p.join(' ')).join(', ')

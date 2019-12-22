@@ -23,7 +23,7 @@ const Spotlight: React.FC<SpotlightProps> = ({ className }) => (
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio animi doloribus possimus voluptas deserunt magnam. Dolore non culpa
       fugiat in commodi facere expedita blanditiis deleniti odio, veniam exercitationem ab ipsam.
     </div>
-    <Divider color={colors.dark} flipVertically={true} flipHorizontally={true} />
+    <Divider color={colors.dark} flipVertically flipHorizontally />
   </StyledSpotlightContainer>
 )
 
