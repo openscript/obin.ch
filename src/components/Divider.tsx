@@ -34,9 +34,11 @@ const baseCoordinates = [
   [0, 2.1]
 ]
 const invertedBaseCoordinates = [
-  [0, 2.1],
-  [80, 0.1],
-  [100, 2.1]
+  [0, 2.0],
+  [80, 0.0],
+  [100, 2.0],
+  [100, 2.1],
+  [0, 2.1]
 ]
 
 const convertCoordinatesToHTMLPoints = (coordinates: Array<Array<number>>) => {
