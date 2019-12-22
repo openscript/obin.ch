@@ -72,6 +72,7 @@ module.exports = {
         useLangKeyLayout: false,
         prefixDefault: false
       }
-    }
+    },
+    'gatsby-plugin-svgr'
   ]
 }

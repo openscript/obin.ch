@@ -12,7 +12,12 @@ declare module '*.module.scss' {
 
 declare module '*.module.css' {
   const cssModule: CSSModule
-  export = cssModuleYour turn
+  export = cssModule
+}
+
+declare module '*.svg' {
+  import { PureComponent, SVGProps } from 'react';
+  export class ReactComponent extends PureComponent<SVGProps<SVGSVGElement>> { }
 }
 
 declare namespace Intl {

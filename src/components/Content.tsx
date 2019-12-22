@@ -16,11 +16,9 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({ children, className }) => (
-  <>
-    <StyledContent>
-      <StyledInnerContent className={className}>{children}</StyledInnerContent>
-    </StyledContent>
-  </>
+  <StyledContent>
+    <StyledInnerContent className={className}>{children}</StyledInnerContent>
+  </StyledContent>
 )
 
 export default Content

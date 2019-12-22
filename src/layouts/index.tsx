@@ -9,7 +9,7 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 import Brand from '../components/parts/Brand'
-import Head from '../components/Head'
+import PageHead from '../components/PageHead'
 import TopNavigation from '../components/parts/TopNavigation'
 import { PageContext } from '../components/Context'
 
@@ -36,7 +36,8 @@ const StyledNav = styled.nav`
   align-items: center;
 `
 
-const IndexLayout: React.FC = ({ children }) => {
+const IndexLayout: React.FC = props => {
+  const { children } = props
   const currentPageContext = React.useContext(PageContext)
   return (
     <StaticQuery
@@ -56,7 +57,11 @@ const IndexLayout: React.FC = ({ children }) => {
       `}
       render={(data: StaticQueryProps) => (
         <>
-          <Head language={currentPageContext.langKey} title={data.site.siteMetadata.title} author={data.site.siteMetadata.author.name} />
+          <PageHead
+            language={currentPageContext.langKey}
+            title={data.site.siteMetadata.title}
+            author={data.site.siteMetadata.author.name}
+          />
           <StyledHeader>
             <Brand />
             <StyledNav>

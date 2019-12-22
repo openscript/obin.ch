@@ -6,7 +6,7 @@ import LocalizedLink from '../LocalizedLink'
 const HomepageLink = styled(LocalizedLink)`
   display: block;
   color: ${colors.white};
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
   text-decoration: none;
 
@@ -25,9 +25,7 @@ const HomepageLink = styled(LocalizedLink)`
   }
 `
 
-interface BrandProps {}
-
-const Brand: React.FC<BrandProps> = () => (
+const Brand: React.FC = () => (
   <>
     <h1>
       <HomepageLink to="/">

@@ -2,9 +2,10 @@ import { Link, GatsbyLinkProps } from 'gatsby'
 import React from 'react'
 import { PageContext } from './Context'
 
-const LocalizedLink: React.FC<GatsbyLinkProps<any>> = props => {
+const LocalizedLink: React.FC<GatsbyLinkProps<{}>> = props => {
+  const { to } = props
   const currentPageContext = React.useContext(PageContext)
-  let path = props.to
+  let path = to
   if (currentPageContext.langKey === 'de') {
     path = `/${currentPageContext.langKey}${path}`
   }

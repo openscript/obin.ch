@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
+import React from 'react'
 
 interface StyledDividerProps {
-  stickToBottom: boolean
   color: string
 }
 
@@ -9,8 +9,8 @@ const StyledDivider = styled.svg<StyledDividerProps>`
   pointer-events: none;
   position: absolute;
   width: 100%;
-  bottom: ${(props: StyledDividerProps) => (props.stickToBottom ? '0' : 'auto')};
   left: 0;
+  margin: -1px 0;
 
   polygon {
     fill: ${(props: StyledDividerProps) => props.color};
@@ -25,18 +25,18 @@ interface Props {
   color: string
 }
 
-const viewBox = '0 0 100 2'
+const viewBox = '0 0 100 2.1'
 const baseCoordinates = [
   [0, 0],
   [100, 0],
-  [100, 2],
-  [20, 0],
-  [0, 2]
+  [100, 2.1],
+  [20, 0.1],
+  [0, 2.1]
 ]
 const invertedBaseCoordinates = [
-  [0, 2],
-  [80, 0],
-  [100, 2]
+  [0, 2.1],
+  [80, 0.1],
+  [100, 2.1]
 ]
 
 const convertCoordinatesToHTMLPoints = (coordinates: Array<Array<number>>) => {
@@ -44,21 +44,21 @@ const convertCoordinatesToHTMLPoints = (coordinates: Array<Array<number>>) => {
 }
 
 const Divider: React.FC<Props> = props => {
-  const stickToBottom = !!props.flipVertically
-  const coordinates = props.invert ? invertedBaseCoordinates : baseCoordinates
-  let transform = ''
+  const { flipVertically, flipHorizontally, invert, color, className } = props
+  const coordinates = invert ? invertedBaseCoordinates : baseCoordinates
+  const transform: string[] = []
 
-  if (props.flipVertically) {
-    transform += 'scale(1 -1) translate(0 -2)'
+  if (flipVertically) {
+    transform.push('scale(1 -1) translate(0 -2.1)')
   }
 
-  if (props.flipHorizontally) {
-    transform += 'scale(-1 1) translate(-100 0)'
+  if (flipHorizontally) {
+    transform.push('scale(-1 1) translate(-100 0)')
   }
 
   return (
-    <StyledDivider stickToBottom={stickToBottom} color={props.color} viewBox={viewBox} className={props.className}>
-      <polygon points={convertCoordinatesToHTMLPoints(coordinates)} transform={transform} />
+    <StyledDivider color={color} viewBox={viewBox} className={className}>
+      <polygon points={convertCoordinatesToHTMLPoints(coordinates)} transform={transform.join(' ')} />
     </StyledDivider>
   )
 }

@@ -8,8 +8,8 @@ export const dimensions = {
   layout: {
     gutter: '1.5rem',
     pageWidth: '80rem',
-    headerHeight: '5rem',
-    footerHeight: '4rem'
+    headerHeight: '6rem',
+    footerHeight: '6rem'
   }
 }
 

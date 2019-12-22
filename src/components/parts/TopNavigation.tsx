@@ -30,11 +30,6 @@ const MenuItem = styled.li`
 const TopNavigation: React.FC<TopNavigationProps> = ({ className }) => (
   <Navigation className={className}>
     <MenuItem>
-      <LocalizedLink to="/about">
-        <FormattedMessage id="navigation.about" />
-      </LocalizedLink>
-    </MenuItem>
-    <MenuItem>
       <LocalizedLink to="/projects">
         <FormattedMessage id="navigation.projects" />
       </LocalizedLink>

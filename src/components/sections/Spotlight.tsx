@@ -6,25 +6,33 @@ import Divider from '../Divider'
 const StyledSpotlightContainer = styled.div`
   position: relative;
   min-height: 20rem;
-  height: 50vh;
+  height: 60vw;
   background-color: ${colors.white};
   color: ${colors.black};
   overflow: hidden;
+
+  @media screen and (min-width: 1200px) {
+    height: 60vh;
+  }
+`
+
+const SpotlightDivider = styled(Divider)`
+  bottom: 0;
 `
 
 interface SpotlightProps {
   className?: string
 }
 
-const Spotlight: React.FC<SpotlightProps> = ({ className }) => (
-  <StyledSpotlightContainer className={className}>
-    <Divider color={colors.dark} />
-    <div>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio animi doloribus possimus voluptas deserunt magnam. Dolore non culpa
-      fugiat in commodi facere expedita blanditiis deleniti odio, veniam exercitationem ab ipsam.
-    </div>
-    <Divider color={colors.dark} flipVertically flipHorizontally />
-  </StyledSpotlightContainer>
-)
+const Spotlight: React.FC<SpotlightProps> = props => {
+  const { className, children } = props
+
+  return (
+    <StyledSpotlightContainer className={className}>
+      {children}
+      <SpotlightDivider color={colors.dark} flipVertically flipHorizontally />
+    </StyledSpotlightContainer>
+  )
+}
 
 export default Spotlight
