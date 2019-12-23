@@ -13,7 +13,7 @@ export const dimensions = {
     footerHeight: '6rem'
   },
   breakpoints: {
-    tiny: '25rem',
+    tiny: '30rem',
     mobile: '50rem',
     small: '70rem'
   }

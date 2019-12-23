@@ -34,19 +34,22 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 1.4rem;
 
   @media (max-width: ${dimensions.breakpoints.small}) {
     width: 70%;
     padding: 0 10rem;
+    font-size: 1.2rem;
   }
 
   @media (max-width: ${dimensions.breakpoints.mobile}) {
     width: 80%;
     padding: 0 5rem;
+    font-size: 1rem;
   }
 
   @media (max-width: ${dimensions.breakpoints.tiny}) {
-    width: 80%;
+    width: 75%;
     padding: 0 1rem;
   }
 `
