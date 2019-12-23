@@ -31,11 +31,6 @@ const StyledHeader = styled(Header)`
   justify-content: space-between;
 `
 
-const StyledNav = styled.nav`
-  display: flex;
-  align-items: center;
-`
-
 const IndexLayout: React.FC = props => {
   const { children } = props
   const currentPageContext = React.useContext(PageContext)
@@ -64,9 +59,7 @@ const IndexLayout: React.FC = props => {
           />
           <StyledHeader>
             <Brand />
-            <StyledNav>
-              <TopNavigation />
-            </StyledNav>
+            <TopNavigation />
           </StyledHeader>
           <Main>{children}</Main>
           <Footer>

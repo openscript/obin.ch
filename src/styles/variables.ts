@@ -10,6 +10,9 @@ export const dimensions = {
     pageWidth: '80rem',
     headerHeight: '6rem',
     footerHeight: '6rem'
+  },
+  breakpoints: {
+    mobile: '50rem'
   }
 }
 
