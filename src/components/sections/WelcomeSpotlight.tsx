@@ -50,7 +50,7 @@ const Content = styled.div`
 
   @media (max-width: ${dimensions.breakpoints.tiny}) {
     width: 75%;
-    padding: 0 1rem;
+    padding: 0 1rem 0 0;
   }
 `
 
