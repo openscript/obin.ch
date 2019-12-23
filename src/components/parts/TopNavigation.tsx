@@ -30,7 +30,7 @@ const MenuList = styled.ul<MenuListProps>`
     left: 0;
     right: 0;
     z-index: 20;
-    background-color: ${colors.dark};
+    background-color: ${colors.brown};
 
     li {
       padding: 0 calc(${dimensions.layout.gutter} / 2);

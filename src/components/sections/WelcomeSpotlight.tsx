@@ -28,7 +28,7 @@ const StyledWelcome = styled(Welcome)`
 
 const Content = styled.div`
   position: absolute;
-  padding: 0 10rem;
+  padding: 0 13rem;
   width: 60%;
   height: 100%;
   display: flex;
@@ -37,10 +37,17 @@ const Content = styled.div`
 
   @media (max-width: ${dimensions.breakpoints.small}) {
     width: 70%;
+    padding: 0 10rem;
   }
 
   @media (max-width: ${dimensions.breakpoints.mobile}) {
-    width: 85%;
+    width: 80%;
+    padding: 0 5rem;
+  }
+
+  @media (max-width: ${dimensions.breakpoints.tiny}) {
+    width: 80%;
+    padding: 0 1rem;
   }
 `
 
