@@ -30,7 +30,7 @@ const Spotlight: React.FC<SpotlightProps> = props => {
   return (
     <StyledSpotlightContainer className={className}>
       {children}
-      <SpotlightDivider color={colors.dark} flipVertically flipHorizontally />
+      <SpotlightDivider color={colors.bright} flipVertically flipHorizontally />
     </StyledSpotlightContainer>
   )
 }

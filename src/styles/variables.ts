@@ -9,7 +9,7 @@ export const dimensions = {
     gutter: '1.5rem',
     pageWidth: '80rem',
     minimalPageWidth: '35rem',
-    headerHeight: '6rem',
+    headerHeight: '5rem',
     footerHeight: '6rem'
   },
   breakpoints: {
@@ -21,8 +21,10 @@ export const dimensions = {
 export const colors = {
   black: '#111111',
   white: '#EEEEEE',
-  dark: '#6A4A3C',
+  bright: '#DDDDDD',
+  dark: '#555555',
   red: '#CC333F',
+  brown: '#6A4A3C',
   orange: '#EB6841',
   yellow: '#EDC951',
   contra: '#00A0B0'

@@ -6,8 +6,9 @@ const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background-color: ${colors.dark};
+  background-color: ${colors.bright};
   padding-bottom: ${dimensions.layout.gutter};
+  color: ${colors.black};
 `
 
 interface MainProps {

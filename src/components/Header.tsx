@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   height: ${dimensions.layout.headerHeight};
-  background-color: ${colors.dark};
+  background-color: ${colors.brown};
 `
 
 const HeaderDivider = styled(Divider)`
@@ -24,7 +24,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ className, children }) => (
   <StyledHeader>
     <Content className={className}>{children}</Content>
-    <HeaderDivider color={colors.dark} />
+    <HeaderDivider color={colors.brown} />
   </StyledHeader>
 )
 
