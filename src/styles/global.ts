@@ -14,6 +14,7 @@ export const globalStyles = css`
     min-height: 100%;
     flex-direction: column;
     color: ${colors.black};
+    min-width: ${dimensions.layout.minimalPageWidth};
   }
 
   main,

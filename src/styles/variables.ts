@@ -8,11 +8,13 @@ export const dimensions = {
   layout: {
     gutter: '1.5rem',
     pageWidth: '80rem',
+    minimalPageWidth: '35rem',
     headerHeight: '6rem',
     footerHeight: '6rem'
   },
   breakpoints: {
-    mobile: '50rem'
+    mobile: '50rem',
+    small: '70rem'
   }
 }
 

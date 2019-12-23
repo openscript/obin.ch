@@ -5,7 +5,7 @@ import Divider from '../Divider'
 
 const StyledSpotlightContainer = styled.div`
   position: relative;
-  min-height: 30rem;
+  min-height: 25rem;
   height: 60vw;
   background-color: ${colors.white};
   color: ${colors.black};

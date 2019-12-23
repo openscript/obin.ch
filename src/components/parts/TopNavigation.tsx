@@ -33,29 +33,41 @@ const MenuList = styled.ul<MenuListProps>`
     background-color: ${colors.dark};
 
     li {
-      margin: 0 calc(${dimensions.layout.gutter} / 2);
+      padding: 0 calc(${dimensions.layout.gutter} / 2);
+      margin: 0;
+      border: none;
     }
 
     li:last-child {
-      margin-bottom: calc(${dimensions.layout.gutter} / 2);
+      padding-bottom: calc(${dimensions.layout.gutter} / 2);
     }
   }
 `
 
 const MenuItem = styled.li`
-  margin-left: calc(${dimensions.layout.gutter} / 2);
+  padding-left: calc(${dimensions.layout.gutter} / 2);
 
   a {
     display: block;
     text-decoration: none;
     padding: calc(${dimensions.layout.gutter} / 2);
-    background-color: rgba(255, 255, 255, 0.1);
     outline: 2px solid transparent;
+    transition: 200ms;
 
     &:hover {
       outline: 2px solid ${colors.white};
     }
+
+    &:focus,
+    &:active {
+      outline: 1px dotted ${colors.white};
+    }
   }
+`
+
+const OtherMenuItem = styled(MenuItem)`
+  border-left: 2px solid ${colors.white};
+  margin-left: calc(${dimensions.layout.gutter} / 2);
 `
 
 const StyledMenuButton = styled(MenuButton)`
@@ -97,9 +109,9 @@ const TopNavigation: React.FC<TopNavigationProps> = ({ className }) => {
             <FormattedMessage id="navigation.collection" />
           </LocalizedLink>
         </MenuItem>
-        <MenuItem>
+        <OtherMenuItem>
           <LanguageSwitcher locales={Locales} />
-        </MenuItem>
+        </OtherMenuItem>
       </MenuList>
     </Navigation>
   )

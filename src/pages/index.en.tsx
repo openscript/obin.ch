@@ -1,41 +1,17 @@
 import * as React from 'react'
 
-import styled from '@emotion/styled'
 import IndexLayout from '../layouts'
-import Spotlight from '../components/sections/Spotlight'
 import Content from '../components/Content'
-import { ReactComponent as Welcome } from '../assets/welcome.svg'
-import { dimensions } from '../styles/variables'
-
-const StyledContent = styled.div`
-  padding: ${dimensions.layout.gutter} calc((100vw - ${dimensions.layout.pageWidth}) / 2);
-  width: 100%;
-  height: 100%;
-  position: relative;
-`
-
-const StyledInnerContent = styled.div`
-  padding: 0 ${dimensions.layout.gutter};
-`
-
-const StyledWelcome = styled(Welcome)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`
+import WelcomeSpotlight from '../components/sections/WelcomeSpotlight'
 
 const IndexPage: React.FC = () => (
   <IndexLayout>
-    <Spotlight>
-      <StyledContent>
-        <StyledInnerContent>
-          <h2>Welcome</h2>
-          <StyledWelcome />
-        </StyledInnerContent>
-      </StyledContent>
-    </Spotlight>
+    <WelcomeSpotlight>
+      <h2>Hello!</h2>
+      <p>
+        <strong>Great to have you here.</strong> On this website I collect things of which I think they can be useful for other people.
+      </p>
+    </WelcomeSpotlight>
     <Content>
       <p>Welcome :)</p>
     </Content>
