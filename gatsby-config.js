@@ -73,6 +73,7 @@ module.exports = {
         prefixDefault: false
       }
     },
-    'gatsby-plugin-svgr'
+    'gatsby-plugin-svgr',
+    `gatsby-plugin-graphql-codegen`
   ]
 }

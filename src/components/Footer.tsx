@@ -7,7 +7,7 @@ import Divider from './Divider'
 const StyledFooter = styled.footer`
   position: relative;
   height: ${dimensions.layout.footerHeight};
-  background-color: ${colors.dark};
+  background-color: ${colors.brown};
   display: flex;
   align-items: center;
   font-size: 0.8rem;
@@ -25,7 +25,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className, children }) => (
   <>
     <StyledFooter className={className}>
-      <StyledDivider color={colors.dark} invert />
+      <StyledDivider color={colors.brown} invert />
       <Content>{children}</Content>
     </StyledFooter>
   </>

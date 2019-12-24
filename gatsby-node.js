@@ -40,7 +40,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const allMarkdown = await graphql(`
@@ -59,8 +59,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   if (allMarkdown.errors) {
-    console.error(allMarkdown.errors)
-    throw new Error(allMarkdown.errors)
+    reporter.panicOnBuild(allMarkdown.errors)
   }
 
   allMarkdown.data.allMarkdownRemark.edges.forEach(({ node }) => {
