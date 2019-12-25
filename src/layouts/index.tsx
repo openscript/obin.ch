@@ -12,19 +12,7 @@ import Brand from '../components/parts/Brand'
 import PageHead from '../components/PageHead'
 import TopNavigation from '../components/parts/TopNavigation'
 import { PageContext } from '../components/Context'
-
-interface StaticQueryProps {
-  site: {
-    siteMetadata: {
-      title: string
-      license: string
-      author: {
-        name: string
-      }
-    }
-    buildTime: string
-  }
-}
+import { IndexLayoutQuery } from '../../graphql-types'
 
 const StyledHeader = styled(Header)`
   display: flex;
@@ -37,7 +25,7 @@ const IndexLayout: React.FC = props => {
   return (
     <StaticQuery
       query={graphql`
-        query IndexLayoutQuery {
+        query IndexLayout {
           site {
             siteMetadata {
               title
@@ -50,12 +38,12 @@ const IndexLayout: React.FC = props => {
           }
         }
       `}
-      render={(data: StaticQueryProps) => (
+      render={(data: IndexLayoutQuery) => (
         <>
           <PageHead
             language={currentPageContext.langKey}
-            title={data.site.siteMetadata.title}
-            author={data.site.siteMetadata.author.name}
+            title={data.site?.siteMetadata?.title || 'Title'}
+            author={data.site?.siteMetadata?.author?.name || 'Author'}
           />
           <StyledHeader>
             <Brand />
@@ -63,8 +51,8 @@ const IndexLayout: React.FC = props => {
           </StyledHeader>
           <Main>{children}</Main>
           <Footer>
-            {data.site.siteMetadata.license} - <FormattedDate value={new Date(data.site.buildTime)} />{' '}
-            <FormattedTime value={new Date(data.site.buildTime)} />
+            {data.site?.siteMetadata?.license} - <FormattedDate value={new Date(data.site?.buildTime)} />{' '}
+            <FormattedTime value={new Date(data.site?.buildTime)} />
           </Footer>
         </>
       )}
