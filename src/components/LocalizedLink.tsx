@@ -1,6 +1,6 @@
 import { Link, GatsbyLinkProps } from 'gatsby'
 import React from 'react'
-import { PageContext } from './Context'
+import { PageContext } from '../models/pageContext'
 
 const LocalizedLink: React.FC<GatsbyLinkProps<{}>> = props => {
   const { to } = props

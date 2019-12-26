@@ -11,8 +11,8 @@ import Footer from '../components/Footer'
 import Brand from '../components/parts/Brand'
 import PageHead from '../components/PageHead'
 import TopNavigation from '../components/parts/TopNavigation'
-import { PageContext } from '../components/Context'
 import { IndexLayoutQuery } from '../../graphql-types'
+import { PageContext } from '../models/pageContext'
 
 const StyledHeader = styled(Header)`
   display: flex;

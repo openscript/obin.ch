@@ -1,12 +1,12 @@
 import * as React from 'react'
 
 import IndexLayout from '../layouts'
-import Spotlight from '../components/sections/Spotlight'
+import Spotlight from '../components/Spotlight'
 import Content from '../components/Content'
 
 const ProjectsPage = () => (
   <IndexLayout>
-    <Spotlight></Spotlight>
+    <Spotlight />
     <Content>
       <h2>Projects</h2>
     </Content>

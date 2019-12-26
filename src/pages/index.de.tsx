@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import IndexLayout from '../layouts'
 import WelcomeSpotlight from '../components/sections/WelcomeSpotlight'
-import Content from '../components/Content'
+import FeaturedProjects from '../components/sections/FeaturedProjects'
 
 const IndexPage: React.FC = () => (
   <IndexLayout>
@@ -13,9 +13,7 @@ const IndexPage: React.FC = () => (
         nützlich sind.
       </p>
     </WelcomeSpotlight>
-    <Content>
-      <p>Willkommen :)</p>
-    </Content>
+    <FeaturedProjects />
   </IndexLayout>
 )
 

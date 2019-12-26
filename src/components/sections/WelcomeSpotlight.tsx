@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import styled from '@emotion/styled'
-import Spotlight from './Spotlight'
+import Spotlight from '../Spotlight'
 import { ReactComponent as Welcome } from '../../assets/welcome.svg'
 import { dimensions } from '../../styles/variables'
 

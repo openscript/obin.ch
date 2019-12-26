@@ -1,8 +1,8 @@
 import * as React from 'react'
 
 import IndexLayout from '../layouts'
-import Content from '../components/Content'
 import WelcomeSpotlight from '../components/sections/WelcomeSpotlight'
+import FeaturedProjects from '../components/sections/FeaturedProjects'
 
 const IndexPage: React.FC = () => (
   <IndexLayout>
@@ -12,9 +12,7 @@ const IndexPage: React.FC = () => (
         <strong>Great to have you here.</strong> On this website I collect things of which I think they can be useful for other people.
       </p>
     </WelcomeSpotlight>
-    <Content>
-      <p>Welcome :)</p>
-    </Content>
+    <FeaturedProjects />
   </IndexLayout>
 )
 

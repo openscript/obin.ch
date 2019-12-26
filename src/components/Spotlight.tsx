@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { colors } from '../../styles/variables'
-import Divider from '../Divider'
+import { colors } from '../styles/variables'
+import Divider from './Divider'
 
-const StyledSpotlightContainer = styled.div`
+const StyledSpotlightContainer = styled.section`
   position: relative;
   min-height: 25rem;
   height: 60vw;

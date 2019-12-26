@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { PageContext } from './Context'
 import { DefaultLocale } from '../models/locales'
+import { PageContext } from '../models/pageContext'
 
 interface Props {
   locales: { [key: string]: { key: string; name: string } }

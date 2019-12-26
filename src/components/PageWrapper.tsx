@@ -3,8 +3,7 @@ import { IntlProvider } from 'react-intl'
 import { Global } from '@emotion/core'
 import { GermanTranslation, EnglishTranslation } from '../models/locales'
 import { globalStyles } from '../styles/global'
-import { PageContext as PageContextModel, defaultPageContext } from '../models/pageContext'
-import { PageContext } from './Context'
+import { PageContextModel, defaultPageContext, PageContext } from '../models/pageContext'
 
 interface Props {
   className?: string
