@@ -26,7 +26,7 @@
     "@emotion/core": "^10.0.27",
     "@emotion/css": "^10.0.27",
     "@emotion/styled": "^10.0.27",
-    "@formatjs/intl-relativetimeformat": "^4.5.1",
+    "@formatjs/intl-relativetimeformat": "^4.5.3",
     "@svgr/webpack": "^5.0.0",
     "babel-plugin-styled-components": "^1.10.6",
     "classnames": "^2.2.6",
@@ -60,12 +60,12 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "react-intl": "^3.9.2",
+    "react-intl": "^3.10.0",
     "typescript": "^3.7.4"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.9",
-    "@types/node": "^13.1.0",
+    "@types/node": "^13.1.1",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/react-helmet": "^5.0.14",
