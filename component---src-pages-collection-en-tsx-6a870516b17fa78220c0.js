@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{v0Jw:function(c,n,t){"use strict";t.r(n);t("q1tI");var e=t("+ego"),l=t("Q09j"),u=t("Cqiw"),o=t("qKvR");n.default=function(){return Object(o.c)(e.a,null,Object(o.c)(l.a,null),Object(o.c)(u.a,null,Object(o.c)("h2",null,"Collection")))}}}]);
-//# sourceMappingURL=component---src-pages-collection-en-tsx-6a870516b17fa78220c0.js.map
