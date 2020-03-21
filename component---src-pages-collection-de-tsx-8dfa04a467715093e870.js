@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{ePvM:function(n,c,e){"use strict";e.r(c);e("q1tI");var t=e("+ego"),u=e("4Z5W"),l=e("Cqiw"),a=e("qKvR");c.default=function(){return Object(a.c)(t.a,null,Object(a.c)(u.a,null),Object(a.c)(l.a,null,Object(a.c)("h2",null,"Sammlung")))}}}]);
+//# sourceMappingURL=component---src-pages-collection-de-tsx-8dfa04a467715093e870.js.map
