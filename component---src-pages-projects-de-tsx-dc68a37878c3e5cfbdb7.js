@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{hTmU:function(c,n,e){"use strict";e.r(n);e("q1tI");var t=e("+ego"),u=e("4Z5W"),l=e("Cqiw"),o=e("qKvR");n.default=function(){return Object(o.c)(t.a,null,Object(o.c)(u.a,null),Object(o.c)(l.a,null,Object(o.c)("h2",null,"Projekte")))}}}]);
-//# sourceMappingURL=component---src-pages-projects-de-tsx-dc68a37878c3e5cfbdb7.js.map
