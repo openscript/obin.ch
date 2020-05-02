@@ -15,14 +15,14 @@
     "dev": "gatsby develop",
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
-    "start": "npm run dev",
-    "test": "npm run type-check && npm run lint",
-    "type-check": "tsc"
+    "start": "yarn dev",
+    "test": "yarn lint"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "dependencies": {
+    "@babel/core": "^7.9.6",
     "@emotion/core": "^10.0.28",
     "@emotion/css": "^10.0.27",
     "@emotion/styled": "^10.0.27",
@@ -41,7 +41,7 @@
     "gatsby-plugin-react-helmet": "^3.3.0",
     "gatsby-plugin-sharp": "^2.6.0",
     "gatsby-plugin-svgr": "^2.0.2",
-    "gatsby-plugin-typescript": "^2.4.0",
+    "gatsby-plugin-ts": "^2.7.1",
     "gatsby-remark-copy-linked-files": "^2.3.1",
     "gatsby-remark-images": "^3.3.0",
     "gatsby-remark-prismjs": "^3.5.0",
@@ -51,6 +51,7 @@
     "gatsby-transformer-json": "^2.4.0",
     "gatsby-transformer-remark": "^2.8.3",
     "gatsby-transformer-sharp": "^2.5.0",
+    "graphql": "^14.6.0",
     "intl-pluralrules": "^1.2.0",
     "modern-normalize": "^0.6.0",
     "normalize.css": "^8.0.1",
@@ -61,6 +62,8 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "react-intl": "^4.5.1",
+    "react-is": "^16.13.1",
+    "styled-components": "^5.1.0",
     "typescript": "^3.8.3",
     "yarn": "^1.22.0"
   },

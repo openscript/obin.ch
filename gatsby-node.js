@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             fields {
               layout
-              slug
+              slus
             }
           }
         }

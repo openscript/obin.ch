@@ -10,4 +10,5 @@ Personal website about topics like: information technologies, progressive web ap
 
 For this project the following resources were used:
 
-- [Gatsby Starter: TypeScript Plus (MIT)](https://github.com/resir014/gatsby-starter-typescript-plus)
+- [Template: Gatsby Starter TypeScript Plus (MIT)](https://github.com/resir014/gatsby-starter-typescript-plus)
+- [Article: Part 2: Converting Gatsby Config and Node API to TypeScript](https://www.extensive.one/converting-gatsby-config-and-node-api-to-typescript/)

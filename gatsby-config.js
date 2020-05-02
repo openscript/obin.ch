@@ -61,7 +61,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-emotion',
-    'gatsby-plugin-typescript',
+    'gatsby-plugin-ts',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',

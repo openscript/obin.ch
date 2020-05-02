@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
-import { ClassNames } from '@emotion/core'
 
 const Burger = styled.div`
   width: 2.2rem;
