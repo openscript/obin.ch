@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{"419A":function(e,t,c){"use strict";c.r(t);c("q1tI");var n=c("+ego"),l=c("FrX+"),o=c("tk3Z"),u=c("qKvR");t.default=function(){return Object(u.c)(n.a,null,Object(u.c)(l.a,null,Object(u.c)("h2",null,"Hello!"),Object(u.c)("p",null,Object(u.c)("strong",null,"Great to have you here.")," On this website I collect things of which I think they can be useful for other people.")),Object(u.c)(o.a,null))}}}]);
-//# sourceMappingURL=component---src-pages-index-en-tsx-a11d8105859d33b346ba.js.map
