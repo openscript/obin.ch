@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useIntl } from 'react-intl'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 interface HeadProps {
   language: string
