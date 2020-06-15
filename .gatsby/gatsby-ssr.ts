@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+/*
 export { wrapPageElement } from './config/wrapPageElement'
 
 if (!Intl.PluralRules) {
@@ -10,3 +10,4 @@ if (!Intl.RelativeTimeFormat) {
   require('@formatjs/intl-relativetimeformat/dist/locale-data/de') // Add locale data for de
   require('@formatjs/intl-relativetimeformat/dist/locale-data/en') // Add locale data for de
 }
+*/
