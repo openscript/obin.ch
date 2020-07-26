@@ -2,7 +2,7 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useStaticQuery, graphql } from 'gatsby'
 import Content from '../Content'
-import { FeaturedProjectsQuery } from '../../../graphql-types'
+import { FeaturedProjectsQuery } from '../../../graphql-type'
 
 const FeaturedProjects: React.FC = () => {
   const projects = useStaticQuery<FeaturedProjectsQuery>(graphql`
@@ -22,7 +22,7 @@ const FeaturedProjects: React.FC = () => {
       <h2>
         <FormattedMessage id="navigation.projects" />
       </h2>
-      {projects.allMarkdownRemark.nodes.map(p => {
+      {projects.allMarkdownRemark.nodes.map((p) => {
         return <div>{p.frontmatter?.title}</div>
       })}
     </Content>

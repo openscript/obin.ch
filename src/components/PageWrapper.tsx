@@ -10,9 +10,7 @@ interface Props {
   pageContext: PageContextModel
 }
 
-const PageWrapper: React.FC<Props> = props => {
-  const { pageContext, children } = props
-
+const PageWrapper: React.FC<Props> = ({ children, pageContext }) => {
   const translation = pageContext.langKey === 'de' ? GermanTranslation : EnglishTranslation
   const currentPageContext = { ...defaultPageContext, ...{ langKey: translation.key, slug: pageContext.slug } }
   return (

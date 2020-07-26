@@ -1,13 +1,13 @@
-/*
-export { wrapPageElement } from './config/wrapPageElement'
+export { wrapPageElement } from './wrapPageElement';
 
 if (!Intl.PluralRules) {
-  require('intl-pluralrules')
+  require('@formatjs/intl-pluralrules/polyfill');
+  require('@formatjs/intl-pluralrules/locale-data/de');
+  require('@formatjs/intl-pluralrules/locale-data/en');
 }
 
 if (!Intl.RelativeTimeFormat) {
-  require('@formatjs/intl-relativetimeformat/polyfill')
-  require('@formatjs/intl-relativetimeformat/dist/locale-data/de') // Add locale data for de
-  require('@formatjs/intl-relativetimeformat/dist/locale-data/en') // Add locale data for de
+  require('@formatjs/intl-relativetimeformat/polyfill');
+  require('@formatjs/intl-relativetimeformat/locale-data/de');
+  require('@formatjs/intl-relativetimeformat/locale-data/en');
 }
-*/

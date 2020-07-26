@@ -1,6 +1,5 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
 import { FileSystemNode } from 'gatsby-source-filesystem';
-import { Query } from '../graphql-types';
 import path from 'path';
 
 type Frontmatter = {
@@ -39,7 +38,7 @@ const node: ITSConfigFn<'node'> = () => ({
   createPages: async ({ graphql, actions, reporter }) => {
     const { createPage } = actions
 
-    const allMarkdown = await graphql<Query>(`
+    const allMarkdown = await graphql<any>(`
       {
         allMarkdownRemark(limit: 1000) {
           edges {

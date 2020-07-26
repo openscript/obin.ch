@@ -17,6 +17,14 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
     'gatsby-plugin-sharp',
     'gatsby-plugin-svgr',
     'gatsby-plugin-ts',
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'en',
+        useLangKeyLayout: false,
+        prefixDefault: false
+      }
+    },
 
     // Sources
     {

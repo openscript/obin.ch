@@ -16,13 +16,7 @@ declare module '*.module.css' {
 }
 
 declare module '*.svg' {
-  import { PureComponent, SVGProps } from 'react';
-  export class ReactComponent extends PureComponent<SVGProps<SVGSVGElement>> { }
-}
+  import { PureComponent, SVGProps } from 'react'
 
-declare namespace Intl {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  class RelativeTimeFormat {
-    constructor(locale: string);
-  }
+  export class ReactComponent extends PureComponent<SVGProps<SVGSVGElement>> { }
 }

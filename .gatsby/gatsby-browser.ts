@@ -1,3 +1,1 @@
-/*
-export { wrapPageElement } from './config/wrapPageElement'
-*/
+export { wrapPageElement } from './wrapPageElement';

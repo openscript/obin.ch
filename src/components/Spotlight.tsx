@@ -24,7 +24,7 @@ interface SpotlightProps {
   className?: string
 }
 
-const Spotlight: React.FC<SpotlightProps> = props => {
+const Spotlight: React.FC<SpotlightProps> = (props) => {
   const { className, children } = props
 
   return (

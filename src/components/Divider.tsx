@@ -42,10 +42,10 @@ const invertedBaseCoordinates = [
 ]
 
 const convertCoordinatesToHTMLPoints = (coordinates: Array<Array<number>>) => {
-  return coordinates.map(p => p.join(' ')).join(', ')
+  return coordinates.map((p) => p.join(' ')).join(', ')
 }
 
-const Divider: React.FC<Props> = props => {
+const Divider: React.FC<Props> = (props) => {
   const { flipVertically, flipHorizontally, invert, color, className } = props
   const coordinates = invert ? invertedBaseCoordinates : baseCoordinates
   const transform: string[] = []
