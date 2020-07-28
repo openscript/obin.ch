@@ -20,11 +20,11 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
       resolve: 'gatsby-plugin-ts',
       options: {
         codegen: true,
-        fileName: `${projectRoot}/gatsby-graphql.ts`,
+        fileName: 'graphql-type.ts',
         documentPaths: [
-          `${projectRoot}/src/**/*.{ts,tsx}`,
-          `${projectRoot}/node_modules/gatsby-*/**/*.js`,
-          `${projectRoot}/gatsby-node.ts`,
+          'src/**/*.{ts,tsx}',
+          'node_modules/gatsby-*/**/*.js',
+          '.gatsby/gatsby-node.ts',
         ],
       }
     },
