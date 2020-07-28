@@ -44,8 +44,8 @@ const node: ITSConfigFn<'node'> = () => ({
           edges {
             node {
               fields {
-                layout
                 slug
+                layout
               }
             }
           }

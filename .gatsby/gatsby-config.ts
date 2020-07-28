@@ -16,7 +16,18 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-svgr',
-    'gatsby-plugin-ts',
+    {
+      resolve: 'gatsby-plugin-ts',
+      options: {
+        codegen: true,
+        fileName: `${projectRoot}/gatsby-graphql.ts`,
+        documentPaths: [
+          `${projectRoot}/src/**/*.{ts,tsx}`,
+          `${projectRoot}/node_modules/gatsby-*/**/*.js`,
+          `${projectRoot}/gatsby-node.ts`,
+        ],
+      }
+    },
     {
       resolve: 'gatsby-plugin-i18n',
       options: {

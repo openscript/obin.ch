@@ -11,7 +11,6 @@ import Footer from '../components/Footer'
 import Brand from '../components/parts/Brand'
 import PageHead from '../components/PageHead'
 import TopNavigation from '../components/parts/TopNavigation'
-import { IndexLayoutQuery } from '../../graphql-type'
 import { PageContext } from '../models/pageContext'
 
 const StyledHeader = styled(Header)`
@@ -38,7 +37,7 @@ const IndexLayout: React.FC = (props) => {
           }
         }
       `}
-      render={(data: IndexLayoutQuery) => (
+      render={(data: any) => (
         <>
           <PageHead
             language={currentPageContext.langKey}

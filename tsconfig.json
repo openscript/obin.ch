@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "target": "esnext",
+    "target": "es2018",
     "jsx": "preserve",
-    "lib": ["dom", "es2015", "es2017"],
+    "lib": ["dom"],
     "strict": false,
     "noEmit": true,
     "isolatedModules": true,
@@ -15,6 +15,6 @@
     "removeComments": false,
     "preserveConstEnums": true
   },
-  "include": ["./src/**/*"],
-  "files": ["graphql-type.ts"]
+  "include": ["./src/**/*"]
+  //"files": ["graphql-type.ts"]
 }
