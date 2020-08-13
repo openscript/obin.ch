@@ -17,9 +17,8 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
     'gatsby-plugin-sharp',
     'gatsby-plugin-svgr',
     {
-      resolve: 'gatsby-plugin-ts',
+      resolve: 'gatsby-plugin-graphql-codegen',
       options: {
-        codegen: true,
         fileName: 'graphql-type.ts',
         documentPaths: [
           'src/**/*.{ts,tsx}',
