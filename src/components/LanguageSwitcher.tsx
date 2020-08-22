@@ -14,7 +14,7 @@ const LanguageSwitcher: React.FC<Props> = ({ locales }) => {
       const trailedPath = path.split('/').slice(2).join('/')
       return `/${trailedPath}`
     }
-    return `/${langKey}/${path}`
+    return `/${langKey}${path}`
   }
 
   const currentPageContext = React.useContext(PageContext)
