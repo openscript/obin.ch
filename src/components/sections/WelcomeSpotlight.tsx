@@ -1,22 +1,22 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import styled from '@emotion/styled'
-import Spotlight from '../Spotlight'
-import { ReactComponent as Welcome } from '../../assets/welcome.svg'
-import { dimensions } from '../../styles/variables'
+import styled from '@emotion/styled';
+import Spotlight from '../Spotlight';
+import { ReactComponent as Welcome } from '../../assets/welcome.svg';
+import { dimensions } from '../../styles/variables';
 
 const StyledContent = styled.div`
   padding: ${dimensions.layout.gutter} calc((100vw - ${dimensions.layout.pageWidth}) / 2);
   width: 100%;
   height: 100%;
   position: relative;
-`
+`;
 
 const StyledInnerContent = styled.div`
   padding: 0 ${dimensions.layout.gutter};
   position: relative;
   height: 100%;
-`
+`;
 
 const StyledWelcome = styled(Welcome)`
   position: absolute;
@@ -24,7 +24,7 @@ const StyledWelcome = styled(Welcome)`
   left: 0;
   width: 100%;
   height: 100%;
-`
+`;
 
 const Content = styled.div`
   position: absolute;
@@ -52,7 +52,7 @@ const Content = styled.div`
     width: 75%;
     padding: 0 1rem 0 0;
   }
-`
+`;
 
 const WelcomeSpotlight: React.FC = ({ children }) => (
   <Spotlight>
@@ -63,6 +63,6 @@ const WelcomeSpotlight: React.FC = ({ children }) => (
       </StyledInnerContent>
     </StyledContent>
   </Spotlight>
-)
+);
 
-export default WelcomeSpotlight
+export default WelcomeSpotlight;

@@ -1,7 +1,7 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { colors } from '../../styles/variables'
-import LocalizedLink from '../LocalizedLink'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import { colors } from '../../styles/variables';
+import LocalizedLink from '../LocalizedLink';
 
 const HomepageLink = styled(LocalizedLink)`
   display: block;
@@ -23,7 +23,7 @@ const HomepageLink = styled(LocalizedLink)`
     margin-left: -1rem;
     transition: 0.5s;
   }
-`
+`;
 
 const Brand: React.FC = () => (
   <>
@@ -33,6 +33,6 @@ const Brand: React.FC = () => (
       </HomepageLink>
     </h1>
   </>
-)
+);
 
-export default Brand
+export default Brand;

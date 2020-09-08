@@ -1,27 +1,27 @@
-import * as React from 'react'
-import { graphql } from 'gatsby'
+import * as React from 'react';
+import { graphql } from 'gatsby';
 
-import IndexLayout from '../layouts'
+import IndexLayout from '../layouts';
 
 interface PageTemplateProps {
   data: {
     site: {
       siteMetadata: {
-        title: string
-        description: string
+        title: string;
+        description: string;
         author: {
-          name: string
-        }
-      }
-    }
+          name: string;
+        };
+      };
+    };
     markdownRemark: {
-      html: string
-      excerpt: string
+      html: string;
+      excerpt: string;
       frontmatter: {
-        title: string
-      }
-    }
-  }
+        title: string;
+      };
+    };
+  };
 }
 
 const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
@@ -30,9 +30,9 @@ const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
     {/* eslint-disable-next-line react/no-danger */}
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
   </IndexLayout>
-)
+);
 
-export default PageTemplate
+export default PageTemplate;
 
 export const query = graphql`
   query PageTemplateQuery($slug: String!) {
@@ -52,4 +52,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

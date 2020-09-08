@@ -1,8 +1,8 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import IndexLayout from '../layouts'
-import Spotlight from '../components/Spotlight'
-import Content from '../components/Content'
+import IndexLayout from '../layouts';
+import Spotlight from '../components/Spotlight';
+import Content from '../components/Content';
 
 const ProjectsPage: React.FC = () => (
   <IndexLayout>
@@ -11,6 +11,6 @@ const ProjectsPage: React.FC = () => (
       <h2>Projects</h2>
     </Content>
   </IndexLayout>
-)
+);
 
-export default ProjectsPage
+export default ProjectsPage;

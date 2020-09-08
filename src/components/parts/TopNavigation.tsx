@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
-import styled from '@emotion/styled'
-import { FormattedMessage } from 'react-intl'
-import { dimensions, colors } from '../../styles/variables'
-import LocalizedLink from '../LocalizedLink'
-import LanguageSwitcher from '../LanguageSwitcher'
-import { Locales } from '../../models/locales'
-import MenuButton from '../MenuButton'
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
+import { FormattedMessage } from 'react-intl';
+import { dimensions, colors } from '../../styles/variables';
+import LocalizedLink from '../LocalizedLink';
+import LanguageSwitcher from '../LanguageSwitcher';
+import { Locales } from '../../models/locales';
+import MenuButton from '../MenuButton';
 
 interface MenuListProps {
-  isOpen?: boolean
+  isOpen?: boolean;
 }
 
 const Navigation = styled.nav`
   display: flex;
   align-items: center;
-`
+`;
 
 const MenuList = styled.ul<MenuListProps>`
   display: flex;
@@ -42,7 +42,7 @@ const MenuList = styled.ul<MenuListProps>`
       padding-bottom: calc(${dimensions.layout.gutter} / 2);
     }
   }
-`
+`;
 
 const MenuItem = styled.li`
   padding-left: calc(${dimensions.layout.gutter} / 2);
@@ -63,12 +63,12 @@ const MenuItem = styled.li`
       outline: 1px dotted ${colors.white};
     }
   }
-`
+`;
 
 const OtherMenuItem = styled(MenuItem)`
   border-left: 2px solid ${colors.white};
   margin-left: calc(${dimensions.layout.gutter} / 2);
-`
+`;
 
 const StyledMenuButton = styled(MenuButton)`
   display: none;
@@ -76,14 +76,14 @@ const StyledMenuButton = styled(MenuButton)`
   @media (max-width: ${dimensions.breakpoints.mobile}) {
     display: block;
   }
-`
+`;
 
 interface TopNavigationProps {
-  className?: string
+  className?: string;
 }
 
 const TopNavigation: React.FC<TopNavigationProps> = ({ className }) => {
-  const [open, isOpen] = useState(false)
+  const [open, isOpen] = useState(false);
 
   return (
     <Navigation>
@@ -114,7 +114,7 @@ const TopNavigation: React.FC<TopNavigationProps> = ({ className }) => {
         </OtherMenuItem>
       </MenuList>
     </Navigation>
-  )
-}
+  );
+};
 
-export default TopNavigation
+export default TopNavigation;

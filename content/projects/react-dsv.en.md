@@ -1,5 +1,5 @@
 ---
-title: openscript GmbH
+title: React DSV component
 featured: true
 ---
 

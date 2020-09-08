@@ -1,7 +1,7 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { colors } from '../styles/variables'
-import Divider from './Divider'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import { colors } from '../styles/variables';
+import Divider from './Divider';
 
 const StyledSpotlightContainer = styled.section`
   position: relative;
@@ -14,25 +14,25 @@ const StyledSpotlightContainer = styled.section`
   @media screen and (min-width: 1200px) {
     height: 60vh;
   }
-`
+`;
 
 const SpotlightDivider = styled(Divider)`
   bottom: 0;
-`
+`;
 
 interface SpotlightProps {
-  className?: string
+  className?: string;
 }
 
 const Spotlight: React.FC<SpotlightProps> = (props) => {
-  const { className, children } = props
+  const { className, children } = props;
 
   return (
     <StyledSpotlightContainer className={className}>
       {children}
       <SpotlightDivider color={colors.bright} flipVertically flipHorizontally />
     </StyledSpotlightContainer>
-  )
-}
+  );
+};
 
-export default Spotlight
+export default Spotlight;

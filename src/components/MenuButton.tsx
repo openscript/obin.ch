@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import styled from '@emotion/styled'
+import React, { useState } from 'react';
+import styled from '@emotion/styled';
 
 const Burger = styled.div`
   width: 2.2rem;
@@ -28,29 +28,29 @@ const Burger = styled.div`
   &.active:before {
     transform: translateY(10px) rotate(135deg);
   }
-`
+`;
 
 interface MenuButtonProps {
-  className?: string
-  onClick?: (active: boolean) => void
+  className?: string;
+  onClick?: (active: boolean) => void;
 }
 
 const MenuButton: React.FC<MenuButtonProps> = ({ className, onClick }) => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
 
   const toggleActive = () => {
-    const newActive = !active
-    setActive(newActive)
+    const newActive = !active;
+    setActive(newActive);
     if (onClick) {
-      onClick(newActive)
+      onClick(newActive);
     }
-  }
+  };
 
   return (
     <Burger className={`${className}${active ? ' active' : ''}`} onClick={toggleActive}>
       <div />
     </Burger>
-  )
-}
+  );
+};
 
-export default MenuButton
+export default MenuButton;

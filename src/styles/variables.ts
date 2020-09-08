@@ -17,7 +17,7 @@ export const dimensions = {
     mobile: '50rem',
     small: '70rem'
   }
-}
+};
 
 export const colors = {
   black: '#111111',
@@ -29,8 +29,8 @@ export const colors = {
   orange: '#EB6841',
   yellow: '#EDC951',
   contra: '#00A0B0'
-}
+};
 
 export const fonts = {
   sansSerif: "'Roboto', 'Verdana', 'Ubuntu', sans-serif"
-}
+};

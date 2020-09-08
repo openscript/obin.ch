@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import * as React from 'react';
+import { Link } from 'gatsby';
 
-import IndexLayout from '../layouts'
-import Content from '../components/Content'
+import IndexLayout from '../layouts';
+import Content from '../components/Content';
 
 const NotFoundPage = () => (
   <IndexLayout>
@@ -13,6 +13,6 @@ const NotFoundPage = () => (
       </p>
     </Content>
   </IndexLayout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

@@ -1,8 +1,8 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { dimensions, colors } from '../styles/variables'
-import Content from './Content'
-import Divider from './Divider'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import { dimensions, colors } from '../styles/variables';
+import Content from './Content';
+import Divider from './Divider';
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -12,14 +12,14 @@ const StyledFooter = styled.footer`
   align-items: center;
   font-size: 0.8rem;
   color: ${colors.white};
-`
+`;
 
 const StyledDivider = styled(Divider)`
   bottom: 100%;
-`
+`;
 
 interface FooterProps {
-  className?: string
+  className?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({ className, children }) => (
@@ -29,6 +29,6 @@ const Footer: React.FC<FooterProps> = ({ className, children }) => (
       <Content>{children}</Content>
     </StyledFooter>
   </>
-)
+);
 
-export default Footer
+export default Footer;

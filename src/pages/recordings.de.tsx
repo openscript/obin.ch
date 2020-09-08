@@ -1,8 +1,8 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import IndexLayout from '../layouts'
-import Spotlight from '../components/Spotlight'
-import Content from '../components/Content'
+import IndexLayout from '../layouts';
+import Spotlight from '../components/Spotlight';
+import Content from '../components/Content';
 
 const RecordingsPage: React.FC = () => (
   <IndexLayout>
@@ -11,6 +11,6 @@ const RecordingsPage: React.FC = () => (
       <h2>Aufnahmen</h2>
     </Content>
   </IndexLayout>
-)
+);
 
-export default RecordingsPage
+export default RecordingsPage;

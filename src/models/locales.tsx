@@ -1,18 +1,18 @@
 export interface Locale {
-  key: string
-  name: string
+  key: string;
+  name: string;
 }
 
 export const Locales: { [key: string]: Locale } = {
   de: { key: 'de', name: 'Deutsch' },
   en: { key: 'en', name: 'English' }
-}
+};
 
-export const DefaultLocale = Locales.en
+export const DefaultLocale = Locales.en;
 
 export interface Translation {
-  key: string
-  messages: { [key: string]: string }
+  key: string;
+  messages: { [key: string]: string };
 }
 
 export const GermanTranslation: Translation = {
@@ -28,7 +28,7 @@ export const GermanTranslation: Translation = {
     'navigation.blog': 'Blog',
     'navigation.collection': 'Sammlung'
   }
-}
+};
 
 export const EnglishTranslation: Translation = {
   key: Locales.en.key,
@@ -45,4 +45,4 @@ export const EnglishTranslation: Translation = {
     'navigation.blog': 'Blog',
     'navigation.collection': 'Collection'
   }
-}
+};

@@ -20,11 +20,7 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {
         fileName: 'graphql-type.ts',
-        documentPaths: [
-          'src/**/*.{ts,tsx}',
-          'node_modules/gatsby-*/**/*.js',
-          '.gatsby/gatsby-node.ts',
-        ],
+        documentPaths: ['src/**/*.{ts,tsx}', 'node_modules/gatsby-*/**/*.js', '.gatsby/gatsby-node.ts']
       }
     },
     {
@@ -41,7 +37,7 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
-        path: `${projectRoot}/src/content`
+        path: `${projectRoot}/content`
       }
     },
 

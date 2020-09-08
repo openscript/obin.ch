@@ -1,8 +1,8 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useStaticQuery, graphql } from 'gatsby'
-import Content from '../Content'
-import { FeaturedProjectsQuery } from '../../../graphql-type'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { useStaticQuery, graphql } from 'gatsby';
+import Content from '../Content';
+import { FeaturedProjectsQuery } from '../../../graphql-type';
 
 const FeaturedProjects: React.FC = () => {
   const projects = useStaticQuery<FeaturedProjectsQuery>(graphql`
@@ -15,7 +15,7 @@ const FeaturedProjects: React.FC = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Content>
@@ -23,10 +23,10 @@ const FeaturedProjects: React.FC = () => {
         <FormattedMessage id="navigation.projects" />
       </h2>
       {projects.allMarkdownRemark.nodes.map((p) => {
-        return <div>{p.frontmatter?.title}</div>
+        return <div>{p.frontmatter?.title}</div>;
       })}
     </Content>
-  )
-}
+  );
+};
 
-export default FeaturedProjects
+export default FeaturedProjects;

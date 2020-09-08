@@ -1,5 +1,5 @@
-import css from '@emotion/css'
-import { dimensions, fonts, colors } from './variables'
+import css from '@emotion/css';
+import { dimensions, fonts, colors } from './variables';
 
 export const globalStyles = css`
   html {
@@ -28,4 +28,4 @@ export const globalStyles = css`
     flex-direction: column;
     flex-grow: 1;
   }
-`
+`;

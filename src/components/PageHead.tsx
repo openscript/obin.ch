@@ -1,15 +1,15 @@
-import * as React from 'react'
-import { useIntl } from 'react-intl'
-import { Helmet } from 'react-helmet'
+import * as React from 'react';
+import { useIntl } from 'react-intl';
+import { Helmet } from 'react-helmet';
 
 interface HeadProps {
-  language: string
-  title: string
-  author: string
+  language: string;
+  title: string;
+  author: string;
 }
 
 const PageHead: React.FC<HeadProps> = ({ language, title, author }) => {
-  const intl = useIntl()
+  const intl = useIntl();
 
   return (
     <Helmet
@@ -22,7 +22,7 @@ const PageHead: React.FC<HeadProps> = ({ language, title, author }) => {
     >
       <html lang={language} />
     </Helmet>
-  )
-}
+  );
+};
 
-export default PageHead
+export default PageHead;

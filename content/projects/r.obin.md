@@ -1,6 +1,6 @@
 ---
 title: r.obin.ch
-featured: true
+featured: false
 ---
 
 This is this website.

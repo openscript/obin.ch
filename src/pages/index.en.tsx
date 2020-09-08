@@ -1,8 +1,8 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import IndexLayout from '../layouts'
-import WelcomeSpotlight from '../components/sections/WelcomeSpotlight'
-import FeaturedProjects from '../components/sections/FeaturedProjects'
+import IndexLayout from '../layouts';
+import WelcomeSpotlight from '../components/sections/WelcomeSpotlight';
+import FeaturedProjects from '../components/sections/FeaturedProjects';
 
 const IndexPage: React.FC = () => (
   <IndexLayout>
@@ -14,6 +14,6 @@ const IndexPage: React.FC = () => (
     </WelcomeSpotlight>
     <FeaturedProjects />
   </IndexLayout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

@@ -1,27 +1,27 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 
-import 'modern-normalize'
+import 'modern-normalize';
 
-import { FormattedDate, FormattedTime } from 'react-intl'
-import styled from '@emotion/styled'
-import Header from '../components/Header'
-import Main from '../components/Main'
-import Footer from '../components/Footer'
-import Brand from '../components/parts/Brand'
-import PageHead from '../components/PageHead'
-import TopNavigation from '../components/parts/TopNavigation'
-import { PageContext } from '../models/pageContext'
-import { IndexLayoutQuery } from '../../graphql-type'
+import { FormattedDate, FormattedTime } from 'react-intl';
+import styled from '@emotion/styled';
+import Header from '../components/Header';
+import Main from '../components/Main';
+import Footer from '../components/Footer';
+import Brand from '../components/parts/Brand';
+import PageHead from '../components/PageHead';
+import TopNavigation from '../components/parts/TopNavigation';
+import { PageContext } from '../models/pageContext';
+import { IndexLayoutQuery } from '../../graphql-type';
 
 const StyledHeader = styled(Header)`
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const IndexLayout: React.FC = (props) => {
-  const { children } = props
-  const currentPageContext = React.useContext(PageContext)
+  const { children } = props;
+  const currentPageContext = React.useContext(PageContext);
   return (
     <StaticQuery
       query={graphql`
@@ -57,7 +57,7 @@ const IndexLayout: React.FC = (props) => {
         </>
       )}
     />
-  )
-}
+  );
+};
 
-export default IndexLayout
+export default IndexLayout;
