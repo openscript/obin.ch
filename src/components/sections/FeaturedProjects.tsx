@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useStaticQuery, graphql } from 'gatsby';
 import Content from '../Content';
-import { FeaturedProjectsQuery } from '../../../graphql-type';
+import { FeaturedProjectsQuery } from '../../../graphql-types';
 
 const FeaturedProjects: React.FC = () => {
   const projects = useStaticQuery<FeaturedProjectsQuery>(graphql`

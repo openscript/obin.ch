@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export interface Locale {
   key: string;
   name: string;
@@ -18,10 +19,12 @@ export interface Translation {
 export const GermanTranslation: Translation = {
   key: Locales.de.key,
   messages: {
-    language: 'Deutsch',
-    subtitle: 'Mein Faszikel',
-    description: 'Persönliche Webseite zu den Themen: Informatik, Progressive Webapplikationen (PWA), Softwareentwicklung und vieles mehr.',
-    keywords: 'Informatik, Progressive Webapplikationen, Informatik Schulungen, Experte für Softwareentwicklung, persönlich, engagiert',
+    'base.language': 'Deutsch',
+    'base.subtitle': 'Mein Faszikel',
+    'base.description':
+      'Persönliche Webseite zu den Themen: Informatik, Progressive Webapplikationen (PWA), Softwareentwicklung und vieles mehr.',
+    'base.keywords':
+      'Informatik, Progressive Webapplikationen, Informatik Schulungen, Experte für Softwareentwicklung, persönlich, engagiert',
     'navigation.about': 'Über mich',
     'navigation.projects': 'Projekte',
     'navigation.recordings': 'Aufnahmen',
@@ -33,12 +36,11 @@ export const GermanTranslation: Translation = {
 export const EnglishTranslation: Translation = {
   key: Locales.en.key,
   messages: {
-    language: 'English',
-    subtitle: 'My fascicle',
-    description:
-      'Personal website about topics like: information technologies, progressive web applications (PWA), software development and much ' +
-      'more.',
-    keywords: 'computer science, progressive web applications, IT teaching, expert for software development',
+    'base.language': 'English',
+    'base.subtitle': 'My fascicle',
+    'base.description':
+      'Personal website about topics like: information technologies, progressive web applications (PWA), software development and much more.',
+    'base.keywords': 'computer science, progressive web applications, IT teaching, expert for software development',
     'navigation.about': 'About me',
     'navigation.projects': 'Projects',
     'navigation.recordings': 'Recordings',

@@ -4,12 +4,12 @@ import { Link } from 'gatsby';
 import IndexLayout from '../layouts';
 import Content from '../components/Content';
 
-const NotFoundPage = () => (
+const NotFoundPage: React.FC = () => (
   <IndexLayout>
     <Content>
       <h1>404: Page not found.</h1>
       <p>
-        You've hit the void. <Link to="/">Go back.</Link>
+        You&apos;ve hit the void. <Link to="/">Go back.</Link>
       </p>
     </Content>
   </IndexLayout>

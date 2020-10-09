@@ -3,11 +3,12 @@ import { IntlProvider } from 'react-intl';
 import { Global } from '@emotion/core';
 import { GermanTranslation, EnglishTranslation } from '../models/locales';
 import { globalStyles } from '../styles/global';
-import { PageContextModel, defaultPageContext, PageContext } from '../models/pageContext';
+import { defaultPageContext, PageContext } from '../models/pageContext';
+import { SitePageContext } from '../../graphql-types';
 
 interface Props {
   className?: string;
-  pageContext: PageContextModel;
+  pageContext: SitePageContext;
 }
 
 const PageWrapper: React.FC<Props> = ({ children, pageContext }) => {

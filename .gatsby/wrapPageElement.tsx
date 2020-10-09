@@ -1,8 +1,8 @@
-import React from 'react'
-import PageWrapper from '../src/components/PageWrapper'
-import { PageContextModel } from '../src/models/pageContext'
-import { GatsbyBrowser, GatsbySSR } from 'gatsby'
+import React from 'react';
+import PageWrapper from '../src/components/PageWrapper';
+import { GatsbyBrowser, GatsbySSR } from 'gatsby';
+import { SitePageContext } from '../graphql-types';
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] | GatsbySSR['wrapPageElement'] = ({ element, props }) => {
-  return <PageWrapper pageContext={props.pageContext as PageContextModel}>{element}</PageWrapper>
-}
+  return <PageWrapper pageContext={props.pageContext as SitePageContext}>{element}</PageWrapper>;
+};

@@ -12,7 +12,7 @@ import Brand from '../components/parts/Brand';
 import PageHead from '../components/PageHead';
 import TopNavigation from '../components/parts/TopNavigation';
 import { PageContext } from '../models/pageContext';
-import { IndexLayoutQuery } from '../../graphql-type';
+import { IndexLayoutQuery } from '../../graphql-types';
 
 const StyledHeader = styled(Header)`
   display: flex;

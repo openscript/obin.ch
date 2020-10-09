@@ -15,6 +15,6 @@
     "removeComments": false,
     "preserveConstEnums": true
   },
-  "include": ["./src/**/*"],
-  "files": ["graphql-type.ts"]
+  "include": ["./src/**/*", "./.gatsby/*"],
+  "files": ["graphql-types.ts"]
 }

@@ -13,10 +13,10 @@ const PageHead: React.FC<HeadProps> = ({ language, title, author }) => {
 
   return (
     <Helmet
-      title={`${intl.formatMessage({ id: 'subtitle' })} - ${title}`}
+      title={`${intl.formatMessage({ id: 'base.subtitle' })} - ${title}`}
       meta={[
-        { name: 'description', content: intl.formatMessage({ id: 'description' }) },
-        { name: 'keywords', content: intl.formatMessage({ id: 'keywords' }) },
+        { name: 'description', content: intl.formatMessage({ id: 'base.description' }) },
+        { name: 'keywords', content: intl.formatMessage({ id: 'base.keywords' }) },
         { name: 'author', content: author }
       ]}
     >
