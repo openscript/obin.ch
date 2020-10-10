@@ -1,4 +1,5 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
+import { ObjectSchema } from 'gatsby-plugin-utils';
 import { FileSystemNode } from 'gatsby-source-filesystem';
 import path from 'path';
 
@@ -68,6 +69,9 @@ const node: ITSConfigFn<'node'> = () => ({
         }
       });
     });
+  },
+  pluginOptionsSchema: () => {
+    return {} as ObjectSchema;
   }
 });
 
