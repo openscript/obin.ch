@@ -8,7 +8,10 @@ cache:
     - node_modules
 
 install:
-  - yarn install --prod --frozen-lockfile
+  - yarn install --frozen-lockfile
+
+before_script:
+  - yarn run test
 
 script:
   - yarn run build
