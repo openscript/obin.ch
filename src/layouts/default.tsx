@@ -1,4 +1,4 @@
-import { css, Global } from '@emotion/core';
+import { css, Global } from '@emotion/react';
 import { graphql, StaticQuery } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
 import { useIntl } from 'react-intl';
