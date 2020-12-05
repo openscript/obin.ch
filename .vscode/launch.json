@@ -3,28 +3,23 @@
   "configurations": [
     {
       "name": "Gatsby develop",
-      "type": "node",
+      "type": "pwa-node",
       "request": "launch",
-      "protocol": "inspector",
       "program": "${workspaceRoot}/node_modules/.bin/gatsby",
-      "autoAttachChildProcesses": true,
-      "args": ["develop", "--inspect-brk"],
-      "stopOnEntry": false,
+      "args": ["develop"],
       "runtimeArgs": ["--nolazy"],
-      "sourceMaps": false,
+      "console": "integratedTerminal",
       "runtimeExecutable": "/home/rdex/.asdf/shims/node"
     },
     {
       "name": "Gatsby build",
-      "type": "node",
+      "type": "pwa-node",
       "request": "launch",
-      "protocol": "inspector",
       "program": "${workspaceRoot}/node_modules/.bin/gatsby",
       "args": ["build"],
-      "stopOnEntry": false,
       "runtimeArgs": ["--nolazy"],
-      "sourceMaps": false,
-      "runtimeExecutable": "/home/rdex/.asdf/shims/node"
+      "console": "integratedTerminal",
+      "runtimeExecutable": "/home/rdex/.asdf/shims/node",
     }
   ]
 }

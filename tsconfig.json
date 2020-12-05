@@ -1,20 +1,18 @@
 {
+  "include": ["./src/**/*", "./.gatsby/*", "./graphql-types.ts"],
   "compilerOptions": {
-    "module": "esnext",
-    "target": "es2018",
-    "jsx": "preserve",
-    "lib": ["dom"],
-    "strict": false,
-    "noEmit": true,
-    "isolatedModules": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["dom", "ES2017", "ES2019"],
+    // "allowJs": true,
+    // "checkJs": true,
+    "jsx": "react",
+    "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
     "skipLibCheck": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": false,
-    "preserveConstEnums": true
-  },
-  "include": ["./src/**/*", "./.gatsby/*"],
-  "files": ["graphql-types.ts"]
+    "moduleResolution": "node"
+  }
 }

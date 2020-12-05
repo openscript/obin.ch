@@ -1,35 +1,33 @@
-import React from 'react';
+import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import { DefaultLocale } from '../models/locales';
-import { PageContext } from '../models/pageContext';
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
-interface Props {
-  locales: { [key: string]: { key: string; name: string } };
-}
+const StyledList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
 
-const LanguageSwitcher: React.FC<Props> = ({ locales }) => {
-  const localeKeys = Object.keys(locales);
-  const createPath = (langKey: string, path: string) => {
-    if (langKey === DefaultLocale.key) {
-      const trailedPath = path.split('/').slice(2).join('/');
-      return `/${trailedPath}`;
-    }
-    return `/${langKey}${path}`;
-  };
-
-  const currentPageContext = React.useContext(PageContext);
-  const menuItems = localeKeys.map((l) => {
-    if (currentPageContext.langKey !== l) {
-      return (
-        <Link to={createPath(l, currentPageContext.slug)} key={l}>
-          {locales[l].name}
-        </Link>
-      );
-    }
-    return null;
-  });
-
-  return <>{menuItems}</>;
+export type LanguageSwitcherProps = {
+  paths?: { language: string; path: string }[];
 };
 
-export default LanguageSwitcher;
+export function LanguageSwitcher({ paths }: LanguageSwitcherProps) {
+  if (!paths) {
+    return null;
+  }
+  return (
+    <StyledList>
+      {paths.map((p) => {
+        return (
+          <li key={p.language}>
+            <Link to={p.path}>
+              <FormattedMessage id={p.language} />
+            </Link>
+          </li>
+        );
+      })}
+    </StyledList>
+  );
+}

@@ -1,26 +1,19 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["eslint-config-blvd/react", "prettier/@typescript-eslint", "prettier/react", "plugin:prettier/recommended"],
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "prettier/@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "prettier"],
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
+    "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module", // Allows for the use of imports
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+  "env": {
+    "browser": true,
+    "node": true
   },
   "rules": {
-    "max-len": ["error", { "code": 140, "ignoreUrls": true }],
-    "import/prefer-default-export": 0,
-    "import/extensions": 0, // doesn't work properly
-    "react/jsx-props-no-spreading": 0,
-    "react/prop-types": 0,
-    "@typescript-eslint/explicit-function-return-type": 0,
-    "no-use-before-define": 0, // see https://github.com/typescript-eslint/typescript-eslint/issues/2540
-    "@typescript-eslint/no-use-before-define": 0 // see https://github.com/typescript-eslint/typescript-eslint/issues/2540
+    "@typescript-eslint/explicit-module-boundary-types": [0]
   }
 }
