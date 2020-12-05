@@ -22,7 +22,7 @@ const MenuList = styled.ul<CollapseWidthProps>`
       left: 0;
       right: 0;
       padding: 0 2rem;
-      background-color: var(--white-alternate-color);
+      background-color: var(--black-color);
 
       li {
         margin-right: 0;

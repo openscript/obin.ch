@@ -1,12 +1,12 @@
 ## Impressum
 
-Unterhalb sind die Angaben zur Identität des Eigentümers nach [UWG Art. 3](https://www.admin.ch/opc/de/classified-compilation/19860391/index.html#a3) zu finden.
+Unterhalb sind die Angaben zur Identität des Eigentümers zu finden.
 
-openscript GmbH\
+Robin Bühler\
 Steig 20\
 8193 Eglisau
 
-hi@openscript.ch\
+hi+r@obin.ch\
 +41 44 520 54 67
 
 ### Haftungserklärung

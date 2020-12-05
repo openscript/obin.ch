@@ -3,7 +3,7 @@ import { ITSConfigFn } from 'gatsby-plugin-ts-config';
 const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
   siteMetadata: {
     siteUrl: 'https://r.obin.ch',
-    email: 'hi@openscript.ch',
+    email: 'hi+r@obin.ch',
     phone: '+41 44 520 54 67'
   },
   plugins: [

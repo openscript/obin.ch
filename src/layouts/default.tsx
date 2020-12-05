@@ -10,18 +10,19 @@ import { Logo } from '../components/Logo';
 import { PageHead } from '../components/PageHead';
 import { DefaultFooter } from './default/Footer';
 import { DefaultHeader } from './default/Header';
+import AslantDivider from '../components/AslantDivider';
 
 const DefaultLayoutStyle = css`
   :root {
-    --white-color: #ede9df;
-    --white-alternate-color: #dbd4c3;
-    --black-color: #231f20;
+    --white-color: ##eeeeee;
+    --white-alternate-color: ##dddddd;
+    --black-color: #6a4a3c;
     --black-alternate-color: #2c2a2a;
-    --primary-color: #539350;
-    --primary-alternate-color: #7ad975;
-    --secondary-color: #fa5100;
-    --heading-font: 'Prompt', 'Roboto', sans-serif;
-    --paragraph-font: 'PT Sans', 'Roboto', sans-serif;
+    --primary-color: #eb6841;
+    --primary-alternate-color: #e74818;
+    --secondary-color: #ebbd41;
+    --heading-font: 'Rajdhani', sans-serif;
+    --paragraph-font: 'Poppins', 'Roboto', sans-serif;
     --code-font: 'IBM Plex Mono', monospace;
   }
 
@@ -92,7 +93,7 @@ const DefaultLayoutStyle = css`
     }
 
     & > main > section {
-      padding-top: 2rem;
+      margin-top: 2rem;
       padding-bottom: 2rem;
     }
   }
@@ -111,6 +112,7 @@ const DefaultLayoutStyle = css`
 
   main {
     grid-area: main;
+    overflow-x: hidden;
   }
 
   footer {
@@ -133,8 +135,7 @@ const DefaultLayoutStyle = css`
   h5,
   h6 {
     font-family: var(--heading-font);
-    font-weight: 400;
-    margin-top: 0;
+    font-weight: 600;
   }
 
   pre,
@@ -183,7 +184,10 @@ export function DefaultLayout({ pageContext, title, children }: DefaultLayoutPro
             logo={<Logo homePath={'/'} />}
             siteTitle={siteTitle}
           />
-          <main>{children}</main>
+          <main>
+            <AslantDivider color="--black-color" />
+            {children}
+          </main>
           <DefaultFooter buildInfo={<BuildInfo buildDateTime={data.site.buildTime} />} />
         </div>
       )}

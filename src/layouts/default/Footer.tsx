@@ -7,7 +7,7 @@ const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--white-alternate-color);
+  background-color: var(--black-color);
 
   nav ul {
     padding: 0;
