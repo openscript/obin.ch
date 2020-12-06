@@ -12,6 +12,10 @@ const StyledHeader = styled.header`
 
   a {
     color: var(--white-color);
+
+    &:hover {
+      font-weight: bold;
+    }
   }
 `;
 
@@ -25,6 +29,10 @@ const Header = styled(PaddedElement)`
 const SiteHeading = styled.h1`
   text-indent: -9999em;
   margin: 0;
+`;
+
+const BottomDivider = styled(AslantDivider)`
+  margin-bottom: --1px;
 `;
 
 type DefaultHeaderProps = {
@@ -41,7 +49,7 @@ export function DefaultHeader({ navigationBar, logo, siteTitle }: DefaultHeaderP
         <SiteHeading>{siteTitle}</SiteHeading>
         {navigationBar}
       </Header>
-      <AslantDivider color="--white-alternate-color" invert flipHorizontally />
+      <BottomDivider color="--white-alternate-color" invert flipHorizontally />
     </StyledHeader>
   );
 }

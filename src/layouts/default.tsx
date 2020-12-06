@@ -28,17 +28,17 @@ const DefaultLayoutStyle = css`
   html {
     height: 100%;
     font-size: 18px;
-  }
 
-  @media (max-width: 60rem) {
-    html {
-      font-size: 12pt;
+    @media (min-width: 120rem) {
+      font-size: 24px;
     }
-  }
 
-  @media (max-width: 30rem) {
-    html {
-      font-size: 11pt;
+    @media (max-width: 60rem) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 30rem) {
+      font-size: 14px;
     }
   }
 
@@ -63,7 +63,12 @@ const DefaultLayoutStyle = css`
     width: 100%;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 6rem auto 8rem;
+    grid-template-rows: 7rem auto 8rem;
+
+    @media (min-width: 120rem) {
+      grid-template-rows: 8rem auto 8rem;
+    }
+
     grid-template-areas:
       'header'
       'main'
@@ -74,7 +79,7 @@ const DefaultLayoutStyle = css`
       max-width: 100%;
     }
 
-    & > main > section {
+    & > main > section::not(.section) {
       margin-top: 2rem;
       padding-bottom: 2rem;
     }
@@ -93,7 +98,6 @@ const DefaultLayoutStyle = css`
 
   main {
     grid-area: main;
-    overflow-x: hidden;
   }
 
   footer {
