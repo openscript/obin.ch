@@ -5,11 +5,15 @@ interface StyledDividerProps {
   color: string;
 }
 
+const DividerContainer = styled.div`
+  display: flex;
+`;
+
 const StyledDivider = styled.svg<StyledDividerProps>`
   pointer-events: none;
-  margin: -1px;
   polygon {
     fill: var(${(props: StyledDividerProps) => props.color});
+    position: absolute;
   }
 `;
 
@@ -55,9 +59,11 @@ const AslantDivider: React.FC<Props> = (props) => {
   }
 
   return (
-    <StyledDivider color={color} viewBox={viewBox} className={className}>
-      <polygon points={convertCoordinatesToHTMLPoints(coordinates)} transform={transform.join(' ')} />
-    </StyledDivider>
+    <DividerContainer>
+      <StyledDivider color={color} viewBox={viewBox} className={className}>
+        <polygon points={convertCoordinatesToHTMLPoints(coordinates)} transform={transform.join(' ')} />
+      </StyledDivider>
+    </DividerContainer>
   );
 };
 

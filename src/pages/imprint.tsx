@@ -4,6 +4,7 @@ import { useIntl } from 'react-intl';
 import { SitePageContext } from '../../graphql-types';
 import { DefaultLayout } from '../layouts/default';
 import { ImprintPageQuery } from '../../graphql-types';
+import { PaddedElement } from '../layouts/default/PaddedElement';
 
 type ImprintPageProps = { data: ImprintPageQuery; pageContext: SitePageContext };
 
@@ -12,7 +13,7 @@ export default function ImprintPage({ data, pageContext }: ImprintPageProps) {
   const title = intl.formatMessage({ id: 'page.imprint.title' });
   return (
     <DefaultLayout pageContext={pageContext} title={title}>
-      <section dangerouslySetInnerHTML={{ __html: data.imprint.html }}></section>
+      <PaddedElement dangerouslySetInnerHTML={{ __html: data.imprint.html }}></PaddedElement>
     </DefaultLayout>
   );
 }
