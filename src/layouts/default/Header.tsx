@@ -9,6 +9,10 @@ const StyledHeader = styled.header`
   background-color: var(--black-color);
   font-size: 1.2rem;
   font-family: var(--heading-font);
+
+  a {
+    color: var(--white-color);
+  }
 `;
 
 const Header = styled(PaddedElement)`

@@ -63,7 +63,7 @@ const DefaultLayoutStyle = css`
     width: 100%;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 6rem auto 7rem;
+    grid-template-rows: 6rem auto 8rem;
     grid-template-areas:
       'header'
       'main'
@@ -117,6 +117,10 @@ const DefaultLayoutStyle = css`
   h6 {
     font-family: var(--heading-font);
     font-weight: 600;
+  }
+
+  h3 {
+    margin-top: 2rem;
   }
 
   pre,

@@ -5,7 +5,7 @@ const PaddedComponent = styled.div`
   padding: 0 20%;
 
   @media (max-width: 100rem) {
-    padding: 0 15%;
+    padding: 0 17.5%;
   }
 
   @media (max-width: 60rem) {

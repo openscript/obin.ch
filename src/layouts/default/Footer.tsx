@@ -11,6 +11,10 @@ const StyledFooterContainer = styled.footer`
   color: var(--white-color);
   background-color: var(--black-color);
   font-family: var(--heading-font);
+
+  a {
+    color: var(--white-color);
+  }
 `;
 
 const Footer = styled(PaddedElement)`
