@@ -159,18 +159,17 @@ export function DefaultLayout({ pageContext, title, children }: DefaultLayoutPro
           <Global styles={DefaultLayoutStyle} />
           <DefaultHeader
             navigationBar={
-              <NavigationBar
-                phone={data.site.siteMetadata.phone}
-                email={data.site.siteMetadata.email}
-                language={<LanguageSwitcher paths={pageContext.alternativeLanguagePaths} />}
-                collapseWidth="45rem"
-              />
+              <NavigationBar language={<LanguageSwitcher paths={pageContext.alternativeLanguagePaths} />} collapseWidth="45rem" />
             }
             logo={<Logo homePath={'/'} />}
             siteTitle={siteTitle}
           />
           <main>{children}</main>
-          <DefaultFooter buildInfo={<BuildInfo buildDateTime={data.site.buildTime} />} />
+          <DefaultFooter
+            buildInfo={<BuildInfo buildDateTime={data.site.buildTime} />}
+            phone={data.site.siteMetadata.phone}
+            email={data.site.siteMetadata.email}
+          />
         </div>
       )}
     />

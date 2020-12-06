@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import AslantDivider from '../../components/AslantDivider';
+import { ContactItems } from '../../components/ContactItems';
 import { LocalizedLink } from '../../components/LocalizedLink';
 import { PaddedElement } from './PaddedElement';
 
@@ -24,6 +25,12 @@ const Footer = styled(PaddedElement)`
   flex-grow: 1;
 `;
 
+const FooterInfo = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`;
+
 const FooterMenu = styled.nav`
   ul {
     padding: 0;
@@ -33,15 +40,20 @@ const FooterMenu = styled.nav`
 `;
 
 type DefaultFooterProps = {
+  phone: string;
+  email: string;
   buildInfo: JSX.Element;
 };
 
-export function DefaultFooter({ buildInfo }: DefaultFooterProps) {
+export function DefaultFooter({ buildInfo, phone, email }: DefaultFooterProps) {
   return (
     <StyledFooterContainer>
       <AslantDivider color="--white-alternate-color" flipHorizontally />
       <Footer>
-        {buildInfo}
+        <FooterInfo>
+          <ContactItems phone={phone} email={email} />
+          <li>{buildInfo}</li>
+        </FooterInfo>
         <FooterMenu>
           <ul>
             <li>

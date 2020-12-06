@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React, { useState } from 'react';
 import { BurgerButton } from './BurgerButton';
+import { ContactItems } from './ContactItems';
 
 type CollapseWidthProps = {
   collapseWidth: string;
@@ -45,13 +46,11 @@ const StyledBurgerButton = styled(BurgerButton)<CollapseWidthProps>`
 `;
 
 type NavigationBarProps = {
-  phone: string;
-  email: string;
   language: JSX.Element;
   collapseWidth: string;
 };
 
-export function NavigationBar({ phone, email, language, collapseWidth }: NavigationBarProps) {
+export function NavigationBar({ language, collapseWidth }: NavigationBarProps) {
   const [open, isOpen] = useState(false);
   const toggleOpen = () => isOpen(!open);
 
@@ -59,12 +58,6 @@ export function NavigationBar({ phone, email, language, collapseWidth }: Navigat
     <nav>
       <StyledBurgerButton onClick={toggleOpen} isActive={open} collapseWidth={collapseWidth} />
       <MenuList className={open ? 'open' : ''} collapseWidth={collapseWidth}>
-        <li>
-          <a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a>
-        </li>
-        <li>
-          <a href={`mailto:${email}`}>{email}</a>
-        </li>
         <li>{language}</li>
       </MenuList>
     </nav>
