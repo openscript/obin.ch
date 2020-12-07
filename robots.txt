@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://r.obin.ch/sitemap.xml
+Host: https://r.obin.ch
