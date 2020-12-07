@@ -1,15 +1,20 @@
-import { Link, GatsbyLinkProps } from 'gatsby';
+import { Link } from 'gatsby';
 import React from 'react';
-import { PageContext } from '../models/pageContext';
+import { useIntl } from 'react-intl';
 
-const LocalizedLink: React.FC<GatsbyLinkProps<unknown>> = (props) => {
-  const { to } = props;
-  const currentPageContext = React.useContext(PageContext);
-  let path = to;
-  if (currentPageContext.langKey === 'de') {
-    path = `/${currentPageContext.langKey}${path}`;
-  }
-  return <Link {...props} ref={null} to={path} />;
-};
+type LocalizedLinkProps = React.PropsWithChildren<{
+  className?: string;
+  to: string;
+}>;
 
-export default LocalizedLink;
+export function LocalizedLink({ to, children, className }: LocalizedLinkProps) {
+  const intl = useIntl();
+  const getSlug = () => (intl.messages[to] ? intl.formatMessage({ id: to }) : to);
+  const localizedPath = to !== '/' ? getSlug() : '/';
+  const prefixedPath = intl.defaultLocale === intl.locale ? localizedPath : `/${intl.locale}${localizedPath}`;
+  return (
+    <Link to={prefixedPath} className={className}>
+      {children}
+    </Link>
+  );
+}

@@ -2,13 +2,9 @@ import { ITSConfigFn } from 'gatsby-plugin-ts-config';
 
 const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
   siteMetadata: {
-    title: 'r.obin.ch',
-    license: 'AGPL-3.0',
-    url: 'https://r.obin.ch',
-    author: {
-      name: 'Robin Bühler',
-      email: 'r@obin.ch'
-    }
+    siteUrl: 'https://r.obin.ch',
+    email: 'hi+r@obin.ch',
+    phone: '+41 44 520 54 67'
   },
   plugins: [
     // Plugins
@@ -16,24 +12,30 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-svgr',
+    'gatsby-plugin-robots-txt',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-emotion',
     {
-      resolve: 'gatsby-plugin-i18n',
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
-        prefixDefault: false
-      }
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `r.obin.ch`,
-        short_name: `r.obin.ch`,
-        start_url: `/`,
-        background_color: `#6A4A3C`,
-        theme_color: `#EB6841`,
-        display: `standalone`,
-        icon: `src/assets/favicon.png`
+        name: 'r.obin.ch',
+        short_name: 'r.obin.ch',
+        start_url: '/',
+        background_color: `#6a4a3c`,
+        theme_color: `#eb6841`,
+        display: 'standalone',
+        icon: 'static/icons/favicon.png',
+        icons: [
+          {
+            src: 'static/icons/favicon192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          }, {
+            src: 'static/icons/favicon512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
       }
     },
 
@@ -68,85 +70,3 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
 });
 
 export default configuration;
-
-/*
-module.exports = {
-  siteMetadata: {
-    title: 'r.obin.ch',
-    license: 'Robin Bühler - AGPL-3.0',
-    siteUrl: 'https://r.obin.ch',
-    author: {
-      name: 'Robin Bühler',
-      url: 'https://r.obin.ch',
-      email: ''
-    }
-  },
-  plugins: [
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'content',
-        path: `${__dirname}/src/content`
-      }
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1rem'
-            }
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1140,
-              quality: 90,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
-    },
-    'gatsby-transformer-json',
-    {
-      resolve: 'gatsby-plugin-canonical-urls',
-      options: {
-        siteUrl: 'https://r.obin.ch'
-      }
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `r.obin.ch`,
-        short_name: `r.obin.ch`,
-        start_url: `/`,
-        background_color: `#6A4A3C`,
-        theme_color: `#EB6841`,
-        display: `standalone`,
-        icon: `src/assets/favicon.png`
-      }
-    },
-    'gatsby-plugin-emotion',
-    'gatsby-plugin-ts',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
-        prefixDefault: false
-      }
-    },
-    'gatsby-plugin-svgr',
-    `gatsby-plugin-graphql-codegen`
-  ]
-}
-*/

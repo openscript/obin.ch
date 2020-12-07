@@ -1,77 +1,52 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
-import { ObjectSchema } from 'gatsby-plugin-utils';
 import { FileSystemNode } from 'gatsby-source-filesystem';
-import path from 'path';
+import { defaultLanguage, Language, languages, slugTranslation } from './i18n';
 
-type Frontmatter = {
-  permalink?: string;
-  layout?: string;
-};
+const trimRightSlash = (path: string) => {
+  return path === '/' ? path : path.replace(/\/$/, '');
+}
+
+const generateTranslatedPaths = (path: string) => {
+  const paths: { language: Language, path: string }[] = [];
+
+  languages.forEach((language) => {
+    const trimmedPath = trimRightSlash(path);
+    let newPath = slugTranslation[language][trimmedPath] ?? trimmedPath;
+    if (language !== defaultLanguage) {
+      newPath = `/${language}${newPath}`;
+    }
+    paths.push({ language, path: newPath });
+  })
+
+  return paths;
+}
 
 const node: ITSConfigFn<'node'> = () => ({
   onCreateNode: async ({ node, actions, getNode }) => {
     const { createNodeField } = actions;
-    const fileSystemNode = getNode(node.parent);
 
-    if (node.internal.type === 'MarkdownRemark' && fileSystemNode.internal.type === 'File') {
-      const { permalink, layout } = node.frontmatter as Frontmatter;
-      const { relativePath } = fileSystemNode as FileSystemNode;
-
-      let slug = permalink;
-
-      if (!slug) {
-        slug = `/${relativePath.replace('.md', '')}/`;
-      }
-
-      createNodeField({
-        node,
-        name: 'slug',
-        value: slug || ''
-      });
-
-      createNodeField({
-        node,
-        name: 'layout',
-        value: layout || ''
-      });
+    if (node.internal.type === 'MarkdownRemark' && node.parent) {
+      const fileSystemNode = getNode(node.parent);
+      const { name, relativeDirectory } = fileSystemNode as FileSystemNode;
+      const nameMatch = name.match(/^(\w+)(.+)?\.(\w+)$/);
+      const slug = nameMatch && nameMatch[1] ? nameMatch[1] : name;
+      const language = nameMatch && nameMatch[3] ? nameMatch[3] : defaultLanguage;
+      createNodeField({node, name: 'language', value: language});
+      createNodeField({node, name: 'filename', value: slug});
+      createNodeField({node, name: 'kind', value: relativeDirectory});
     }
   },
-  createPages: async ({ graphql, actions, reporter }) => {
-    const { createPage } = actions;
+  onCreatePage: async ({ page, actions }) => {
+    const { createPage, deletePage } = actions;
+    const paths = generateTranslatedPaths(page.path);
 
-    const allMarkdown = await graphql<any>(`
-      {
-        allMarkdownRemark(limit: 1000) {
-          edges {
-            node {
-              fields {
-                slug
-                layout
-              }
-            }
-          }
-        }
-      }
-    `);
+    deletePage(page);
 
-    if (allMarkdown.errors) {
-      reporter.panicOnBuild(allMarkdown.errors);
-    }
-
-    allMarkdown.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const { slug, layout } = node.fields;
-
-      createPage({
-        path: slug,
-        component: path.resolve(`./src/templates/${layout || 'page'}.tsx`),
-        context: {
-          slug
-        }
-      });
-    });
-  },
-  pluginOptionsSchema: () => {
-    return {} as ObjectSchema;
+    paths.forEach((path) => {
+      const alternativeLanguagePaths = paths.filter((p) => p.language !== path.language);
+      const context = { ...page.context, language: path.language, alternativeLanguagePaths };
+      createPage({ ...page, path: path.path, context });
+    })
   }
 });
 

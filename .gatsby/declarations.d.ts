@@ -1,4 +1,5 @@
-declare namespace Intl {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  class RelativeTimeFormat {}
+declare module '*.svg' {
+  import { PureComponent, SVGProps } from 'react';
+
+  export class ReactComponent extends PureComponent<SVGProps<SVGSVGElement>> {}
 }

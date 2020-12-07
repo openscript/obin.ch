@@ -1,28 +1,25 @@
-import * as React from 'react';
-import { useIntl } from 'react-intl';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 
-interface HeadProps {
-  language: string;
+type PageHeadProps = {
   title: string;
-  author: string;
-}
-
-const PageHead: React.FC<HeadProps> = ({ language, title, author }) => {
-  const intl = useIntl();
-
-  return (
-    <Helmet
-      title={`${intl.formatMessage({ id: 'base.subtitle' })} - ${title}`}
-      meta={[
-        { name: 'description', content: intl.formatMessage({ id: 'base.description' }) },
-        { name: 'keywords', content: intl.formatMessage({ id: 'base.keywords' }) },
-        { name: 'author', content: author }
-      ]}
-    >
-      <html lang={language} />
-    </Helmet>
-  );
+  locale: string;
+  alternativeLanguagePaths?: { language: string; path: string }[];
 };
 
-export default PageHead;
+export function PageHead({ title, locale, alternativeLanguagePaths }: PageHeadProps) {
+  return (
+    <Helmet>
+      <html lang={locale} />
+      <title>{title}</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,300;0,600;1,300;1,600&family=Rajdhani:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+      {alternativeLanguagePaths?.map((p) => {
+        return <link rel="alternate" href={p.path} hrefLang={p.language} key={p.language} />;
+      })}
+    </Helmet>
+  );
+}
