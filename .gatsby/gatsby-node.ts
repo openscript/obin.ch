@@ -1,6 +1,5 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
 import { FileSystemNode } from 'gatsby-source-filesystem';
-import { pathToArray } from 'graphql/jsutils/Path';
 import { resolve } from 'path';
 import { ArticlesQuery } from '../graphql-types';
 import { defaultLanguage, Language, languages, slugTranslation } from './i18n';
@@ -9,16 +8,17 @@ const trimRightSlash = (path: string) => {
   return path === '/' ? path : path.replace(/\/$/, '');
 };
 
-const generateTranslatedPaths = (path: string) => {
+const addLanguagePrefix = (path: string, language: string, defaultLanguage: string) => {
+  return language !== defaultLanguage ? `/${language}${path}` : path;
+};
+
+const translatePagePaths = (path: string) => {
   const paths: { language: Language; path: string }[] = [];
 
   languages.forEach((language) => {
     const trimmedPath = trimRightSlash(path);
-    let newPath = slugTranslation[language][trimmedPath] ?? trimmedPath;
-    if (language !== defaultLanguage) {
-      newPath = `/${language}${newPath}`;
-    }
-    paths.push({ language, path: newPath });
+    const newPath = slugTranslation[language][trimmedPath] ?? trimmedPath;
+    paths.push({ language, path: addLanguagePrefix(newPath, language, defaultLanguage) });
   });
 
   return paths;
@@ -39,9 +39,10 @@ const node: ITSConfigFn<'node'> = () => ({
       createNodeField({ node, name: 'kind', value: relativeDirectory });
     }
   },
+  // translate pages
   onCreatePage: async ({ page, actions }) => {
     const { createPage, deletePage } = actions;
-    const paths = generateTranslatedPaths(page.path);
+    const paths = translatePagePaths(page.path);
 
     deletePage(page);
 
@@ -63,6 +64,7 @@ const node: ITSConfigFn<'node'> = () => ({
               }
               fields {
                 language
+                filename
               }
             }
           }
@@ -71,12 +73,23 @@ const node: ITSConfigFn<'node'> = () => ({
     `);
 
     result.data?.allMarkdownRemark.edges.forEach(({ node }) => {
+      const alternativeLanguagePaths = result.data?.allMarkdownRemark.edges
+        .filter((alternative) => {
+          return node.fields.filename === alternative.node.fields.filename && node.fields.language !== alternative.node.fields.language;
+        })
+        .map(({ node }) => {
+          return {
+            language: node.fields.language,
+            path: addLanguagePrefix(`/articles/${node.frontmatter.slug}`, node.fields.language, defaultLanguage)
+          };
+        });
       createPage({
-        path: `articles/${node.frontmatter.slug}`,
+        path: addLanguagePrefix(`/articles/${node.frontmatter.slug}`, node.fields.language, defaultLanguage),
         component: resolve('./src/templates/article.tsx'),
         context: {
           slug: node.frontmatter.slug,
-          language: node.fields.language
+          language: node.fields.language,
+          alternativeLanguagePaths
         }
       });
     });

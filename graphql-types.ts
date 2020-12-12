@@ -3246,7 +3246,7 @@ export type ArticlesQuery = (
           & Pick<MarkdownRemarkFrontmatter, 'slug'>
         )>, fields: Maybe<(
           { __typename?: 'MarkdownRemarkFields' }
-          & Pick<MarkdownRemarkFields, 'language'>
+          & Pick<MarkdownRemarkFields, 'language' | 'filename'>
         )> }
       ) }
     )> }
