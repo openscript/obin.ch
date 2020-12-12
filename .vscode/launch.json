@@ -8,8 +8,7 @@
       "program": "${workspaceRoot}/node_modules/.bin/gatsby",
       "args": ["develop"],
       "runtimeArgs": ["--nolazy"],
-      "console": "integratedTerminal",
-      "runtimeExecutable": "/home/rdex/.asdf/shims/node"
+      "console": "integratedTerminal"
     },
     {
       "name": "Gatsby build",
@@ -18,8 +17,7 @@
       "program": "${workspaceRoot}/node_modules/.bin/gatsby",
       "args": ["build"],
       "runtimeArgs": ["--nolazy"],
-      "console": "integratedTerminal",
-      "runtimeExecutable": "/home/rdex/.asdf/shims/node",
+      "console": "integratedTerminal"
     }
   ]
 }
