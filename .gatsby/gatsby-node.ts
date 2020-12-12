@@ -1,5 +1,5 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
-import { FileSystemNode } from 'gatsby-source-filesystem';
+import { createFilePath, FileSystemNode } from 'gatsby-source-filesystem';
 import { resolve } from 'path';
 import { ArticlesQuery } from '../graphql-types';
 import { defaultLanguage, Language, languages, slugTranslation } from './i18n';
@@ -34,9 +34,12 @@ const node: ITSConfigFn<'node'> = () => ({
       const nameMatch = name.match(/^(\w+)(.+)?\.(\w+)$/);
       const filename = nameMatch && nameMatch[1] ? nameMatch[1] : name;
       const language = nameMatch && nameMatch[3] ? nameMatch[3] : defaultLanguage;
+      const { slug } = node['frontmatter'] as { slug?: string };
+      const path = addLanguagePrefix(`/${relativeDirectory}/${slug ? slug : filename}`, language, defaultLanguage);
       createNodeField({ node, name: 'language', value: language });
       createNodeField({ node, name: 'filename', value: filename });
       createNodeField({ node, name: 'kind', value: relativeDirectory });
+      createNodeField({ node, name: 'path', value: path });
     }
   },
   // translate pages
@@ -65,6 +68,7 @@ const node: ITSConfigFn<'node'> = () => ({
               fields {
                 language
                 filename
+                path
               }
             }
           }
@@ -80,11 +84,11 @@ const node: ITSConfigFn<'node'> = () => ({
         .map(({ node }) => {
           return {
             language: node.fields.language,
-            path: addLanguagePrefix(`/articles/${node.frontmatter.slug}`, node.fields.language, defaultLanguage)
+            path: node.fields.path
           };
         });
       createPage({
-        path: addLanguagePrefix(`/articles/${node.frontmatter.slug}`, node.fields.language, defaultLanguage),
+        path: node.fields.path,
         component: resolve('./src/templates/article.tsx'),
         context: {
           slug: node.frontmatter.slug,
