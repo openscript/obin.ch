@@ -27,7 +27,8 @@ export const contentTranslation: Translation = {
     'page.index.section.values': 'Werte',
     'page.index.section.references': 'Referenzen',
     'page.index.section.offers': 'Angebote',
-    'page.imprint.title': 'Impressum'
+    'page.imprint.title': 'Impressum',
+    'page.articles.title': 'Artikel'
   },
   en: {
     ...localeTranslation,
@@ -38,6 +39,7 @@ export const contentTranslation: Translation = {
     'page.index.section.values': 'Values',
     'page.index.section.references': 'References',
     'page.index.section.offers': 'Offers',
-    'page.imprint.title': 'Imprint'
+    'page.imprint.title': 'Imprint',
+    'page.articles.title': 'Articles'
   }
 };

@@ -1,11 +1,11 @@
 import { CreatePagesArgs } from 'gatsby';
 import { resolve } from 'path';
-import { ArticlesQuery } from '../../graphql-types';
+import { CreateArticlePagesQuery } from '../../graphql-types';
 
 export async function createArticlePages({ graphql, actions }: CreatePagesArgs) {
   const { createPage } = actions;
-  const result = await graphql<ArticlesQuery>(`
-    query Articles {
+  const result = await graphql<CreateArticlePagesQuery>(`
+    query CreateArticlePages {
       allMarkdownRemark(filter: { fields: { kind: { eq: "articles" } } }) {
         edges {
           node {

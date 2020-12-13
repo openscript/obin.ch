@@ -1,32 +1,14 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
 import { FileSystemNode } from 'gatsby-source-filesystem';
-import { defaultLanguage, Language, languages, slugTranslation } from './i18n';
+import { defaultLanguage } from './i18n';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import slug from 'limax';
 import { createArticlePages } from './createPages/createArticlePages';
+import { createArticlesPages } from './createPages/createArticlesPages';
+import { addLanguagePrefix, translatePagePaths } from './utils/path';
 
 const promisifiedExec = promisify(exec);
-
-const trimRightSlash = (path: string) => {
-  return path === '/' ? path : path.replace(/\/$/, '');
-};
-
-const addLanguagePrefix = (path: string, language: string, defaultLanguage: string) => {
-  return language !== defaultLanguage ? `/${language}${path}` : path;
-};
-
-const translatePagePaths = (path: string) => {
-  const paths: { language: Language; path: string }[] = [];
-
-  languages.forEach((language) => {
-    const trimmedPath = trimRightSlash(path);
-    const newPath = slugTranslation[language][trimmedPath] ?? trimmedPath;
-    paths.push({ language, path: addLanguagePrefix(newPath, language, defaultLanguage) });
-  });
-
-  return paths;
-};
 
 const getCreationDate = async (path: string) => {
   return promisifiedExec(`git log --diff-filter=A --follow --format=%aI -- ${path} | tail -1`);
@@ -37,6 +19,7 @@ const getModificationDate = async (path: string) => {
 };
 
 const node: ITSConfigFn<'node'> = () => ({
+  // enhance nodes
   onCreateNode: async ({ node, actions, getNode }) => {
     const { createNodeField } = actions;
 
@@ -49,7 +32,7 @@ const node: ITSConfigFn<'node'> = () => ({
       const language = nameMatch && nameMatch[3] ? nameMatch[3] : defaultLanguage;
       const { title } = node['frontmatter'] as { title?: string };
       const currentSlug = title ? slug(title) : filename;
-      const path = addLanguagePrefix(`/${relativeDirectory}/${currentSlug}`, language, defaultLanguage);
+      const path = addLanguagePrefix(`/${relativeDirectory}/${currentSlug}`, language);
       const createdAt = await getCreationDate(absolutePath);
       const modifiedAt = await getModificationDate(absolutePath);
       createNodeField({ node, name: 'language', value: language });
@@ -74,8 +57,10 @@ const node: ITSConfigFn<'node'> = () => ({
       createPage({ ...page, path: path.path, context });
     });
   },
+  // generate pages
   createPages: async (args) => {
     await createArticlePages(args);
+    await createArticlesPages(args);
   }
 });
 
