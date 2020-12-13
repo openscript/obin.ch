@@ -16,3 +16,4 @@ Feel free to checkout how our website is built, but don't copy our content and b
 ## Resources
 
 - [Configure `Internal Status Port`](https://github.com/gatsbyjs/gatsby/pull/25862)
+- [Create a blog with Gatsby](https://blog.logrocket.com/creating-a-gatsby-blog-from-scratch/)

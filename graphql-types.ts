@@ -708,55 +708,59 @@ export enum FileFieldsEnum {
   childMarkdownRemark___fields___language = 217,
   childMarkdownRemark___fields___filename = 218,
   childMarkdownRemark___fields___kind = 219,
-  childMarkdownRemark___html = 220,
-  childMarkdownRemark___htmlAst = 221,
-  childMarkdownRemark___excerptAst = 222,
-  childMarkdownRemark___headings = 223,
-  childMarkdownRemark___headings___id = 224,
-  childMarkdownRemark___headings___value = 225,
-  childMarkdownRemark___headings___depth = 226,
-  childMarkdownRemark___timeToRead = 227,
-  childMarkdownRemark___tableOfContents = 228,
-  childMarkdownRemark___wordCount___paragraphs = 229,
-  childMarkdownRemark___wordCount___sentences = 230,
-  childMarkdownRemark___wordCount___words = 231,
-  childMarkdownRemark___parent___id = 232,
-  childMarkdownRemark___parent___parent___id = 233,
-  childMarkdownRemark___parent___parent___children = 234,
-  childMarkdownRemark___parent___children = 235,
-  childMarkdownRemark___parent___children___id = 236,
-  childMarkdownRemark___parent___children___children = 237,
-  childMarkdownRemark___parent___internal___content = 238,
-  childMarkdownRemark___parent___internal___contentDigest = 239,
-  childMarkdownRemark___parent___internal___description = 240,
-  childMarkdownRemark___parent___internal___fieldOwners = 241,
-  childMarkdownRemark___parent___internal___ignoreType = 242,
-  childMarkdownRemark___parent___internal___mediaType = 243,
-  childMarkdownRemark___parent___internal___owner = 244,
-  childMarkdownRemark___parent___internal___type = 245,
-  childMarkdownRemark___children = 246,
-  childMarkdownRemark___children___id = 247,
-  childMarkdownRemark___children___parent___id = 248,
-  childMarkdownRemark___children___parent___children = 249,
-  childMarkdownRemark___children___children = 250,
-  childMarkdownRemark___children___children___id = 251,
-  childMarkdownRemark___children___children___children = 252,
-  childMarkdownRemark___children___internal___content = 253,
-  childMarkdownRemark___children___internal___contentDigest = 254,
-  childMarkdownRemark___children___internal___description = 255,
-  childMarkdownRemark___children___internal___fieldOwners = 256,
-  childMarkdownRemark___children___internal___ignoreType = 257,
-  childMarkdownRemark___children___internal___mediaType = 258,
-  childMarkdownRemark___children___internal___owner = 259,
-  childMarkdownRemark___children___internal___type = 260,
-  childMarkdownRemark___internal___content = 261,
-  childMarkdownRemark___internal___contentDigest = 262,
-  childMarkdownRemark___internal___description = 263,
-  childMarkdownRemark___internal___fieldOwners = 264,
-  childMarkdownRemark___internal___ignoreType = 265,
-  childMarkdownRemark___internal___mediaType = 266,
-  childMarkdownRemark___internal___owner = 267,
-  childMarkdownRemark___internal___type = 268
+  childMarkdownRemark___fields___slug = 220,
+  childMarkdownRemark___fields___path = 221,
+  childMarkdownRemark___fields___createdAt = 222,
+  childMarkdownRemark___fields___modifiedAt = 223,
+  childMarkdownRemark___html = 224,
+  childMarkdownRemark___htmlAst = 225,
+  childMarkdownRemark___excerptAst = 226,
+  childMarkdownRemark___headings = 227,
+  childMarkdownRemark___headings___id = 228,
+  childMarkdownRemark___headings___value = 229,
+  childMarkdownRemark___headings___depth = 230,
+  childMarkdownRemark___timeToRead = 231,
+  childMarkdownRemark___tableOfContents = 232,
+  childMarkdownRemark___wordCount___paragraphs = 233,
+  childMarkdownRemark___wordCount___sentences = 234,
+  childMarkdownRemark___wordCount___words = 235,
+  childMarkdownRemark___parent___id = 236,
+  childMarkdownRemark___parent___parent___id = 237,
+  childMarkdownRemark___parent___parent___children = 238,
+  childMarkdownRemark___parent___children = 239,
+  childMarkdownRemark___parent___children___id = 240,
+  childMarkdownRemark___parent___children___children = 241,
+  childMarkdownRemark___parent___internal___content = 242,
+  childMarkdownRemark___parent___internal___contentDigest = 243,
+  childMarkdownRemark___parent___internal___description = 244,
+  childMarkdownRemark___parent___internal___fieldOwners = 245,
+  childMarkdownRemark___parent___internal___ignoreType = 246,
+  childMarkdownRemark___parent___internal___mediaType = 247,
+  childMarkdownRemark___parent___internal___owner = 248,
+  childMarkdownRemark___parent___internal___type = 249,
+  childMarkdownRemark___children = 250,
+  childMarkdownRemark___children___id = 251,
+  childMarkdownRemark___children___parent___id = 252,
+  childMarkdownRemark___children___parent___children = 253,
+  childMarkdownRemark___children___children = 254,
+  childMarkdownRemark___children___children___id = 255,
+  childMarkdownRemark___children___children___children = 256,
+  childMarkdownRemark___children___internal___content = 257,
+  childMarkdownRemark___children___internal___contentDigest = 258,
+  childMarkdownRemark___children___internal___description = 259,
+  childMarkdownRemark___children___internal___fieldOwners = 260,
+  childMarkdownRemark___children___internal___ignoreType = 261,
+  childMarkdownRemark___children___internal___mediaType = 262,
+  childMarkdownRemark___children___internal___owner = 263,
+  childMarkdownRemark___children___internal___type = 264,
+  childMarkdownRemark___internal___content = 265,
+  childMarkdownRemark___internal___contentDigest = 266,
+  childMarkdownRemark___internal___description = 267,
+  childMarkdownRemark___internal___fieldOwners = 268,
+  childMarkdownRemark___internal___ignoreType = 269,
+  childMarkdownRemark___internal___mediaType = 270,
+  childMarkdownRemark___internal___owner = 271,
+  childMarkdownRemark___internal___type = 272
 }
 
 export type FileFilterInput = {
@@ -1538,6 +1542,10 @@ export type MarkdownRemarkFields = {
   language: Maybe<Scalars['String']>;
   filename: Maybe<Scalars['String']>;
   kind: Maybe<Scalars['String']>;
+  slug: Maybe<Scalars['String']>;
+  path: Maybe<Scalars['String']>;
+  createdAt: Maybe<Scalars['String']>;
+  modifiedAt: Maybe<Scalars['String']>;
 };
 
 export enum MarkdownRemarkFieldsEnum {
@@ -1549,109 +1557,117 @@ export enum MarkdownRemarkFieldsEnum {
   fields___language = 5,
   fields___filename = 6,
   fields___kind = 7,
-  html = 8,
-  htmlAst = 9,
-  excerptAst = 10,
-  headings = 11,
-  headings___id = 12,
-  headings___value = 13,
-  headings___depth = 14,
-  timeToRead = 15,
-  tableOfContents = 16,
-  wordCount___paragraphs = 17,
-  wordCount___sentences = 18,
-  wordCount___words = 19,
-  parent___id = 20,
-  parent___parent___id = 21,
-  parent___parent___parent___id = 22,
-  parent___parent___parent___children = 23,
-  parent___parent___children = 24,
-  parent___parent___children___id = 25,
-  parent___parent___children___children = 26,
-  parent___parent___internal___content = 27,
-  parent___parent___internal___contentDigest = 28,
-  parent___parent___internal___description = 29,
-  parent___parent___internal___fieldOwners = 30,
-  parent___parent___internal___ignoreType = 31,
-  parent___parent___internal___mediaType = 32,
-  parent___parent___internal___owner = 33,
-  parent___parent___internal___type = 34,
-  parent___children = 35,
-  parent___children___id = 36,
-  parent___children___parent___id = 37,
-  parent___children___parent___children = 38,
-  parent___children___children = 39,
-  parent___children___children___id = 40,
-  parent___children___children___children = 41,
-  parent___children___internal___content = 42,
-  parent___children___internal___contentDigest = 43,
-  parent___children___internal___description = 44,
-  parent___children___internal___fieldOwners = 45,
-  parent___children___internal___ignoreType = 46,
-  parent___children___internal___mediaType = 47,
-  parent___children___internal___owner = 48,
-  parent___children___internal___type = 49,
-  parent___internal___content = 50,
-  parent___internal___contentDigest = 51,
-  parent___internal___description = 52,
-  parent___internal___fieldOwners = 53,
-  parent___internal___ignoreType = 54,
-  parent___internal___mediaType = 55,
-  parent___internal___owner = 56,
-  parent___internal___type = 57,
-  children = 58,
-  children___id = 59,
-  children___parent___id = 60,
-  children___parent___parent___id = 61,
-  children___parent___parent___children = 62,
-  children___parent___children = 63,
-  children___parent___children___id = 64,
-  children___parent___children___children = 65,
-  children___parent___internal___content = 66,
-  children___parent___internal___contentDigest = 67,
-  children___parent___internal___description = 68,
-  children___parent___internal___fieldOwners = 69,
-  children___parent___internal___ignoreType = 70,
-  children___parent___internal___mediaType = 71,
-  children___parent___internal___owner = 72,
-  children___parent___internal___type = 73,
-  children___children = 74,
-  children___children___id = 75,
-  children___children___parent___id = 76,
-  children___children___parent___children = 77,
-  children___children___children = 78,
-  children___children___children___id = 79,
-  children___children___children___children = 80,
-  children___children___internal___content = 81,
-  children___children___internal___contentDigest = 82,
-  children___children___internal___description = 83,
-  children___children___internal___fieldOwners = 84,
-  children___children___internal___ignoreType = 85,
-  children___children___internal___mediaType = 86,
-  children___children___internal___owner = 87,
-  children___children___internal___type = 88,
-  children___internal___content = 89,
-  children___internal___contentDigest = 90,
-  children___internal___description = 91,
-  children___internal___fieldOwners = 92,
-  children___internal___ignoreType = 93,
-  children___internal___mediaType = 94,
-  children___internal___owner = 95,
-  children___internal___type = 96,
-  internal___content = 97,
-  internal___contentDigest = 98,
-  internal___description = 99,
-  internal___fieldOwners = 100,
-  internal___ignoreType = 101,
-  internal___mediaType = 102,
-  internal___owner = 103,
-  internal___type = 104
+  fields___slug = 8,
+  fields___path = 9,
+  fields___createdAt = 10,
+  fields___modifiedAt = 11,
+  html = 12,
+  htmlAst = 13,
+  excerptAst = 14,
+  headings = 15,
+  headings___id = 16,
+  headings___value = 17,
+  headings___depth = 18,
+  timeToRead = 19,
+  tableOfContents = 20,
+  wordCount___paragraphs = 21,
+  wordCount___sentences = 22,
+  wordCount___words = 23,
+  parent___id = 24,
+  parent___parent___id = 25,
+  parent___parent___parent___id = 26,
+  parent___parent___parent___children = 27,
+  parent___parent___children = 28,
+  parent___parent___children___id = 29,
+  parent___parent___children___children = 30,
+  parent___parent___internal___content = 31,
+  parent___parent___internal___contentDigest = 32,
+  parent___parent___internal___description = 33,
+  parent___parent___internal___fieldOwners = 34,
+  parent___parent___internal___ignoreType = 35,
+  parent___parent___internal___mediaType = 36,
+  parent___parent___internal___owner = 37,
+  parent___parent___internal___type = 38,
+  parent___children = 39,
+  parent___children___id = 40,
+  parent___children___parent___id = 41,
+  parent___children___parent___children = 42,
+  parent___children___children = 43,
+  parent___children___children___id = 44,
+  parent___children___children___children = 45,
+  parent___children___internal___content = 46,
+  parent___children___internal___contentDigest = 47,
+  parent___children___internal___description = 48,
+  parent___children___internal___fieldOwners = 49,
+  parent___children___internal___ignoreType = 50,
+  parent___children___internal___mediaType = 51,
+  parent___children___internal___owner = 52,
+  parent___children___internal___type = 53,
+  parent___internal___content = 54,
+  parent___internal___contentDigest = 55,
+  parent___internal___description = 56,
+  parent___internal___fieldOwners = 57,
+  parent___internal___ignoreType = 58,
+  parent___internal___mediaType = 59,
+  parent___internal___owner = 60,
+  parent___internal___type = 61,
+  children = 62,
+  children___id = 63,
+  children___parent___id = 64,
+  children___parent___parent___id = 65,
+  children___parent___parent___children = 66,
+  children___parent___children = 67,
+  children___parent___children___id = 68,
+  children___parent___children___children = 69,
+  children___parent___internal___content = 70,
+  children___parent___internal___contentDigest = 71,
+  children___parent___internal___description = 72,
+  children___parent___internal___fieldOwners = 73,
+  children___parent___internal___ignoreType = 74,
+  children___parent___internal___mediaType = 75,
+  children___parent___internal___owner = 76,
+  children___parent___internal___type = 77,
+  children___children = 78,
+  children___children___id = 79,
+  children___children___parent___id = 80,
+  children___children___parent___children = 81,
+  children___children___children = 82,
+  children___children___children___id = 83,
+  children___children___children___children = 84,
+  children___children___internal___content = 85,
+  children___children___internal___contentDigest = 86,
+  children___children___internal___description = 87,
+  children___children___internal___fieldOwners = 88,
+  children___children___internal___ignoreType = 89,
+  children___children___internal___mediaType = 90,
+  children___children___internal___owner = 91,
+  children___children___internal___type = 92,
+  children___internal___content = 93,
+  children___internal___contentDigest = 94,
+  children___internal___description = 95,
+  children___internal___fieldOwners = 96,
+  children___internal___ignoreType = 97,
+  children___internal___mediaType = 98,
+  children___internal___owner = 99,
+  children___internal___type = 100,
+  internal___content = 101,
+  internal___contentDigest = 102,
+  internal___description = 103,
+  internal___fieldOwners = 104,
+  internal___ignoreType = 105,
+  internal___mediaType = 106,
+  internal___owner = 107,
+  internal___type = 108
 }
 
 export type MarkdownRemarkFieldsFilterInput = {
   language: Maybe<StringQueryOperatorInput>;
   filename: Maybe<StringQueryOperatorInput>;
   kind: Maybe<StringQueryOperatorInput>;
+  slug: Maybe<StringQueryOperatorInput>;
+  path: Maybe<StringQueryOperatorInput>;
+  createdAt: Maybe<StringQueryOperatorInput>;
+  modifiedAt: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFilterInput = {
@@ -1916,15 +1932,15 @@ export type QuerySitePageArgs = {
   internalComponentName: Maybe<StringQueryOperatorInput>;
   componentChunkName: Maybe<StringQueryOperatorInput>;
   matchPath: Maybe<StringQueryOperatorInput>;
+  id: Maybe<StringQueryOperatorInput>;
+  parent: Maybe<NodeFilterInput>;
+  children: Maybe<NodeFilterListInput>;
+  internal: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
   context: Maybe<SitePageContextFilterInput>;
   pluginCreator: Maybe<SitePluginFilterInput>;
   pluginCreatorId: Maybe<StringQueryOperatorInput>;
   componentPath: Maybe<StringQueryOperatorInput>;
-  id: Maybe<StringQueryOperatorInput>;
-  parent: Maybe<NodeFilterInput>;
-  children: Maybe<NodeFilterListInput>;
-  internal: Maybe<InternalFilterInput>;
 };
 
 
@@ -2367,15 +2383,15 @@ export type SitePage = Node & {
   internalComponentName: Scalars['String'];
   componentChunkName: Scalars['String'];
   matchPath: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  parent: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
   isCreatedByStatefulCreatePages: Maybe<Scalars['Boolean']>;
   context: Maybe<SitePageContext>;
   pluginCreator: Maybe<SitePlugin>;
   pluginCreatorId: Maybe<Scalars['String']>;
   componentPath: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  parent: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
 };
 
 export type SitePageConnection = {
@@ -2402,8 +2418,13 @@ export type SitePageConnectionGroupArgs = {
 
 export type SitePageContext = {
   __typename?: 'SitePageContext';
+  slug: Maybe<Scalars['String']>;
   language: Maybe<Scalars['String']>;
   alternativeLanguagePaths: Maybe<Array<Maybe<SitePageContextAlternativeLanguagePaths>>>;
+  limit: Maybe<Scalars['Int']>;
+  skip: Maybe<Scalars['Int']>;
+  pageCount: Maybe<Scalars['Int']>;
+  currentPage: Maybe<Scalars['Int']>;
 };
 
 export type SitePageContextAlternativeLanguagePaths = {
@@ -2422,8 +2443,13 @@ export type SitePageContextAlternativeLanguagePathsFilterListInput = {
 };
 
 export type SitePageContextFilterInput = {
+  slug: Maybe<StringQueryOperatorInput>;
   language: Maybe<StringQueryOperatorInput>;
   alternativeLanguagePaths: Maybe<SitePageContextAlternativeLanguagePathsFilterListInput>;
+  limit: Maybe<IntQueryOperatorInput>;
+  skip: Maybe<IntQueryOperatorInput>;
+  pageCount: Maybe<IntQueryOperatorInput>;
+  currentPage: Maybe<IntQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2439,213 +2465,198 @@ export enum SitePageFieldsEnum {
   internalComponentName = 2,
   componentChunkName = 3,
   matchPath = 4,
-  isCreatedByStatefulCreatePages = 5,
-  context___language = 6,
-  context___alternativeLanguagePaths = 7,
-  context___alternativeLanguagePaths___language = 8,
-  context___alternativeLanguagePaths___path = 9,
-  pluginCreator___id = 10,
-  pluginCreator___parent___id = 11,
-  pluginCreator___parent___parent___id = 12,
-  pluginCreator___parent___parent___children = 13,
-  pluginCreator___parent___children = 14,
-  pluginCreator___parent___children___id = 15,
-  pluginCreator___parent___children___children = 16,
-  pluginCreator___parent___internal___content = 17,
-  pluginCreator___parent___internal___contentDigest = 18,
-  pluginCreator___parent___internal___description = 19,
-  pluginCreator___parent___internal___fieldOwners = 20,
-  pluginCreator___parent___internal___ignoreType = 21,
-  pluginCreator___parent___internal___mediaType = 22,
-  pluginCreator___parent___internal___owner = 23,
-  pluginCreator___parent___internal___type = 24,
-  pluginCreator___children = 25,
-  pluginCreator___children___id = 26,
-  pluginCreator___children___parent___id = 27,
-  pluginCreator___children___parent___children = 28,
-  pluginCreator___children___children = 29,
-  pluginCreator___children___children___id = 30,
-  pluginCreator___children___children___children = 31,
-  pluginCreator___children___internal___content = 32,
-  pluginCreator___children___internal___contentDigest = 33,
-  pluginCreator___children___internal___description = 34,
-  pluginCreator___children___internal___fieldOwners = 35,
-  pluginCreator___children___internal___ignoreType = 36,
-  pluginCreator___children___internal___mediaType = 37,
-  pluginCreator___children___internal___owner = 38,
-  pluginCreator___children___internal___type = 39,
-  pluginCreator___internal___content = 40,
-  pluginCreator___internal___contentDigest = 41,
-  pluginCreator___internal___description = 42,
-  pluginCreator___internal___fieldOwners = 43,
-  pluginCreator___internal___ignoreType = 44,
-  pluginCreator___internal___mediaType = 45,
-  pluginCreator___internal___owner = 46,
-  pluginCreator___internal___type = 47,
-  pluginCreator___resolve = 48,
-  pluginCreator___name = 49,
-  pluginCreator___version = 50,
-  pluginCreator___pluginOptions___plugins = 51,
-  pluginCreator___pluginOptions___plugins___resolve = 52,
-  pluginCreator___pluginOptions___plugins___id = 53,
-  pluginCreator___pluginOptions___plugins___name = 54,
-  pluginCreator___pluginOptions___plugins___version = 55,
-  pluginCreator___pluginOptions___plugins___nodeAPIs = 56,
-  pluginCreator___pluginOptions___plugins___browserAPIs = 57,
-  pluginCreator___pluginOptions___plugins___pluginFilepath = 58,
-  pluginCreator___pluginOptions___sourceMap = 59,
-  pluginCreator___pluginOptions___autoLabel = 60,
-  pluginCreator___pluginOptions___labelFormat = 61,
-  pluginCreator___pluginOptions___cssPropOptimization = 62,
-  pluginCreator___pluginOptions___base64Width = 63,
-  pluginCreator___pluginOptions___stripMetadata = 64,
-  pluginCreator___pluginOptions___defaultQuality = 65,
-  pluginCreator___pluginOptions___failOnError = 66,
-  pluginCreator___pluginOptions___output = 67,
-  pluginCreator___pluginOptions___createLinkInHead = 68,
-  pluginCreator___pluginOptions___name = 69,
-  pluginCreator___pluginOptions___short_name = 70,
-  pluginCreator___pluginOptions___start_url = 71,
-  pluginCreator___pluginOptions___background_color = 72,
-  pluginCreator___pluginOptions___theme_color = 73,
-  pluginCreator___pluginOptions___display = 74,
-  pluginCreator___pluginOptions___icon = 75,
-  pluginCreator___pluginOptions___icons = 76,
-  pluginCreator___pluginOptions___icons___src = 77,
-  pluginCreator___pluginOptions___icons___sizes = 78,
-  pluginCreator___pluginOptions___icons___type = 79,
-  pluginCreator___pluginOptions___legacy = 80,
-  pluginCreator___pluginOptions___theme_color_in_head = 81,
-  pluginCreator___pluginOptions___cache_busting_mode = 82,
-  pluginCreator___pluginOptions___crossOrigin = 83,
-  pluginCreator___pluginOptions___include_favicon = 84,
-  pluginCreator___pluginOptions___cacheDigest = 85,
-  pluginCreator___pluginOptions___path = 86,
-  pluginCreator___pluginOptions___maxWidth = 87,
-  pluginCreator___pluginOptions___quality = 88,
-  pluginCreator___pluginOptions___linkImagesToOriginal = 89,
-  pluginCreator___pluginOptions___showCaptions = 90,
-  pluginCreator___pluginOptions___markdownCaptions = 91,
-  pluginCreator___pluginOptions___sizeByPixelDensity = 92,
-  pluginCreator___pluginOptions___backgroundColor = 93,
-  pluginCreator___pluginOptions___withWebp = 94,
-  pluginCreator___pluginOptions___tracedSVG = 95,
-  pluginCreator___pluginOptions___loading = 96,
-  pluginCreator___pluginOptions___disableBgImageOnAlpha = 97,
-  pluginCreator___pluginOptions___disableBgImage = 98,
-  pluginCreator___pluginOptions___configDir = 99,
-  pluginCreator___pluginOptions___tsNode = 100,
-  pluginCreator___pluginOptions___pathCheck = 101,
-  pluginCreator___pluginOptions___allExtensions = 102,
-  pluginCreator___pluginOptions___isTSX = 103,
-  pluginCreator___pluginOptions___jsxPragma = 104,
-  pluginCreator___nodeAPIs = 105,
-  pluginCreator___browserAPIs = 106,
-  pluginCreator___ssrAPIs = 107,
-  pluginCreator___pluginFilepath = 108,
-  pluginCreator___packageJson___name = 109,
-  pluginCreator___packageJson___description = 110,
-  pluginCreator___packageJson___version = 111,
-  pluginCreator___packageJson___main = 112,
-  pluginCreator___packageJson___license = 113,
-  pluginCreator___packageJson___dependencies = 114,
-  pluginCreator___packageJson___dependencies___name = 115,
-  pluginCreator___packageJson___dependencies___version = 116,
-  pluginCreator___packageJson___devDependencies = 117,
-  pluginCreator___packageJson___devDependencies___name = 118,
-  pluginCreator___packageJson___devDependencies___version = 119,
-  pluginCreator___packageJson___peerDependencies = 120,
-  pluginCreator___packageJson___peerDependencies___name = 121,
-  pluginCreator___packageJson___peerDependencies___version = 122,
-  pluginCreator___packageJson___keywords = 123,
-  pluginCreatorId = 124,
-  componentPath = 125,
-  id = 126,
-  parent___id = 127,
-  parent___parent___id = 128,
-  parent___parent___parent___id = 129,
-  parent___parent___parent___children = 130,
-  parent___parent___children = 131,
-  parent___parent___children___id = 132,
-  parent___parent___children___children = 133,
-  parent___parent___internal___content = 134,
-  parent___parent___internal___contentDigest = 135,
-  parent___parent___internal___description = 136,
-  parent___parent___internal___fieldOwners = 137,
-  parent___parent___internal___ignoreType = 138,
-  parent___parent___internal___mediaType = 139,
-  parent___parent___internal___owner = 140,
-  parent___parent___internal___type = 141,
-  parent___children = 142,
-  parent___children___id = 143,
-  parent___children___parent___id = 144,
-  parent___children___parent___children = 145,
-  parent___children___children = 146,
-  parent___children___children___id = 147,
-  parent___children___children___children = 148,
-  parent___children___internal___content = 149,
-  parent___children___internal___contentDigest = 150,
-  parent___children___internal___description = 151,
-  parent___children___internal___fieldOwners = 152,
-  parent___children___internal___ignoreType = 153,
-  parent___children___internal___mediaType = 154,
-  parent___children___internal___owner = 155,
-  parent___children___internal___type = 156,
-  parent___internal___content = 157,
-  parent___internal___contentDigest = 158,
-  parent___internal___description = 159,
-  parent___internal___fieldOwners = 160,
-  parent___internal___ignoreType = 161,
-  parent___internal___mediaType = 162,
-  parent___internal___owner = 163,
-  parent___internal___type = 164,
-  children = 165,
-  children___id = 166,
-  children___parent___id = 167,
-  children___parent___parent___id = 168,
-  children___parent___parent___children = 169,
-  children___parent___children = 170,
-  children___parent___children___id = 171,
-  children___parent___children___children = 172,
-  children___parent___internal___content = 173,
-  children___parent___internal___contentDigest = 174,
-  children___parent___internal___description = 175,
-  children___parent___internal___fieldOwners = 176,
-  children___parent___internal___ignoreType = 177,
-  children___parent___internal___mediaType = 178,
-  children___parent___internal___owner = 179,
-  children___parent___internal___type = 180,
-  children___children = 181,
-  children___children___id = 182,
-  children___children___parent___id = 183,
-  children___children___parent___children = 184,
-  children___children___children = 185,
-  children___children___children___id = 186,
-  children___children___children___children = 187,
-  children___children___internal___content = 188,
-  children___children___internal___contentDigest = 189,
-  children___children___internal___description = 190,
-  children___children___internal___fieldOwners = 191,
-  children___children___internal___ignoreType = 192,
-  children___children___internal___mediaType = 193,
-  children___children___internal___owner = 194,
-  children___children___internal___type = 195,
-  children___internal___content = 196,
-  children___internal___contentDigest = 197,
-  children___internal___description = 198,
-  children___internal___fieldOwners = 199,
-  children___internal___ignoreType = 200,
-  children___internal___mediaType = 201,
-  children___internal___owner = 202,
-  children___internal___type = 203,
-  internal___content = 204,
-  internal___contentDigest = 205,
-  internal___description = 206,
-  internal___fieldOwners = 207,
-  internal___ignoreType = 208,
-  internal___mediaType = 209,
-  internal___owner = 210,
-  internal___type = 211
+  id = 5,
+  parent___id = 6,
+  parent___parent___id = 7,
+  parent___parent___parent___id = 8,
+  parent___parent___parent___children = 9,
+  parent___parent___children = 10,
+  parent___parent___children___id = 11,
+  parent___parent___children___children = 12,
+  parent___parent___internal___content = 13,
+  parent___parent___internal___contentDigest = 14,
+  parent___parent___internal___description = 15,
+  parent___parent___internal___fieldOwners = 16,
+  parent___parent___internal___ignoreType = 17,
+  parent___parent___internal___mediaType = 18,
+  parent___parent___internal___owner = 19,
+  parent___parent___internal___type = 20,
+  parent___children = 21,
+  parent___children___id = 22,
+  parent___children___parent___id = 23,
+  parent___children___parent___children = 24,
+  parent___children___children = 25,
+  parent___children___children___id = 26,
+  parent___children___children___children = 27,
+  parent___children___internal___content = 28,
+  parent___children___internal___contentDigest = 29,
+  parent___children___internal___description = 30,
+  parent___children___internal___fieldOwners = 31,
+  parent___children___internal___ignoreType = 32,
+  parent___children___internal___mediaType = 33,
+  parent___children___internal___owner = 34,
+  parent___children___internal___type = 35,
+  parent___internal___content = 36,
+  parent___internal___contentDigest = 37,
+  parent___internal___description = 38,
+  parent___internal___fieldOwners = 39,
+  parent___internal___ignoreType = 40,
+  parent___internal___mediaType = 41,
+  parent___internal___owner = 42,
+  parent___internal___type = 43,
+  children = 44,
+  children___id = 45,
+  children___parent___id = 46,
+  children___parent___parent___id = 47,
+  children___parent___parent___children = 48,
+  children___parent___children = 49,
+  children___parent___children___id = 50,
+  children___parent___children___children = 51,
+  children___parent___internal___content = 52,
+  children___parent___internal___contentDigest = 53,
+  children___parent___internal___description = 54,
+  children___parent___internal___fieldOwners = 55,
+  children___parent___internal___ignoreType = 56,
+  children___parent___internal___mediaType = 57,
+  children___parent___internal___owner = 58,
+  children___parent___internal___type = 59,
+  children___children = 60,
+  children___children___id = 61,
+  children___children___parent___id = 62,
+  children___children___parent___children = 63,
+  children___children___children = 64,
+  children___children___children___id = 65,
+  children___children___children___children = 66,
+  children___children___internal___content = 67,
+  children___children___internal___contentDigest = 68,
+  children___children___internal___description = 69,
+  children___children___internal___fieldOwners = 70,
+  children___children___internal___ignoreType = 71,
+  children___children___internal___mediaType = 72,
+  children___children___internal___owner = 73,
+  children___children___internal___type = 74,
+  children___internal___content = 75,
+  children___internal___contentDigest = 76,
+  children___internal___description = 77,
+  children___internal___fieldOwners = 78,
+  children___internal___ignoreType = 79,
+  children___internal___mediaType = 80,
+  children___internal___owner = 81,
+  children___internal___type = 82,
+  internal___content = 83,
+  internal___contentDigest = 84,
+  internal___description = 85,
+  internal___fieldOwners = 86,
+  internal___ignoreType = 87,
+  internal___mediaType = 88,
+  internal___owner = 89,
+  internal___type = 90,
+  isCreatedByStatefulCreatePages = 91,
+  context___slug = 92,
+  context___language = 93,
+  context___alternativeLanguagePaths = 94,
+  context___alternativeLanguagePaths___language = 95,
+  context___alternativeLanguagePaths___path = 96,
+  context___limit = 97,
+  context___skip = 98,
+  context___pageCount = 99,
+  context___currentPage = 100,
+  pluginCreator___id = 101,
+  pluginCreator___parent___id = 102,
+  pluginCreator___parent___parent___id = 103,
+  pluginCreator___parent___parent___children = 104,
+  pluginCreator___parent___children = 105,
+  pluginCreator___parent___children___id = 106,
+  pluginCreator___parent___children___children = 107,
+  pluginCreator___parent___internal___content = 108,
+  pluginCreator___parent___internal___contentDigest = 109,
+  pluginCreator___parent___internal___description = 110,
+  pluginCreator___parent___internal___fieldOwners = 111,
+  pluginCreator___parent___internal___ignoreType = 112,
+  pluginCreator___parent___internal___mediaType = 113,
+  pluginCreator___parent___internal___owner = 114,
+  pluginCreator___parent___internal___type = 115,
+  pluginCreator___children = 116,
+  pluginCreator___children___id = 117,
+  pluginCreator___children___parent___id = 118,
+  pluginCreator___children___parent___children = 119,
+  pluginCreator___children___children = 120,
+  pluginCreator___children___children___id = 121,
+  pluginCreator___children___children___children = 122,
+  pluginCreator___children___internal___content = 123,
+  pluginCreator___children___internal___contentDigest = 124,
+  pluginCreator___children___internal___description = 125,
+  pluginCreator___children___internal___fieldOwners = 126,
+  pluginCreator___children___internal___ignoreType = 127,
+  pluginCreator___children___internal___mediaType = 128,
+  pluginCreator___children___internal___owner = 129,
+  pluginCreator___children___internal___type = 130,
+  pluginCreator___internal___content = 131,
+  pluginCreator___internal___contentDigest = 132,
+  pluginCreator___internal___description = 133,
+  pluginCreator___internal___fieldOwners = 134,
+  pluginCreator___internal___ignoreType = 135,
+  pluginCreator___internal___mediaType = 136,
+  pluginCreator___internal___owner = 137,
+  pluginCreator___internal___type = 138,
+  pluginCreator___resolve = 139,
+  pluginCreator___name = 140,
+  pluginCreator___version = 141,
+  pluginCreator___pluginOptions___plugins = 142,
+  pluginCreator___pluginOptions___plugins___resolve = 143,
+  pluginCreator___pluginOptions___plugins___id = 144,
+  pluginCreator___pluginOptions___plugins___name = 145,
+  pluginCreator___pluginOptions___plugins___version = 146,
+  pluginCreator___pluginOptions___plugins___nodeAPIs = 147,
+  pluginCreator___pluginOptions___plugins___browserAPIs = 148,
+  pluginCreator___pluginOptions___plugins___pluginFilepath = 149,
+  pluginCreator___pluginOptions___name = 150,
+  pluginCreator___pluginOptions___short_name = 151,
+  pluginCreator___pluginOptions___start_url = 152,
+  pluginCreator___pluginOptions___background_color = 153,
+  pluginCreator___pluginOptions___theme_color = 154,
+  pluginCreator___pluginOptions___display = 155,
+  pluginCreator___pluginOptions___icon = 156,
+  pluginCreator___pluginOptions___icons = 157,
+  pluginCreator___pluginOptions___icons___src = 158,
+  pluginCreator___pluginOptions___icons___sizes = 159,
+  pluginCreator___pluginOptions___icons___type = 160,
+  pluginCreator___pluginOptions___cache_busting_mode = 161,
+  pluginCreator___pluginOptions___include_favicon = 162,
+  pluginCreator___pluginOptions___legacy = 163,
+  pluginCreator___pluginOptions___theme_color_in_head = 164,
+  pluginCreator___pluginOptions___cacheDigest = 165,
+  pluginCreator___pluginOptions___path = 166,
+  pluginCreator___pluginOptions___maxWidth = 167,
+  pluginCreator___pluginOptions___quality = 168,
+  pluginCreator___pluginOptions___linkImagesToOriginal = 169,
+  pluginCreator___pluginOptions___configDir = 170,
+  pluginCreator___pluginOptions___tsNode = 171,
+  pluginCreator___pluginOptions___pathCheck = 172,
+  pluginCreator___pluginOptions___allExtensions = 173,
+  pluginCreator___pluginOptions___isTSX = 174,
+  pluginCreator___pluginOptions___jsxPragma = 175,
+  pluginCreator___nodeAPIs = 176,
+  pluginCreator___browserAPIs = 177,
+  pluginCreator___ssrAPIs = 178,
+  pluginCreator___pluginFilepath = 179,
+  pluginCreator___packageJson___name = 180,
+  pluginCreator___packageJson___description = 181,
+  pluginCreator___packageJson___version = 182,
+  pluginCreator___packageJson___main = 183,
+  pluginCreator___packageJson___license = 184,
+  pluginCreator___packageJson___dependencies = 185,
+  pluginCreator___packageJson___dependencies___name = 186,
+  pluginCreator___packageJson___dependencies___version = 187,
+  pluginCreator___packageJson___devDependencies = 188,
+  pluginCreator___packageJson___devDependencies___name = 189,
+  pluginCreator___packageJson___devDependencies___version = 190,
+  pluginCreator___packageJson___peerDependencies = 191,
+  pluginCreator___packageJson___peerDependencies___name = 192,
+  pluginCreator___packageJson___peerDependencies___version = 193,
+  pluginCreator___packageJson___keywords = 194,
+  pluginCreatorId = 195,
+  componentPath = 196
 }
 
 export type SitePageFilterInput = {
@@ -2654,15 +2665,15 @@ export type SitePageFilterInput = {
   internalComponentName: Maybe<StringQueryOperatorInput>;
   componentChunkName: Maybe<StringQueryOperatorInput>;
   matchPath: Maybe<StringQueryOperatorInput>;
+  id: Maybe<StringQueryOperatorInput>;
+  parent: Maybe<NodeFilterInput>;
+  children: Maybe<NodeFilterListInput>;
+  internal: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
   context: Maybe<SitePageContextFilterInput>;
   pluginCreator: Maybe<SitePluginFilterInput>;
   pluginCreatorId: Maybe<StringQueryOperatorInput>;
   componentPath: Maybe<StringQueryOperatorInput>;
-  id: Maybe<StringQueryOperatorInput>;
-  parent: Maybe<NodeFilterInput>;
-  children: Maybe<NodeFilterListInput>;
-  internal: Maybe<InternalFilterInput>;
 };
 
 export type SitePageGroupConnection = {
@@ -2824,83 +2835,54 @@ export enum SitePluginFieldsEnum {
   pluginOptions___plugins___pluginOptions___maxWidth = 94,
   pluginOptions___plugins___pluginOptions___quality = 95,
   pluginOptions___plugins___pluginOptions___linkImagesToOriginal = 96,
-  pluginOptions___plugins___pluginOptions___showCaptions = 97,
-  pluginOptions___plugins___pluginOptions___markdownCaptions = 98,
-  pluginOptions___plugins___pluginOptions___sizeByPixelDensity = 99,
-  pluginOptions___plugins___pluginOptions___backgroundColor = 100,
-  pluginOptions___plugins___pluginOptions___withWebp = 101,
-  pluginOptions___plugins___pluginOptions___tracedSVG = 102,
-  pluginOptions___plugins___pluginOptions___loading = 103,
-  pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha = 104,
-  pluginOptions___plugins___pluginOptions___disableBgImage = 105,
-  pluginOptions___plugins___nodeAPIs = 106,
-  pluginOptions___plugins___browserAPIs = 107,
-  pluginOptions___plugins___pluginFilepath = 108,
-  pluginOptions___sourceMap = 109,
-  pluginOptions___autoLabel = 110,
-  pluginOptions___labelFormat = 111,
-  pluginOptions___cssPropOptimization = 112,
-  pluginOptions___base64Width = 113,
-  pluginOptions___stripMetadata = 114,
-  pluginOptions___defaultQuality = 115,
-  pluginOptions___failOnError = 116,
-  pluginOptions___output = 117,
-  pluginOptions___createLinkInHead = 118,
-  pluginOptions___name = 119,
-  pluginOptions___short_name = 120,
-  pluginOptions___start_url = 121,
-  pluginOptions___background_color = 122,
-  pluginOptions___theme_color = 123,
-  pluginOptions___display = 124,
-  pluginOptions___icon = 125,
-  pluginOptions___icons = 126,
-  pluginOptions___icons___src = 127,
-  pluginOptions___icons___sizes = 128,
-  pluginOptions___icons___type = 129,
-  pluginOptions___legacy = 130,
-  pluginOptions___theme_color_in_head = 131,
-  pluginOptions___cache_busting_mode = 132,
-  pluginOptions___crossOrigin = 133,
-  pluginOptions___include_favicon = 134,
-  pluginOptions___cacheDigest = 135,
-  pluginOptions___path = 136,
-  pluginOptions___maxWidth = 137,
-  pluginOptions___quality = 138,
-  pluginOptions___linkImagesToOriginal = 139,
-  pluginOptions___showCaptions = 140,
-  pluginOptions___markdownCaptions = 141,
-  pluginOptions___sizeByPixelDensity = 142,
-  pluginOptions___backgroundColor = 143,
-  pluginOptions___withWebp = 144,
-  pluginOptions___tracedSVG = 145,
-  pluginOptions___loading = 146,
-  pluginOptions___disableBgImageOnAlpha = 147,
-  pluginOptions___disableBgImage = 148,
-  pluginOptions___configDir = 149,
-  pluginOptions___tsNode = 150,
-  pluginOptions___pathCheck = 151,
-  pluginOptions___allExtensions = 152,
-  pluginOptions___isTSX = 153,
-  pluginOptions___jsxPragma = 154,
-  nodeAPIs = 155,
-  browserAPIs = 156,
-  ssrAPIs = 157,
-  pluginFilepath = 158,
-  packageJson___name = 159,
-  packageJson___description = 160,
-  packageJson___version = 161,
-  packageJson___main = 162,
-  packageJson___license = 163,
-  packageJson___dependencies = 164,
-  packageJson___dependencies___name = 165,
-  packageJson___dependencies___version = 166,
-  packageJson___devDependencies = 167,
-  packageJson___devDependencies___name = 168,
-  packageJson___devDependencies___version = 169,
-  packageJson___peerDependencies = 170,
-  packageJson___peerDependencies___name = 171,
-  packageJson___peerDependencies___version = 172,
-  packageJson___keywords = 173
+  pluginOptions___plugins___nodeAPIs = 97,
+  pluginOptions___plugins___browserAPIs = 98,
+  pluginOptions___plugins___pluginFilepath = 99,
+  pluginOptions___name = 100,
+  pluginOptions___short_name = 101,
+  pluginOptions___start_url = 102,
+  pluginOptions___background_color = 103,
+  pluginOptions___theme_color = 104,
+  pluginOptions___display = 105,
+  pluginOptions___icon = 106,
+  pluginOptions___icons = 107,
+  pluginOptions___icons___src = 108,
+  pluginOptions___icons___sizes = 109,
+  pluginOptions___icons___type = 110,
+  pluginOptions___cache_busting_mode = 111,
+  pluginOptions___include_favicon = 112,
+  pluginOptions___legacy = 113,
+  pluginOptions___theme_color_in_head = 114,
+  pluginOptions___cacheDigest = 115,
+  pluginOptions___path = 116,
+  pluginOptions___maxWidth = 117,
+  pluginOptions___quality = 118,
+  pluginOptions___linkImagesToOriginal = 119,
+  pluginOptions___configDir = 120,
+  pluginOptions___tsNode = 121,
+  pluginOptions___pathCheck = 122,
+  pluginOptions___allExtensions = 123,
+  pluginOptions___isTSX = 124,
+  pluginOptions___jsxPragma = 125,
+  nodeAPIs = 126,
+  browserAPIs = 127,
+  ssrAPIs = 128,
+  pluginFilepath = 129,
+  packageJson___name = 130,
+  packageJson___description = 131,
+  packageJson___version = 132,
+  packageJson___main = 133,
+  packageJson___license = 134,
+  packageJson___dependencies = 135,
+  packageJson___dependencies___name = 136,
+  packageJson___dependencies___version = 137,
+  packageJson___devDependencies = 138,
+  packageJson___devDependencies___name = 139,
+  packageJson___devDependencies___version = 140,
+  packageJson___peerDependencies = 141,
+  packageJson___peerDependencies___name = 142,
+  packageJson___peerDependencies___version = 143,
+  packageJson___keywords = 144
 }
 
 export type SitePluginFilterInput = {
@@ -3002,16 +2984,6 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 export type SitePluginPluginOptions = {
   __typename?: 'SitePluginPluginOptions';
   plugins: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>;
-  sourceMap: Maybe<Scalars['Boolean']>;
-  autoLabel: Maybe<Scalars['String']>;
-  labelFormat: Maybe<Scalars['String']>;
-  cssPropOptimization: Maybe<Scalars['Boolean']>;
-  base64Width: Maybe<Scalars['Int']>;
-  stripMetadata: Maybe<Scalars['Boolean']>;
-  defaultQuality: Maybe<Scalars['Int']>;
-  failOnError: Maybe<Scalars['Boolean']>;
-  output: Maybe<Scalars['String']>;
-  createLinkInHead: Maybe<Scalars['Boolean']>;
   name: Maybe<Scalars['String']>;
   short_name: Maybe<Scalars['String']>;
   start_url: Maybe<Scalars['String']>;
@@ -3020,25 +2992,15 @@ export type SitePluginPluginOptions = {
   display: Maybe<Scalars['String']>;
   icon: Maybe<Scalars['String']>;
   icons: Maybe<Array<Maybe<SitePluginPluginOptionsIcons>>>;
+  cache_busting_mode: Maybe<Scalars['String']>;
+  include_favicon: Maybe<Scalars['Boolean']>;
   legacy: Maybe<Scalars['Boolean']>;
   theme_color_in_head: Maybe<Scalars['Boolean']>;
-  cache_busting_mode: Maybe<Scalars['String']>;
-  crossOrigin: Maybe<Scalars['String']>;
-  include_favicon: Maybe<Scalars['Boolean']>;
   cacheDigest: Maybe<Scalars['String']>;
   path: Maybe<Scalars['String']>;
   maxWidth: Maybe<Scalars['Int']>;
   quality: Maybe<Scalars['Int']>;
   linkImagesToOriginal: Maybe<Scalars['Boolean']>;
-  showCaptions: Maybe<Scalars['Boolean']>;
-  markdownCaptions: Maybe<Scalars['Boolean']>;
-  sizeByPixelDensity: Maybe<Scalars['Boolean']>;
-  backgroundColor: Maybe<Scalars['String']>;
-  withWebp: Maybe<Scalars['Boolean']>;
-  tracedSVG: Maybe<Scalars['Boolean']>;
-  loading: Maybe<Scalars['String']>;
-  disableBgImageOnAlpha: Maybe<Scalars['Boolean']>;
-  disableBgImage: Maybe<Scalars['Boolean']>;
   configDir: Maybe<Scalars['String']>;
   tsNode: Maybe<Scalars['Boolean']>;
   pathCheck: Maybe<Scalars['Boolean']>;
@@ -3049,16 +3011,6 @@ export type SitePluginPluginOptions = {
 
 export type SitePluginPluginOptionsFilterInput = {
   plugins: Maybe<SitePluginPluginOptionsPluginsFilterListInput>;
-  sourceMap: Maybe<BooleanQueryOperatorInput>;
-  autoLabel: Maybe<StringQueryOperatorInput>;
-  labelFormat: Maybe<StringQueryOperatorInput>;
-  cssPropOptimization: Maybe<BooleanQueryOperatorInput>;
-  base64Width: Maybe<IntQueryOperatorInput>;
-  stripMetadata: Maybe<BooleanQueryOperatorInput>;
-  defaultQuality: Maybe<IntQueryOperatorInput>;
-  failOnError: Maybe<BooleanQueryOperatorInput>;
-  output: Maybe<StringQueryOperatorInput>;
-  createLinkInHead: Maybe<BooleanQueryOperatorInput>;
   name: Maybe<StringQueryOperatorInput>;
   short_name: Maybe<StringQueryOperatorInput>;
   start_url: Maybe<StringQueryOperatorInput>;
@@ -3067,25 +3019,15 @@ export type SitePluginPluginOptionsFilterInput = {
   display: Maybe<StringQueryOperatorInput>;
   icon: Maybe<StringQueryOperatorInput>;
   icons: Maybe<SitePluginPluginOptionsIconsFilterListInput>;
+  cache_busting_mode: Maybe<StringQueryOperatorInput>;
+  include_favicon: Maybe<BooleanQueryOperatorInput>;
   legacy: Maybe<BooleanQueryOperatorInput>;
   theme_color_in_head: Maybe<BooleanQueryOperatorInput>;
-  cache_busting_mode: Maybe<StringQueryOperatorInput>;
-  crossOrigin: Maybe<StringQueryOperatorInput>;
-  include_favicon: Maybe<BooleanQueryOperatorInput>;
   cacheDigest: Maybe<StringQueryOperatorInput>;
   path: Maybe<StringQueryOperatorInput>;
   maxWidth: Maybe<IntQueryOperatorInput>;
   quality: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal: Maybe<BooleanQueryOperatorInput>;
-  showCaptions: Maybe<BooleanQueryOperatorInput>;
-  markdownCaptions: Maybe<BooleanQueryOperatorInput>;
-  sizeByPixelDensity: Maybe<BooleanQueryOperatorInput>;
-  backgroundColor: Maybe<StringQueryOperatorInput>;
-  withWebp: Maybe<BooleanQueryOperatorInput>;
-  tracedSVG: Maybe<BooleanQueryOperatorInput>;
-  loading: Maybe<StringQueryOperatorInput>;
-  disableBgImageOnAlpha: Maybe<BooleanQueryOperatorInput>;
-  disableBgImage: Maybe<BooleanQueryOperatorInput>;
   configDir: Maybe<StringQueryOperatorInput>;
   tsNode: Maybe<BooleanQueryOperatorInput>;
   pathCheck: Maybe<BooleanQueryOperatorInput>;
@@ -3143,30 +3085,12 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   maxWidth: Maybe<Scalars['Int']>;
   quality: Maybe<Scalars['Int']>;
   linkImagesToOriginal: Maybe<Scalars['Boolean']>;
-  showCaptions: Maybe<Scalars['Boolean']>;
-  markdownCaptions: Maybe<Scalars['Boolean']>;
-  sizeByPixelDensity: Maybe<Scalars['Boolean']>;
-  backgroundColor: Maybe<Scalars['String']>;
-  withWebp: Maybe<Scalars['Boolean']>;
-  tracedSVG: Maybe<Scalars['Boolean']>;
-  loading: Maybe<Scalars['String']>;
-  disableBgImageOnAlpha: Maybe<Scalars['Boolean']>;
-  disableBgImage: Maybe<Scalars['Boolean']>;
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   maxWidth: Maybe<IntQueryOperatorInput>;
   quality: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal: Maybe<BooleanQueryOperatorInput>;
-  showCaptions: Maybe<BooleanQueryOperatorInput>;
-  markdownCaptions: Maybe<BooleanQueryOperatorInput>;
-  sizeByPixelDensity: Maybe<BooleanQueryOperatorInput>;
-  backgroundColor: Maybe<StringQueryOperatorInput>;
-  withWebp: Maybe<BooleanQueryOperatorInput>;
-  tracedSVG: Maybe<BooleanQueryOperatorInput>;
-  loading: Maybe<StringQueryOperatorInput>;
-  disableBgImageOnAlpha: Maybe<BooleanQueryOperatorInput>;
-  disableBgImage: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type SitePluginSortInput = {
@@ -3222,6 +3146,43 @@ export type TransformOptions = {
 export type WebPOptions = {
   quality: Maybe<Scalars['Int']>;
 };
+
+export type CreateArticlePagesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CreateArticlePagesQuery = (
+  { __typename?: 'Query' }
+  & { allMarkdownRemark: (
+    { __typename?: 'MarkdownRemarkConnection' }
+    & { edges: Array<(
+      { __typename?: 'MarkdownRemarkEdge' }
+      & { node: (
+        { __typename?: 'MarkdownRemark' }
+        & { fields: Maybe<(
+          { __typename?: 'MarkdownRemarkFields' }
+          & Pick<MarkdownRemarkFields, 'language' | 'filename' | 'path' | 'slug'>
+        )> }
+      ) }
+    )> }
+  ) }
+);
+
+export type CreateArticlesPagesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CreateArticlesPagesQuery = (
+  { __typename?: 'Query' }
+  & { allMarkdownRemark: (
+    { __typename?: 'MarkdownRemarkConnection' }
+    & { edges: Array<(
+      { __typename?: 'MarkdownRemarkEdge' }
+      & { node: (
+        { __typename?: 'MarkdownRemark' }
+        & Pick<MarkdownRemark, 'id'>
+      ) }
+    )> }
+  ) }
+);
 
 export type GatsbyImageSharpFixedFragment = (
   { __typename?: 'ImageSharpFixed' }
@@ -3383,8 +3344,67 @@ export type IndexPageQueryVariables = Exact<{
 
 export type IndexPageQuery = (
   { __typename?: 'Query' }
-  & { welcome: Maybe<(
+  & { welcomeSpotlight: Maybe<(
     { __typename?: 'MarkdownRemark' }
     & Pick<MarkdownRemark, 'html'>
+  )>, recentArticles: (
+    { __typename?: 'MarkdownRemarkConnection' }
+    & { nodes: Array<(
+      { __typename?: 'MarkdownRemark' }
+      & Pick<MarkdownRemark, 'excerpt'>
+      & { fields: Maybe<(
+        { __typename?: 'MarkdownRemarkFields' }
+        & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+      )>, frontmatter: Maybe<(
+        { __typename?: 'MarkdownRemarkFrontmatter' }
+        & Pick<MarkdownRemarkFrontmatter, 'title'>
+      )> }
+    )> }
+  ) }
+);
+
+export type ArticlePageQueryVariables = Exact<{
+  language: Maybe<Scalars['String']>;
+  slug: Maybe<Scalars['String']>;
+}>;
+
+
+export type ArticlePageQuery = (
+  { __typename?: 'Query' }
+  & { article: Maybe<(
+    { __typename?: 'MarkdownRemark' }
+    & Pick<MarkdownRemark, 'html'>
+    & { frontmatter: Maybe<(
+      { __typename?: 'MarkdownRemarkFrontmatter' }
+      & Pick<MarkdownRemarkFrontmatter, 'title'>
+    )> }
   )> }
+);
+
+export type ArticlesPageQueryVariables = Exact<{
+  language: Scalars['String'];
+  skip: Scalars['Int'];
+  limit: Scalars['Int'];
+}>;
+
+
+export type ArticlesPageQuery = (
+  { __typename?: 'Query' }
+  & { articles: (
+    { __typename?: 'MarkdownRemarkConnection' }
+    & { edges: Array<(
+      { __typename?: 'MarkdownRemarkEdge' }
+      & { node: (
+        { __typename?: 'MarkdownRemark' }
+        & Pick<MarkdownRemark, 'excerpt'>
+        & { fields: Maybe<(
+          { __typename?: 'MarkdownRemarkFields' }
+          & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+        )>, frontmatter: Maybe<(
+          { __typename?: 'MarkdownRemarkFrontmatter' }
+          & Pick<MarkdownRemarkFrontmatter, 'title'>
+        )> }
+      ) }
+    )> }
+  ) }
 );

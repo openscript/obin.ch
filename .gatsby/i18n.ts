@@ -5,40 +5,41 @@ export const defaultLanguage: Language = 'de';
 export type Translation = { [key in Language]: { [key: string]: string } };
 
 export const slugTranslation: Translation = {
-  'de': {
+  de: {
     '/about': '/ueber-uns',
     '/imprint': '/impressum'
   },
-  'en': {
-  }
-}
+  en: {}
+};
 
 export const localeTranslation: { [key in Language]: string } = {
-  'de': 'Deutsch',
-  'en': 'English'
-}
+  de: 'Deutsch',
+  en: 'English'
+};
 
 export const contentTranslation: Translation = {
-  'de': {
+  de: {
     ...localeTranslation,
     ...slugTranslation.de,
     'meta.languageName': 'Deutsch',
-    'meta.title': 'r.obin.ch',
+    'meta.title': 'R.obin.ch',
     'page.index.title': 'Startseite',
     'page.index.section.values': 'Werte',
     'page.index.section.references': 'Referenzen',
     'page.index.section.offers': 'Angebote',
-    'page.imprint.title': 'Impressum'
+    'page.imprint.title': 'Impressum',
+    'page.articles.title': 'Artikel'
   },
-  'en': {
+  en: {
     ...localeTranslation,
     ...slugTranslation.en,
     'meta.languageName': 'English',
-    'meta.title': 'r.obin.ch',
+    'meta.title': 'R.obin.ch',
     'page.index.title': 'Homepage',
     'page.index.section.values': 'Values',
     'page.index.section.references': 'References',
     'page.index.section.offers': 'Offers',
-    'page.imprint.title': 'Imprint'
+    'page.imprint.title': 'Imprint',
+    'page.articles.title': 'Articles'
   }
-}
+};
