@@ -1,11 +1,10 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
 import { FileSystemNode } from 'gatsby-source-filesystem';
-import { resolve } from 'path';
-import { ArticlesQuery } from '../graphql-types';
 import { defaultLanguage, Language, languages, slugTranslation } from './i18n';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import slug from 'limax';
+import { createArticlePages } from './createPages/createArticlePages';
 
 const promisifiedExec = promisify(exec);
 
@@ -75,46 +74,8 @@ const node: ITSConfigFn<'node'> = () => ({
       createPage({ ...page, path: path.path, context });
     });
   },
-  createPages: async ({ graphql, actions }) => {
-    const { createPage } = actions;
-    const result = await graphql<ArticlesQuery>(`
-      query Articles {
-        allMarkdownRemark(filter: { fields: { kind: { eq: "articles" } } }) {
-          edges {
-            node {
-              fields {
-                language
-                filename
-                path
-                slug
-              }
-            }
-          }
-        }
-      }
-    `);
-
-    result.data?.allMarkdownRemark.edges.forEach(({ node }) => {
-      const alternativeLanguagePaths = result.data?.allMarkdownRemark.edges
-        .filter((alternative) => {
-          return node.fields.filename === alternative.node.fields.filename && node.fields.language !== alternative.node.fields.language;
-        })
-        .map(({ node }) => {
-          return {
-            language: node.fields.language,
-            path: node.fields.path
-          };
-        });
-      createPage({
-        path: node.fields.path,
-        component: resolve('./src/templates/article.tsx'),
-        context: {
-          slug: node.fields.slug,
-          language: node.fields.language,
-          alternativeLanguagePaths
-        }
-      });
-    });
+  createPages: async (args) => {
+    await createArticlePages(args);
   }
 });
 
