@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useIntl } from 'react-intl';
 import { ArticlePageQuery, SitePageContext } from '../../graphql-types';
 import { DefaultLayout } from '../layouts/default';
@@ -12,15 +12,21 @@ export default function Article({ data, pageContext }: ArticleProps) {
   const title = intl.formatMessage({ id: 'page.imprint.title' });
   return (
     <DefaultLayout pageContext={pageContext} title={title}>
-      <PaddedElement dangerouslySetInnerHTML={{ __html: data.article.html }}></PaddedElement>
+      <PaddedElement>
+        <h1>{data.article.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: data.article.html }} />
+      </PaddedElement>
     </DefaultLayout>
   );
 }
 
 export const query = graphql`
   query ArticlePage($language: String, $slug: String) {
-    article: markdownRemark(fields: { language: { eq: $language }, kind: { eq: "articles" } }, frontmatter: { slug: { eq: $slug } }) {
+    article: markdownRemark(fields: { language: { eq: $language }, kind: { eq: "articles" }, slug: { eq: $slug } }) {
       html
+      frontmatter {
+        title
+      }
     }
   }
 `;
