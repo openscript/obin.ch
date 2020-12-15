@@ -1,8 +1,8 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
 import { createArticlePages } from './createPages/createArticlePages';
 import { createArticlesPages } from './createPages/createArticlesPages';
-import { translatePagePaths } from './utils/path';
 import { enhanceMarkdownNodes } from './onCreateNode/enhanceMarkdowNodes';
+import { translatePage } from './onCreatePage/translatePage';
 
 const node: ITSConfigFn<'node'> = () => ({
   // enhance nodes
@@ -10,17 +10,8 @@ const node: ITSConfigFn<'node'> = () => ({
     await enhanceMarkdownNodes(args);
   },
   // translate pages
-  onCreatePage: async ({ page, actions }) => {
-    const { createPage, deletePage } = actions;
-    const paths = translatePagePaths(page.path);
-
-    deletePage(page);
-
-    paths.forEach((path) => {
-      const alternativeLanguagePaths = paths.filter((p) => p.language !== path.language);
-      const context = { ...page.context, language: path.language, alternativeLanguagePaths };
-      createPage({ ...page, path: path.path, context });
-    });
+  onCreatePage: async (args) => {
+    await translatePage(args);
   },
   // generate pages
   createPages: async (args) => {
