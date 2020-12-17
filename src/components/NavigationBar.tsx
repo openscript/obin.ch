@@ -24,6 +24,9 @@ const MenuList = styled.ul<CollapseWidthProps>`
       right: 0;
       padding: 0 2rem;
       background-color: var(--black-color);
+      margin-top: -2rem;
+      padding-top: 2rem;
+      z-index: 1;
 
       li {
         margin-right: 0;
