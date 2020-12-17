@@ -10,15 +10,16 @@ const StyledList = styled.ul`
 `;
 
 export type LanguageSwitcherProps = {
+  className?: string;
   paths?: { language: string; path: string }[];
 };
 
-export function LanguageSwitcher({ paths }: LanguageSwitcherProps) {
+export function LanguageSwitcher({ className, paths }: LanguageSwitcherProps) {
   if (!paths) {
     return null;
   }
   return (
-    <StyledList>
+    <StyledList className={className}>
       {paths.map((p) => {
         return (
           <li key={p.language}>

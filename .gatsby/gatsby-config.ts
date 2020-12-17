@@ -4,7 +4,11 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
   siteMetadata: {
     siteUrl: 'https://r.obin.ch',
     email: 'hi+r@obin.ch',
-    phone: '+41 44 520 54 67'
+    phone: '+41 44 520 54 67',
+    mainNavigation: [{
+      title: 'page.articles.title',
+      path: '/articles'
+    }]
   },
   plugins: [
     // Plugins

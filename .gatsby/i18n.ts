@@ -7,7 +7,7 @@ export type Translation = { [key in Language]: { [key: string]: string } };
 export const slugTranslation: Translation = {
   de: {
     '/about': '/ueber-uns',
-    '/imprint': '/impressum'
+    '/imprint': '/impressum',
   },
   en: {}
 };
@@ -28,7 +28,7 @@ export const contentTranslation: Translation = {
     'page.index.section.references': 'Referenzen',
     'page.index.section.offers': 'Angebote',
     'page.imprint.title': 'Impressum',
-    'page.articles.title': 'Artikel'
+    'page.articles.title': 'Blog'
   },
   en: {
     ...localeTranslation,
@@ -40,6 +40,6 @@ export const contentTranslation: Translation = {
     'page.index.section.references': 'References',
     'page.index.section.offers': 'Offers',
     'page.imprint.title': 'Imprint',
-    'page.articles.title': 'Articles'
+    'page.articles.title': 'Blog'
   }
 };

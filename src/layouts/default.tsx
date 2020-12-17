@@ -1,5 +1,5 @@
 import { css, Global } from '@emotion/react';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
 import { useIntl } from 'react-intl';
 import { DefaultLayoutQuery, SitePageContext } from '../../graphql-types';
@@ -11,6 +11,8 @@ import { PageHead } from '../components/PageHead';
 import { DefaultFooter } from './default/Footer';
 import { DefaultHeader } from './default/Header';
 import { breakpoints } from './default/breakpoints';
+import { NavigationItem } from '../components/NavigationItem';
+import styled from '@emotion/styled';
 
 const DefaultLayoutStyle = css`
   :root {
@@ -136,50 +138,59 @@ const DefaultLayoutStyle = css`
   }
 `;
 
+const StyledLanguageSwitcher = styled(LanguageSwitcher)`
+  border-left: 2px solid var(--white-alternate-color);
+  padding-left: 1rem;
+`;
+
 type DefaultLayoutProps = PropsWithChildren<{ pageContext: SitePageContext; title: string }>;
 
 export function DefaultLayout({ pageContext, title, children }: DefaultLayoutProps) {
   const intl = useIntl();
   const siteTitle = intl.formatMessage({ id: 'meta.title' });
-  return (
-    <StaticQuery
-      query={graphql`
-        query DefaultLayout {
-          site {
-            buildTime
-            siteMetadata {
-              phone
-              email
-            }
+  const siteMetadata = useStaticQuery<DefaultLayoutQuery>(graphql`
+    query DefaultLayout {
+      site {
+        buildTime
+        siteMetadata {
+          phone
+          email
+          mainNavigation {
+            title
+            path
           }
         }
-      `}
-      render={(data: DefaultLayoutQuery) => (
-        <div id="wrapper">
-          <PageHead
-            alternativeLanguagePaths={pageContext.alternativeLanguagePaths}
-            locale={pageContext.language}
-            title={`${title} - ${siteTitle}`}
+      }
+    }
+  `);
+  const mainNavigationItems = siteMetadata.site.siteMetadata.mainNavigation.map((entry) => {
+    return <NavigationItem path={entry.path} title={intl.formatMessage({ id: entry.title })} />;
+  });
+  return (
+    <div id="wrapper">
+      <PageHead
+        alternativeLanguagePaths={pageContext.alternativeLanguagePaths}
+        locale={pageContext.language}
+        title={`${title} - ${siteTitle}`}
+      />
+      <Global styles={DefaultLayoutStyle} />
+      <DefaultHeader
+        navigationBar={
+          <NavigationBar
+            items={mainNavigationItems}
+            language={<StyledLanguageSwitcher paths={pageContext.alternativeLanguagePaths} />}
+            collapseWidth={breakpoints.small}
           />
-          <Global styles={DefaultLayoutStyle} />
-          <DefaultHeader
-            navigationBar={
-              <NavigationBar
-                language={<LanguageSwitcher paths={pageContext.alternativeLanguagePaths} />}
-                collapseWidth={breakpoints.small}
-              />
-            }
-            logo={<Logo homePath={'/'} />}
-            siteTitle={siteTitle}
-          />
-          <main>{children}</main>
-          <DefaultFooter
-            buildInfo={<BuildInfo buildDateTime={data.site.buildTime} />}
-            phone={data.site.siteMetadata.phone}
-            email={data.site.siteMetadata.email}
-          />
-        </div>
-      )}
-    />
+        }
+        logo={<Logo homePath={'/'} />}
+        siteTitle={siteTitle}
+      />
+      <main>{children}</main>
+      <DefaultFooter
+        buildInfo={<BuildInfo buildDateTime={siteMetadata.site.buildTime} />}
+        phone={siteMetadata.site.siteMetadata.phone}
+        email={siteMetadata.site.siteMetadata.email}
+      />
+    </div>
   );
 }

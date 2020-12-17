@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { BurgerButton } from './BurgerButton';
-import { ContactItems } from './ContactItems';
 
 type CollapseWidthProps = {
   collapseWidth: string;
@@ -36,7 +35,11 @@ const MenuList = styled.ul<CollapseWidthProps>`
   }
 
   li {
-    margin-right: 1rem;
+    padding: 0 1rem;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 `;
 
@@ -49,11 +52,12 @@ const StyledBurgerButton = styled(BurgerButton)<CollapseWidthProps>`
 `;
 
 type NavigationBarProps = {
+  items: ReactNode;
   language: JSX.Element;
   collapseWidth: string;
 };
 
-export function NavigationBar({ language, collapseWidth }: NavigationBarProps) {
+export function NavigationBar({ items, language, collapseWidth }: NavigationBarProps) {
   const [open, isOpen] = useState(false);
   const toggleOpen = () => isOpen(!open);
 
@@ -61,6 +65,7 @@ export function NavigationBar({ language, collapseWidth }: NavigationBarProps) {
     <nav>
       <StyledBurgerButton onClick={toggleOpen} isActive={open} collapseWidth={collapseWidth} />
       <MenuList className={open ? 'open' : ''} collapseWidth={collapseWidth}>
+        {items}
         <li>{language}</li>
       </MenuList>
     </nav>

@@ -2261,96 +2261,99 @@ export enum SiteFieldsEnum {
   siteMetadata___siteUrl = 3,
   siteMetadata___email = 4,
   siteMetadata___phone = 5,
-  port = 6,
-  host = 7,
-  polyfill = 8,
-  pathPrefix = 9,
-  id = 10,
-  parent___id = 11,
-  parent___parent___id = 12,
-  parent___parent___parent___id = 13,
-  parent___parent___parent___children = 14,
-  parent___parent___children = 15,
-  parent___parent___children___id = 16,
-  parent___parent___children___children = 17,
-  parent___parent___internal___content = 18,
-  parent___parent___internal___contentDigest = 19,
-  parent___parent___internal___description = 20,
-  parent___parent___internal___fieldOwners = 21,
-  parent___parent___internal___ignoreType = 22,
-  parent___parent___internal___mediaType = 23,
-  parent___parent___internal___owner = 24,
-  parent___parent___internal___type = 25,
-  parent___children = 26,
-  parent___children___id = 27,
-  parent___children___parent___id = 28,
-  parent___children___parent___children = 29,
-  parent___children___children = 30,
-  parent___children___children___id = 31,
-  parent___children___children___children = 32,
-  parent___children___internal___content = 33,
-  parent___children___internal___contentDigest = 34,
-  parent___children___internal___description = 35,
-  parent___children___internal___fieldOwners = 36,
-  parent___children___internal___ignoreType = 37,
-  parent___children___internal___mediaType = 38,
-  parent___children___internal___owner = 39,
-  parent___children___internal___type = 40,
-  parent___internal___content = 41,
-  parent___internal___contentDigest = 42,
-  parent___internal___description = 43,
-  parent___internal___fieldOwners = 44,
-  parent___internal___ignoreType = 45,
-  parent___internal___mediaType = 46,
-  parent___internal___owner = 47,
-  parent___internal___type = 48,
-  children = 49,
-  children___id = 50,
-  children___parent___id = 51,
-  children___parent___parent___id = 52,
-  children___parent___parent___children = 53,
-  children___parent___children = 54,
-  children___parent___children___id = 55,
-  children___parent___children___children = 56,
-  children___parent___internal___content = 57,
-  children___parent___internal___contentDigest = 58,
-  children___parent___internal___description = 59,
-  children___parent___internal___fieldOwners = 60,
-  children___parent___internal___ignoreType = 61,
-  children___parent___internal___mediaType = 62,
-  children___parent___internal___owner = 63,
-  children___parent___internal___type = 64,
-  children___children = 65,
-  children___children___id = 66,
-  children___children___parent___id = 67,
-  children___children___parent___children = 68,
-  children___children___children = 69,
-  children___children___children___id = 70,
-  children___children___children___children = 71,
-  children___children___internal___content = 72,
-  children___children___internal___contentDigest = 73,
-  children___children___internal___description = 74,
-  children___children___internal___fieldOwners = 75,
-  children___children___internal___ignoreType = 76,
-  children___children___internal___mediaType = 77,
-  children___children___internal___owner = 78,
-  children___children___internal___type = 79,
-  children___internal___content = 80,
-  children___internal___contentDigest = 81,
-  children___internal___description = 82,
-  children___internal___fieldOwners = 83,
-  children___internal___ignoreType = 84,
-  children___internal___mediaType = 85,
-  children___internal___owner = 86,
-  children___internal___type = 87,
-  internal___content = 88,
-  internal___contentDigest = 89,
-  internal___description = 90,
-  internal___fieldOwners = 91,
-  internal___ignoreType = 92,
-  internal___mediaType = 93,
-  internal___owner = 94,
-  internal___type = 95
+  siteMetadata___mainNavigation = 6,
+  siteMetadata___mainNavigation___title = 7,
+  siteMetadata___mainNavigation___path = 8,
+  port = 9,
+  host = 10,
+  polyfill = 11,
+  pathPrefix = 12,
+  id = 13,
+  parent___id = 14,
+  parent___parent___id = 15,
+  parent___parent___parent___id = 16,
+  parent___parent___parent___children = 17,
+  parent___parent___children = 18,
+  parent___parent___children___id = 19,
+  parent___parent___children___children = 20,
+  parent___parent___internal___content = 21,
+  parent___parent___internal___contentDigest = 22,
+  parent___parent___internal___description = 23,
+  parent___parent___internal___fieldOwners = 24,
+  parent___parent___internal___ignoreType = 25,
+  parent___parent___internal___mediaType = 26,
+  parent___parent___internal___owner = 27,
+  parent___parent___internal___type = 28,
+  parent___children = 29,
+  parent___children___id = 30,
+  parent___children___parent___id = 31,
+  parent___children___parent___children = 32,
+  parent___children___children = 33,
+  parent___children___children___id = 34,
+  parent___children___children___children = 35,
+  parent___children___internal___content = 36,
+  parent___children___internal___contentDigest = 37,
+  parent___children___internal___description = 38,
+  parent___children___internal___fieldOwners = 39,
+  parent___children___internal___ignoreType = 40,
+  parent___children___internal___mediaType = 41,
+  parent___children___internal___owner = 42,
+  parent___children___internal___type = 43,
+  parent___internal___content = 44,
+  parent___internal___contentDigest = 45,
+  parent___internal___description = 46,
+  parent___internal___fieldOwners = 47,
+  parent___internal___ignoreType = 48,
+  parent___internal___mediaType = 49,
+  parent___internal___owner = 50,
+  parent___internal___type = 51,
+  children = 52,
+  children___id = 53,
+  children___parent___id = 54,
+  children___parent___parent___id = 55,
+  children___parent___parent___children = 56,
+  children___parent___children = 57,
+  children___parent___children___id = 58,
+  children___parent___children___children = 59,
+  children___parent___internal___content = 60,
+  children___parent___internal___contentDigest = 61,
+  children___parent___internal___description = 62,
+  children___parent___internal___fieldOwners = 63,
+  children___parent___internal___ignoreType = 64,
+  children___parent___internal___mediaType = 65,
+  children___parent___internal___owner = 66,
+  children___parent___internal___type = 67,
+  children___children = 68,
+  children___children___id = 69,
+  children___children___parent___id = 70,
+  children___children___parent___children = 71,
+  children___children___children = 72,
+  children___children___children___id = 73,
+  children___children___children___children = 74,
+  children___children___internal___content = 75,
+  children___children___internal___contentDigest = 76,
+  children___children___internal___description = 77,
+  children___children___internal___fieldOwners = 78,
+  children___children___internal___ignoreType = 79,
+  children___children___internal___mediaType = 80,
+  children___children___internal___owner = 81,
+  children___children___internal___type = 82,
+  children___internal___content = 83,
+  children___internal___contentDigest = 84,
+  children___internal___description = 85,
+  children___internal___fieldOwners = 86,
+  children___internal___ignoreType = 87,
+  children___internal___mediaType = 88,
+  children___internal___owner = 89,
+  children___internal___type = 90,
+  internal___content = 91,
+  internal___contentDigest = 92,
+  internal___description = 93,
+  internal___fieldOwners = 94,
+  internal___ignoreType = 95,
+  internal___mediaType = 96,
+  internal___owner = 97,
+  internal___type = 98
 }
 
 export type SiteFilterInput = {
@@ -3105,6 +3108,7 @@ export type SiteSiteMetadata = {
   siteUrl: Maybe<Scalars['String']>;
   email: Maybe<Scalars['String']>;
   phone: Maybe<Scalars['String']>;
+  mainNavigation: Maybe<Array<Maybe<SiteSiteMetadataMainNavigation>>>;
 };
 
 export type SiteSiteMetadataFilterInput = {
@@ -3113,6 +3117,22 @@ export type SiteSiteMetadataFilterInput = {
   siteUrl: Maybe<StringQueryOperatorInput>;
   email: Maybe<StringQueryOperatorInput>;
   phone: Maybe<StringQueryOperatorInput>;
+  mainNavigation: Maybe<SiteSiteMetadataMainNavigationFilterListInput>;
+};
+
+export type SiteSiteMetadataMainNavigation = {
+  __typename?: 'SiteSiteMetadataMainNavigation';
+  title: Maybe<Scalars['String']>;
+  path: Maybe<Scalars['String']>;
+};
+
+export type SiteSiteMetadataMainNavigationFilterInput = {
+  title: Maybe<StringQueryOperatorInput>;
+  path: Maybe<StringQueryOperatorInput>;
+};
+
+export type SiteSiteMetadataMainNavigationFilterListInput = {
+  elemMatch: Maybe<SiteSiteMetadataMainNavigationFilterInput>;
 };
 
 export type SiteSortInput = {
@@ -3320,6 +3340,10 @@ export type DefaultLayoutQuery = (
     & { siteMetadata: Maybe<(
       { __typename?: 'SiteSiteMetadata' }
       & Pick<SiteSiteMetadata, 'phone' | 'email'>
+      & { mainNavigation: Maybe<Array<Maybe<(
+        { __typename?: 'SiteSiteMetadataMainNavigation' }
+        & Pick<SiteSiteMetadataMainNavigation, 'title' | 'path'>
+      )>>> }
     )> }
   )> }
 );
