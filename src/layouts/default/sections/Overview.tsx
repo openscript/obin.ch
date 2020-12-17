@@ -5,6 +5,7 @@ import { PaddedElement } from '../PaddedElement';
 
 const OverviewSection = styled(PaddedElement)`
   display: flex;
+  margin: 2rem 0 4rem 0;
 `;
 
 type OverviewProps = PropsWithChildren<unknown>;

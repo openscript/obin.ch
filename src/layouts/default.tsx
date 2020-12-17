@@ -10,6 +10,7 @@ import { Logo } from '../components/Logo';
 import { PageHead } from '../components/PageHead';
 import { DefaultFooter } from './default/Footer';
 import { DefaultHeader } from './default/Header';
+import { breakpoints } from './default/breakpoints';
 
 const DefaultLayoutStyle = css`
   :root {
@@ -29,16 +30,16 @@ const DefaultLayoutStyle = css`
     height: 100%;
     font-size: 18px;
 
-    @media (min-width: 120rem) {
-      font-size: 24px;
+    @media (max-width: ${breakpoints.small}) {
+      font-size: 14px;
     }
 
-    @media (max-width: 60rem) {
+    @media (max-width: ${breakpoints.medium}) {
       font-size: 16px;
     }
 
-    @media (max-width: 30rem) {
-      font-size: 14px;
+    @media (min-width: ${breakpoints.big}) {
+      font-size: 24px;
     }
   }
 
@@ -65,7 +66,7 @@ const DefaultLayoutStyle = css`
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: 7rem auto 8rem;
 
-    @media (min-width: 120rem) {
+    @media (min-width: ${breakpoints.big}) {
       grid-template-rows: 8rem auto 8rem;
     }
 
@@ -163,7 +164,10 @@ export function DefaultLayout({ pageContext, title, children }: DefaultLayoutPro
           <Global styles={DefaultLayoutStyle} />
           <DefaultHeader
             navigationBar={
-              <NavigationBar language={<LanguageSwitcher paths={pageContext.alternativeLanguagePaths} />} collapseWidth="45rem" />
+              <NavigationBar
+                language={<LanguageSwitcher paths={pageContext.alternativeLanguagePaths} />}
+                collapseWidth={breakpoints.small}
+              />
             }
             logo={<Logo homePath={'/'} />}
             siteTitle={siteTitle}

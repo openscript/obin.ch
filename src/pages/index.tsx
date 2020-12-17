@@ -15,7 +15,9 @@ type IndexPageProps = {
 };
 
 const WelcomeSpotlight = styled(Spotlight)`
-  height: 40rem;
+  min-height: 50vh;
+  height: 55vw;
+  max-height: 80vh;
 `;
 
 const WelcomeContent = styled.div`
