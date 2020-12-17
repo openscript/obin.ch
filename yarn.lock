@@ -1566,10 +1566,10 @@
     "@formatjs/ecma402-abstract" "1.5.0"
     tslib "^2.0.1"
 
-"@formatjs/intl@1.4.11":
-  version "1.4.11"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl/-/intl-1.4.11.tgz#6fa19a5b9be9daca36ee511c286cd310529776c0"
-  integrity sha512-fzAgZhJFpWi3Lc+j5WFIRMiJSt3AuaMHRUHl+eixmBIRqVXUoCbLvAqIs6b+fl/B6pXcVgRPY5HcPFUG2ApCGw==
+"@formatjs/intl@1.4.12":
+  version "1.4.12"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl/-/intl-1.4.12.tgz#69a42e1a7cc6317023c87f04cebf1fa223161d88"
+  integrity sha512-o0DC3hq0G7leJ3C2uuXT7dv2ZTJ4Sw2b3k95PkGs+exYOtYAIGCCbY6rTDr8DYTIboZJRCOUYitRiBDHoHX20Q==
   dependencies:
     "@formatjs/ecma402-abstract" "1.5.0"
     "@formatjs/intl-datetimeformat" "3.2.0"
@@ -1577,8 +1577,8 @@
     "@formatjs/intl-listformat" "5.0.2"
     "@formatjs/intl-relativetimeformat" "8.0.1"
     fast-memoize "^2.5.2"
-    intl-messageformat "9.3.20"
-    intl-messageformat-parser "6.0.18"
+    intl-messageformat "9.4.0"
+    intl-messageformat-parser "6.1.0"
     tslib "^2.0.1"
 
 "@graphql-codegen/cli@^1.19.4":
@@ -5203,10 +5203,10 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.5.3"
 
-create-gatsby@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/create-gatsby/-/create-gatsby-0.2.0.tgz#2ef9d85b29d616dabf75acd550b94f1a022d506f"
-  integrity sha512-1KGKbAzY442rwmZ67rt2660l79n+qoKl2EjS3rcTzMkIBEpZ/+1DKDRaryeaZvEF7gWPV7viXxt+nQrniLgVpQ==
+create-gatsby@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/create-gatsby/-/create-gatsby-0.2.1.tgz#d93ed639ab8bea00be9956ab495dc84ab8e49f4b"
+  integrity sha512-TYg5jfi97GWCuotU2otZUqNtNBmjIZTHlW1RE49JDK/QujtJ4pur9cp7oFJm9QaOqeiH+oq1/LK7JFzq9B44HA==
 
 create-hash@^1.1.0, create-hash@^1.1.2, create-hash@^1.2.0:
   version "1.2.0"
@@ -7497,10 +7497,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.16.0.tgz#99f24d7d2835e452d523744611a3f22e0a624c43"
-  integrity sha512-WoFDKdHJ/Zrq74673zuaLrly9/LMGYWX6sIDxI6VHsgyeE1UFxYwOazx9uArjWZ4b3zFV3T2QYVZF6QuFbkeZg==
+gatsby-cli@^2.16.1:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.16.1.tgz#f6da732111403d80245cb21579a12a530a17fa1f"
+  integrity sha512-LIuvOCfkGCNkdApb0UpqwyhHhmfn0weEQ2ZVW07/DLbqOJ8bzilzoCZHCBNZUKiSSQwADaInLcr5L2/EbEZzZw==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@hapi/joi" "^15.1.1"
@@ -7511,7 +7511,7 @@ gatsby-cli@^2.16.0:
     common-tags "^1.8.0"
     configstore "^5.0.1"
     convert-hrtime "^3.0.0"
-    create-gatsby "^0.2.0"
+    create-gatsby "^0.2.1"
     envinfo "^7.7.3"
     execa "^3.4.0"
     fs-exists-cached "^1.0.0"
@@ -7619,16 +7619,17 @@ gatsby-plugin-manifest@^2.9.0:
     semver "^7.3.2"
     sharp "^0.26.3"
 
-gatsby-plugin-page-creator@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.7.0.tgz#8b6f2afa11794c15eb0809054d5b7e0d47a6ba99"
-  integrity sha512-lLUiwVGP/KfdlLwI7sB5naODK9KauPqPg9vd35LGKu/xI4izAi1070LwrG69XWm+R3RUF7NEkgHczBjwSI/fcQ==
+gatsby-plugin-page-creator@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.7.1.tgz#ad8e81d62a48b52497cf09c1d8518e70b929275a"
+  integrity sha512-rGFbwBy24pk9RX+4ekBdKkzX9Xkc42GD917DsroQ7hPc5fHAFnJ6a1wJPrAH1+frOHovGQFMCBdtrokAD/U1Aw==
   dependencies:
     "@babel/traverse" "^7.12.5"
     "@sindresorhus/slugify" "^1.1.0"
     chokidar "^3.4.2"
     fs-exists-cached "^1.0.0"
     gatsby-page-utils "^0.6.0"
+    gatsby-telemetry "^1.7.0"
     globby "^11.0.1"
     lodash "^4.17.20"
 
@@ -7647,10 +7648,10 @@ gatsby-plugin-robots-txt@^1.5.3:
     "@babel/runtime" "^7.11.2"
     generate-robotstxt "^8.0.3"
 
-gatsby-plugin-sharp@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.11.0.tgz#92b4b6b4a79b2499f944aebe1dbcf79bd001edc3"
-  integrity sha512-euNpOvvFIExsPRPHe8SYA07Dy4KsgTlS6aspwlCIc4UvyVIBS7vf2iTUnfiOSZMJ4mB5EpN2qUZEkFf8ZeTjyw==
+gatsby-plugin-sharp@^2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.11.1.tgz#8fc2df2d12c9d8bef1c2aaa795e78e46259e405a"
+  integrity sha512-x+szZDBequnh8bCn/TAS4TYXybPFM/jcu9MwkV85M2tnBZwU9/1Y/XFQMV6pMfrkc5xASTqG0UR9wMSPQGBtUg==
   dependencies:
     "@babel/runtime" "^7.12.5"
     async "^3.2.0"
@@ -7910,10 +7911,10 @@ gatsby-transformer-sharp@^2.9.0:
     semver "^7.3.2"
     sharp "^0.26.3"
 
-gatsby@^2.29.0:
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.29.0.tgz#3149572c78fc01de0a623e8e9b0db0585518c0f4"
-  integrity sha512-sS1t1POQ0orRiQXNcZrcOa5fi++nRymXEENpfFTp8N9FDmBWH1EVUhXuEwKKtVIMdfm+Fhnt5TiBeZCDXRQyfQ==
+gatsby@^2.29.1:
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.29.1.tgz#0b1d7bc8cf434c81086e5a26926394f4181cbb93"
+  integrity sha512-DGVbGhBmD3GmKgNBB1Vz34Ex9c8mpVQ4ojOSnO4Dtns1Q32MRIqI/CRhfeoIauxuSi49Z8DbkRT5HTTjNVKDtw==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.12.3"
@@ -7982,12 +7983,12 @@ gatsby@^2.29.0:
     find-cache-dir "^3.3.1"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "^2.16.0"
+    gatsby-cli "^2.16.1"
     gatsby-core-utils "^1.7.0"
     gatsby-graphiql-explorer "^0.8.0"
     gatsby-legacy-polyfills "^0.4.0"
     gatsby-link "^2.8.0"
-    gatsby-plugin-page-creator "^2.7.0"
+    gatsby-plugin-page-creator "^2.7.1"
     gatsby-plugin-typescript "^2.9.0"
     gatsby-plugin-utils "^0.6.0"
     gatsby-react-router-scroll "^3.4.0"
@@ -9272,21 +9273,21 @@ internal-slot@^1.0.2:
     has "^1.0.3"
     side-channel "^1.0.2"
 
-intl-messageformat-parser@6.0.18:
-  version "6.0.18"
-  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.0.18.tgz#bf2855b82b0749e1f34e452f0a15d08d3277c8c7"
-  integrity sha512-vLjACEunfi5uSUCWFLOR4PXQ9DGLpED3tM7o9zsYsOvjl0VIheoxyG0WZXnsnhn+S+Zu158M6CkuHXeNZfKRRg==
+intl-messageformat-parser@6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.1.0.tgz#134328151c41592d9e1a61f5c6779c06c8eb3f08"
+  integrity sha512-nPPh2kOrKqlh4D9bCAetxkrUiq5/6S1exPQyg52Ihusy0ECNGhZ0Qmq8pFRK9gWIuiQPVmLA7eSNp8diC2tX3w==
   dependencies:
     "@formatjs/ecma402-abstract" "1.5.0"
     tslib "^2.0.1"
 
-intl-messageformat@9.3.20:
-  version "9.3.20"
-  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.3.20.tgz#87ec7e5f7a0f5d13157dc8bed88fe37b4c57b2a1"
-  integrity sha512-jmpjYHE076J/0CIofrPhtUC4LfmsAhuv4JMQxytl2KJd2bim+3+gQJh+Z1vyHUzcj4fIHdt388ZGchb8f0NwOA==
+intl-messageformat@9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.4.0.tgz#b9c9c00a6e88a8f1ffd9ee3e54340c9dfb765d13"
+  integrity sha512-zcF8OWG52dCwwePkykqqv7F038vCaixPR14Lr3YUFc9jRdGoCazl2dTE3BwBaeHr3pG/qYb6A/mwMKrj4LFt9Q==
   dependencies:
     fast-memoize "^2.5.2"
-    intl-messageformat-parser "6.0.18"
+    intl-messageformat-parser "6.1.0"
     tslib "^2.0.1"
 
 into-stream@^3.1.0:
@@ -13284,21 +13285,21 @@ react-hot-loader@^4.12.21:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-intl@^5.10.7:
-  version "5.10.7"
-  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-5.10.7.tgz#2f163122bcbf3938fa736026d05bfc9aade05693"
-  integrity sha512-wbpQ7RPvlquxYaUBNG9E5lwufc/Ldq7/iJzIGwMG2eh7bag39AlbPlG+2ZfO31xfCo9TU4nG+X6t12I7d+Kdhg==
+react-intl@^5.10.8:
+  version "5.10.8"
+  resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-5.10.8.tgz#658ed51648f9181815299dafa3aaa5d7c67e3519"
+  integrity sha512-XPZZTdYNxorfCeWkZgi5rPmhv9I5nDQnPYJh8JTf2moq0aV6ByqAMI9HZTKXkJBCrbyZ8v5rvYGMLWKhiWS95g==
   dependencies:
     "@formatjs/ecma402-abstract" "1.5.0"
-    "@formatjs/intl" "1.4.11"
+    "@formatjs/intl" "1.4.12"
     "@formatjs/intl-displaynames" "4.0.2"
     "@formatjs/intl-listformat" "5.0.2"
     "@formatjs/intl-relativetimeformat" "8.0.1"
     "@types/hoist-non-react-statics" "^3.3.1"
     fast-memoize "^2.5.2"
     hoist-non-react-statics "^3.3.2"
-    intl-messageformat "9.3.20"
-    intl-messageformat-parser "6.0.18"
+    intl-messageformat "9.4.0"
+    intl-messageformat-parser "6.1.0"
     shallow-equal "^1.2.1"
     tslib "^2.0.1"
 
