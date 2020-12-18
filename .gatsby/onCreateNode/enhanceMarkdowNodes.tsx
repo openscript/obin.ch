@@ -8,12 +8,18 @@ import { addLanguagePrefix } from '../utils/path';
 
 const promisifiedExec = promisify(exec);
 
-const getCreationDate = async (path: string) => {
-  return promisifiedExec(`git log --diff-filter=A --follow --format=%aI -- ${path} | tail -1`);
+const convertToISOString = (gitDateTime: string) => {
+  return new Date(gitDateTime).toISOString();
+};
+
+const getPublicationDate = async (path: string) => {
+  const publicationDate = await promisifiedExec(`git log --diff-filter=A --follow --format=%aI -- ${path} | tail -1`);
+  return convertToISOString(publicationDate.stdout.trim());
 };
 
 const getModificationDate = async (path: string) => {
-  return promisifiedExec(`git log -1 --format=%aI -- ${path} | tail -1`);
+  const modificationDate = promisifiedExec(`git log -1 --format=%aI -- ${path} | tail -1`);
+  return convertToISOString((await modificationDate).stdout.trim());
 };
 
 export async function enhanceMarkdownNodes(args: CreateNodeArgs) {
@@ -29,14 +35,14 @@ export async function enhanceMarkdownNodes(args: CreateNodeArgs) {
     const { title } = node['frontmatter'] as { title?: string };
     const currentSlug = title ? slug(title) : filename;
     const path = addLanguagePrefix(`/${relativeDirectory}/${currentSlug}`, language);
-    const createdAt = await getCreationDate(absolutePath);
+    const publishedAt = await getPublicationDate(absolutePath);
     const modifiedAt = await getModificationDate(absolutePath);
     createNodeField({ node, name: 'language', value: language });
     createNodeField({ node, name: 'filename', value: filename });
     createNodeField({ node, name: 'kind', value: relativeDirectory });
     createNodeField({ node, name: 'slug', value: currentSlug });
     createNodeField({ node, name: 'path', value: path });
-    createNodeField({ node, name: 'createdAt', value: createdAt.stdout });
-    createNodeField({ node, name: 'modifiedAt', value: modifiedAt.stdout });
+    createNodeField({ node, name: 'publishedAt', value: publishedAt });
+    createNodeField({ node, name: 'modifiedAt', value: modifiedAt });
   }
 }

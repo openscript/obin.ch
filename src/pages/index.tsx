@@ -8,6 +8,7 @@ import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import { Card } from '../components/Card';
 import { Overview } from '../layouts/default/sections/Overview';
+import { ExcerptItem } from '../components/ExcerptItem';
 
 type IndexPageProps = {
   data: IndexPageQuery;
@@ -41,9 +42,13 @@ export default function IndexPage({ data, pageContext }: IndexPageProps) {
       <Overview>
         {data.recentArticles.nodes.map((article, i) => {
           return (
-            <Card title={article.frontmatter.title} path={article.fields.path} key={i}>
-              {article.excerpt}
-            </Card>
+            <ExcerptItem
+              title={article.frontmatter.title}
+              excerpt={article.excerpt}
+              path={article.fields.path}
+              key={i}
+              publishedAt={article.fields.modifiedAt}
+            />
           );
         })}
       </Overview>
@@ -64,7 +69,6 @@ export const query = graphql`
       nodes {
         fields {
           path
-          modifiedAt
         }
         frontmatter {
           title
