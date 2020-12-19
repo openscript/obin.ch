@@ -7,7 +7,7 @@ export type Translation = { [key in Language]: { [key: string]: string } };
 export const slugTranslation: Translation = {
   de: {
     '/about': '/ueber-uns',
-    '/imprint': '/impressum',
+    '/imprint': '/impressum'
   },
   en: {}
 };
@@ -28,6 +28,8 @@ export const contentTranslation: Translation = {
     'page.index.section.references': 'Referenzen',
     'page.index.section.offers': 'Angebote',
     'page.imprint.title': 'Impressum',
+    'page.notFound.title': 'Seite nicht gefunden',
+    'page.notFound.content': 'Es tut mir leid. Die gesuchte Seite konnte existiert nicht.',
     'page.articles.title': 'Blog'
   },
   en: {
@@ -40,6 +42,8 @@ export const contentTranslation: Translation = {
     'page.index.section.references': 'References',
     'page.index.section.offers': 'Offers',
     'page.imprint.title': 'Imprint',
+    'page.notFound.title': 'Page not found',
+    'page.notFound.content': "I'm sorry. The requested page couldn't be found.",
     'page.articles.title': 'Blog'
   }
 };
