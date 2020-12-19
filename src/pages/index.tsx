@@ -47,7 +47,7 @@ export default function IndexPage({ data, pageContext }: IndexPageProps) {
               excerpt={article.excerpt}
               path={article.fields.path}
               key={i}
-              publishedAt={article.fields.modifiedAt}
+              date={article.fields.modifiedAt}
             />
           );
         })}

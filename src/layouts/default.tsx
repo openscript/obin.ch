@@ -163,8 +163,8 @@ export function DefaultLayout({ pageContext, title, children }: DefaultLayoutPro
       }
     }
   `);
-  const mainNavigationItems = siteMetadata.site.siteMetadata.mainNavigation.map((entry) => {
-    return <NavigationItem path={entry.path} title={intl.formatMessage({ id: entry.title })} />;
+  const mainNavigationItems = siteMetadata.site.siteMetadata.mainNavigation.map((entry, i) => {
+    return <NavigationItem path={entry.path} title={intl.formatMessage({ id: entry.title })} key={i} />;
   });
   return (
     <div id="wrapper">

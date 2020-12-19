@@ -3,6 +3,7 @@ import React from 'react';
 import { useIntl } from 'react-intl';
 import { ArticlesPageQuery, SitePageContext } from '../../graphql-types';
 import { Card } from '../components/Card';
+import { ExcerptItem } from '../components/ExcerptItem';
 import { DefaultLayout } from '../layouts/default';
 import { PaddedElement } from '../layouts/default/PaddedElement';
 
@@ -16,9 +17,13 @@ export default function Articles({ data, pageContext }: ArticlesProps) {
     <DefaultLayout pageContext={pageContext} title={title}>
       <PaddedElement>
         {data.articles.edges.map((article, i) => (
-          <Card title={article.node.frontmatter.title} path={article.node.fields.path} key={i}>
-            {article.node.excerpt}
-          </Card>
+          <ExcerptItem
+            title={article.node.frontmatter.title}
+            path={article.node.fields.path}
+            key={i}
+            excerpt={article.node.excerpt}
+            date={article.node.fields.modifiedAt}
+          />
         ))}
       </PaddedElement>
     </DefaultLayout>
