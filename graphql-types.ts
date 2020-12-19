@@ -710,7 +710,7 @@ export enum FileFieldsEnum {
   childMarkdownRemark___fields___kind = 219,
   childMarkdownRemark___fields___slug = 220,
   childMarkdownRemark___fields___path = 221,
-  childMarkdownRemark___fields___createdAt = 222,
+  childMarkdownRemark___fields___publishedAt = 222,
   childMarkdownRemark___fields___modifiedAt = 223,
   childMarkdownRemark___html = 224,
   childMarkdownRemark___htmlAst = 225,
@@ -1544,8 +1544,24 @@ export type MarkdownRemarkFields = {
   kind: Maybe<Scalars['String']>;
   slug: Maybe<Scalars['String']>;
   path: Maybe<Scalars['String']>;
-  createdAt: Maybe<Scalars['String']>;
-  modifiedAt: Maybe<Scalars['String']>;
+  publishedAt: Maybe<Scalars['Date']>;
+  modifiedAt: Maybe<Scalars['Date']>;
+};
+
+
+export type MarkdownRemarkFieldsPublishedAtArgs = {
+  formatString: Maybe<Scalars['String']>;
+  fromNow: Maybe<Scalars['Boolean']>;
+  difference: Maybe<Scalars['String']>;
+  locale: Maybe<Scalars['String']>;
+};
+
+
+export type MarkdownRemarkFieldsModifiedAtArgs = {
+  formatString: Maybe<Scalars['String']>;
+  fromNow: Maybe<Scalars['Boolean']>;
+  difference: Maybe<Scalars['String']>;
+  locale: Maybe<Scalars['String']>;
 };
 
 export enum MarkdownRemarkFieldsEnum {
@@ -1559,7 +1575,7 @@ export enum MarkdownRemarkFieldsEnum {
   fields___kind = 7,
   fields___slug = 8,
   fields___path = 9,
-  fields___createdAt = 10,
+  fields___publishedAt = 10,
   fields___modifiedAt = 11,
   html = 12,
   htmlAst = 13,
@@ -1666,8 +1682,8 @@ export type MarkdownRemarkFieldsFilterInput = {
   kind: Maybe<StringQueryOperatorInput>;
   slug: Maybe<StringQueryOperatorInput>;
   path: Maybe<StringQueryOperatorInput>;
-  createdAt: Maybe<StringQueryOperatorInput>;
-  modifiedAt: Maybe<StringQueryOperatorInput>;
+  publishedAt: Maybe<DateQueryOperatorInput>;
+  modifiedAt: Maybe<DateQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFilterInput = {

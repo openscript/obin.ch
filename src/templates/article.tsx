@@ -13,7 +13,7 @@ export default function Article({ data, pageContext }: ArticleProps) {
   return (
     <DefaultLayout pageContext={pageContext} title={title}>
       <PaddedElement>
-        <h1>{data.article.frontmatter.title}</h1>
+        <h2>{data.article.frontmatter.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: data.article.html }} />
       </PaddedElement>
     </DefaultLayout>

@@ -37,7 +37,7 @@ const DefaultLayoutStyle = css`
     }
 
     @media (max-width: ${breakpoints.medium}) {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     @media (min-width: ${breakpoints.big}) {
@@ -49,6 +49,7 @@ const DefaultLayoutStyle = css`
     margin: 0;
     min-height: 100%;
     scroll-behavior: smooth;
+    overflow-y: scroll;
     display: flex;
     min-height: 100%;
     background: var(--white-alternate-color);

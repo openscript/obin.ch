@@ -6,7 +6,6 @@ import { Spotlight } from '../layouts/default/sections/Spotlight';
 import { ReactComponent as WelcomeGraphic } from '../../static/graphics/welcome.svg';
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
-import { Card } from '../components/Card';
 import { Overview } from '../layouts/default/sections/Overview';
 import { ExcerptItem } from '../components/ExcerptItem';
 
@@ -42,13 +41,9 @@ export default function IndexPage({ data, pageContext }: IndexPageProps) {
       <Overview>
         {data.recentArticles.nodes.map((article, i) => {
           return (
-            <ExcerptItem
-              title={article.frontmatter.title}
-              excerpt={article.excerpt}
-              path={article.fields.path}
-              key={i}
-              date={article.fields.modifiedAt}
-            />
+            <ExcerptItem title={article.frontmatter.title} path={article.fields.path} key={i} date={article.fields.modifiedAt}>
+              {article.excerpt}
+            </ExcerptItem>
           );
         })}
       </Overview>
@@ -69,6 +64,7 @@ export const query = graphql`
       nodes {
         fields {
           path
+          modifiedAt
         }
         frontmatter {
           title

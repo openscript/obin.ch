@@ -1,30 +1,36 @@
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import React from 'react';
-import { FormattedDate, FormattedMessage } from 'react-intl';
+import React, { ElementType } from 'react';
+import { FormattedDate, FormattedMessage, FormattedTime } from 'react-intl';
+import { Props } from '../utils/Props';
 import { Card } from './Card';
 
 const StyledCardHeader = styled(Card.Header)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 3rem;
 `;
 
-type ExcerptItemProps = {
+const StyledHeading = styled.h3`
+  margin: 0;
+`;
+
+type ExcerptItemProps = Props<{
   title: string;
   date: string;
-  excerpt: string;
   path: string;
-};
+  headingType?: ElementType;
+}>;
 
-export function ExcerptItem({ title, date, excerpt, path }: ExcerptItemProps) {
+export function ExcerptItem({ className, title, date, children, path, headingType = 'h3' }: ExcerptItemProps) {
   const header = (
     <StyledCardHeader>
       <Link to={path}>
-        <h3>{title}</h3>
+        <StyledHeading as={headingType}>{title}</StyledHeading>
       </Link>
       <span>
-        <FormattedDate value={date} />
+        <FormattedDate value={date} /> <FormattedTime value={date} />
       </span>
     </StyledCardHeader>
   );
@@ -37,8 +43,8 @@ export function ExcerptItem({ title, date, excerpt, path }: ExcerptItemProps) {
   );
 
   return (
-    <Card header={header} footer={footer}>
-      {excerpt}
+    <Card header={header} footer={footer} className={className}>
+      {children}
     </Card>
   );
 }
