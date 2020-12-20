@@ -8,7 +8,7 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
     mainNavigation: [
       {
         title: 'page.articles.title',
-        path: '/articles'
+        path: '/blog'
       }
     ]
   },

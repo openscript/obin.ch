@@ -12,6 +12,12 @@ const StyledCardHeader = styled(Card.Header)`
   height: 3rem;
 `;
 
+const StyledCardFooter = styled(Card.Footer)`
+  display: flex;
+  align-items: center;
+  height: 3rem;
+`;
+
 const StyledHeading = styled.h3`
   margin: 0;
 `;
@@ -35,11 +41,11 @@ export function ExcerptItem({ className, title, date, children, path, headingTyp
     </StyledCardHeader>
   );
   const footer = (
-    <Card.Footer>
+    <StyledCardFooter>
       <Link to={path}>
         <FormattedMessage id={'misc.more'} />
       </Link>
-    </Card.Footer>
+    </StyledCardFooter>
   );
 
   return (

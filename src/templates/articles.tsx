@@ -44,7 +44,7 @@ export const query = graphql`
       sort: { fields: fields___modifiedAt, order: DESC }
       limit: $limit
       skip: $skip
-      filter: { fields: { language: { eq: $language }, kind: { eq: "articles" } } }
+      filter: { fields: { language: { eq: $language }, kind: { eq: "blog" } } }
     ) {
       edges {
         node {

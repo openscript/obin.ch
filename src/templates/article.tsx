@@ -22,7 +22,7 @@ export default function Article({ data, pageContext }: ArticleProps) {
 
 export const query = graphql`
   query ArticlePage($language: String, $slug: String) {
-    article: markdownRemark(fields: { language: { eq: $language }, kind: { eq: "articles" }, slug: { eq: $slug } }) {
+    article: markdownRemark(fields: { language: { eq: $language }, kind: { eq: "blog" }, slug: { eq: $slug } }) {
       html
       frontmatter {
         title

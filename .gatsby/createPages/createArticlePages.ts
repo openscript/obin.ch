@@ -6,7 +6,7 @@ export async function createArticlePages({ graphql, actions }: CreatePagesArgs) 
   const { createPage } = actions;
   const result = await graphql<CreateArticlePagesQuery>(`
     query CreateArticlePages {
-      allMarkdownRemark(filter: { fields: { kind: { eq: "articles" } } }) {
+      allMarkdownRemark(filter: { fields: { kind: { eq: "blog" } } }) {
         edges {
           node {
             fields {

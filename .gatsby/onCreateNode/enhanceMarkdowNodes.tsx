@@ -8,8 +8,12 @@ import { addLanguagePrefix } from '../utils/path';
 
 const promisifiedExec = promisify(exec);
 
-const convertToISOString = (gitDateTime: string) => {
-  return new Date(gitDateTime).toISOString();
+const convertToISOString = (dateTimeString: string) => {
+  if(isNaN(Date.parse(dateTimeString))) {
+    return new Date().toISOString();
+  } else {
+    return new Date(dateTimeString).toISOString();
+  }
 };
 
 const getPublicationDate = async (path: string) => {
@@ -37,9 +41,10 @@ export async function enhanceMarkdownNodes(args: CreateNodeArgs) {
     const path = addLanguagePrefix(`/${relativeDirectory}/${currentSlug}`, language);
     const publishedAt = await getPublicationDate(absolutePath);
     const modifiedAt = await getModificationDate(absolutePath);
+    const kind = relativeDirectory.split('/')[0] || '';
     createNodeField({ node, name: 'language', value: language });
     createNodeField({ node, name: 'filename', value: filename });
-    createNodeField({ node, name: 'kind', value: relativeDirectory });
+    createNodeField({ node, name: 'kind', value: kind });
     createNodeField({ node, name: 'slug', value: currentSlug });
     createNodeField({ node, name: 'path', value: path });
     createNodeField({ node, name: 'publishedAt', value: publishedAt });

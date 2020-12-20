@@ -10,7 +10,7 @@ export async function createArticlesPages({ graphql, actions }: CreatePagesArgs)
   for (const language of languages) {
     const result = await graphql<CreateArticlesPagesQuery>(`
       query CreateArticlesPages {
-        allMarkdownRemark(filter: { fields: { language: { eq: "${language}" }, kind: { eq: "articles" } } }) {
+        allMarkdownRemark(filter: { fields: { language: { eq: "${language}" }, kind: { eq: "blog" } } }) {
           edges {
             node {
               id
@@ -25,12 +25,12 @@ export async function createArticlesPages({ graphql, actions }: CreatePagesArgs)
       .filter((l) => l !== language)
       .map((l) => {
         return {
-          path: addLanguagePrefix('/articles', l),
+          path: addLanguagePrefix('/blog', l),
           language: l
         };
       });
     Array.from({ length: pageCount }).forEach((_, i) => {
-      const currentPath = i === 0 ? '/articles' : `/articles/${i + 1}`;
+      const currentPath = i === 0 ? '/blog' : `/blog/${i + 1}`;
       createPage({
         path: addLanguagePrefix(currentPath, language),
         component: resolve('./src/templates/articles.tsx'),
