@@ -59,7 +59,7 @@ export const query = graphql`
     recentArticles: allMarkdownRemark(
       sort: { fields: fields___modifiedAt, order: DESC }
       filter: { fields: { language: { eq: $language }, kind: { eq: "blog" } } }
-      limit: 3
+      limit: 2
     ) {
       nodes {
         fields {

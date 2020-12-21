@@ -1,6 +1,6 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
-import { createArticlePages } from './createPages/createArticlePages';
-import { createArticlesPages } from './createPages/createArticlesPages';
+import { CreateBlogPages } from './createPages/createBlogPages';
+import { CreateBlogPostPages } from './createPages/createBlogPostPages';
 import { enhanceMarkdownNodes } from './onCreateNode/enhanceMarkdowNodes';
 import { translatePage } from './onCreatePage/translatePage';
 
@@ -15,8 +15,8 @@ const node: ITSConfigFn<'node'> = () => ({
   },
   // generate pages
   createPages: async (args) => {
-    await createArticlePages(args);
-    await createArticlesPages(args);
+    await CreateBlogPostPages(args);
+    await CreateBlogPages(args);
   }
 });
 

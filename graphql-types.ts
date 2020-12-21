@@ -3183,10 +3183,27 @@ export type WebPOptions = {
   quality: Maybe<Scalars['Int']>;
 };
 
-export type CreateArticlePagesQueryVariables = Exact<{ [key: string]: never; }>;
+export type CreateBlogPagesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type CreateArticlePagesQuery = (
+export type CreateBlogPagesQuery = (
+  { __typename?: 'Query' }
+  & { allMarkdownRemark: (
+    { __typename?: 'MarkdownRemarkConnection' }
+    & { edges: Array<(
+      { __typename?: 'MarkdownRemarkEdge' }
+      & { node: (
+        { __typename?: 'MarkdownRemark' }
+        & Pick<MarkdownRemark, 'id'>
+      ) }
+    )> }
+  ) }
+);
+
+export type CreateBlogPostPagesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CreateBlogPostPagesQuery = (
   { __typename?: 'Query' }
   & { allMarkdownRemark: (
     { __typename?: 'MarkdownRemarkConnection' }
@@ -3198,23 +3215,6 @@ export type CreateArticlePagesQuery = (
           { __typename?: 'MarkdownRemarkFields' }
           & Pick<MarkdownRemarkFields, 'language' | 'filename' | 'path' | 'slug'>
         )> }
-      ) }
-    )> }
-  ) }
-);
-
-export type CreateArticlesPagesQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type CreateArticlesPagesQuery = (
-  { __typename?: 'Query' }
-  & { allMarkdownRemark: (
-    { __typename?: 'MarkdownRemarkConnection' }
-    & { edges: Array<(
-      { __typename?: 'MarkdownRemarkEdge' }
-      & { node: (
-        { __typename?: 'MarkdownRemark' }
-        & Pick<MarkdownRemark, 'id'>
       ) }
     )> }
   ) }
@@ -3403,24 +3403,6 @@ export type IndexPageQuery = (
   ) }
 );
 
-export type ArticlePageQueryVariables = Exact<{
-  language: Maybe<Scalars['String']>;
-  slug: Maybe<Scalars['String']>;
-}>;
-
-
-export type ArticlePageQuery = (
-  { __typename?: 'Query' }
-  & { article: Maybe<(
-    { __typename?: 'MarkdownRemark' }
-    & Pick<MarkdownRemark, 'html'>
-    & { frontmatter: Maybe<(
-      { __typename?: 'MarkdownRemarkFrontmatter' }
-      & Pick<MarkdownRemarkFrontmatter, 'title'>
-    )> }
-  )> }
-);
-
 export type ArticlesPageQueryVariables = Exact<{
   language: Scalars['String'];
   skip: Scalars['Int'];
@@ -3447,4 +3429,22 @@ export type ArticlesPageQuery = (
       ) }
     )> }
   ) }
+);
+
+export type ArticlePageQueryVariables = Exact<{
+  language: Maybe<Scalars['String']>;
+  slug: Maybe<Scalars['String']>;
+}>;
+
+
+export type ArticlePageQuery = (
+  { __typename?: 'Query' }
+  & { article: Maybe<(
+    { __typename?: 'MarkdownRemark' }
+    & Pick<MarkdownRemark, 'html'>
+    & { frontmatter: Maybe<(
+      { __typename?: 'MarkdownRemarkFrontmatter' }
+      & Pick<MarkdownRemarkFrontmatter, 'title'>
+    )> }
+  )> }
 );

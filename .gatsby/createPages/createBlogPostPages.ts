@@ -1,11 +1,11 @@
 import { CreatePagesArgs } from 'gatsby';
 import { resolve } from 'path';
-import { CreateArticlePagesQuery } from '../../graphql-types';
+import { CreateBlogPostPagesQuery } from '../../graphql-types';
 
-export async function createArticlePages({ graphql, actions }: CreatePagesArgs) {
+export async function CreateBlogPostPages({ graphql, actions }: CreatePagesArgs) {
   const { createPage } = actions;
-  const result = await graphql<CreateArticlePagesQuery>(`
-    query CreateArticlePages {
+  const result = await graphql<CreateBlogPostPagesQuery>(`
+    query CreateBlogPostPages {
       allMarkdownRemark(filter: { fields: { kind: { eq: "blog" } } }) {
         edges {
           node {
@@ -34,7 +34,7 @@ export async function createArticlePages({ graphql, actions }: CreatePagesArgs) 
       });
     createPage({
       path: node.fields.path,
-      component: resolve('./src/templates/article.tsx'),
+      component: resolve('./src/templates/blogPost.tsx'),
       context: {
         slug: node.fields.slug,
         language: node.fields.language,
