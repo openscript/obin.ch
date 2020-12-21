@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { ArticlesPageQuery, SitePageContext } from '../../graphql-types';
+import { BlogPageQuery, SitePageContext } from '../../graphql-types';
 import { ExcerptItem } from '../components/ExcerptItem';
 import { DefaultLayout } from '../layouts/default';
 import { PaddedElement } from '../layouts/default/PaddedElement';
@@ -11,9 +11,9 @@ const StyledExcerptItem = styled(ExcerptItem)`
   margin-bottom: 2rem;
 `;
 
-type ArticlesProps = { data: ArticlesPageQuery; pageContext: SitePageContext };
+type BlogProps = { data: BlogPageQuery; pageContext: SitePageContext };
 
-export default function Articles({ data, pageContext }: ArticlesProps) {
+export default function Blog({ data, pageContext }: BlogProps) {
   const intl = useIntl();
   const title = intl.formatMessage({ id: 'page.articles.title' });
 
@@ -23,15 +23,15 @@ export default function Articles({ data, pageContext }: ArticlesProps) {
         <h2>
           <FormattedMessage id={'page.articles.title'} />
         </h2>
-        {data.articles.edges.map((article, i) => (
+        {data.posts.edges.map((post, i) => (
           <StyledExcerptItem
-            title={article.node.frontmatter.title}
-            path={article.node.fields.path}
+            title={post.node.frontmatter.title}
+            path={post.node.fields.path}
             key={i}
-            date={article.node.fields.modifiedAt}
-            tags={article.node.fields.tags}
+            date={post.node.fields.modifiedAt}
+            tags={post.node.fields.tags}
           >
-            {article.node.excerpt}
+            {post.node.excerpt}
           </StyledExcerptItem>
         ))}
       </PaddedElement>
@@ -40,8 +40,8 @@ export default function Articles({ data, pageContext }: ArticlesProps) {
 }
 
 export const query = graphql`
-  query ArticlesPage($language: String!, $skip: Int!, $limit: Int!) {
-    articles: allMarkdownRemark(
+  query BlogPage($language: String!, $skip: Int!, $limit: Int!) {
+    posts: allMarkdownRemark(
       sort: { fields: fields___modifiedAt, order: DESC }
       limit: $limit
       skip: $skip

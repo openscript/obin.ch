@@ -1,28 +1,28 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import { useIntl } from 'react-intl';
-import { ArticlePageQuery, SitePageContext } from '../../graphql-types';
+import { BlogPostPageQuery, SitePageContext } from '../../graphql-types';
 import { DefaultLayout } from '../layouts/default';
 import { PaddedElement } from '../layouts/default/PaddedElement';
 
-type ArticleProps = { data: ArticlePageQuery; pageContext: SitePageContext };
+type BlogPostProps = { data: BlogPostPageQuery; pageContext: SitePageContext };
 
-export default function Article({ data, pageContext }: ArticleProps) {
+export default function BlogPost({ data, pageContext }: BlogPostProps) {
   const intl = useIntl();
   const title = intl.formatMessage({ id: 'page.imprint.title' });
   return (
     <DefaultLayout pageContext={pageContext} title={title}>
       <PaddedElement>
-        <h2>{data.article.frontmatter.title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: data.article.html }} />
+        <h2>{data.blogPost.frontmatter.title}</h2>
+        <div dangerouslySetInnerHTML={{ __html: data.blogPost.html }} />
       </PaddedElement>
     </DefaultLayout>
   );
 }
 
 export const query = graphql`
-  query ArticlePage($language: String, $slug: String) {
-    article: markdownRemark(fields: { language: { eq: $language }, kind: { eq: "blog" }, slug: { eq: $slug } }) {
+  query BlogPostPage($language: String, $slug: String) {
+    blogPost: markdownRemark(fields: { language: { eq: $language }, kind: { eq: "blog" }, slug: { eq: $slug } }) {
       html
       frontmatter {
         title
