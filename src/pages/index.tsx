@@ -29,6 +29,10 @@ const WelcomeContent = styled.div`
   min-height: 100%;
 `;
 
+const StyledExcerptItem = styled(ExcerptItem)`
+  text-align: justify;
+`;
+
 export default function IndexPage({ data, pageContext }: IndexPageProps) {
   const intl = useIntl();
   const title = intl.formatMessage({ id: 'page.index.title' });
@@ -41,7 +45,7 @@ export default function IndexPage({ data, pageContext }: IndexPageProps) {
       <Overview>
         {data.recentArticles.nodes.map((article, i) => {
           return (
-            <ExcerptItem
+            <StyledExcerptItem
               title={article.frontmatter.title}
               path={article.fields.path}
               key={i}
@@ -49,7 +53,7 @@ export default function IndexPage({ data, pageContext }: IndexPageProps) {
               tags={article.fields.tags}
             >
               {article.excerpt}
-            </ExcerptItem>
+            </StyledExcerptItem>
           );
         })}
       </Overview>

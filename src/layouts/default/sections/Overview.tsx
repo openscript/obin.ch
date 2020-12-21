@@ -6,8 +6,8 @@ import { PaddedElement } from '../PaddedElement';
 const OverviewSection = styled(PaddedElement)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-  margin: 2rem 0 4rem 0;
+  grid-gap: 3rem;
+  margin: 3rem 0 4rem 0;
 `;
 
 type OverviewProps = PropsWithChildren<unknown>;

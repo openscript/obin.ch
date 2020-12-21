@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import React from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
-import { ArticlesPageQuery, SitePageContext, TagPageQuery } from '../../graphql-types';
+import { useIntl } from 'react-intl';
+import { SitePageContext, TagPageQuery } from '../../graphql-types';
 import { ExcerptItem } from '../components/ExcerptItem';
 import { DefaultLayout } from '../layouts/default';
 import { PaddedElement } from '../layouts/default/PaddedElement';
