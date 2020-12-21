@@ -1,5 +1,5 @@
 import { exec } from 'child_process';
-import { CreateNodeArgs } from 'gatsby';
+import { CreateNodeArgs, Node, Actions } from 'gatsby';
 import { FileSystemNode } from 'gatsby-source-filesystem';
 import slug from 'limax';
 import { promisify } from 'util';
@@ -9,7 +9,7 @@ import { addLanguagePrefix } from '../utils/path';
 const promisifiedExec = promisify(exec);
 
 const convertToISOString = (dateTimeString: string) => {
-  if(isNaN(Date.parse(dateTimeString))) {
+  if (isNaN(Date.parse(dateTimeString))) {
     return new Date().toISOString();
   } else {
     return new Date(dateTimeString).toISOString();
@@ -24,6 +24,20 @@ const getPublicationDate = async (path: string) => {
 const getModificationDate = async (path: string) => {
   const modificationDate = promisifiedExec(`git log -1 --format=%aI -- ${path} | tail -1`);
   return convertToISOString((await modificationDate).stdout.trim());
+};
+
+const enhanceBlogNodes = async (node: Node, actions: Actions, language: string) => {
+  const { createNodeField } = actions;
+  const { tags } = node['frontmatter'] as { tags?: string[] };
+  if (tags) {
+    createNodeField({
+      node,
+      name: 'tags',
+      value: tags.map((tag) => {
+        return { value: tag, path: addLanguagePrefix(`/tags/${slug(tag)}`, language) };
+      })
+    });
+  }
 };
 
 export async function enhanceMarkdownNodes(args: CreateNodeArgs) {
@@ -49,5 +63,7 @@ export async function enhanceMarkdownNodes(args: CreateNodeArgs) {
     createNodeField({ node, name: 'path', value: path });
     createNodeField({ node, name: 'publishedAt', value: publishedAt });
     createNodeField({ node, name: 'modifiedAt', value: modifiedAt });
+
+    await enhanceBlogNodes(node, actions, language);
   }
 }

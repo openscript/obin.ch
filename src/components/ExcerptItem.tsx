@@ -10,6 +10,14 @@ const StyledCardHeader = styled(Card.Header)`
   align-items: center;
   justify-content: space-between;
   height: 3rem;
+  font-size: 1.2rem;
+`;
+
+const StyledMetaInformation = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  align-items: flex-end;
 `;
 
 const StyledCardFooter = styled(Card.Footer)`
@@ -26,18 +34,28 @@ type ExcerptItemProps = Props<{
   title: string;
   date: string;
   path: string;
+  tags?: { value: string; path: string }[];
   headingType?: ElementType;
 }>;
 
-export function ExcerptItem({ className, title, date, children, path, headingType = 'h3' }: ExcerptItemProps) {
+export function ExcerptItem({ className, title, date, tags, children, path, headingType = 'h3' }: ExcerptItemProps) {
   const header = (
     <StyledCardHeader>
       <Link to={path}>
         <StyledHeading as={headingType}>{title}</StyledHeading>
       </Link>
-      <span>
-        <FormattedDate value={date} /> <FormattedTime value={date} />
-      </span>
+      <StyledMetaInformation>
+        <span>
+          <FormattedDate value={date} /> <FormattedTime value={date} />
+        </span>
+        {tags && (
+          <span>
+            {tags.map((tag) => (
+              <Link to={tag.path}>{tag.value}</Link>
+            ))}
+          </span>
+        )}
+      </StyledMetaInformation>
     </StyledCardHeader>
   );
   const footer = (

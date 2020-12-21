@@ -41,7 +41,13 @@ export default function IndexPage({ data, pageContext }: IndexPageProps) {
       <Overview>
         {data.recentArticles.nodes.map((article, i) => {
           return (
-            <ExcerptItem title={article.frontmatter.title} path={article.fields.path} key={i} date={article.fields.modifiedAt}>
+            <ExcerptItem
+              title={article.frontmatter.title}
+              path={article.fields.path}
+              key={i}
+              date={article.fields.modifiedAt}
+              tags={article.fields.tags}
+            >
               {article.excerpt}
             </ExcerptItem>
           );
@@ -65,6 +71,10 @@ export const query = graphql`
         fields {
           path
           modifiedAt
+          tags {
+            value
+            path
+          }
         }
         frontmatter {
           title

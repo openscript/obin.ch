@@ -702,65 +702,69 @@ export enum FileFieldsEnum {
   internal___type = 211,
   childMarkdownRemark___id = 212,
   childMarkdownRemark___frontmatter___title = 213,
-  childMarkdownRemark___excerpt = 214,
-  childMarkdownRemark___rawMarkdownBody = 215,
-  childMarkdownRemark___fileAbsolutePath = 216,
-  childMarkdownRemark___fields___language = 217,
-  childMarkdownRemark___fields___filename = 218,
-  childMarkdownRemark___fields___kind = 219,
-  childMarkdownRemark___fields___slug = 220,
-  childMarkdownRemark___fields___path = 221,
-  childMarkdownRemark___fields___publishedAt = 222,
-  childMarkdownRemark___fields___modifiedAt = 223,
-  childMarkdownRemark___html = 224,
-  childMarkdownRemark___htmlAst = 225,
-  childMarkdownRemark___excerptAst = 226,
-  childMarkdownRemark___headings = 227,
-  childMarkdownRemark___headings___id = 228,
-  childMarkdownRemark___headings___value = 229,
-  childMarkdownRemark___headings___depth = 230,
-  childMarkdownRemark___timeToRead = 231,
-  childMarkdownRemark___tableOfContents = 232,
-  childMarkdownRemark___wordCount___paragraphs = 233,
-  childMarkdownRemark___wordCount___sentences = 234,
-  childMarkdownRemark___wordCount___words = 235,
-  childMarkdownRemark___parent___id = 236,
-  childMarkdownRemark___parent___parent___id = 237,
-  childMarkdownRemark___parent___parent___children = 238,
-  childMarkdownRemark___parent___children = 239,
-  childMarkdownRemark___parent___children___id = 240,
-  childMarkdownRemark___parent___children___children = 241,
-  childMarkdownRemark___parent___internal___content = 242,
-  childMarkdownRemark___parent___internal___contentDigest = 243,
-  childMarkdownRemark___parent___internal___description = 244,
-  childMarkdownRemark___parent___internal___fieldOwners = 245,
-  childMarkdownRemark___parent___internal___ignoreType = 246,
-  childMarkdownRemark___parent___internal___mediaType = 247,
-  childMarkdownRemark___parent___internal___owner = 248,
-  childMarkdownRemark___parent___internal___type = 249,
-  childMarkdownRemark___children = 250,
-  childMarkdownRemark___children___id = 251,
-  childMarkdownRemark___children___parent___id = 252,
-  childMarkdownRemark___children___parent___children = 253,
-  childMarkdownRemark___children___children = 254,
-  childMarkdownRemark___children___children___id = 255,
-  childMarkdownRemark___children___children___children = 256,
-  childMarkdownRemark___children___internal___content = 257,
-  childMarkdownRemark___children___internal___contentDigest = 258,
-  childMarkdownRemark___children___internal___description = 259,
-  childMarkdownRemark___children___internal___fieldOwners = 260,
-  childMarkdownRemark___children___internal___ignoreType = 261,
-  childMarkdownRemark___children___internal___mediaType = 262,
-  childMarkdownRemark___children___internal___owner = 263,
-  childMarkdownRemark___children___internal___type = 264,
-  childMarkdownRemark___internal___content = 265,
-  childMarkdownRemark___internal___contentDigest = 266,
-  childMarkdownRemark___internal___description = 267,
-  childMarkdownRemark___internal___fieldOwners = 268,
-  childMarkdownRemark___internal___ignoreType = 269,
-  childMarkdownRemark___internal___mediaType = 270,
-  childMarkdownRemark___internal___owner = 271,
-  childMarkdownRemark___internal___type = 272
+  childMarkdownRemark___frontmatter___tags = 214,
+  childMarkdownRemark___excerpt = 215,
+  childMarkdownRemark___rawMarkdownBody = 216,
+  childMarkdownRemark___fileAbsolutePath = 217,
+  childMarkdownRemark___fields___language = 218,
+  childMarkdownRemark___fields___filename = 219,
+  childMarkdownRemark___fields___kind = 220,
+  childMarkdownRemark___fields___slug = 221,
+  childMarkdownRemark___fields___path = 222,
+  childMarkdownRemark___fields___publishedAt = 223,
+  childMarkdownRemark___fields___modifiedAt = 224,
+  childMarkdownRemark___fields___tags = 225,
+  childMarkdownRemark___fields___tags___value = 226,
+  childMarkdownRemark___fields___tags___path = 227,
+  childMarkdownRemark___html = 228,
+  childMarkdownRemark___htmlAst = 229,
+  childMarkdownRemark___excerptAst = 230,
+  childMarkdownRemark___headings = 231,
+  childMarkdownRemark___headings___id = 232,
+  childMarkdownRemark___headings___value = 233,
+  childMarkdownRemark___headings___depth = 234,
+  childMarkdownRemark___timeToRead = 235,
+  childMarkdownRemark___tableOfContents = 236,
+  childMarkdownRemark___wordCount___paragraphs = 237,
+  childMarkdownRemark___wordCount___sentences = 238,
+  childMarkdownRemark___wordCount___words = 239,
+  childMarkdownRemark___parent___id = 240,
+  childMarkdownRemark___parent___parent___id = 241,
+  childMarkdownRemark___parent___parent___children = 242,
+  childMarkdownRemark___parent___children = 243,
+  childMarkdownRemark___parent___children___id = 244,
+  childMarkdownRemark___parent___children___children = 245,
+  childMarkdownRemark___parent___internal___content = 246,
+  childMarkdownRemark___parent___internal___contentDigest = 247,
+  childMarkdownRemark___parent___internal___description = 248,
+  childMarkdownRemark___parent___internal___fieldOwners = 249,
+  childMarkdownRemark___parent___internal___ignoreType = 250,
+  childMarkdownRemark___parent___internal___mediaType = 251,
+  childMarkdownRemark___parent___internal___owner = 252,
+  childMarkdownRemark___parent___internal___type = 253,
+  childMarkdownRemark___children = 254,
+  childMarkdownRemark___children___id = 255,
+  childMarkdownRemark___children___parent___id = 256,
+  childMarkdownRemark___children___parent___children = 257,
+  childMarkdownRemark___children___children = 258,
+  childMarkdownRemark___children___children___id = 259,
+  childMarkdownRemark___children___children___children = 260,
+  childMarkdownRemark___children___internal___content = 261,
+  childMarkdownRemark___children___internal___contentDigest = 262,
+  childMarkdownRemark___children___internal___description = 263,
+  childMarkdownRemark___children___internal___fieldOwners = 264,
+  childMarkdownRemark___children___internal___ignoreType = 265,
+  childMarkdownRemark___children___internal___mediaType = 266,
+  childMarkdownRemark___children___internal___owner = 267,
+  childMarkdownRemark___children___internal___type = 268,
+  childMarkdownRemark___internal___content = 269,
+  childMarkdownRemark___internal___contentDigest = 270,
+  childMarkdownRemark___internal___description = 271,
+  childMarkdownRemark___internal___fieldOwners = 272,
+  childMarkdownRemark___internal___ignoreType = 273,
+  childMarkdownRemark___internal___mediaType = 274,
+  childMarkdownRemark___internal___owner = 275,
+  childMarkdownRemark___internal___type = 276
 }
 
 export type FileFilterInput = {
@@ -1546,6 +1550,7 @@ export type MarkdownRemarkFields = {
   path: Maybe<Scalars['String']>;
   publishedAt: Maybe<Scalars['Date']>;
   modifiedAt: Maybe<Scalars['Date']>;
+  tags: Maybe<Array<Maybe<MarkdownRemarkFieldsTags>>>;
 };
 
 
@@ -1567,113 +1572,117 @@ export type MarkdownRemarkFieldsModifiedAtArgs = {
 export enum MarkdownRemarkFieldsEnum {
   id = 0,
   frontmatter___title = 1,
-  excerpt = 2,
-  rawMarkdownBody = 3,
-  fileAbsolutePath = 4,
-  fields___language = 5,
-  fields___filename = 6,
-  fields___kind = 7,
-  fields___slug = 8,
-  fields___path = 9,
-  fields___publishedAt = 10,
-  fields___modifiedAt = 11,
-  html = 12,
-  htmlAst = 13,
-  excerptAst = 14,
-  headings = 15,
-  headings___id = 16,
-  headings___value = 17,
-  headings___depth = 18,
-  timeToRead = 19,
-  tableOfContents = 20,
-  wordCount___paragraphs = 21,
-  wordCount___sentences = 22,
-  wordCount___words = 23,
-  parent___id = 24,
-  parent___parent___id = 25,
-  parent___parent___parent___id = 26,
-  parent___parent___parent___children = 27,
-  parent___parent___children = 28,
-  parent___parent___children___id = 29,
-  parent___parent___children___children = 30,
-  parent___parent___internal___content = 31,
-  parent___parent___internal___contentDigest = 32,
-  parent___parent___internal___description = 33,
-  parent___parent___internal___fieldOwners = 34,
-  parent___parent___internal___ignoreType = 35,
-  parent___parent___internal___mediaType = 36,
-  parent___parent___internal___owner = 37,
-  parent___parent___internal___type = 38,
-  parent___children = 39,
-  parent___children___id = 40,
-  parent___children___parent___id = 41,
-  parent___children___parent___children = 42,
-  parent___children___children = 43,
-  parent___children___children___id = 44,
-  parent___children___children___children = 45,
-  parent___children___internal___content = 46,
-  parent___children___internal___contentDigest = 47,
-  parent___children___internal___description = 48,
-  parent___children___internal___fieldOwners = 49,
-  parent___children___internal___ignoreType = 50,
-  parent___children___internal___mediaType = 51,
-  parent___children___internal___owner = 52,
-  parent___children___internal___type = 53,
-  parent___internal___content = 54,
-  parent___internal___contentDigest = 55,
-  parent___internal___description = 56,
-  parent___internal___fieldOwners = 57,
-  parent___internal___ignoreType = 58,
-  parent___internal___mediaType = 59,
-  parent___internal___owner = 60,
-  parent___internal___type = 61,
-  children = 62,
-  children___id = 63,
-  children___parent___id = 64,
-  children___parent___parent___id = 65,
-  children___parent___parent___children = 66,
-  children___parent___children = 67,
-  children___parent___children___id = 68,
-  children___parent___children___children = 69,
-  children___parent___internal___content = 70,
-  children___parent___internal___contentDigest = 71,
-  children___parent___internal___description = 72,
-  children___parent___internal___fieldOwners = 73,
-  children___parent___internal___ignoreType = 74,
-  children___parent___internal___mediaType = 75,
-  children___parent___internal___owner = 76,
-  children___parent___internal___type = 77,
-  children___children = 78,
-  children___children___id = 79,
-  children___children___parent___id = 80,
-  children___children___parent___children = 81,
-  children___children___children = 82,
-  children___children___children___id = 83,
-  children___children___children___children = 84,
-  children___children___internal___content = 85,
-  children___children___internal___contentDigest = 86,
-  children___children___internal___description = 87,
-  children___children___internal___fieldOwners = 88,
-  children___children___internal___ignoreType = 89,
-  children___children___internal___mediaType = 90,
-  children___children___internal___owner = 91,
-  children___children___internal___type = 92,
-  children___internal___content = 93,
-  children___internal___contentDigest = 94,
-  children___internal___description = 95,
-  children___internal___fieldOwners = 96,
-  children___internal___ignoreType = 97,
-  children___internal___mediaType = 98,
-  children___internal___owner = 99,
-  children___internal___type = 100,
-  internal___content = 101,
-  internal___contentDigest = 102,
-  internal___description = 103,
-  internal___fieldOwners = 104,
-  internal___ignoreType = 105,
-  internal___mediaType = 106,
-  internal___owner = 107,
-  internal___type = 108
+  frontmatter___tags = 2,
+  excerpt = 3,
+  rawMarkdownBody = 4,
+  fileAbsolutePath = 5,
+  fields___language = 6,
+  fields___filename = 7,
+  fields___kind = 8,
+  fields___slug = 9,
+  fields___path = 10,
+  fields___publishedAt = 11,
+  fields___modifiedAt = 12,
+  fields___tags = 13,
+  fields___tags___value = 14,
+  fields___tags___path = 15,
+  html = 16,
+  htmlAst = 17,
+  excerptAst = 18,
+  headings = 19,
+  headings___id = 20,
+  headings___value = 21,
+  headings___depth = 22,
+  timeToRead = 23,
+  tableOfContents = 24,
+  wordCount___paragraphs = 25,
+  wordCount___sentences = 26,
+  wordCount___words = 27,
+  parent___id = 28,
+  parent___parent___id = 29,
+  parent___parent___parent___id = 30,
+  parent___parent___parent___children = 31,
+  parent___parent___children = 32,
+  parent___parent___children___id = 33,
+  parent___parent___children___children = 34,
+  parent___parent___internal___content = 35,
+  parent___parent___internal___contentDigest = 36,
+  parent___parent___internal___description = 37,
+  parent___parent___internal___fieldOwners = 38,
+  parent___parent___internal___ignoreType = 39,
+  parent___parent___internal___mediaType = 40,
+  parent___parent___internal___owner = 41,
+  parent___parent___internal___type = 42,
+  parent___children = 43,
+  parent___children___id = 44,
+  parent___children___parent___id = 45,
+  parent___children___parent___children = 46,
+  parent___children___children = 47,
+  parent___children___children___id = 48,
+  parent___children___children___children = 49,
+  parent___children___internal___content = 50,
+  parent___children___internal___contentDigest = 51,
+  parent___children___internal___description = 52,
+  parent___children___internal___fieldOwners = 53,
+  parent___children___internal___ignoreType = 54,
+  parent___children___internal___mediaType = 55,
+  parent___children___internal___owner = 56,
+  parent___children___internal___type = 57,
+  parent___internal___content = 58,
+  parent___internal___contentDigest = 59,
+  parent___internal___description = 60,
+  parent___internal___fieldOwners = 61,
+  parent___internal___ignoreType = 62,
+  parent___internal___mediaType = 63,
+  parent___internal___owner = 64,
+  parent___internal___type = 65,
+  children = 66,
+  children___id = 67,
+  children___parent___id = 68,
+  children___parent___parent___id = 69,
+  children___parent___parent___children = 70,
+  children___parent___children = 71,
+  children___parent___children___id = 72,
+  children___parent___children___children = 73,
+  children___parent___internal___content = 74,
+  children___parent___internal___contentDigest = 75,
+  children___parent___internal___description = 76,
+  children___parent___internal___fieldOwners = 77,
+  children___parent___internal___ignoreType = 78,
+  children___parent___internal___mediaType = 79,
+  children___parent___internal___owner = 80,
+  children___parent___internal___type = 81,
+  children___children = 82,
+  children___children___id = 83,
+  children___children___parent___id = 84,
+  children___children___parent___children = 85,
+  children___children___children = 86,
+  children___children___children___id = 87,
+  children___children___children___children = 88,
+  children___children___internal___content = 89,
+  children___children___internal___contentDigest = 90,
+  children___children___internal___description = 91,
+  children___children___internal___fieldOwners = 92,
+  children___children___internal___ignoreType = 93,
+  children___children___internal___mediaType = 94,
+  children___children___internal___owner = 95,
+  children___children___internal___type = 96,
+  children___internal___content = 97,
+  children___internal___contentDigest = 98,
+  children___internal___description = 99,
+  children___internal___fieldOwners = 100,
+  children___internal___ignoreType = 101,
+  children___internal___mediaType = 102,
+  children___internal___owner = 103,
+  children___internal___type = 104,
+  internal___content = 105,
+  internal___contentDigest = 106,
+  internal___description = 107,
+  internal___fieldOwners = 108,
+  internal___ignoreType = 109,
+  internal___mediaType = 110,
+  internal___owner = 111,
+  internal___type = 112
 }
 
 export type MarkdownRemarkFieldsFilterInput = {
@@ -1684,6 +1693,22 @@ export type MarkdownRemarkFieldsFilterInput = {
   path: Maybe<StringQueryOperatorInput>;
   publishedAt: Maybe<DateQueryOperatorInput>;
   modifiedAt: Maybe<DateQueryOperatorInput>;
+  tags: Maybe<MarkdownRemarkFieldsTagsFilterListInput>;
+};
+
+export type MarkdownRemarkFieldsTags = {
+  __typename?: 'MarkdownRemarkFieldsTags';
+  value: Maybe<Scalars['String']>;
+  path: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFieldsTagsFilterInput = {
+  value: Maybe<StringQueryOperatorInput>;
+  path: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFieldsTagsFilterListInput = {
+  elemMatch: Maybe<MarkdownRemarkFieldsTagsFilterInput>;
 };
 
 export type MarkdownRemarkFilterInput = {
@@ -1708,10 +1733,12 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatter = {
   __typename?: 'MarkdownRemarkFrontmatter';
   title: Maybe<Scalars['String']>;
+  tags: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title: Maybe<StringQueryOperatorInput>;
+  tags: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {
@@ -1948,15 +1975,15 @@ export type QuerySitePageArgs = {
   internalComponentName: Maybe<StringQueryOperatorInput>;
   componentChunkName: Maybe<StringQueryOperatorInput>;
   matchPath: Maybe<StringQueryOperatorInput>;
-  id: Maybe<StringQueryOperatorInput>;
-  parent: Maybe<NodeFilterInput>;
-  children: Maybe<NodeFilterListInput>;
-  internal: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
   context: Maybe<SitePageContextFilterInput>;
   pluginCreator: Maybe<SitePluginFilterInput>;
   pluginCreatorId: Maybe<StringQueryOperatorInput>;
   componentPath: Maybe<StringQueryOperatorInput>;
+  id: Maybe<StringQueryOperatorInput>;
+  parent: Maybe<NodeFilterInput>;
+  children: Maybe<NodeFilterListInput>;
+  internal: Maybe<InternalFilterInput>;
 };
 
 
@@ -2402,15 +2429,15 @@ export type SitePage = Node & {
   internalComponentName: Scalars['String'];
   componentChunkName: Scalars['String'];
   matchPath: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  parent: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
   isCreatedByStatefulCreatePages: Maybe<Scalars['Boolean']>;
   context: Maybe<SitePageContext>;
   pluginCreator: Maybe<SitePlugin>;
   pluginCreatorId: Maybe<Scalars['String']>;
   componentPath: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  parent: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
 };
 
 export type SitePageConnection = {
@@ -2444,6 +2471,7 @@ export type SitePageContext = {
   skip: Maybe<Scalars['Int']>;
   pageCount: Maybe<Scalars['Int']>;
   currentPage: Maybe<Scalars['Int']>;
+  tag: Maybe<Scalars['String']>;
 };
 
 export type SitePageContextAlternativeLanguagePaths = {
@@ -2469,6 +2497,7 @@ export type SitePageContextFilterInput = {
   skip: Maybe<IntQueryOperatorInput>;
   pageCount: Maybe<IntQueryOperatorInput>;
   currentPage: Maybe<IntQueryOperatorInput>;
+  tag: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2484,198 +2513,199 @@ export enum SitePageFieldsEnum {
   internalComponentName = 2,
   componentChunkName = 3,
   matchPath = 4,
-  id = 5,
-  parent___id = 6,
-  parent___parent___id = 7,
-  parent___parent___parent___id = 8,
-  parent___parent___parent___children = 9,
-  parent___parent___children = 10,
-  parent___parent___children___id = 11,
-  parent___parent___children___children = 12,
-  parent___parent___internal___content = 13,
-  parent___parent___internal___contentDigest = 14,
-  parent___parent___internal___description = 15,
-  parent___parent___internal___fieldOwners = 16,
-  parent___parent___internal___ignoreType = 17,
-  parent___parent___internal___mediaType = 18,
-  parent___parent___internal___owner = 19,
-  parent___parent___internal___type = 20,
-  parent___children = 21,
-  parent___children___id = 22,
-  parent___children___parent___id = 23,
-  parent___children___parent___children = 24,
-  parent___children___children = 25,
-  parent___children___children___id = 26,
-  parent___children___children___children = 27,
-  parent___children___internal___content = 28,
-  parent___children___internal___contentDigest = 29,
-  parent___children___internal___description = 30,
-  parent___children___internal___fieldOwners = 31,
-  parent___children___internal___ignoreType = 32,
-  parent___children___internal___mediaType = 33,
-  parent___children___internal___owner = 34,
-  parent___children___internal___type = 35,
-  parent___internal___content = 36,
-  parent___internal___contentDigest = 37,
-  parent___internal___description = 38,
-  parent___internal___fieldOwners = 39,
-  parent___internal___ignoreType = 40,
-  parent___internal___mediaType = 41,
-  parent___internal___owner = 42,
-  parent___internal___type = 43,
-  children = 44,
-  children___id = 45,
-  children___parent___id = 46,
-  children___parent___parent___id = 47,
-  children___parent___parent___children = 48,
-  children___parent___children = 49,
-  children___parent___children___id = 50,
-  children___parent___children___children = 51,
-  children___parent___internal___content = 52,
-  children___parent___internal___contentDigest = 53,
-  children___parent___internal___description = 54,
-  children___parent___internal___fieldOwners = 55,
-  children___parent___internal___ignoreType = 56,
-  children___parent___internal___mediaType = 57,
-  children___parent___internal___owner = 58,
-  children___parent___internal___type = 59,
-  children___children = 60,
-  children___children___id = 61,
-  children___children___parent___id = 62,
-  children___children___parent___children = 63,
-  children___children___children = 64,
-  children___children___children___id = 65,
-  children___children___children___children = 66,
-  children___children___internal___content = 67,
-  children___children___internal___contentDigest = 68,
-  children___children___internal___description = 69,
-  children___children___internal___fieldOwners = 70,
-  children___children___internal___ignoreType = 71,
-  children___children___internal___mediaType = 72,
-  children___children___internal___owner = 73,
-  children___children___internal___type = 74,
-  children___internal___content = 75,
-  children___internal___contentDigest = 76,
-  children___internal___description = 77,
-  children___internal___fieldOwners = 78,
-  children___internal___ignoreType = 79,
-  children___internal___mediaType = 80,
-  children___internal___owner = 81,
-  children___internal___type = 82,
-  internal___content = 83,
-  internal___contentDigest = 84,
-  internal___description = 85,
-  internal___fieldOwners = 86,
-  internal___ignoreType = 87,
-  internal___mediaType = 88,
-  internal___owner = 89,
-  internal___type = 90,
-  isCreatedByStatefulCreatePages = 91,
-  context___slug = 92,
-  context___language = 93,
-  context___alternativeLanguagePaths = 94,
-  context___alternativeLanguagePaths___language = 95,
-  context___alternativeLanguagePaths___path = 96,
-  context___limit = 97,
-  context___skip = 98,
-  context___pageCount = 99,
-  context___currentPage = 100,
-  pluginCreator___id = 101,
-  pluginCreator___parent___id = 102,
-  pluginCreator___parent___parent___id = 103,
-  pluginCreator___parent___parent___children = 104,
-  pluginCreator___parent___children = 105,
-  pluginCreator___parent___children___id = 106,
-  pluginCreator___parent___children___children = 107,
-  pluginCreator___parent___internal___content = 108,
-  pluginCreator___parent___internal___contentDigest = 109,
-  pluginCreator___parent___internal___description = 110,
-  pluginCreator___parent___internal___fieldOwners = 111,
-  pluginCreator___parent___internal___ignoreType = 112,
-  pluginCreator___parent___internal___mediaType = 113,
-  pluginCreator___parent___internal___owner = 114,
-  pluginCreator___parent___internal___type = 115,
-  pluginCreator___children = 116,
-  pluginCreator___children___id = 117,
-  pluginCreator___children___parent___id = 118,
-  pluginCreator___children___parent___children = 119,
-  pluginCreator___children___children = 120,
-  pluginCreator___children___children___id = 121,
-  pluginCreator___children___children___children = 122,
-  pluginCreator___children___internal___content = 123,
-  pluginCreator___children___internal___contentDigest = 124,
-  pluginCreator___children___internal___description = 125,
-  pluginCreator___children___internal___fieldOwners = 126,
-  pluginCreator___children___internal___ignoreType = 127,
-  pluginCreator___children___internal___mediaType = 128,
-  pluginCreator___children___internal___owner = 129,
-  pluginCreator___children___internal___type = 130,
-  pluginCreator___internal___content = 131,
-  pluginCreator___internal___contentDigest = 132,
-  pluginCreator___internal___description = 133,
-  pluginCreator___internal___fieldOwners = 134,
-  pluginCreator___internal___ignoreType = 135,
-  pluginCreator___internal___mediaType = 136,
-  pluginCreator___internal___owner = 137,
-  pluginCreator___internal___type = 138,
-  pluginCreator___resolve = 139,
-  pluginCreator___name = 140,
-  pluginCreator___version = 141,
-  pluginCreator___pluginOptions___plugins = 142,
-  pluginCreator___pluginOptions___plugins___resolve = 143,
-  pluginCreator___pluginOptions___plugins___id = 144,
-  pluginCreator___pluginOptions___plugins___name = 145,
-  pluginCreator___pluginOptions___plugins___version = 146,
-  pluginCreator___pluginOptions___plugins___nodeAPIs = 147,
-  pluginCreator___pluginOptions___plugins___browserAPIs = 148,
-  pluginCreator___pluginOptions___plugins___pluginFilepath = 149,
-  pluginCreator___pluginOptions___name = 150,
-  pluginCreator___pluginOptions___short_name = 151,
-  pluginCreator___pluginOptions___start_url = 152,
-  pluginCreator___pluginOptions___background_color = 153,
-  pluginCreator___pluginOptions___theme_color = 154,
-  pluginCreator___pluginOptions___display = 155,
-  pluginCreator___pluginOptions___icon = 156,
-  pluginCreator___pluginOptions___icons = 157,
-  pluginCreator___pluginOptions___icons___src = 158,
-  pluginCreator___pluginOptions___icons___sizes = 159,
-  pluginCreator___pluginOptions___icons___type = 160,
-  pluginCreator___pluginOptions___cache_busting_mode = 161,
-  pluginCreator___pluginOptions___include_favicon = 162,
-  pluginCreator___pluginOptions___legacy = 163,
-  pluginCreator___pluginOptions___theme_color_in_head = 164,
-  pluginCreator___pluginOptions___cacheDigest = 165,
-  pluginCreator___pluginOptions___path = 166,
-  pluginCreator___pluginOptions___maxWidth = 167,
-  pluginCreator___pluginOptions___quality = 168,
-  pluginCreator___pluginOptions___linkImagesToOriginal = 169,
-  pluginCreator___pluginOptions___configDir = 170,
-  pluginCreator___pluginOptions___tsNode = 171,
-  pluginCreator___pluginOptions___pathCheck = 172,
-  pluginCreator___pluginOptions___allExtensions = 173,
-  pluginCreator___pluginOptions___isTSX = 174,
-  pluginCreator___pluginOptions___jsxPragma = 175,
-  pluginCreator___nodeAPIs = 176,
-  pluginCreator___browserAPIs = 177,
-  pluginCreator___ssrAPIs = 178,
-  pluginCreator___pluginFilepath = 179,
-  pluginCreator___packageJson___name = 180,
-  pluginCreator___packageJson___description = 181,
-  pluginCreator___packageJson___version = 182,
-  pluginCreator___packageJson___main = 183,
-  pluginCreator___packageJson___license = 184,
-  pluginCreator___packageJson___dependencies = 185,
-  pluginCreator___packageJson___dependencies___name = 186,
-  pluginCreator___packageJson___dependencies___version = 187,
-  pluginCreator___packageJson___devDependencies = 188,
-  pluginCreator___packageJson___devDependencies___name = 189,
-  pluginCreator___packageJson___devDependencies___version = 190,
-  pluginCreator___packageJson___peerDependencies = 191,
-  pluginCreator___packageJson___peerDependencies___name = 192,
-  pluginCreator___packageJson___peerDependencies___version = 193,
-  pluginCreator___packageJson___keywords = 194,
-  pluginCreatorId = 195,
-  componentPath = 196
+  isCreatedByStatefulCreatePages = 5,
+  context___slug = 6,
+  context___language = 7,
+  context___alternativeLanguagePaths = 8,
+  context___alternativeLanguagePaths___language = 9,
+  context___alternativeLanguagePaths___path = 10,
+  context___limit = 11,
+  context___skip = 12,
+  context___pageCount = 13,
+  context___currentPage = 14,
+  context___tag = 15,
+  pluginCreator___id = 16,
+  pluginCreator___parent___id = 17,
+  pluginCreator___parent___parent___id = 18,
+  pluginCreator___parent___parent___children = 19,
+  pluginCreator___parent___children = 20,
+  pluginCreator___parent___children___id = 21,
+  pluginCreator___parent___children___children = 22,
+  pluginCreator___parent___internal___content = 23,
+  pluginCreator___parent___internal___contentDigest = 24,
+  pluginCreator___parent___internal___description = 25,
+  pluginCreator___parent___internal___fieldOwners = 26,
+  pluginCreator___parent___internal___ignoreType = 27,
+  pluginCreator___parent___internal___mediaType = 28,
+  pluginCreator___parent___internal___owner = 29,
+  pluginCreator___parent___internal___type = 30,
+  pluginCreator___children = 31,
+  pluginCreator___children___id = 32,
+  pluginCreator___children___parent___id = 33,
+  pluginCreator___children___parent___children = 34,
+  pluginCreator___children___children = 35,
+  pluginCreator___children___children___id = 36,
+  pluginCreator___children___children___children = 37,
+  pluginCreator___children___internal___content = 38,
+  pluginCreator___children___internal___contentDigest = 39,
+  pluginCreator___children___internal___description = 40,
+  pluginCreator___children___internal___fieldOwners = 41,
+  pluginCreator___children___internal___ignoreType = 42,
+  pluginCreator___children___internal___mediaType = 43,
+  pluginCreator___children___internal___owner = 44,
+  pluginCreator___children___internal___type = 45,
+  pluginCreator___internal___content = 46,
+  pluginCreator___internal___contentDigest = 47,
+  pluginCreator___internal___description = 48,
+  pluginCreator___internal___fieldOwners = 49,
+  pluginCreator___internal___ignoreType = 50,
+  pluginCreator___internal___mediaType = 51,
+  pluginCreator___internal___owner = 52,
+  pluginCreator___internal___type = 53,
+  pluginCreator___resolve = 54,
+  pluginCreator___name = 55,
+  pluginCreator___version = 56,
+  pluginCreator___pluginOptions___plugins = 57,
+  pluginCreator___pluginOptions___plugins___resolve = 58,
+  pluginCreator___pluginOptions___plugins___id = 59,
+  pluginCreator___pluginOptions___plugins___name = 60,
+  pluginCreator___pluginOptions___plugins___version = 61,
+  pluginCreator___pluginOptions___plugins___nodeAPIs = 62,
+  pluginCreator___pluginOptions___plugins___browserAPIs = 63,
+  pluginCreator___pluginOptions___plugins___pluginFilepath = 64,
+  pluginCreator___pluginOptions___name = 65,
+  pluginCreator___pluginOptions___short_name = 66,
+  pluginCreator___pluginOptions___start_url = 67,
+  pluginCreator___pluginOptions___background_color = 68,
+  pluginCreator___pluginOptions___theme_color = 69,
+  pluginCreator___pluginOptions___display = 70,
+  pluginCreator___pluginOptions___icon = 71,
+  pluginCreator___pluginOptions___icons = 72,
+  pluginCreator___pluginOptions___icons___src = 73,
+  pluginCreator___pluginOptions___icons___sizes = 74,
+  pluginCreator___pluginOptions___icons___type = 75,
+  pluginCreator___pluginOptions___cache_busting_mode = 76,
+  pluginCreator___pluginOptions___include_favicon = 77,
+  pluginCreator___pluginOptions___legacy = 78,
+  pluginCreator___pluginOptions___theme_color_in_head = 79,
+  pluginCreator___pluginOptions___cacheDigest = 80,
+  pluginCreator___pluginOptions___path = 81,
+  pluginCreator___pluginOptions___maxWidth = 82,
+  pluginCreator___pluginOptions___quality = 83,
+  pluginCreator___pluginOptions___linkImagesToOriginal = 84,
+  pluginCreator___pluginOptions___configDir = 85,
+  pluginCreator___pluginOptions___tsNode = 86,
+  pluginCreator___pluginOptions___pathCheck = 87,
+  pluginCreator___pluginOptions___allExtensions = 88,
+  pluginCreator___pluginOptions___isTSX = 89,
+  pluginCreator___pluginOptions___jsxPragma = 90,
+  pluginCreator___nodeAPIs = 91,
+  pluginCreator___browserAPIs = 92,
+  pluginCreator___ssrAPIs = 93,
+  pluginCreator___pluginFilepath = 94,
+  pluginCreator___packageJson___name = 95,
+  pluginCreator___packageJson___description = 96,
+  pluginCreator___packageJson___version = 97,
+  pluginCreator___packageJson___main = 98,
+  pluginCreator___packageJson___license = 99,
+  pluginCreator___packageJson___dependencies = 100,
+  pluginCreator___packageJson___dependencies___name = 101,
+  pluginCreator___packageJson___dependencies___version = 102,
+  pluginCreator___packageJson___devDependencies = 103,
+  pluginCreator___packageJson___devDependencies___name = 104,
+  pluginCreator___packageJson___devDependencies___version = 105,
+  pluginCreator___packageJson___peerDependencies = 106,
+  pluginCreator___packageJson___peerDependencies___name = 107,
+  pluginCreator___packageJson___peerDependencies___version = 108,
+  pluginCreator___packageJson___keywords = 109,
+  pluginCreatorId = 110,
+  componentPath = 111,
+  id = 112,
+  parent___id = 113,
+  parent___parent___id = 114,
+  parent___parent___parent___id = 115,
+  parent___parent___parent___children = 116,
+  parent___parent___children = 117,
+  parent___parent___children___id = 118,
+  parent___parent___children___children = 119,
+  parent___parent___internal___content = 120,
+  parent___parent___internal___contentDigest = 121,
+  parent___parent___internal___description = 122,
+  parent___parent___internal___fieldOwners = 123,
+  parent___parent___internal___ignoreType = 124,
+  parent___parent___internal___mediaType = 125,
+  parent___parent___internal___owner = 126,
+  parent___parent___internal___type = 127,
+  parent___children = 128,
+  parent___children___id = 129,
+  parent___children___parent___id = 130,
+  parent___children___parent___children = 131,
+  parent___children___children = 132,
+  parent___children___children___id = 133,
+  parent___children___children___children = 134,
+  parent___children___internal___content = 135,
+  parent___children___internal___contentDigest = 136,
+  parent___children___internal___description = 137,
+  parent___children___internal___fieldOwners = 138,
+  parent___children___internal___ignoreType = 139,
+  parent___children___internal___mediaType = 140,
+  parent___children___internal___owner = 141,
+  parent___children___internal___type = 142,
+  parent___internal___content = 143,
+  parent___internal___contentDigest = 144,
+  parent___internal___description = 145,
+  parent___internal___fieldOwners = 146,
+  parent___internal___ignoreType = 147,
+  parent___internal___mediaType = 148,
+  parent___internal___owner = 149,
+  parent___internal___type = 150,
+  children = 151,
+  children___id = 152,
+  children___parent___id = 153,
+  children___parent___parent___id = 154,
+  children___parent___parent___children = 155,
+  children___parent___children = 156,
+  children___parent___children___id = 157,
+  children___parent___children___children = 158,
+  children___parent___internal___content = 159,
+  children___parent___internal___contentDigest = 160,
+  children___parent___internal___description = 161,
+  children___parent___internal___fieldOwners = 162,
+  children___parent___internal___ignoreType = 163,
+  children___parent___internal___mediaType = 164,
+  children___parent___internal___owner = 165,
+  children___parent___internal___type = 166,
+  children___children = 167,
+  children___children___id = 168,
+  children___children___parent___id = 169,
+  children___children___parent___children = 170,
+  children___children___children = 171,
+  children___children___children___id = 172,
+  children___children___children___children = 173,
+  children___children___internal___content = 174,
+  children___children___internal___contentDigest = 175,
+  children___children___internal___description = 176,
+  children___children___internal___fieldOwners = 177,
+  children___children___internal___ignoreType = 178,
+  children___children___internal___mediaType = 179,
+  children___children___internal___owner = 180,
+  children___children___internal___type = 181,
+  children___internal___content = 182,
+  children___internal___contentDigest = 183,
+  children___internal___description = 184,
+  children___internal___fieldOwners = 185,
+  children___internal___ignoreType = 186,
+  children___internal___mediaType = 187,
+  children___internal___owner = 188,
+  children___internal___type = 189,
+  internal___content = 190,
+  internal___contentDigest = 191,
+  internal___description = 192,
+  internal___fieldOwners = 193,
+  internal___ignoreType = 194,
+  internal___mediaType = 195,
+  internal___owner = 196,
+  internal___type = 197
 }
 
 export type SitePageFilterInput = {
@@ -2684,15 +2714,15 @@ export type SitePageFilterInput = {
   internalComponentName: Maybe<StringQueryOperatorInput>;
   componentChunkName: Maybe<StringQueryOperatorInput>;
   matchPath: Maybe<StringQueryOperatorInput>;
-  id: Maybe<StringQueryOperatorInput>;
-  parent: Maybe<NodeFilterInput>;
-  children: Maybe<NodeFilterListInput>;
-  internal: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
   context: Maybe<SitePageContextFilterInput>;
   pluginCreator: Maybe<SitePluginFilterInput>;
   pluginCreatorId: Maybe<StringQueryOperatorInput>;
   componentPath: Maybe<StringQueryOperatorInput>;
+  id: Maybe<StringQueryOperatorInput>;
+  parent: Maybe<NodeFilterInput>;
+  children: Maybe<NodeFilterListInput>;
+  internal: Maybe<InternalFilterInput>;
 };
 
 export type SitePageGroupConnection = {
@@ -3220,6 +3250,21 @@ export type CreateBlogPostPagesQuery = (
   ) }
 );
 
+export type CreateTagPagesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CreateTagPagesQuery = (
+  { __typename?: 'Query' }
+  & { allMarkdownRemark: (
+    { __typename?: 'MarkdownRemarkConnection' }
+    & { group: Array<(
+      { __typename?: 'MarkdownRemarkGroupConnection' }
+      & Pick<MarkdownRemarkGroupConnection, 'totalCount'>
+      & { tag: MarkdownRemarkGroupConnection['fieldValue'] }
+    )> }
+  ) }
+);
+
 export type GatsbyImageSharpFixedFragment = (
   { __typename?: 'ImageSharpFixed' }
   & Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>
@@ -3395,6 +3440,10 @@ export type IndexPageQuery = (
       & { fields: Maybe<(
         { __typename?: 'MarkdownRemarkFields' }
         & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+        & { tags: Maybe<Array<Maybe<(
+          { __typename?: 'MarkdownRemarkFieldsTags' }
+          & Pick<MarkdownRemarkFieldsTags, 'value' | 'path'>
+        )>>> }
       )>, frontmatter: Maybe<(
         { __typename?: 'MarkdownRemarkFrontmatter' }
         & Pick<MarkdownRemarkFrontmatter, 'title'>
@@ -3422,6 +3471,10 @@ export type ArticlesPageQuery = (
         & { fields: Maybe<(
           { __typename?: 'MarkdownRemarkFields' }
           & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+          & { tags: Maybe<Array<Maybe<(
+            { __typename?: 'MarkdownRemarkFieldsTags' }
+            & Pick<MarkdownRemarkFieldsTags, 'value' | 'path'>
+          )>>> }
         )>, frontmatter: Maybe<(
           { __typename?: 'MarkdownRemarkFrontmatter' }
           & Pick<MarkdownRemarkFrontmatter, 'title'>
@@ -3447,4 +3500,35 @@ export type ArticlePageQuery = (
       & Pick<MarkdownRemarkFrontmatter, 'title'>
     )> }
   )> }
+);
+
+export type TagPageQueryVariables = Exact<{
+  language: Scalars['String'];
+  tag: Scalars['String'];
+}>;
+
+
+export type TagPageQuery = (
+  { __typename?: 'Query' }
+  & { entries: (
+    { __typename?: 'MarkdownRemarkConnection' }
+    & { edges: Array<(
+      { __typename?: 'MarkdownRemarkEdge' }
+      & { node: (
+        { __typename?: 'MarkdownRemark' }
+        & Pick<MarkdownRemark, 'excerpt'>
+        & { fields: Maybe<(
+          { __typename?: 'MarkdownRemarkFields' }
+          & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+          & { tags: Maybe<Array<Maybe<(
+            { __typename?: 'MarkdownRemarkFieldsTags' }
+            & Pick<MarkdownRemarkFieldsTags, 'value' | 'path'>
+          )>>> }
+        )>, frontmatter: Maybe<(
+          { __typename?: 'MarkdownRemarkFrontmatter' }
+          & Pick<MarkdownRemarkFrontmatter, 'title'>
+        )> }
+      ) }
+    )> }
+  ) }
 );
