@@ -20,7 +20,7 @@ export default function Tag({ data, pageContext }: TagProps) {
   return (
     <DefaultLayout pageContext={pageContext} title={title}>
       <PaddedElement>
-        <h2>{pageContext.tag}</h2>
+        <h2>{pageContext.title}</h2>
         {data.entries.edges.map((entry, i) => (
           <StyledExcerptItem
             title={entry.node.frontmatter.title}
@@ -49,7 +49,7 @@ export const query = graphql`
             path
             modifiedAt
             tags {
-              value
+              translation
               path
             }
           }

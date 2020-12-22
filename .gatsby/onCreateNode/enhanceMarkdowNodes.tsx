@@ -3,7 +3,7 @@ import { CreateNodeArgs, Node, Actions } from 'gatsby';
 import { FileSystemNode } from 'gatsby-source-filesystem';
 import slug from 'limax';
 import { promisify } from 'util';
-import { defaultLanguage } from '../i18n';
+import { defaultLanguage, translate } from '../i18n';
 import { addLanguagePrefix } from '../utils/path';
 
 const promisifiedExec = promisify(exec);
@@ -34,7 +34,8 @@ const enhanceBlogNodes = async (node: Node, actions: Actions, language: string) 
       node,
       name: 'tags',
       value: tags.map((tag) => {
-        return { value: tag, path: addLanguagePrefix(`/tags/${slug(tag)}`, language) };
+        const translatedValue = translate(language, `tag.${slug(tag)}`);
+        return { value: tag, translation: translatedValue, path: addLanguagePrefix(`/tags/${slug(translatedValue)}`, language) };
       })
     });
   }

@@ -36,7 +36,8 @@ export const contentTranslation: Translation = {
     'page.notFound.content': 'Es tut mir leid. Die gesuchte Seite konnte existiert nicht.',
     'page.blog.title': 'Blog',
     'page.blogPost.title': '{post} - Blog',
-    'page.tag.title': `"{tag}" - Tag`
+    'page.tag.title': `"{tag}" - Tag`,
+    'tag.projects': 'Projekte'
   },
   en: {
     ...localeTranslation,
@@ -56,6 +57,15 @@ export const contentTranslation: Translation = {
     'page.notFound.content': "I'm sorry. The requested page couldn't be found.",
     'page.blog.title': 'Blog',
     'page.blogPost.title': '{post} - Blog',
-    'page.tag.title': `"{tag}" - Tag`
+    'page.tag.title': `"{tag}" - Tag`,
+    'tag.projects': 'Projects'
   }
 };
+
+export function translate(language: string, id: string) {
+  if (contentTranslation[language as Language][id]) {
+    return contentTranslation[language as Language][id];
+  } else {
+    return id;
+  }
+}

@@ -76,7 +76,7 @@ export const query = graphql`
           path
           modifiedAt
           tags {
-            value
+            translation
             path
           }
         }

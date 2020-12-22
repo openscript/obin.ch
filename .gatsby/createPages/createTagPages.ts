@@ -2,7 +2,7 @@ import { CreatePagesArgs } from 'gatsby';
 import slug from 'limax';
 import { resolve } from 'path';
 import { CreateTagPagesQuery } from '../../graphql-types';
-import { languages } from '../i18n';
+import { languages, translate } from '../i18n';
 import { addLanguagePrefix } from '../utils/path';
 
 export async function CreateTagPages({ graphql, actions }: CreatePagesArgs) {
@@ -23,13 +23,16 @@ export async function CreateTagPages({ graphql, actions }: CreatePagesArgs) {
       const alternativeLanguagePaths = languages
         .filter((alternate) => alternate !== language)
         .map((alternate) => {
-          return { language: alternate, path: addLanguagePrefix(`/tags/${slug(entry.tag)}`, alternate) };
+          const translatedValue = translate(alternate, `tag.${slug(entry.tag)}`);
+          return { language: alternate, path: addLanguagePrefix(`/tags/${slug(translatedValue)}`, alternate) };
         });
+      const translatedValue = translate(language, `tag.${slug(entry.tag)}`);
       createPage({
-        path: addLanguagePrefix(`/tags/${slug(entry.tag)}`, language),
+        path: addLanguagePrefix(`/tags/${slug(translatedValue)}`, language),
         component: resolve('./src/templates/tag.tsx'),
         context: {
           tag: entry.tag,
+          title: translatedValue,
           language,
           alternativeLanguagePaths
         }

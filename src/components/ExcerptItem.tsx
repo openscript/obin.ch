@@ -40,7 +40,7 @@ type ExcerptItemProps = Props<{
   title: string;
   date: string;
   path: string;
-  tags?: { value: string; path: string }[];
+  tags?: { translation: string; path: string }[];
   headingType?: ElementType;
 }>;
 
@@ -58,7 +58,7 @@ export function ExcerptItem({ className, title, date, tags, children, path, head
           <StyledTagContainer>
             {tags.map((tag, i) => (
               <Link to={tag.path} key={i}>
-                {tag.value}
+                {tag.translation}
               </Link>
             ))}
           </StyledTagContainer>
