@@ -2476,13 +2476,13 @@ export type SitePageContext = {
 
 export type SitePageContextAlternativeLanguagePaths = {
   __typename?: 'SitePageContextAlternativeLanguagePaths';
-  language: Maybe<Scalars['String']>;
   path: Maybe<Scalars['String']>;
+  language: Maybe<Scalars['String']>;
 };
 
 export type SitePageContextAlternativeLanguagePathsFilterInput = {
-  language: Maybe<StringQueryOperatorInput>;
   path: Maybe<StringQueryOperatorInput>;
+  language: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageContextAlternativeLanguagePathsFilterListInput = {
@@ -2603,8 +2603,8 @@ export enum SitePageFieldsEnum {
   context___slug = 92,
   context___language = 93,
   context___alternativeLanguagePaths = 94,
-  context___alternativeLanguagePaths___language = 95,
-  context___alternativeLanguagePaths___path = 96,
+  context___alternativeLanguagePaths___path = 95,
+  context___alternativeLanguagePaths___language = 96,
   context___limit = 97,
   context___skip = 98,
   context___pageCount = 99,
@@ -3498,6 +3498,13 @@ export type BlogPostPageQuery = (
     & { frontmatter: Maybe<(
       { __typename?: 'MarkdownRemarkFrontmatter' }
       & Pick<MarkdownRemarkFrontmatter, 'title'>
+    )>, fields: Maybe<(
+      { __typename?: 'MarkdownRemarkFields' }
+      & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+      & { tags: Maybe<Array<Maybe<(
+        { __typename?: 'MarkdownRemarkFieldsTags' }
+        & Pick<MarkdownRemarkFieldsTags, 'value' | 'path'>
+      )>>> }
     )> }
   )> }
 );
