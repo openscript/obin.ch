@@ -15,7 +15,7 @@ type TagProps = { data: TagPageQuery; pageContext: SitePageContext };
 
 export default function Tag({ data, pageContext }: TagProps) {
   const intl = useIntl();
-  const title = intl.formatMessage({ id: 'page.tag.title' });
+  const title = intl.formatMessage({ id: 'page.tag.title' }, { tag: pageContext.tag });
 
   return (
     <DefaultLayout pageContext={pageContext} title={title}>

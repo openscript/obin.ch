@@ -29,7 +29,7 @@ export async function CreateBlogPages({ graphql, actions }: CreatePagesArgs) {
           language: l
         };
       });
-    Array.from({ length: pageCount }).forEach((_, i) => {
+    Array.from({ length: pageCount + 1 }).forEach((_, i) => {
       const currentPath = i === 0 ? '/blog' : `/blog/${i + 1}`;
       createPage({
         path: addLanguagePrefix(currentPath, language),

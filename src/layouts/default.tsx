@@ -17,7 +17,7 @@ import styled from '@emotion/styled';
 const DefaultLayoutStyle = css`
   :root {
     --white-color: #eeeeee;
-    --white-alternate-color: #dddddd;
+    --white-alternate-color: #ece3df;
     --black-color: #6a4a3c;
     --black-alternate-color: #2c2a2a;
     --primary-color: #eb6841;

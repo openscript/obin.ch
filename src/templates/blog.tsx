@@ -4,6 +4,7 @@ import React from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { BlogPageQuery, SitePageContext } from '../../graphql-types';
 import { ExcerptItem } from '../components/ExcerptItem';
+import { Hint } from '../components/Hint';
 import { DefaultLayout } from '../layouts/default';
 import { PaddedElement } from '../layouts/default/PaddedElement';
 
@@ -11,29 +12,38 @@ const StyledExcerptItem = styled(ExcerptItem)`
   margin-bottom: 2rem;
 `;
 
+const NoPostsHint = styled(Hint)``;
+
 type BlogProps = { data: BlogPageQuery; pageContext: SitePageContext };
 
 export default function Blog({ data, pageContext }: BlogProps) {
   const intl = useIntl();
-  const title = intl.formatMessage({ id: 'page.articles.title' });
+  const title = intl.formatMessage({ id: 'page.blog.title' });
+  const posts = data.posts.edges;
 
   return (
     <DefaultLayout pageContext={pageContext} title={title}>
       <PaddedElement>
         <h2>
-          <FormattedMessage id={'page.articles.title'} />
+          <FormattedMessage id={'page.blog.title'} />
         </h2>
-        {data.posts.edges.map((post, i) => (
-          <StyledExcerptItem
-            title={post.node.frontmatter.title}
-            path={post.node.fields.path}
-            key={i}
-            date={post.node.fields.modifiedAt}
-            tags={post.node.fields.tags}
-          >
-            {post.node.excerpt}
-          </StyledExcerptItem>
-        ))}
+        {posts.length === 0 ? (
+          <NoPostsHint>
+            <FormattedMessage id="misc.noEntries" />
+          </NoPostsHint>
+        ) : (
+          posts.map((post, i) => (
+            <StyledExcerptItem
+              title={post.node.frontmatter.title}
+              path={post.node.fields.path}
+              key={i}
+              date={post.node.fields.modifiedAt}
+              tags={post.node.fields.tags}
+            >
+              {post.node.excerpt}
+            </StyledExcerptItem>
+          ))
+        )}
       </PaddedElement>
     </DefaultLayout>
   );

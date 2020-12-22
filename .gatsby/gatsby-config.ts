@@ -7,7 +7,7 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
     phone: '+41 44 520 54 67',
     mainNavigation: [
       {
-        title: 'page.articles.title',
+        title: 'page.blog.title',
         path: '/blog'
       }
     ]

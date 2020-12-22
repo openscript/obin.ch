@@ -9,7 +9,7 @@ type BlogPostProps = { data: BlogPostPageQuery; pageContext: SitePageContext };
 
 export default function BlogPost({ data, pageContext }: BlogPostProps) {
   const intl = useIntl();
-  const title = intl.formatMessage({ id: 'page.imprint.title' });
+  const title = intl.formatMessage({ id: 'page.blogPost.title' }, { post: data.blogPost.frontmatter.title });
   return (
     <DefaultLayout pageContext={pageContext} title={title}>
       <PaddedElement>

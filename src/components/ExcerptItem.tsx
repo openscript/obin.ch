@@ -20,6 +20,12 @@ const StyledMetaInformation = styled.div`
   align-items: flex-end;
 `;
 
+const StyledTagContainer = styled.div`
+  a {
+    margin-left: 0.5rem;
+  }
+`;
+
 const StyledCardFooter = styled(Card.Footer)`
   display: flex;
   align-items: center;
@@ -49,11 +55,13 @@ export function ExcerptItem({ className, title, date, tags, children, path, head
           <FormattedDate value={date} /> <FormattedTime value={date} />
         </span>
         {tags && (
-          <span>
-            {tags.map((tag) => (
-              <Link to={tag.path}>{tag.value}</Link>
+          <StyledTagContainer>
+            {tags.map((tag, i) => (
+              <Link to={tag.path} key={i}>
+                {tag.value}
+              </Link>
             ))}
-          </span>
+          </StyledTagContainer>
         )}
       </StyledMetaInformation>
     </StyledCardHeader>
