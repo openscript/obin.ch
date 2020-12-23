@@ -45,6 +45,16 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
         ]
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'G-L92RC5MZHZ',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        defer: true
+      }
+    },
 
     // Sources
     {
