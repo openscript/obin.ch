@@ -2682,37 +2682,42 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___legacy = 165,
   pluginCreator___pluginOptions___theme_color_in_head = 166,
   pluginCreator___pluginOptions___cacheDigest = 167,
-  pluginCreator___pluginOptions___path = 168,
-  pluginCreator___pluginOptions___maxWidth = 169,
-  pluginCreator___pluginOptions___quality = 170,
-  pluginCreator___pluginOptions___linkImagesToOriginal = 171,
-  pluginCreator___pluginOptions___configDir = 172,
-  pluginCreator___pluginOptions___tsNode = 173,
-  pluginCreator___pluginOptions___pathCheck = 174,
-  pluginCreator___pluginOptions___allExtensions = 175,
-  pluginCreator___pluginOptions___isTSX = 176,
-  pluginCreator___pluginOptions___jsxPragma = 177,
-  pluginCreator___nodeAPIs = 178,
-  pluginCreator___browserAPIs = 179,
-  pluginCreator___ssrAPIs = 180,
-  pluginCreator___pluginFilepath = 181,
-  pluginCreator___packageJson___name = 182,
-  pluginCreator___packageJson___description = 183,
-  pluginCreator___packageJson___version = 184,
-  pluginCreator___packageJson___main = 185,
-  pluginCreator___packageJson___license = 186,
-  pluginCreator___packageJson___dependencies = 187,
-  pluginCreator___packageJson___dependencies___name = 188,
-  pluginCreator___packageJson___dependencies___version = 189,
-  pluginCreator___packageJson___devDependencies = 190,
-  pluginCreator___packageJson___devDependencies___name = 191,
-  pluginCreator___packageJson___devDependencies___version = 192,
-  pluginCreator___packageJson___peerDependencies = 193,
-  pluginCreator___packageJson___peerDependencies___name = 194,
-  pluginCreator___packageJson___peerDependencies___version = 195,
-  pluginCreator___packageJson___keywords = 196,
-  pluginCreatorId = 197,
-  componentPath = 198
+  pluginCreator___pluginOptions___trackingId = 168,
+  pluginCreator___pluginOptions___head = 169,
+  pluginCreator___pluginOptions___anonymize = 170,
+  pluginCreator___pluginOptions___respectDNT = 171,
+  pluginCreator___pluginOptions___defer = 172,
+  pluginCreator___pluginOptions___path = 173,
+  pluginCreator___pluginOptions___maxWidth = 174,
+  pluginCreator___pluginOptions___quality = 175,
+  pluginCreator___pluginOptions___linkImagesToOriginal = 176,
+  pluginCreator___pluginOptions___configDir = 177,
+  pluginCreator___pluginOptions___tsNode = 178,
+  pluginCreator___pluginOptions___pathCheck = 179,
+  pluginCreator___pluginOptions___allExtensions = 180,
+  pluginCreator___pluginOptions___isTSX = 181,
+  pluginCreator___pluginOptions___jsxPragma = 182,
+  pluginCreator___nodeAPIs = 183,
+  pluginCreator___browserAPIs = 184,
+  pluginCreator___ssrAPIs = 185,
+  pluginCreator___pluginFilepath = 186,
+  pluginCreator___packageJson___name = 187,
+  pluginCreator___packageJson___description = 188,
+  pluginCreator___packageJson___version = 189,
+  pluginCreator___packageJson___main = 190,
+  pluginCreator___packageJson___license = 191,
+  pluginCreator___packageJson___dependencies = 192,
+  pluginCreator___packageJson___dependencies___name = 193,
+  pluginCreator___packageJson___dependencies___version = 194,
+  pluginCreator___packageJson___devDependencies = 195,
+  pluginCreator___packageJson___devDependencies___name = 196,
+  pluginCreator___packageJson___devDependencies___version = 197,
+  pluginCreator___packageJson___peerDependencies = 198,
+  pluginCreator___packageJson___peerDependencies___name = 199,
+  pluginCreator___packageJson___peerDependencies___version = 200,
+  pluginCreator___packageJson___keywords = 201,
+  pluginCreatorId = 202,
+  componentPath = 203
 }
 
 export type SitePageFilterInput = {
@@ -2910,35 +2915,40 @@ export enum SitePluginFieldsEnum {
   pluginOptions___legacy = 113,
   pluginOptions___theme_color_in_head = 114,
   pluginOptions___cacheDigest = 115,
-  pluginOptions___path = 116,
-  pluginOptions___maxWidth = 117,
-  pluginOptions___quality = 118,
-  pluginOptions___linkImagesToOriginal = 119,
-  pluginOptions___configDir = 120,
-  pluginOptions___tsNode = 121,
-  pluginOptions___pathCheck = 122,
-  pluginOptions___allExtensions = 123,
-  pluginOptions___isTSX = 124,
-  pluginOptions___jsxPragma = 125,
-  nodeAPIs = 126,
-  browserAPIs = 127,
-  ssrAPIs = 128,
-  pluginFilepath = 129,
-  packageJson___name = 130,
-  packageJson___description = 131,
-  packageJson___version = 132,
-  packageJson___main = 133,
-  packageJson___license = 134,
-  packageJson___dependencies = 135,
-  packageJson___dependencies___name = 136,
-  packageJson___dependencies___version = 137,
-  packageJson___devDependencies = 138,
-  packageJson___devDependencies___name = 139,
-  packageJson___devDependencies___version = 140,
-  packageJson___peerDependencies = 141,
-  packageJson___peerDependencies___name = 142,
-  packageJson___peerDependencies___version = 143,
-  packageJson___keywords = 144
+  pluginOptions___trackingId = 116,
+  pluginOptions___head = 117,
+  pluginOptions___anonymize = 118,
+  pluginOptions___respectDNT = 119,
+  pluginOptions___defer = 120,
+  pluginOptions___path = 121,
+  pluginOptions___maxWidth = 122,
+  pluginOptions___quality = 123,
+  pluginOptions___linkImagesToOriginal = 124,
+  pluginOptions___configDir = 125,
+  pluginOptions___tsNode = 126,
+  pluginOptions___pathCheck = 127,
+  pluginOptions___allExtensions = 128,
+  pluginOptions___isTSX = 129,
+  pluginOptions___jsxPragma = 130,
+  nodeAPIs = 131,
+  browserAPIs = 132,
+  ssrAPIs = 133,
+  pluginFilepath = 134,
+  packageJson___name = 135,
+  packageJson___description = 136,
+  packageJson___version = 137,
+  packageJson___main = 138,
+  packageJson___license = 139,
+  packageJson___dependencies = 140,
+  packageJson___dependencies___name = 141,
+  packageJson___dependencies___version = 142,
+  packageJson___devDependencies = 143,
+  packageJson___devDependencies___name = 144,
+  packageJson___devDependencies___version = 145,
+  packageJson___peerDependencies = 146,
+  packageJson___peerDependencies___name = 147,
+  packageJson___peerDependencies___version = 148,
+  packageJson___keywords = 149
 }
 
 export type SitePluginFilterInput = {
@@ -3053,6 +3063,11 @@ export type SitePluginPluginOptions = {
   legacy: Maybe<Scalars['Boolean']>;
   theme_color_in_head: Maybe<Scalars['Boolean']>;
   cacheDigest: Maybe<Scalars['String']>;
+  trackingId: Maybe<Scalars['String']>;
+  head: Maybe<Scalars['Boolean']>;
+  anonymize: Maybe<Scalars['Boolean']>;
+  respectDNT: Maybe<Scalars['Boolean']>;
+  defer: Maybe<Scalars['Boolean']>;
   path: Maybe<Scalars['String']>;
   maxWidth: Maybe<Scalars['Int']>;
   quality: Maybe<Scalars['Int']>;
@@ -3080,6 +3095,11 @@ export type SitePluginPluginOptionsFilterInput = {
   legacy: Maybe<BooleanQueryOperatorInput>;
   theme_color_in_head: Maybe<BooleanQueryOperatorInput>;
   cacheDigest: Maybe<StringQueryOperatorInput>;
+  trackingId: Maybe<StringQueryOperatorInput>;
+  head: Maybe<BooleanQueryOperatorInput>;
+  anonymize: Maybe<BooleanQueryOperatorInput>;
+  respectDNT: Maybe<BooleanQueryOperatorInput>;
+  defer: Maybe<BooleanQueryOperatorInput>;
   path: Maybe<StringQueryOperatorInput>;
   maxWidth: Maybe<IntQueryOperatorInput>;
   quality: Maybe<IntQueryOperatorInput>;
