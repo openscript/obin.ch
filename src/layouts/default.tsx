@@ -102,6 +102,7 @@ const DefaultLayoutStyle = css`
 
   main {
     grid-area: main;
+    hyphens: auto;
   }
 
   footer {
