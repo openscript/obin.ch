@@ -1,15 +1,19 @@
 import { exec } from 'child_process';
-import { CreateNodeArgs } from 'gatsby';
+import { CreateNodeArgs, Node, Actions } from 'gatsby';
 import { FileSystemNode } from 'gatsby-source-filesystem';
 import slug from 'limax';
 import { promisify } from 'util';
-import { defaultLanguage } from '../i18n';
+import { defaultLanguage, translate } from '../i18n';
 import { addLanguagePrefix } from '../utils/path';
 
 const promisifiedExec = promisify(exec);
 
-const convertToISOString = (gitDateTime: string) => {
-  return new Date(gitDateTime).toISOString();
+const convertToISOString = (dateTimeString: string) => {
+  if (isNaN(Date.parse(dateTimeString))) {
+    return new Date().toISOString();
+  } else {
+    return new Date(dateTimeString).toISOString();
+  }
 };
 
 const getPublicationDate = async (path: string) => {
@@ -20,6 +24,21 @@ const getPublicationDate = async (path: string) => {
 const getModificationDate = async (path: string) => {
   const modificationDate = promisifiedExec(`git log -1 --format=%aI -- ${path} | tail -1`);
   return convertToISOString((await modificationDate).stdout.trim());
+};
+
+const enhanceBlogNodes = async (node: Node, actions: Actions, language: string) => {
+  const { createNodeField } = actions;
+  const { tags } = node['frontmatter'] as { tags?: string[] };
+  if (tags) {
+    createNodeField({
+      node,
+      name: 'tags',
+      value: tags.map((tag) => {
+        const translatedValue = translate(language, `tag.${slug(tag)}`);
+        return { value: tag, translation: translatedValue, path: addLanguagePrefix(`/tags/${slug(translatedValue)}`, language) };
+      })
+    });
+  }
 };
 
 export async function enhanceMarkdownNodes(args: CreateNodeArgs) {
@@ -37,12 +56,15 @@ export async function enhanceMarkdownNodes(args: CreateNodeArgs) {
     const path = addLanguagePrefix(`/${relativeDirectory}/${currentSlug}`, language);
     const publishedAt = await getPublicationDate(absolutePath);
     const modifiedAt = await getModificationDate(absolutePath);
+    const kind = relativeDirectory.split('/')[0] || '';
     createNodeField({ node, name: 'language', value: language });
     createNodeField({ node, name: 'filename', value: filename });
-    createNodeField({ node, name: 'kind', value: relativeDirectory });
+    createNodeField({ node, name: 'kind', value: kind });
     createNodeField({ node, name: 'slug', value: currentSlug });
     createNodeField({ node, name: 'path', value: path });
     createNodeField({ node, name: 'publishedAt', value: publishedAt });
     createNodeField({ node, name: 'modifiedAt', value: modifiedAt });
+
+    await enhanceBlogNodes(node, actions, language);
   }
 }

@@ -1,5 +1,4 @@
 #!/bin/sh
 . "$(dirname $0)/_/husky.sh"
 
-[ -z "$CI" ] && exit 0
-yarn run check:types && yarn run check:format
+[ -z "$CI" ] && yarn run check:types && yarn run check:format

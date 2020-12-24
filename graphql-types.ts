@@ -702,65 +702,70 @@ export enum FileFieldsEnum {
   internal___type = 211,
   childMarkdownRemark___id = 212,
   childMarkdownRemark___frontmatter___title = 213,
-  childMarkdownRemark___excerpt = 214,
-  childMarkdownRemark___rawMarkdownBody = 215,
-  childMarkdownRemark___fileAbsolutePath = 216,
-  childMarkdownRemark___fields___language = 217,
-  childMarkdownRemark___fields___filename = 218,
-  childMarkdownRemark___fields___kind = 219,
-  childMarkdownRemark___fields___slug = 220,
-  childMarkdownRemark___fields___path = 221,
-  childMarkdownRemark___fields___createdAt = 222,
-  childMarkdownRemark___fields___modifiedAt = 223,
-  childMarkdownRemark___html = 224,
-  childMarkdownRemark___htmlAst = 225,
-  childMarkdownRemark___excerptAst = 226,
-  childMarkdownRemark___headings = 227,
-  childMarkdownRemark___headings___id = 228,
-  childMarkdownRemark___headings___value = 229,
-  childMarkdownRemark___headings___depth = 230,
-  childMarkdownRemark___timeToRead = 231,
-  childMarkdownRemark___tableOfContents = 232,
-  childMarkdownRemark___wordCount___paragraphs = 233,
-  childMarkdownRemark___wordCount___sentences = 234,
-  childMarkdownRemark___wordCount___words = 235,
-  childMarkdownRemark___parent___id = 236,
-  childMarkdownRemark___parent___parent___id = 237,
-  childMarkdownRemark___parent___parent___children = 238,
-  childMarkdownRemark___parent___children = 239,
-  childMarkdownRemark___parent___children___id = 240,
-  childMarkdownRemark___parent___children___children = 241,
-  childMarkdownRemark___parent___internal___content = 242,
-  childMarkdownRemark___parent___internal___contentDigest = 243,
-  childMarkdownRemark___parent___internal___description = 244,
-  childMarkdownRemark___parent___internal___fieldOwners = 245,
-  childMarkdownRemark___parent___internal___ignoreType = 246,
-  childMarkdownRemark___parent___internal___mediaType = 247,
-  childMarkdownRemark___parent___internal___owner = 248,
-  childMarkdownRemark___parent___internal___type = 249,
-  childMarkdownRemark___children = 250,
-  childMarkdownRemark___children___id = 251,
-  childMarkdownRemark___children___parent___id = 252,
-  childMarkdownRemark___children___parent___children = 253,
-  childMarkdownRemark___children___children = 254,
-  childMarkdownRemark___children___children___id = 255,
-  childMarkdownRemark___children___children___children = 256,
-  childMarkdownRemark___children___internal___content = 257,
-  childMarkdownRemark___children___internal___contentDigest = 258,
-  childMarkdownRemark___children___internal___description = 259,
-  childMarkdownRemark___children___internal___fieldOwners = 260,
-  childMarkdownRemark___children___internal___ignoreType = 261,
-  childMarkdownRemark___children___internal___mediaType = 262,
-  childMarkdownRemark___children___internal___owner = 263,
-  childMarkdownRemark___children___internal___type = 264,
-  childMarkdownRemark___internal___content = 265,
-  childMarkdownRemark___internal___contentDigest = 266,
-  childMarkdownRemark___internal___description = 267,
-  childMarkdownRemark___internal___fieldOwners = 268,
-  childMarkdownRemark___internal___ignoreType = 269,
-  childMarkdownRemark___internal___mediaType = 270,
-  childMarkdownRemark___internal___owner = 271,
-  childMarkdownRemark___internal___type = 272
+  childMarkdownRemark___frontmatter___tags = 214,
+  childMarkdownRemark___excerpt = 215,
+  childMarkdownRemark___rawMarkdownBody = 216,
+  childMarkdownRemark___fileAbsolutePath = 217,
+  childMarkdownRemark___fields___language = 218,
+  childMarkdownRemark___fields___filename = 219,
+  childMarkdownRemark___fields___kind = 220,
+  childMarkdownRemark___fields___slug = 221,
+  childMarkdownRemark___fields___path = 222,
+  childMarkdownRemark___fields___publishedAt = 223,
+  childMarkdownRemark___fields___modifiedAt = 224,
+  childMarkdownRemark___fields___tags = 225,
+  childMarkdownRemark___fields___tags___value = 226,
+  childMarkdownRemark___fields___tags___translation = 227,
+  childMarkdownRemark___fields___tags___path = 228,
+  childMarkdownRemark___html = 229,
+  childMarkdownRemark___htmlAst = 230,
+  childMarkdownRemark___excerptAst = 231,
+  childMarkdownRemark___headings = 232,
+  childMarkdownRemark___headings___id = 233,
+  childMarkdownRemark___headings___value = 234,
+  childMarkdownRemark___headings___depth = 235,
+  childMarkdownRemark___timeToRead = 236,
+  childMarkdownRemark___tableOfContents = 237,
+  childMarkdownRemark___wordCount___paragraphs = 238,
+  childMarkdownRemark___wordCount___sentences = 239,
+  childMarkdownRemark___wordCount___words = 240,
+  childMarkdownRemark___parent___id = 241,
+  childMarkdownRemark___parent___parent___id = 242,
+  childMarkdownRemark___parent___parent___children = 243,
+  childMarkdownRemark___parent___children = 244,
+  childMarkdownRemark___parent___children___id = 245,
+  childMarkdownRemark___parent___children___children = 246,
+  childMarkdownRemark___parent___internal___content = 247,
+  childMarkdownRemark___parent___internal___contentDigest = 248,
+  childMarkdownRemark___parent___internal___description = 249,
+  childMarkdownRemark___parent___internal___fieldOwners = 250,
+  childMarkdownRemark___parent___internal___ignoreType = 251,
+  childMarkdownRemark___parent___internal___mediaType = 252,
+  childMarkdownRemark___parent___internal___owner = 253,
+  childMarkdownRemark___parent___internal___type = 254,
+  childMarkdownRemark___children = 255,
+  childMarkdownRemark___children___id = 256,
+  childMarkdownRemark___children___parent___id = 257,
+  childMarkdownRemark___children___parent___children = 258,
+  childMarkdownRemark___children___children = 259,
+  childMarkdownRemark___children___children___id = 260,
+  childMarkdownRemark___children___children___children = 261,
+  childMarkdownRemark___children___internal___content = 262,
+  childMarkdownRemark___children___internal___contentDigest = 263,
+  childMarkdownRemark___children___internal___description = 264,
+  childMarkdownRemark___children___internal___fieldOwners = 265,
+  childMarkdownRemark___children___internal___ignoreType = 266,
+  childMarkdownRemark___children___internal___mediaType = 267,
+  childMarkdownRemark___children___internal___owner = 268,
+  childMarkdownRemark___children___internal___type = 269,
+  childMarkdownRemark___internal___content = 270,
+  childMarkdownRemark___internal___contentDigest = 271,
+  childMarkdownRemark___internal___description = 272,
+  childMarkdownRemark___internal___fieldOwners = 273,
+  childMarkdownRemark___internal___ignoreType = 274,
+  childMarkdownRemark___internal___mediaType = 275,
+  childMarkdownRemark___internal___owner = 276,
+  childMarkdownRemark___internal___type = 277
 }
 
 export type FileFilterInput = {
@@ -1544,120 +1549,142 @@ export type MarkdownRemarkFields = {
   kind: Maybe<Scalars['String']>;
   slug: Maybe<Scalars['String']>;
   path: Maybe<Scalars['String']>;
-  createdAt: Maybe<Scalars['String']>;
-  modifiedAt: Maybe<Scalars['String']>;
+  publishedAt: Maybe<Scalars['Date']>;
+  modifiedAt: Maybe<Scalars['Date']>;
+  tags: Maybe<Array<Maybe<MarkdownRemarkFieldsTags>>>;
+};
+
+
+export type MarkdownRemarkFieldsPublishedAtArgs = {
+  formatString: Maybe<Scalars['String']>;
+  fromNow: Maybe<Scalars['Boolean']>;
+  difference: Maybe<Scalars['String']>;
+  locale: Maybe<Scalars['String']>;
+};
+
+
+export type MarkdownRemarkFieldsModifiedAtArgs = {
+  formatString: Maybe<Scalars['String']>;
+  fromNow: Maybe<Scalars['Boolean']>;
+  difference: Maybe<Scalars['String']>;
+  locale: Maybe<Scalars['String']>;
 };
 
 export enum MarkdownRemarkFieldsEnum {
   id = 0,
   frontmatter___title = 1,
-  excerpt = 2,
-  rawMarkdownBody = 3,
-  fileAbsolutePath = 4,
-  fields___language = 5,
-  fields___filename = 6,
-  fields___kind = 7,
-  fields___slug = 8,
-  fields___path = 9,
-  fields___createdAt = 10,
-  fields___modifiedAt = 11,
-  html = 12,
-  htmlAst = 13,
-  excerptAst = 14,
-  headings = 15,
-  headings___id = 16,
-  headings___value = 17,
-  headings___depth = 18,
-  timeToRead = 19,
-  tableOfContents = 20,
-  wordCount___paragraphs = 21,
-  wordCount___sentences = 22,
-  wordCount___words = 23,
-  parent___id = 24,
-  parent___parent___id = 25,
-  parent___parent___parent___id = 26,
-  parent___parent___parent___children = 27,
-  parent___parent___children = 28,
-  parent___parent___children___id = 29,
-  parent___parent___children___children = 30,
-  parent___parent___internal___content = 31,
-  parent___parent___internal___contentDigest = 32,
-  parent___parent___internal___description = 33,
-  parent___parent___internal___fieldOwners = 34,
-  parent___parent___internal___ignoreType = 35,
-  parent___parent___internal___mediaType = 36,
-  parent___parent___internal___owner = 37,
-  parent___parent___internal___type = 38,
-  parent___children = 39,
-  parent___children___id = 40,
-  parent___children___parent___id = 41,
-  parent___children___parent___children = 42,
-  parent___children___children = 43,
-  parent___children___children___id = 44,
-  parent___children___children___children = 45,
-  parent___children___internal___content = 46,
-  parent___children___internal___contentDigest = 47,
-  parent___children___internal___description = 48,
-  parent___children___internal___fieldOwners = 49,
-  parent___children___internal___ignoreType = 50,
-  parent___children___internal___mediaType = 51,
-  parent___children___internal___owner = 52,
-  parent___children___internal___type = 53,
-  parent___internal___content = 54,
-  parent___internal___contentDigest = 55,
-  parent___internal___description = 56,
-  parent___internal___fieldOwners = 57,
-  parent___internal___ignoreType = 58,
-  parent___internal___mediaType = 59,
-  parent___internal___owner = 60,
-  parent___internal___type = 61,
-  children = 62,
-  children___id = 63,
-  children___parent___id = 64,
-  children___parent___parent___id = 65,
-  children___parent___parent___children = 66,
-  children___parent___children = 67,
-  children___parent___children___id = 68,
-  children___parent___children___children = 69,
-  children___parent___internal___content = 70,
-  children___parent___internal___contentDigest = 71,
-  children___parent___internal___description = 72,
-  children___parent___internal___fieldOwners = 73,
-  children___parent___internal___ignoreType = 74,
-  children___parent___internal___mediaType = 75,
-  children___parent___internal___owner = 76,
-  children___parent___internal___type = 77,
-  children___children = 78,
-  children___children___id = 79,
-  children___children___parent___id = 80,
-  children___children___parent___children = 81,
-  children___children___children = 82,
-  children___children___children___id = 83,
-  children___children___children___children = 84,
-  children___children___internal___content = 85,
-  children___children___internal___contentDigest = 86,
-  children___children___internal___description = 87,
-  children___children___internal___fieldOwners = 88,
-  children___children___internal___ignoreType = 89,
-  children___children___internal___mediaType = 90,
-  children___children___internal___owner = 91,
-  children___children___internal___type = 92,
-  children___internal___content = 93,
-  children___internal___contentDigest = 94,
-  children___internal___description = 95,
-  children___internal___fieldOwners = 96,
-  children___internal___ignoreType = 97,
-  children___internal___mediaType = 98,
-  children___internal___owner = 99,
-  children___internal___type = 100,
-  internal___content = 101,
-  internal___contentDigest = 102,
-  internal___description = 103,
-  internal___fieldOwners = 104,
-  internal___ignoreType = 105,
-  internal___mediaType = 106,
-  internal___owner = 107,
-  internal___type = 108
+  frontmatter___tags = 2,
+  excerpt = 3,
+  rawMarkdownBody = 4,
+  fileAbsolutePath = 5,
+  fields___language = 6,
+  fields___filename = 7,
+  fields___kind = 8,
+  fields___slug = 9,
+  fields___path = 10,
+  fields___publishedAt = 11,
+  fields___modifiedAt = 12,
+  fields___tags = 13,
+  fields___tags___value = 14,
+  fields___tags___translation = 15,
+  fields___tags___path = 16,
+  html = 17,
+  htmlAst = 18,
+  excerptAst = 19,
+  headings = 20,
+  headings___id = 21,
+  headings___value = 22,
+  headings___depth = 23,
+  timeToRead = 24,
+  tableOfContents = 25,
+  wordCount___paragraphs = 26,
+  wordCount___sentences = 27,
+  wordCount___words = 28,
+  parent___id = 29,
+  parent___parent___id = 30,
+  parent___parent___parent___id = 31,
+  parent___parent___parent___children = 32,
+  parent___parent___children = 33,
+  parent___parent___children___id = 34,
+  parent___parent___children___children = 35,
+  parent___parent___internal___content = 36,
+  parent___parent___internal___contentDigest = 37,
+  parent___parent___internal___description = 38,
+  parent___parent___internal___fieldOwners = 39,
+  parent___parent___internal___ignoreType = 40,
+  parent___parent___internal___mediaType = 41,
+  parent___parent___internal___owner = 42,
+  parent___parent___internal___type = 43,
+  parent___children = 44,
+  parent___children___id = 45,
+  parent___children___parent___id = 46,
+  parent___children___parent___children = 47,
+  parent___children___children = 48,
+  parent___children___children___id = 49,
+  parent___children___children___children = 50,
+  parent___children___internal___content = 51,
+  parent___children___internal___contentDigest = 52,
+  parent___children___internal___description = 53,
+  parent___children___internal___fieldOwners = 54,
+  parent___children___internal___ignoreType = 55,
+  parent___children___internal___mediaType = 56,
+  parent___children___internal___owner = 57,
+  parent___children___internal___type = 58,
+  parent___internal___content = 59,
+  parent___internal___contentDigest = 60,
+  parent___internal___description = 61,
+  parent___internal___fieldOwners = 62,
+  parent___internal___ignoreType = 63,
+  parent___internal___mediaType = 64,
+  parent___internal___owner = 65,
+  parent___internal___type = 66,
+  children = 67,
+  children___id = 68,
+  children___parent___id = 69,
+  children___parent___parent___id = 70,
+  children___parent___parent___children = 71,
+  children___parent___children = 72,
+  children___parent___children___id = 73,
+  children___parent___children___children = 74,
+  children___parent___internal___content = 75,
+  children___parent___internal___contentDigest = 76,
+  children___parent___internal___description = 77,
+  children___parent___internal___fieldOwners = 78,
+  children___parent___internal___ignoreType = 79,
+  children___parent___internal___mediaType = 80,
+  children___parent___internal___owner = 81,
+  children___parent___internal___type = 82,
+  children___children = 83,
+  children___children___id = 84,
+  children___children___parent___id = 85,
+  children___children___parent___children = 86,
+  children___children___children = 87,
+  children___children___children___id = 88,
+  children___children___children___children = 89,
+  children___children___internal___content = 90,
+  children___children___internal___contentDigest = 91,
+  children___children___internal___description = 92,
+  children___children___internal___fieldOwners = 93,
+  children___children___internal___ignoreType = 94,
+  children___children___internal___mediaType = 95,
+  children___children___internal___owner = 96,
+  children___children___internal___type = 97,
+  children___internal___content = 98,
+  children___internal___contentDigest = 99,
+  children___internal___description = 100,
+  children___internal___fieldOwners = 101,
+  children___internal___ignoreType = 102,
+  children___internal___mediaType = 103,
+  children___internal___owner = 104,
+  children___internal___type = 105,
+  internal___content = 106,
+  internal___contentDigest = 107,
+  internal___description = 108,
+  internal___fieldOwners = 109,
+  internal___ignoreType = 110,
+  internal___mediaType = 111,
+  internal___owner = 112,
+  internal___type = 113
 }
 
 export type MarkdownRemarkFieldsFilterInput = {
@@ -1666,8 +1693,26 @@ export type MarkdownRemarkFieldsFilterInput = {
   kind: Maybe<StringQueryOperatorInput>;
   slug: Maybe<StringQueryOperatorInput>;
   path: Maybe<StringQueryOperatorInput>;
-  createdAt: Maybe<StringQueryOperatorInput>;
-  modifiedAt: Maybe<StringQueryOperatorInput>;
+  publishedAt: Maybe<DateQueryOperatorInput>;
+  modifiedAt: Maybe<DateQueryOperatorInput>;
+  tags: Maybe<MarkdownRemarkFieldsTagsFilterListInput>;
+};
+
+export type MarkdownRemarkFieldsTags = {
+  __typename?: 'MarkdownRemarkFieldsTags';
+  value: Maybe<Scalars['String']>;
+  translation: Maybe<Scalars['String']>;
+  path: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFieldsTagsFilterInput = {
+  value: Maybe<StringQueryOperatorInput>;
+  translation: Maybe<StringQueryOperatorInput>;
+  path: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFieldsTagsFilterListInput = {
+  elemMatch: Maybe<MarkdownRemarkFieldsTagsFilterInput>;
 };
 
 export type MarkdownRemarkFilterInput = {
@@ -1692,10 +1737,12 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatter = {
   __typename?: 'MarkdownRemarkFrontmatter';
   title: Maybe<Scalars['String']>;
+  tags: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title: Maybe<StringQueryOperatorInput>;
+  tags: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {
@@ -2428,6 +2475,8 @@ export type SitePageContext = {
   skip: Maybe<Scalars['Int']>;
   pageCount: Maybe<Scalars['Int']>;
   currentPage: Maybe<Scalars['Int']>;
+  tag: Maybe<Scalars['String']>;
+  title: Maybe<Scalars['String']>;
 };
 
 export type SitePageContextAlternativeLanguagePaths = {
@@ -2453,6 +2502,8 @@ export type SitePageContextFilterInput = {
   skip: Maybe<IntQueryOperatorInput>;
   pageCount: Maybe<IntQueryOperatorInput>;
   currentPage: Maybe<IntQueryOperatorInput>;
+  tag: Maybe<StringQueryOperatorInput>;
+  title: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2564,102 +2615,109 @@ export enum SitePageFieldsEnum {
   context___skip = 98,
   context___pageCount = 99,
   context___currentPage = 100,
-  pluginCreator___id = 101,
-  pluginCreator___parent___id = 102,
-  pluginCreator___parent___parent___id = 103,
-  pluginCreator___parent___parent___children = 104,
-  pluginCreator___parent___children = 105,
-  pluginCreator___parent___children___id = 106,
-  pluginCreator___parent___children___children = 107,
-  pluginCreator___parent___internal___content = 108,
-  pluginCreator___parent___internal___contentDigest = 109,
-  pluginCreator___parent___internal___description = 110,
-  pluginCreator___parent___internal___fieldOwners = 111,
-  pluginCreator___parent___internal___ignoreType = 112,
-  pluginCreator___parent___internal___mediaType = 113,
-  pluginCreator___parent___internal___owner = 114,
-  pluginCreator___parent___internal___type = 115,
-  pluginCreator___children = 116,
-  pluginCreator___children___id = 117,
-  pluginCreator___children___parent___id = 118,
-  pluginCreator___children___parent___children = 119,
-  pluginCreator___children___children = 120,
-  pluginCreator___children___children___id = 121,
-  pluginCreator___children___children___children = 122,
-  pluginCreator___children___internal___content = 123,
-  pluginCreator___children___internal___contentDigest = 124,
-  pluginCreator___children___internal___description = 125,
-  pluginCreator___children___internal___fieldOwners = 126,
-  pluginCreator___children___internal___ignoreType = 127,
-  pluginCreator___children___internal___mediaType = 128,
-  pluginCreator___children___internal___owner = 129,
-  pluginCreator___children___internal___type = 130,
-  pluginCreator___internal___content = 131,
-  pluginCreator___internal___contentDigest = 132,
-  pluginCreator___internal___description = 133,
-  pluginCreator___internal___fieldOwners = 134,
-  pluginCreator___internal___ignoreType = 135,
-  pluginCreator___internal___mediaType = 136,
-  pluginCreator___internal___owner = 137,
-  pluginCreator___internal___type = 138,
-  pluginCreator___resolve = 139,
-  pluginCreator___name = 140,
-  pluginCreator___version = 141,
-  pluginCreator___pluginOptions___plugins = 142,
-  pluginCreator___pluginOptions___plugins___resolve = 143,
-  pluginCreator___pluginOptions___plugins___id = 144,
-  pluginCreator___pluginOptions___plugins___name = 145,
-  pluginCreator___pluginOptions___plugins___version = 146,
-  pluginCreator___pluginOptions___plugins___nodeAPIs = 147,
-  pluginCreator___pluginOptions___plugins___browserAPIs = 148,
-  pluginCreator___pluginOptions___plugins___pluginFilepath = 149,
-  pluginCreator___pluginOptions___name = 150,
-  pluginCreator___pluginOptions___short_name = 151,
-  pluginCreator___pluginOptions___start_url = 152,
-  pluginCreator___pluginOptions___background_color = 153,
-  pluginCreator___pluginOptions___theme_color = 154,
-  pluginCreator___pluginOptions___display = 155,
-  pluginCreator___pluginOptions___icon = 156,
-  pluginCreator___pluginOptions___icons = 157,
-  pluginCreator___pluginOptions___icons___src = 158,
-  pluginCreator___pluginOptions___icons___sizes = 159,
-  pluginCreator___pluginOptions___icons___type = 160,
-  pluginCreator___pluginOptions___cache_busting_mode = 161,
-  pluginCreator___pluginOptions___include_favicon = 162,
-  pluginCreator___pluginOptions___legacy = 163,
-  pluginCreator___pluginOptions___theme_color_in_head = 164,
-  pluginCreator___pluginOptions___cacheDigest = 165,
-  pluginCreator___pluginOptions___path = 166,
-  pluginCreator___pluginOptions___maxWidth = 167,
-  pluginCreator___pluginOptions___quality = 168,
-  pluginCreator___pluginOptions___linkImagesToOriginal = 169,
-  pluginCreator___pluginOptions___configDir = 170,
-  pluginCreator___pluginOptions___tsNode = 171,
-  pluginCreator___pluginOptions___pathCheck = 172,
-  pluginCreator___pluginOptions___allExtensions = 173,
-  pluginCreator___pluginOptions___isTSX = 174,
-  pluginCreator___pluginOptions___jsxPragma = 175,
-  pluginCreator___nodeAPIs = 176,
-  pluginCreator___browserAPIs = 177,
-  pluginCreator___ssrAPIs = 178,
-  pluginCreator___pluginFilepath = 179,
-  pluginCreator___packageJson___name = 180,
-  pluginCreator___packageJson___description = 181,
-  pluginCreator___packageJson___version = 182,
-  pluginCreator___packageJson___main = 183,
-  pluginCreator___packageJson___license = 184,
-  pluginCreator___packageJson___dependencies = 185,
-  pluginCreator___packageJson___dependencies___name = 186,
-  pluginCreator___packageJson___dependencies___version = 187,
-  pluginCreator___packageJson___devDependencies = 188,
-  pluginCreator___packageJson___devDependencies___name = 189,
-  pluginCreator___packageJson___devDependencies___version = 190,
-  pluginCreator___packageJson___peerDependencies = 191,
-  pluginCreator___packageJson___peerDependencies___name = 192,
-  pluginCreator___packageJson___peerDependencies___version = 193,
-  pluginCreator___packageJson___keywords = 194,
-  pluginCreatorId = 195,
-  componentPath = 196
+  context___tag = 101,
+  context___title = 102,
+  pluginCreator___id = 103,
+  pluginCreator___parent___id = 104,
+  pluginCreator___parent___parent___id = 105,
+  pluginCreator___parent___parent___children = 106,
+  pluginCreator___parent___children = 107,
+  pluginCreator___parent___children___id = 108,
+  pluginCreator___parent___children___children = 109,
+  pluginCreator___parent___internal___content = 110,
+  pluginCreator___parent___internal___contentDigest = 111,
+  pluginCreator___parent___internal___description = 112,
+  pluginCreator___parent___internal___fieldOwners = 113,
+  pluginCreator___parent___internal___ignoreType = 114,
+  pluginCreator___parent___internal___mediaType = 115,
+  pluginCreator___parent___internal___owner = 116,
+  pluginCreator___parent___internal___type = 117,
+  pluginCreator___children = 118,
+  pluginCreator___children___id = 119,
+  pluginCreator___children___parent___id = 120,
+  pluginCreator___children___parent___children = 121,
+  pluginCreator___children___children = 122,
+  pluginCreator___children___children___id = 123,
+  pluginCreator___children___children___children = 124,
+  pluginCreator___children___internal___content = 125,
+  pluginCreator___children___internal___contentDigest = 126,
+  pluginCreator___children___internal___description = 127,
+  pluginCreator___children___internal___fieldOwners = 128,
+  pluginCreator___children___internal___ignoreType = 129,
+  pluginCreator___children___internal___mediaType = 130,
+  pluginCreator___children___internal___owner = 131,
+  pluginCreator___children___internal___type = 132,
+  pluginCreator___internal___content = 133,
+  pluginCreator___internal___contentDigest = 134,
+  pluginCreator___internal___description = 135,
+  pluginCreator___internal___fieldOwners = 136,
+  pluginCreator___internal___ignoreType = 137,
+  pluginCreator___internal___mediaType = 138,
+  pluginCreator___internal___owner = 139,
+  pluginCreator___internal___type = 140,
+  pluginCreator___resolve = 141,
+  pluginCreator___name = 142,
+  pluginCreator___version = 143,
+  pluginCreator___pluginOptions___plugins = 144,
+  pluginCreator___pluginOptions___plugins___resolve = 145,
+  pluginCreator___pluginOptions___plugins___id = 146,
+  pluginCreator___pluginOptions___plugins___name = 147,
+  pluginCreator___pluginOptions___plugins___version = 148,
+  pluginCreator___pluginOptions___plugins___nodeAPIs = 149,
+  pluginCreator___pluginOptions___plugins___browserAPIs = 150,
+  pluginCreator___pluginOptions___plugins___pluginFilepath = 151,
+  pluginCreator___pluginOptions___name = 152,
+  pluginCreator___pluginOptions___short_name = 153,
+  pluginCreator___pluginOptions___start_url = 154,
+  pluginCreator___pluginOptions___background_color = 155,
+  pluginCreator___pluginOptions___theme_color = 156,
+  pluginCreator___pluginOptions___display = 157,
+  pluginCreator___pluginOptions___icon = 158,
+  pluginCreator___pluginOptions___icons = 159,
+  pluginCreator___pluginOptions___icons___src = 160,
+  pluginCreator___pluginOptions___icons___sizes = 161,
+  pluginCreator___pluginOptions___icons___type = 162,
+  pluginCreator___pluginOptions___cache_busting_mode = 163,
+  pluginCreator___pluginOptions___include_favicon = 164,
+  pluginCreator___pluginOptions___legacy = 165,
+  pluginCreator___pluginOptions___theme_color_in_head = 166,
+  pluginCreator___pluginOptions___cacheDigest = 167,
+  pluginCreator___pluginOptions___trackingId = 168,
+  pluginCreator___pluginOptions___head = 169,
+  pluginCreator___pluginOptions___anonymize = 170,
+  pluginCreator___pluginOptions___respectDNT = 171,
+  pluginCreator___pluginOptions___defer = 172,
+  pluginCreator___pluginOptions___path = 173,
+  pluginCreator___pluginOptions___maxWidth = 174,
+  pluginCreator___pluginOptions___quality = 175,
+  pluginCreator___pluginOptions___linkImagesToOriginal = 176,
+  pluginCreator___pluginOptions___configDir = 177,
+  pluginCreator___pluginOptions___tsNode = 178,
+  pluginCreator___pluginOptions___pathCheck = 179,
+  pluginCreator___pluginOptions___allExtensions = 180,
+  pluginCreator___pluginOptions___isTSX = 181,
+  pluginCreator___pluginOptions___jsxPragma = 182,
+  pluginCreator___nodeAPIs = 183,
+  pluginCreator___browserAPIs = 184,
+  pluginCreator___ssrAPIs = 185,
+  pluginCreator___pluginFilepath = 186,
+  pluginCreator___packageJson___name = 187,
+  pluginCreator___packageJson___description = 188,
+  pluginCreator___packageJson___version = 189,
+  pluginCreator___packageJson___main = 190,
+  pluginCreator___packageJson___license = 191,
+  pluginCreator___packageJson___dependencies = 192,
+  pluginCreator___packageJson___dependencies___name = 193,
+  pluginCreator___packageJson___dependencies___version = 194,
+  pluginCreator___packageJson___devDependencies = 195,
+  pluginCreator___packageJson___devDependencies___name = 196,
+  pluginCreator___packageJson___devDependencies___version = 197,
+  pluginCreator___packageJson___peerDependencies = 198,
+  pluginCreator___packageJson___peerDependencies___name = 199,
+  pluginCreator___packageJson___peerDependencies___version = 200,
+  pluginCreator___packageJson___keywords = 201,
+  pluginCreatorId = 202,
+  componentPath = 203
 }
 
 export type SitePageFilterInput = {
@@ -2857,35 +2915,40 @@ export enum SitePluginFieldsEnum {
   pluginOptions___legacy = 113,
   pluginOptions___theme_color_in_head = 114,
   pluginOptions___cacheDigest = 115,
-  pluginOptions___path = 116,
-  pluginOptions___maxWidth = 117,
-  pluginOptions___quality = 118,
-  pluginOptions___linkImagesToOriginal = 119,
-  pluginOptions___configDir = 120,
-  pluginOptions___tsNode = 121,
-  pluginOptions___pathCheck = 122,
-  pluginOptions___allExtensions = 123,
-  pluginOptions___isTSX = 124,
-  pluginOptions___jsxPragma = 125,
-  nodeAPIs = 126,
-  browserAPIs = 127,
-  ssrAPIs = 128,
-  pluginFilepath = 129,
-  packageJson___name = 130,
-  packageJson___description = 131,
-  packageJson___version = 132,
-  packageJson___main = 133,
-  packageJson___license = 134,
-  packageJson___dependencies = 135,
-  packageJson___dependencies___name = 136,
-  packageJson___dependencies___version = 137,
-  packageJson___devDependencies = 138,
-  packageJson___devDependencies___name = 139,
-  packageJson___devDependencies___version = 140,
-  packageJson___peerDependencies = 141,
-  packageJson___peerDependencies___name = 142,
-  packageJson___peerDependencies___version = 143,
-  packageJson___keywords = 144
+  pluginOptions___trackingId = 116,
+  pluginOptions___head = 117,
+  pluginOptions___anonymize = 118,
+  pluginOptions___respectDNT = 119,
+  pluginOptions___defer = 120,
+  pluginOptions___path = 121,
+  pluginOptions___maxWidth = 122,
+  pluginOptions___quality = 123,
+  pluginOptions___linkImagesToOriginal = 124,
+  pluginOptions___configDir = 125,
+  pluginOptions___tsNode = 126,
+  pluginOptions___pathCheck = 127,
+  pluginOptions___allExtensions = 128,
+  pluginOptions___isTSX = 129,
+  pluginOptions___jsxPragma = 130,
+  nodeAPIs = 131,
+  browserAPIs = 132,
+  ssrAPIs = 133,
+  pluginFilepath = 134,
+  packageJson___name = 135,
+  packageJson___description = 136,
+  packageJson___version = 137,
+  packageJson___main = 138,
+  packageJson___license = 139,
+  packageJson___dependencies = 140,
+  packageJson___dependencies___name = 141,
+  packageJson___dependencies___version = 142,
+  packageJson___devDependencies = 143,
+  packageJson___devDependencies___name = 144,
+  packageJson___devDependencies___version = 145,
+  packageJson___peerDependencies = 146,
+  packageJson___peerDependencies___name = 147,
+  packageJson___peerDependencies___version = 148,
+  packageJson___keywords = 149
 }
 
 export type SitePluginFilterInput = {
@@ -3000,6 +3063,11 @@ export type SitePluginPluginOptions = {
   legacy: Maybe<Scalars['Boolean']>;
   theme_color_in_head: Maybe<Scalars['Boolean']>;
   cacheDigest: Maybe<Scalars['String']>;
+  trackingId: Maybe<Scalars['String']>;
+  head: Maybe<Scalars['Boolean']>;
+  anonymize: Maybe<Scalars['Boolean']>;
+  respectDNT: Maybe<Scalars['Boolean']>;
+  defer: Maybe<Scalars['Boolean']>;
   path: Maybe<Scalars['String']>;
   maxWidth: Maybe<Scalars['Int']>;
   quality: Maybe<Scalars['Int']>;
@@ -3027,6 +3095,11 @@ export type SitePluginPluginOptionsFilterInput = {
   legacy: Maybe<BooleanQueryOperatorInput>;
   theme_color_in_head: Maybe<BooleanQueryOperatorInput>;
   cacheDigest: Maybe<StringQueryOperatorInput>;
+  trackingId: Maybe<StringQueryOperatorInput>;
+  head: Maybe<BooleanQueryOperatorInput>;
+  anonymize: Maybe<BooleanQueryOperatorInput>;
+  respectDNT: Maybe<BooleanQueryOperatorInput>;
+  defer: Maybe<BooleanQueryOperatorInput>;
   path: Maybe<StringQueryOperatorInput>;
   maxWidth: Maybe<IntQueryOperatorInput>;
   quality: Maybe<IntQueryOperatorInput>;
@@ -3167,10 +3240,27 @@ export type WebPOptions = {
   quality: Maybe<Scalars['Int']>;
 };
 
-export type CreateArticlePagesQueryVariables = Exact<{ [key: string]: never; }>;
+export type CreateBlogPagesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type CreateArticlePagesQuery = (
+export type CreateBlogPagesQuery = (
+  { __typename?: 'Query' }
+  & { allMarkdownRemark: (
+    { __typename?: 'MarkdownRemarkConnection' }
+    & { edges: Array<(
+      { __typename?: 'MarkdownRemarkEdge' }
+      & { node: (
+        { __typename?: 'MarkdownRemark' }
+        & Pick<MarkdownRemark, 'id'>
+      ) }
+    )> }
+  ) }
+);
+
+export type CreateBlogPostPagesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CreateBlogPostPagesQuery = (
   { __typename?: 'Query' }
   & { allMarkdownRemark: (
     { __typename?: 'MarkdownRemarkConnection' }
@@ -3187,19 +3277,17 @@ export type CreateArticlePagesQuery = (
   ) }
 );
 
-export type CreateArticlesPagesQueryVariables = Exact<{ [key: string]: never; }>;
+export type CreateTagPagesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type CreateArticlesPagesQuery = (
+export type CreateTagPagesQuery = (
   { __typename?: 'Query' }
   & { allMarkdownRemark: (
     { __typename?: 'MarkdownRemarkConnection' }
-    & { edges: Array<(
-      { __typename?: 'MarkdownRemarkEdge' }
-      & { node: (
-        { __typename?: 'MarkdownRemark' }
-        & Pick<MarkdownRemark, 'id'>
-      ) }
+    & { group: Array<(
+      { __typename?: 'MarkdownRemarkGroupConnection' }
+      & Pick<MarkdownRemarkGroupConnection, 'totalCount'>
+      & { tag: MarkdownRemarkGroupConnection['fieldValue'] }
     )> }
   ) }
 );
@@ -3379,6 +3467,10 @@ export type IndexPageQuery = (
       & { fields: Maybe<(
         { __typename?: 'MarkdownRemarkFields' }
         & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+        & { tags: Maybe<Array<Maybe<(
+          { __typename?: 'MarkdownRemarkFieldsTags' }
+          & Pick<MarkdownRemarkFieldsTags, 'translation' | 'path'>
+        )>>> }
       )>, frontmatter: Maybe<(
         { __typename?: 'MarkdownRemarkFrontmatter' }
         & Pick<MarkdownRemarkFrontmatter, 'title'>
@@ -3387,34 +3479,16 @@ export type IndexPageQuery = (
   ) }
 );
 
-export type ArticlePageQueryVariables = Exact<{
-  language: Maybe<Scalars['String']>;
-  slug: Maybe<Scalars['String']>;
-}>;
-
-
-export type ArticlePageQuery = (
-  { __typename?: 'Query' }
-  & { article: Maybe<(
-    { __typename?: 'MarkdownRemark' }
-    & Pick<MarkdownRemark, 'html'>
-    & { frontmatter: Maybe<(
-      { __typename?: 'MarkdownRemarkFrontmatter' }
-      & Pick<MarkdownRemarkFrontmatter, 'title'>
-    )> }
-  )> }
-);
-
-export type ArticlesPageQueryVariables = Exact<{
+export type BlogPageQueryVariables = Exact<{
   language: Scalars['String'];
   skip: Scalars['Int'];
   limit: Scalars['Int'];
 }>;
 
 
-export type ArticlesPageQuery = (
+export type BlogPageQuery = (
   { __typename?: 'Query' }
-  & { articles: (
+  & { posts: (
     { __typename?: 'MarkdownRemarkConnection' }
     & { edges: Array<(
       { __typename?: 'MarkdownRemarkEdge' }
@@ -3424,6 +3498,66 @@ export type ArticlesPageQuery = (
         & { fields: Maybe<(
           { __typename?: 'MarkdownRemarkFields' }
           & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+          & { tags: Maybe<Array<Maybe<(
+            { __typename?: 'MarkdownRemarkFieldsTags' }
+            & Pick<MarkdownRemarkFieldsTags, 'translation' | 'path'>
+          )>>> }
+        )>, frontmatter: Maybe<(
+          { __typename?: 'MarkdownRemarkFrontmatter' }
+          & Pick<MarkdownRemarkFrontmatter, 'title'>
+        )> }
+      ) }
+    )> }
+  ) }
+);
+
+export type BlogPostPageQueryVariables = Exact<{
+  language: Maybe<Scalars['String']>;
+  slug: Maybe<Scalars['String']>;
+}>;
+
+
+export type BlogPostPageQuery = (
+  { __typename?: 'Query' }
+  & { blogPost: Maybe<(
+    { __typename?: 'MarkdownRemark' }
+    & Pick<MarkdownRemark, 'html'>
+    & { frontmatter: Maybe<(
+      { __typename?: 'MarkdownRemarkFrontmatter' }
+      & Pick<MarkdownRemarkFrontmatter, 'title'>
+    )>, fields: Maybe<(
+      { __typename?: 'MarkdownRemarkFields' }
+      & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+      & { tags: Maybe<Array<Maybe<(
+        { __typename?: 'MarkdownRemarkFieldsTags' }
+        & Pick<MarkdownRemarkFieldsTags, 'value' | 'path'>
+      )>>> }
+    )> }
+  )> }
+);
+
+export type TagPageQueryVariables = Exact<{
+  language: Scalars['String'];
+  tag: Scalars['String'];
+}>;
+
+
+export type TagPageQuery = (
+  { __typename?: 'Query' }
+  & { entries: (
+    { __typename?: 'MarkdownRemarkConnection' }
+    & { edges: Array<(
+      { __typename?: 'MarkdownRemarkEdge' }
+      & { node: (
+        { __typename?: 'MarkdownRemark' }
+        & Pick<MarkdownRemark, 'excerpt'>
+        & { fields: Maybe<(
+          { __typename?: 'MarkdownRemarkFields' }
+          & Pick<MarkdownRemarkFields, 'path' | 'modifiedAt'>
+          & { tags: Maybe<Array<Maybe<(
+            { __typename?: 'MarkdownRemarkFieldsTags' }
+            & Pick<MarkdownRemarkFieldsTags, 'translation' | 'path'>
+          )>>> }
         )>, frontmatter: Maybe<(
           { __typename?: 'MarkdownRemarkFrontmatter' }
           & Pick<MarkdownRemarkFrontmatter, 'title'>

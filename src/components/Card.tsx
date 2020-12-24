@@ -1,19 +1,33 @@
-import { Link } from 'gatsby';
-import React, { createElement, ElementType, PropsWithChildren } from 'react';
+import React, { ReactNode } from 'react';
+import { Props } from '../utils/Props';
 
-type CardProps = PropsWithChildren<{
-  title: string;
-  path?: string;
-  titleComponent?: ElementType;
+type CardProps = Props<{
+  header?: ReactNode;
+  footer?: ReactNode;
 }>;
 
-export function Card({ title, children, path, titleComponent = 'h3' }: CardProps) {
-  const headingContent = path ? <Link to={path}>{title}</Link> : title;
-  const heading = createElement(titleComponent, null, headingContent);
+export function Card({ className, children, header, footer }: CardProps) {
   return (
-    <div>
-      {heading}
+    <div className={className}>
+      {header}
       {children}
+      {footer}
     </div>
   );
 }
+
+type HeaderProps = Props;
+
+function Header({ children, className }: HeaderProps) {
+  return <div className={className}>{children}</div>;
+}
+
+Card.Header = Header;
+
+type FooterProps = Props;
+
+function Footer({ children, className }: FooterProps) {
+  return <div className={className}>{children}</div>;
+}
+
+Card.Footer = Footer;

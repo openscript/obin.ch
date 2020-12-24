@@ -6,7 +6,6 @@ import { Spotlight } from '../layouts/default/sections/Spotlight';
 import { ReactComponent as WelcomeGraphic } from '../../static/graphics/welcome.svg';
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
-import { Card } from '../components/Card';
 import { Overview } from '../layouts/default/sections/Overview';
 import { ExcerptItem } from '../components/ExcerptItem';
 
@@ -30,6 +29,10 @@ const WelcomeContent = styled.div`
   min-height: 100%;
 `;
 
+const StyledExcerptItem = styled(ExcerptItem)`
+  text-align: justify;
+`;
+
 export default function IndexPage({ data, pageContext }: IndexPageProps) {
   const intl = useIntl();
   const title = intl.formatMessage({ id: 'page.index.title' });
@@ -42,13 +45,15 @@ export default function IndexPage({ data, pageContext }: IndexPageProps) {
       <Overview>
         {data.recentArticles.nodes.map((article, i) => {
           return (
-            <ExcerptItem
+            <StyledExcerptItem
               title={article.frontmatter.title}
-              excerpt={article.excerpt}
               path={article.fields.path}
               key={i}
-              publishedAt={article.fields.modifiedAt}
-            />
+              date={article.fields.modifiedAt}
+              tags={article.fields.tags}
+            >
+              {article.excerpt}
+            </StyledExcerptItem>
           );
         })}
       </Overview>
@@ -63,12 +68,17 @@ export const query = graphql`
     }
     recentArticles: allMarkdownRemark(
       sort: { fields: fields___modifiedAt, order: DESC }
-      filter: { fields: { language: { eq: $language }, kind: { eq: "articles" } } }
-      limit: 3
+      filter: { fields: { language: { eq: $language }, kind: { eq: "blog" } } }
+      limit: 2
     ) {
       nodes {
         fields {
           path
+          modifiedAt
+          tags {
+            translation
+            path
+          }
         }
         frontmatter {
           title

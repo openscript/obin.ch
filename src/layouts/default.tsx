@@ -17,7 +17,7 @@ import styled from '@emotion/styled';
 const DefaultLayoutStyle = css`
   :root {
     --white-color: #eeeeee;
-    --white-alternate-color: #dddddd;
+    --white-alternate-color: #ece3df;
     --black-color: #6a4a3c;
     --black-alternate-color: #2c2a2a;
     --primary-color: #eb6841;
@@ -37,7 +37,7 @@ const DefaultLayoutStyle = css`
     }
 
     @media (max-width: ${breakpoints.medium}) {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     @media (min-width: ${breakpoints.big}) {
@@ -49,6 +49,7 @@ const DefaultLayoutStyle = css`
     margin: 0;
     min-height: 100%;
     scroll-behavior: smooth;
+    overflow-y: scroll;
     display: flex;
     min-height: 100%;
     background: var(--white-alternate-color);
@@ -101,6 +102,7 @@ const DefaultLayoutStyle = css`
 
   main {
     grid-area: main;
+    hyphens: auto;
   }
 
   footer {
@@ -163,8 +165,8 @@ export function DefaultLayout({ pageContext, title, children }: DefaultLayoutPro
       }
     }
   `);
-  const mainNavigationItems = siteMetadata.site.siteMetadata.mainNavigation.map((entry) => {
-    return <NavigationItem path={entry.path} title={intl.formatMessage({ id: entry.title })} />;
+  const mainNavigationItems = siteMetadata.site.siteMetadata.mainNavigation.map((entry, i) => {
+    return <NavigationItem path={entry.path} title={intl.formatMessage({ id: entry.title })} key={i} />;
   });
   return (
     <div id="wrapper">
