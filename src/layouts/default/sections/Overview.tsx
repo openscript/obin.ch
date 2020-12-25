@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { PropsWithChildren } from 'react';
+import { breakpoints } from '../breakpoints';
 import { PaddedElement } from '../PaddedElement';
 
 const OverviewSection = styled(PaddedElement)`
@@ -8,6 +9,10 @@ const OverviewSection = styled(PaddedElement)`
   grid-template-columns: 1fr 1fr;
   grid-gap: 3rem;
   margin: 3rem 0 4rem 0;
+
+  @media (max-width: ${breakpoints.tiny}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 type OverviewProps = PropsWithChildren<unknown>;

@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import React, { ElementType } from 'react';
 import { FormattedDate, FormattedMessage, FormattedTime } from 'react-intl';
+import { breakpoints } from '../layouts/default/breakpoints';
 import { Props } from '../utils/Props';
 import { Card } from './Card';
 
@@ -11,6 +12,11 @@ const StyledCardHeader = styled(Card.Header)`
   justify-content: space-between;
   height: 3rem;
   font-size: 1.2rem;
+
+  @media (max-width: ${breakpoints.small}) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
 `;
 
 const StyledMetaInformation = styled.div`
@@ -18,6 +24,10 @@ const StyledMetaInformation = styled.div`
   flex-direction: column;
   font-size: 0.8rem;
   align-items: flex-end;
+
+  @media (max-width: ${breakpoints.small}) {
+    flex-direction: row;
+  }
 `;
 
 const StyledTagContainer = styled.div`

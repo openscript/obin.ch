@@ -4,24 +4,52 @@ import React from 'react';
 import { FormattedDate, FormattedMessage, FormattedTime, useIntl } from 'react-intl';
 import { BlogPostPageQuery, SitePageContext } from '../../graphql-types';
 import { DefaultLayout } from '../layouts/default';
+import { breakpoints } from '../layouts/default/breakpoints';
 import { PaddedElement } from '../layouts/default/PaddedElement';
 
 const Post = styled.article`
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    'title title'
+    'content meta';
   grid-column-gap: 1rem;
 
+  @media (max-width: ${breakpoints.small}) {
+    grid-template-areas:
+      'title'
+      'meta'
+      'content';
+  }
+
   h2 {
-    grid-column: 1 / 3;
+    grid-area: title;
   }
 `;
 
+const PostContent = styled.div`
+  grid-area: content;
+`;
+
 const MetaInformation = styled.dl`
+  grid-area: meta;
   margin-top: 1rem;
   font-size: 0.8rem;
 
   dd a {
     margin-right: 0.5rem;
+  }
+
+  @media (max-width: ${breakpoints.small}) {
+    display: flex;
+    margin: 0;
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      margin: 0 0.5rem;
+    }
   }
 `;
 
@@ -35,7 +63,6 @@ export default function BlogPost({ data, pageContext }: BlogPostProps) {
       <PaddedElement>
         <Post>
           <h2>{data.blogPost.frontmatter.title}</h2>
-          <div dangerouslySetInnerHTML={{ __html: data.blogPost.html }} />
           <MetaInformation>
             <dt>
               <FormattedMessage id="misc.date" />
@@ -54,6 +81,7 @@ export default function BlogPost({ data, pageContext }: BlogPostProps) {
               ))}
             </dd>
           </MetaInformation>
+          <PostContent dangerouslySetInnerHTML={{ __html: data.blogPost.html }} />
         </Post>
       </PaddedElement>
     </DefaultLayout>

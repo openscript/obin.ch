@@ -8,6 +8,7 @@ import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import { Overview } from '../layouts/default/sections/Overview';
 import { ExcerptItem } from '../components/ExcerptItem';
+import { breakpoints } from '../layouts/default/breakpoints';
 
 type IndexPageProps = {
   data: IndexPageQuery;
@@ -27,6 +28,10 @@ const WelcomeContent = styled.div`
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
+
+  @media (max-width: ${breakpoints.tiny}) {
+    width: 60%;
+  }
 `;
 
 const StyledExcerptItem = styled(ExcerptItem)`

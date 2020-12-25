@@ -143,6 +143,15 @@ const DefaultLayoutStyle = css`
 const StyledLanguageSwitcher = styled(LanguageSwitcher)`
   border-left: 2px solid var(--white-alternate-color);
   padding-left: 1rem;
+
+  @media (max-width: ${breakpoints.medium}) {
+    border-left: none;
+    padding-left: 0;
+
+    li {
+      padding-left: 0;
+    }
+  }
 `;
 
 type DefaultLayoutProps = PropsWithChildren<{ pageContext: SitePageContext; title: string }>;
