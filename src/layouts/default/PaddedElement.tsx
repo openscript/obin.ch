@@ -3,18 +3,22 @@ import React, { ElementType, PropsWithChildren } from 'react';
 import { breakpoints } from './breakpoints';
 
 const PaddedComponent = styled.div`
-  padding: 0 20%;
+  padding-left: 20%;
+  padding-right: 20%;
 
   @media (max-width: ${breakpoints.big}) {
-    padding: 0 17.5%;
+    padding-left: 17.5%;
+    padding-right: 17.5%;
   }
 
   @media (max-width: ${breakpoints.medium}) {
-    padding: 0 10%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   @media (max-width: ${breakpoints.tiny}) {
-    padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 `;
 

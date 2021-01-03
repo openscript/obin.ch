@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import AslantDivider from '../../components/AslantDivider';
 import { ContactItems } from '../../components/ContactItems';
 import { LocalizedLink } from '../../components/LocalizedLink';
 import { PaddedElement } from './PaddedElement';
@@ -12,6 +11,8 @@ const StyledFooterContainer = styled.footer`
   color: var(--white-color);
   background-color: var(--black-color);
   font-family: var(--heading-font);
+  clip-path: polygon(0 var(--divider-height), 80% 0, 100% var(--divider-height), 100% 100%, 0 100%);
+  padding-top: var(--divider-height);
 
   a {
     color: var(--white-color);
@@ -48,7 +49,6 @@ type DefaultFooterProps = {
 export function DefaultFooter({ buildInfo, phone, email }: DefaultFooterProps) {
   return (
     <StyledFooterContainer>
-      <AslantDivider color="--white-alternate-color" flipHorizontally />
       <Footer>
         <FooterInfo>
           <ContactItems phone={phone} email={email} />

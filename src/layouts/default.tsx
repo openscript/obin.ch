@@ -26,6 +26,7 @@ const DefaultLayoutStyle = css`
     --heading-font: 'Rajdhani', sans-serif;
     --paragraph-font: 'Poppins', 'Roboto', sans-serif;
     --code-font: 'IBM Plex Mono', monospace;
+    --divider-height: 1.5rem;
   }
 
   html {
@@ -34,6 +35,9 @@ const DefaultLayoutStyle = css`
 
     @media (max-width: ${breakpoints.small}) {
       font-size: 14px;
+      :root {
+        --divider-height: 1rem;
+      }
     }
 
     @media (max-width: ${breakpoints.medium}) {
@@ -67,10 +71,10 @@ const DefaultLayoutStyle = css`
     width: 100%;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 7rem auto 8rem;
+    grid-template-rows: 5.5rem auto 8rem;
 
     @media (min-width: ${breakpoints.big}) {
-      grid-template-rows: 8rem auto 8rem;
+      grid-template-rows: 6.5rem auto 8rem;
     }
 
     grid-template-areas:
@@ -103,6 +107,11 @@ const DefaultLayoutStyle = css`
   main {
     grid-area: main;
     hyphens: auto;
+
+    & > * {
+      padding-top: var(--divider-height);
+      padding-bottom: var(--divider-height);
+    }
   }
 
   footer {

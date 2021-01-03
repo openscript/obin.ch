@@ -1,15 +1,21 @@
 import styled from '@emotion/styled';
 import React, { ReactNode } from 'react';
 import { PropsWithChildren } from 'react';
-import AslantDivider from '../../../components/AslantDivider';
 import { PaddedElement } from '../PaddedElement';
 
-type SpotlightContentProps = {
+type SpotlightContainerProps = {
   color: string;
 };
 
+const SpotlightContainer = styled.section`
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--divider-height)), 80% 100%, 0 calc(100% - var(--divider-height)));
+  background-color: var(${(props: SpotlightContainerProps) => props.color});
+  position: relative;
+  display: flex;
+  flex-direction: column;
+`;
+
 const SpotlightContent = styled(PaddedElement)`
-  background-color: var(${(props: SpotlightContentProps) => props.color});
   position: relative;
   flex-grow: 1;
 
@@ -25,18 +31,6 @@ const SpotlightContent = styled(PaddedElement)`
   }
 `;
 
-const SpotlightContainer = styled.section`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-`;
-
-const BeforeDivider = styled(AslantDivider)`
-  position: absolute;
-  bottom: 100%;
-  margin-bottom: -1px;
-`;
-
 type SpotlightProps = PropsWithChildren<{
   color: string;
   className?: string;
@@ -45,13 +39,11 @@ type SpotlightProps = PropsWithChildren<{
 
 export function Spotlight({ background, children, color, className }: SpotlightProps) {
   return (
-    <SpotlightContainer className={`spotlight ${className}`}>
-      <BeforeDivider color={color} invert flipHorizontally />
-      <SpotlightContent color={color}>
+    <SpotlightContainer className={`spotlight ${className}`} color={color}>
+      <SpotlightContent>
         {background}
         {children}
       </SpotlightContent>
-      <AslantDivider color={color} invert flipVertically />
     </SpotlightContainer>
   );
 }

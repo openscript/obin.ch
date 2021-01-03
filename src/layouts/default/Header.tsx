@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import AslantDivider from '../../components/AslantDivider';
 import { PaddedElement } from './PaddedElement';
 
 const StyledHeader = styled.header`
@@ -9,6 +8,10 @@ const StyledHeader = styled.header`
   background-color: var(--black-color);
   font-size: 1.2rem;
   font-family: var(--heading-font);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% calc(100% - var(--divider-height)), 0 100%);
+  padding-bottom: var(--divider-height);
+  margin-bottom: calc(var(--divider-height) * -1);
+  z-index: 2;
 
   a {
     color: var(--white-color);
@@ -31,10 +34,6 @@ const SiteHeading = styled.h1`
   margin: 0;
 `;
 
-const BottomDivider = styled(AslantDivider)`
-  margin-bottom: --1px;
-`;
-
 type DefaultHeaderProps = {
   navigationBar: JSX.Element;
   logo: JSX.Element;
@@ -49,7 +48,6 @@ export function DefaultHeader({ navigationBar, logo, siteTitle }: DefaultHeaderP
         <SiteHeading>{siteTitle}</SiteHeading>
         {navigationBar}
       </Header>
-      <BottomDivider color="--white-alternate-color" invert flipHorizontally />
     </StyledHeader>
   );
 }
