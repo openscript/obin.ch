@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import React, { ReactNode, useState } from 'react';
+import { breakpoints } from '../layouts/default/breakpoints';
 import { BurgerButton } from './BurgerButton';
 
 type CollapseWidthProps = {
@@ -21,15 +22,27 @@ const MenuList = styled.ul<CollapseWidthProps>`
       top: 100%;
       left: 0;
       right: 0;
-      padding: 0 2rem;
       background-color: var(--black-color);
-      margin-top: -2rem;
       padding-top: 2rem;
       z-index: 1;
+      padding: 0 20%;
+
+      @media (max-width: ${breakpoints.big}) {
+        padding: 0 17.5%;
+      }
+
+      @media (max-width: ${breakpoints.medium}) {
+        padding: 0 10%;
+      }
+
+      @media (max-width: ${breakpoints.tiny}) {
+        padding: 0 1rem;
+      }
 
       li {
         margin-right: 0;
         margin-bottom: 1rem;
+        padding: 0;
       }
     }
   }

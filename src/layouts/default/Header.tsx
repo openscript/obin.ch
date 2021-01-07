@@ -8,10 +8,18 @@ const StyledHeader = styled.header`
   background-color: var(--black-color);
   font-size: 1.2rem;
   font-family: var(--heading-font);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% calc(100% - var(--divider-height)), 0 100%);
-  padding-bottom: var(--divider-height);
-  margin-bottom: calc(var(--divider-height) * -1);
   z-index: 2;
+
+  &:after {
+    content: '';
+    height: var(--divider-height);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% calc(100% - var(--divider-height)), 0 100%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--black-color);
+  }
 
   a {
     color: var(--white-color);

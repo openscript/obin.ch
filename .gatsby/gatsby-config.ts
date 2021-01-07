@@ -54,8 +54,7 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
           cookie_expires: 0
         },
         pluginConfig: {
-          head: false,
-          respectDNT: true
+          head: false
         }
       }
     },
