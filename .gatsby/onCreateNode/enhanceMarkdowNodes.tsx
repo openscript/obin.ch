@@ -51,19 +51,17 @@ export async function enhanceMarkdownNodes(args: CreateNodeArgs) {
     const nameMatch = name.match(/^(\w+)(.+)?\.(\w+)$/);
     const filename = nameMatch && nameMatch[1] ? nameMatch[1] : name;
     const language = nameMatch && nameMatch[3] ? nameMatch[3] : defaultLanguage;
-    const { title } = node['frontmatter'] as { title?: string };
+    const { title, publishedAt, modifiedAt } = node['frontmatter'] as { title?: string; publishedAt?: Date; modifiedAt?: Date };
     const currentSlug = title ? slug(title) : filename;
     const path = addLanguagePrefix(`/${relativeDirectory}/${currentSlug}`, language);
-    const publishedAt = await getPublicationDate(absolutePath);
-    const modifiedAt = await getModificationDate(absolutePath);
     const kind = relativeDirectory.split('/')[0] || '';
     createNodeField({ node, name: 'language', value: language });
     createNodeField({ node, name: 'filename', value: filename });
     createNodeField({ node, name: 'kind', value: kind });
     createNodeField({ node, name: 'slug', value: currentSlug });
     createNodeField({ node, name: 'path', value: path });
-    createNodeField({ node, name: 'publishedAt', value: publishedAt });
-    createNodeField({ node, name: 'modifiedAt', value: modifiedAt });
+    createNodeField({ node, name: 'publishedAt', value: publishedAt || (await getPublicationDate(absolutePath)) });
+    createNodeField({ node, name: 'modifiedAt', value: modifiedAt || publishedAt || (await getModificationDate(absolutePath)) });
 
     await enhanceBlogNodes(node, actions, language);
   }
