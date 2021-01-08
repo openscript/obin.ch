@@ -35,7 +35,11 @@ const enhanceBlogNodes = async (node: Node, actions: Actions, language: string) 
       name: 'tags',
       value: tags.map((tag) => {
         const translatedValue = translate(language, `tag.${slug(tag)}`);
-        return { value: tag, translation: translatedValue, path: addLanguagePrefix(`/tags/${slug(translatedValue)}`, language) };
+        return {
+          value: tag,
+          translation: translatedValue,
+          path: addLanguagePrefix(`${translate(language, '/tags')}/${slug(translatedValue)}`, language)
+        };
       })
     });
   }
@@ -51,17 +55,22 @@ export async function enhanceMarkdownNodes(args: CreateNodeArgs) {
     const nameMatch = name.match(/^(\w+)(.+)?\.(\w+)$/);
     const filename = nameMatch && nameMatch[1] ? nameMatch[1] : name;
     const language = nameMatch && nameMatch[3] ? nameMatch[3] : defaultLanguage;
-    const { title, publishedAt, modifiedAt } = node['frontmatter'] as { title?: string; publishedAt?: Date; modifiedAt?: Date };
+    const { title, date, modifiedAt } = node['frontmatter'] as { title?: string; date?: Date; modifiedAt?: Date };
     const currentSlug = title ? slug(title) : filename;
-    const path = addLanguagePrefix(`/${relativeDirectory}/${currentSlug}`, language);
     const kind = relativeDirectory.split('/')[0] || '';
+
+    let path = addLanguagePrefix(`/${relativeDirectory}/${currentSlug}`, language);
+    if (kind) {
+      path = path.replace(`/${kind}`, translate(language, `/${kind}`));
+    }
+
     createNodeField({ node, name: 'language', value: language });
     createNodeField({ node, name: 'filename', value: filename });
     createNodeField({ node, name: 'kind', value: kind });
     createNodeField({ node, name: 'slug', value: currentSlug });
     createNodeField({ node, name: 'path', value: path });
-    createNodeField({ node, name: 'publishedAt', value: publishedAt || (await getPublicationDate(absolutePath)) });
-    createNodeField({ node, name: 'modifiedAt', value: modifiedAt || publishedAt || (await getModificationDate(absolutePath)) });
+    createNodeField({ node, name: 'publishedAt', value: date || (await getPublicationDate(absolutePath)) });
+    createNodeField({ node, name: 'modifiedAt', value: modifiedAt || date || (await getModificationDate(absolutePath)) });
 
     await enhanceBlogNodes(node, actions, language);
   }

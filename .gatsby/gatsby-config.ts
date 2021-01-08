@@ -1,4 +1,5 @@
 import { ITSConfigFn } from 'gatsby-plugin-ts-config';
+import { BLOG_PATH, GALLERY_PATH } from './configuration';
 
 const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
   siteMetadata: {
@@ -8,7 +9,11 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
     mainNavigation: [
       {
         title: 'page.blog.title',
-        path: '/blog'
+        path: BLOG_PATH
+      },
+      {
+        title: 'page.gallery.title',
+        path: GALLERY_PATH
       }
     ]
   },

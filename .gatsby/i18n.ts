@@ -6,8 +6,8 @@ export type Translation = { [key in Language]: { [key: string]: string } };
 
 export const slugTranslation: Translation = {
   de: {
-    '/about': '/ueber-uns',
-    '/imprint': '/impressum'
+    '/imprint': '/impressum',
+    '/gallery': '/galerie'
   },
   en: {}
 };
@@ -36,6 +36,7 @@ export const contentTranslation: Translation = {
     'page.notFound.content': 'Es tut mir leid. Die gesuchte Seite existiert nicht.',
     'page.blog.title': 'Blog',
     'page.blogPost.title': '{post} - Blog',
+    'page.gallery.title': 'Galerie',
     'page.tag.title': `"{tag}" - Tag`,
     'tag.projects': 'Projekte'
   },
@@ -57,6 +58,7 @@ export const contentTranslation: Translation = {
     'page.notFound.content': "I'm sorry. The requested page couldn't be found.",
     'page.blog.title': 'Blog',
     'page.blogPost.title': '{post} - Blog',
+    'page.gallery.title': 'Gallery',
     'page.tag.title': `"{tag}" - Tag`,
     'tag.projects': 'Projects'
   }
