@@ -19,6 +19,7 @@ const StyledHeader = styled.header`
     left: 0;
     right: 0;
     background-color: var(--black-color);
+    transform: translateY(-0.1px);
   }
 
   a {
