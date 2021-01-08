@@ -33,7 +33,7 @@ export const contentTranslation: Translation = {
     'page.index.section.offers': 'Angebote',
     'page.imprint.title': 'Impressum',
     'page.notFound.title': 'Seite nicht gefunden',
-    'page.notFound.content': 'Es tut mir leid. Die gesuchte Seite konnte existiert nicht.',
+    'page.notFound.content': 'Es tut mir leid. Die gesuchte Seite existiert nicht.',
     'page.blog.title': 'Blog',
     'page.blogPost.title': '{post} - Blog',
     'page.tag.title': `"{tag}" - Tag`,
