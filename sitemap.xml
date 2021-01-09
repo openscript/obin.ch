@@ -6,6 +6,8 @@
 <url> <loc>https://r.obin.ch/blog/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://r.obin.ch/en/blog</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://r.obin.ch/en/blog/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://r.obin.ch/galerie</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://r.obin.ch/en/gallery</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://r.obin.ch/tags/projekte</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://r.obin.ch/en/tags/projects</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://r.obin.ch/en/404</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
