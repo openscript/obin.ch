@@ -12,7 +12,7 @@ Feel free to checkout how our website is built, but don't copy our content and b
 ## Tips and tricks
 
 - When the dev container configuration changes, it's sometimes not detected by VSCode. It can be rebuilt manually `Remote-Containers: Rebuild Container`.
-- Sometimes deployment is easy as `git checkout master && git pull && git merge --ff develop && git push && git checkout -`
+- Sometimes deployment is easy as `git checkout master && git pull && git merge --ff - && git push && git checkout -`
 
 ## Resources
 
