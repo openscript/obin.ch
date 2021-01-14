@@ -10,8 +10,12 @@ const StyledCardHeader = styled(Card.Header)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 3rem;
+  min-height: 4rem;
   font-size: 1.2rem;
+
+  & > a {
+    width: 60%;
+  }
 
   @media (max-width: ${breakpoints.small}) {
     flex-direction: column;
@@ -23,7 +27,9 @@ const StyledMetaInformation = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 0.8rem;
-  align-items: flex-end;
+  text-align: right;
+  width: 40%;
+  margin-left: 0.5rem;
 
   @media (max-width: ${breakpoints.small}) {
     flex-direction: row;
@@ -31,6 +37,9 @@ const StyledMetaInformation = styled.div`
 `;
 
 const StyledTagContainer = styled.div`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   a {
     margin-left: 0.5rem;
   }
@@ -65,7 +74,7 @@ export function ExcerptItem({ className, title, date, tags, children, path, head
           <FormattedDate value={date} /> <FormattedTime value={date} />
         </span>
         {tags && (
-          <StyledTagContainer>
+          <StyledTagContainer title={tags.map((tag) => tag.translation).join(', ')}>
             {tags.map((tag, i) => (
               <Link to={tag.path} key={i}>
                 {tag.translation}

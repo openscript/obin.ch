@@ -38,7 +38,11 @@ export const contentTranslation: Translation = {
     'page.blogPost.title': '{post} - Blog',
     'page.gallery.title': 'Galerie',
     'page.tag.title': `"{tag}" - Tag`,
-    'tag.projects': 'Projekte'
+    'tag.projects': 'Projekte',
+    'tag.react': 'React',
+    'tag.react-router': 'React Router',
+    'tag.web-technologies': 'Webtechnologien',
+    'tag.authentication-and-authorization': 'Authentifizierung und Autorisierung'
   },
   en: {
     ...localeTranslation,
@@ -60,7 +64,11 @@ export const contentTranslation: Translation = {
     'page.blogPost.title': '{post} - Blog',
     'page.gallery.title': 'Gallery',
     'page.tag.title': `"{tag}" - Tag`,
-    'tag.projects': 'Projects'
+    'tag.projects': 'Projects',
+    'tag.react': 'React',
+    'tag.react-router': 'React Router',
+    'tag.web-technologies': 'Web Technologies',
+    'tag.authentication-and-authorization': 'Authentication and Authorization'
   }
 };
 

@@ -35,8 +35,15 @@ const MetaInformation = styled.dl`
   margin-top: 1rem;
   font-size: 0.8rem;
 
-  dd a {
-    margin-right: 0.5rem;
+  dd {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      margin-right: 0.5rem;
+    }
   }
 
   @media (max-width: ${breakpoints.small}) {
@@ -74,11 +81,15 @@ export default function BlogPost({ data, pageContext }: BlogPostProps) {
               <FormattedMessage id="misc.tags" />
             </dt>
             <dd>
-              {data.blogPost.fields.tags.map((tag, i) => (
-                <Link to={tag.path} key={i}>
-                  {tag.value}
-                </Link>
-              ))}
+              <ul>
+                {data.blogPost.fields.tags.map((tag, i) => (
+                  <li>
+                    <Link to={tag.path} key={i}>
+                      {tag.value}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </dd>
           </MetaInformation>
           <PostContent dangerouslySetInnerHTML={{ __html: data.blogPost.html }} />

@@ -1,13 +1,20 @@
 # r.obin.ch
 
-Feel free to checkout how our website is built, but don't copy our content and brand.
+Feel free to checkout how my website is built, but don't copy my content and brand.
 
 ## Getting started
 
 1. Clone repository
-1. Install dependencies
+1. Install dependencies `yarn install`
 1. Run `yarn start`
 1. Go to http://localhost:8000
+
+## Conventions
+
+All the following conventions should be met:
+
+- React according to the Airbnb rules: https://github.com/airbnb/javascript/tree/master/react
+- Content file names follow the lower case Kebab case style: https://www.theserverside.com/definition/Kebab-case
 
 ## Tips and tricks
 

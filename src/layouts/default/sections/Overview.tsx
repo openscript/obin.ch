@@ -6,7 +6,7 @@ import { PaddedElement } from '../PaddedElement';
 
 const OverviewSection = styled(PaddedElement)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-gap: 3rem;
   margin: 3rem 0 4rem 0;
 
