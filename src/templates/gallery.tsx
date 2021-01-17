@@ -16,16 +16,14 @@ export default function Gallery({ data, pageContext }: GalleryProps) {
         <h2>
           <FormattedMessage id={'page.gallery.title'} />
         </h2>
-        {data.entries.group.map((group) => {
-          return (
-            <div>
-              <h3>{group.fieldValue}</h3>
-              {group.edges.map((entry) => {
-                return <Img fixed={entry.node.frontmatter.photo.childImageSharp.fixed} />;
-              })}
-            </div>
-          );
-        })}
+        {data.entries.group.map((group, i) => (
+          <div key={i}>
+            <h3>{group.fieldValue}</h3>
+            {group.edges.map((entry, i) => (
+              <Img fixed={entry.node.frontmatter.photo.childImageSharp.fixed} key={i} />
+            ))}
+          </div>
+        ))}
       </PaddedElement>
     </DefaultLayout>
   );

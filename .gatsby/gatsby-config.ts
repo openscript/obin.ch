@@ -87,6 +87,12 @@ const configuration: ITSConfigFn<'config'> = ({ projectRoot }) => ({
               quality: 90,
               linkImagesToOriginal: false
             }
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: true
+            }
           }
         ]
       }

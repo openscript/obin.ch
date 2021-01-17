@@ -13,6 +13,8 @@ import { DefaultHeader } from './default/Header';
 import { breakpoints } from './default/breakpoints';
 import { NavigationItem } from '../components/NavigationItem';
 import styled from '@emotion/styled';
+import 'prism-themes/themes/prism-coldark-cold.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 const DefaultLayoutStyle = css`
   :root {
@@ -144,8 +146,31 @@ const DefaultLayoutStyle = css`
   pre,
   code,
   samp,
-  kbd {
+  kbd,
+  code[class*='language-'],
+  pre[class*='language-'] {
     font-family: var(--code-font);
+    font-size: 0.9rem;
+  }
+
+  .gatsby-highlight pre[class*='language-'].line-numbers {
+    padding: 0;
+    padding-left: 3.5em;
+    overflow: auto;
+    border-radius: 0.2rem;
+
+    .line-numbers-rows {
+      padding-left: 1em;
+      background: none;
+
+      & > span:before {
+        color: var(--black-color);
+      }
+    }
+  }
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
+    background-color: var(--white-color);
   }
 `;
 

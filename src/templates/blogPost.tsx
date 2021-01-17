@@ -13,6 +13,7 @@ const Post = styled.article`
     'title title'
     'content meta';
   grid-column-gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, 15rem);
 
   @media (max-width: ${breakpoints.small}) {
     grid-template-areas:
@@ -83,10 +84,8 @@ export default function BlogPost({ data, pageContext }: BlogPostProps) {
             <dd>
               <ul>
                 {data.blogPost.fields.tags.map((tag, i) => (
-                  <li>
-                    <Link to={tag.path} key={i}>
-                      {tag.value}
-                    </Link>
+                  <li key={i}>
+                    <Link to={tag.path}>{tag.value}</Link>
                   </li>
                 ))}
               </ul>
